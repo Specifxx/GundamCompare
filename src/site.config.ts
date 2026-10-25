@@ -34,7 +34,8 @@ export const SITE: SiteConfig = {
     query: "gundam",
     singlesCategoryId: "183454",
     sealedCategoryId: "183456",
-    minPriceUsd: 20,
+    // Cards under $10 get no eBay call; every sealed product does (owner, 2026-10-25).
+    minPriceUsd: 10,
     dailyBudget: 2500,
     // Lorcana Compare runs at 06 UTC on the same eBay app; eBay's daily count
     // resets at midnight Pacific, so each eBay day holds one run of each site.
