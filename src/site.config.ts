@@ -25,7 +25,8 @@ export const SITE: SiteConfig = {
     "gd06 stardust trails price",
   ],
   adminEmails: ["bill.jyang101@gmail.com"],
-  supportEmail: "bill.jyang101@gmail.com",
+  supportEmail: "riftcompare@gmail.com",
+  ownerEmail: "bill.jyang101@gmail.com",
 
   tcgcsvCategoryId: 86,
   tcgplayerSlug: "gundam-card-game",
