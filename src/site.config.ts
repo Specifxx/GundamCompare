@@ -12,7 +12,7 @@ export const SITE: SiteConfig = {
   wordmark: ["GUNDAM", "COMPARE"],
   game: "Gundam Card Game",
   gameShort: "Gundam",
-  domain: "gundamcompare.app",
+  domain: "gundamcompare.com",
   tagline: "Compare Gundam Card Game prices across every store",
   description:
     "Free Gundam Card Game price comparison: live prices for every Gundam TCG card, parallel and booster box across TCGplayer, eBay and game stores in the US, UK, Canada and Australia.",
@@ -64,7 +64,7 @@ export const SITE: SiteConfig = {
   sisterSites: [
     { name: "Rift Compare", url: "https://riftcompare.com", game: "Riftbound" },
     { name: "OP Compare", url: "https://opcompare.app", game: "One Piece" },
-    { name: "Lorcana Compare", url: "https://lorcanacompare.app", game: "Disney Lorcana" },
+    { name: "Lorcana Compare", url: "https://lorcanacompare.com", game: "Disney Lorcana" },
     { name: "DexCompare", url: "https://www.dexcompare.app", game: "Pokémon" },
     { name: "MTG Compare", url: "https://mtgcompare.app", game: "Magic" },
   ],
