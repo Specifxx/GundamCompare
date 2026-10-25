@@ -22,7 +22,7 @@ export const post: Post = {
 
 <h2>What a ban does to prices</h2>
 <p>A ban usually drops a card's price within days. Anksha fell after July's announcement, while cards that slot into the decks that replace it tend to climb. A card's page here charts its price history, so you can see the effect directly: {{card:643169}} is {{price:643169}} today.</p>
-<p>Track it on <a href="/movers">price movers</a>, or set an alert on a card you expect to move when the next list lands with Blazing Fist (GD07) in January 2027.</p>
+<p>Track it on <a href="/movers">price movers</a>, or bookmark the card pages you expect to move when the next list lands with Blazing Fist (GD07) in January 2027.</p>
 `,
   faq: [
     { q: "Is Anksha banned in the Gundam Card Game?", a: "Yes. Anksha (GD01-020) was banned from 24 July 2026." },

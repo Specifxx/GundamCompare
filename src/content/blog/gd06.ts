@@ -26,7 +26,7 @@ export const post: Post = {
 <p>Freedom Ascension (GD05) is the best guide to where GD06's chase cards will land. Its LR++ cards trade today at {{price:707601}} for {{card:707601}}, {{price:707600}} for {{card:707600}} and {{price:707604}} for {{card:707604}}. GD05's special EX Resource tokens also sell for hundreds of dollars. If ZZ Gundam's LR++ follows Wing Zero's pattern, it will be the most valuable card in the set within the first week. Expect it to fall from its launch-week peak as supply arrives.</p>
 
 <h2>Should you pre-order or buy singles?</h2>
-<p>Open boxes if you enjoy the pull. If you want one specific LR++, buy the single: there are 12 Legend Rares and the LR++ parallels are far rarer than one per box. Set a <a href="/premium">price alert</a> and we'll email you when the card you want drops to your price.</p>
+<p>Open boxes if you enjoy the pull. If you want one specific LR++, buy the single: there are 12 Legend Rares and the LR++ parallels are far rarer than one per box. Its card page charts the price every day, so you can buy on a dip.</p>
 `,
   faq: [
     { q: "When does Gundam Card Game Stardust Trails release?", a: "30 October 2026." },
