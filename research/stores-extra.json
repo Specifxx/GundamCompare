@@ -1,0 +1,237 @@
+{
+ "stores": [
+  {
+   "key": "blackvaultgaming",
+   "name": "blackvaultgaming",
+   "base": "https://blackvaultgaming.com",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam-card-game-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Aile Strike Gundam [ST04 - ST04-001]",
+    "Justice Gundam [GD01 - GD01-066]",
+    "Gundam Heavyarms Custom [GD03 - GD03-029]"
+   ],
+   "productCount": 1064,
+   "titleFormat": "Name [SET - CODE]"
+  },
+  {
+   "key": "manyrealms",
+   "name": "manyrealms",
+   "base": "https://manyrealms.com",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Gundam (ST01-001) - Edition Beta Holofoil",
+    "Freedom Gundam (GD03-070) (LR+) (GD03-070) - Steel Requiem Holofoil",
+    "Gaia Gundam (GD05-034) - Freedom Ascension Holofoil"
+   ],
+   "productCount": 485,
+   "titleFormat": "Name (CODE) - Set [Holofoil]"
+  },
+  {
+   "key": "vegassingles",
+   "name": "vegas.singles",
+   "base": "https://vegas.singles",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Darkness Finger (GD05-110) - Freedom Ascension Holofoil",
+    "Wing Gundam Zero (EW) (GD05-067) - Freedom Ascension Holofoil",
+    "G-Falcon DX (ST14-005) - Starter Deck 14 Heavy Dominion"
+   ],
+   "productCount": 1216,
+   "titleFormat": "Name (CODE) - Set [Holofoil]"
+  },
+  {
+   "key": "atlantis-comics",
+   "name": "atlantis-comics",
+   "base": "https://atlantis-comics.com",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "The-O - ST14-001 (GD03) - Damaged (LR+)",
+    "Setsuna F. Seiei - ST07-009 (ST07)  - Near Mint (C+)"
+   ],
+   "productCount": 105,
+   "titleFormat": "mixed; see samples"
+  },
+  {
+   "key": "impactgamingcenter",
+   "name": "impactgamingcenter",
+   "base": "https://impactgamingcenter.gg",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam-card-game-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Char's Zaku II (T-006) Token (T-006) [Edition Beta]",
+    "Guntank (T-003) Token (T-003) [Edition Beta]",
+    "Unforeseen Incident (Store Tournament Participant Pack 01) (ST01-014) [Gundam Promotional Cards]"
+   ],
+   "productCount": 1920,
+   "titleFormat": "mixed; see samples"
+  },
+  {
+   "key": "joshscards",
+   "name": "joshscards",
+   "base": "https://joshscards.com",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam"
+   ],
+   "kind": "both",
+   "sampleTitles": [
+    "Gundamn: Steel Requiem GD-03 Booster Box",
+    "Freedom Ascension Booster Box",
+    "Hammerhead (GD02-128) - Dual Impact"
+   ],
+   "productCount": 2150,
+   "titleFormat": "Name (CODE) - Set [Holofoil]"
+  },
+  {
+   "key": "newrealmgames",
+   "name": "newrealmgames",
+   "base": "https://newrealmgames.com",
+   "country": "CA",
+   "currency": "CAD",
+   "collections": [
+    "gundam-card-game-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Wing Gundam Zero (Championship Winner Card 01) - GD01-024 - LR",
+    "Overflowing Affection - GD01-118B - Edition Beta - U+ (Parallel)",
+    "Gundam Leopard (C+) - ST11-007 - C+"
+   ],
+   "productCount": 1765,
+   "titleFormat": "mixed; see samples"
+  },
+  {
+   "key": "danireon",
+   "name": "danireon",
+   "base": "https://www.danireon.com",
+   "country": "CA",
+   "currency": "CAD",
+   "collections": [
+    "gundam-tcg-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Airframe Seizure (GD05-111) - Freedom Ascension",
+    "Launcher Strike Gundam (GD01-072) - Newtype Rising",
+    "Hallelujah Haptism (GD04-090) - Phantom Aria"
+   ],
+   "productCount": 1541,
+   "titleFormat": "Name (CODE) - Set [Holofoil]"
+  },
+  {
+   "key": "retrogamingofdenver",
+   "name": "retrogamingofdenver",
+   "base": "https://retrogamingofdenver.com",
+   "country": "US",
+   "currency": "USD",
+   "collections": [
+    "gundam-single-cards"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Gundam NT-1 (GD03-001) - Steel Requiem Holofoil",
+    "Amuro Ray (ST01-010) - Starter Deck 01 Heroic Beginnings",
+    "Desil Galette (GD02-096) - Dual Impact"
+   ],
+   "productCount": 726,
+   "titleFormat": "Name (CODE) - Set [Holofoil]"
+  },
+  {
+   "key": "card-caster",
+   "name": "card-caster",
+   "base": "https://card-caster.myshopify.com",
+   "country": "CA",
+   "currency": "CAD",
+   "collections": [
+    "gundam-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Gundam (GD01-013) [GD01 - GD01-013]",
+    "G-Sky Easy [GD01 - GD01-014]",
+    "Jegan [GD01 - GD01-016]"
+   ],
+   "productCount": 810,
+   "titleFormat": "Name [SET - CODE]"
+  },
+  {
+   "key": "hpwcards",
+   "name": "hpwcards",
+   "base": "https://hpwcards.com",
+   "country": "CA",
+   "currency": "CAD",
+   "collections": [
+    "gundam-gd01-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Overflowing Affection (U+) (SP) (GD01-118) - Steel Requiem (U+)",
+    "Unforeseen Incident (Store Tournament Pack 01) (Winner) (ST01-014) - Gundam Promotional Cards (C+)",
+    "Kayra Su (GD05-086) - Freedom Ascension (UC)"
+   ],
+   "productCount": 592,
+   "titleFormat": "Name (CODE) - Set [Holofoil]"
+  },
+  {
+   "key": "kaiofcards",
+   "name": "kaiofcards",
+   "base": "https://kaiofcards.com",
+   "country": "NL",
+   "currency": "EUR",
+   "collections": [
+    "gundam-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "GD01-086, C, Gundam Lfrith",
+    "GD01-100, UC, A Show of Resolve",
+    "GD04-002, LR, Penelope (Flight Form)"
+   ],
+   "productCount": 1615,
+   "titleFormat": "mixed; see samples"
+  },
+  {
+   "key": "derpycards",
+   "name": "derpycards",
+   "base": "https://derpycards.ca",
+   "country": "CA",
+   "currency": "CAD",
+   "collections": [
+    "gundam-singles"
+   ],
+   "kind": "singles",
+   "sampleTitles": [
+    "Amuro Ray (R+) GD05-085/undefined - Freedom Ascension Holofoil",
+    "Improved Technique GD03-109/undefined - Steel Requiem Holofoil",
+    "Resource (R-015) (C++) R-015/undefined - Dual Impact Holofoil"
+   ],
+   "productCount": 1372,
+   "titleFormat": "mixed; see samples"
+  }
+ ]
+}
