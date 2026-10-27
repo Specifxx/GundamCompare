@@ -27,6 +27,7 @@ export const SITE: SiteConfig = {
   adminEmails: ["bill.jyang101@gmail.com"],
   supportEmail: "riftcompare@gmail.com",
   ownerEmail: "bill.jyang101@gmail.com",
+  impactSiteVerification: "3ab0538e-afa1-4fe4-9cac-ce9a84159716",
 
   tcgcsvCategoryId: 86,
   tcgplayerSlug: "gundam-card-game",
