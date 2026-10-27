@@ -1,0 +1,26 @@
+name: Impact tag check (temporary)
+on:
+  push:
+    branches: [claude/impact-check]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - run: |
+          set -u
+          declare -A want=( [lorcanacompare.com]=dda031ee-47ba-46d5-b639-93aba9b39be3 [gundamcompare.com]=3ab0538e-afa1-4fe4-9cac-ce9a84159716 [ygocompare.com]=3c00a442-a61e-4003-a422-540b7435b80d )
+          for i in $(seq 1 40); do
+            ok=0
+            for d in "${!want[@]}"; do
+              line="$(curl -sL "https://$d/" | grep -o '<meta name="impact-site-verification"[^>]*>' || true)"
+              if [[ "$line" == *"value=\"${want[$d]}\""* ]]; then ok=$((ok+1)); fi
+            done
+            [ "$ok" = 3 ] && break
+            sleep 30
+          done
+          for d in lorcanacompare.com gundamcompare.com ygocompare.com; do
+            echo "RESULT $d: $(curl -s "https://$d/" | grep -o '<meta name="impact-site-verification"[^>]*>' || echo NOT FOUND)  (expected ${want[$d]})"
+            echo "RAW curl -s https://$d/ | grep -c impact-site-verification => $(curl -s https://$d/ | grep -c impact-site-verification)"
+          done
+          [ "$ok" = 3 ]
