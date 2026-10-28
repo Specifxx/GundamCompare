@@ -44,6 +44,13 @@ jobs:
           EBAY_AFFILIATE_CAMPAIGN: ${{ secrets.EBAY_AFFILIATE_CAMPAIGN }}
           EBAY_REFRESH: ${{ github.event_name == 'workflow_dispatch' && !inputs.ebay && 'false' || 'true' }}
         run: npx tsx scripts/import-all.ts
+      # Gunpla (SITE.kits): hobby shops' kits, matched by JAN barcode. After
+      # the card import, which writes the day's exchange rates it reads.
+      # A kit failure never holds back the card prices: the ops monitor flags
+      # kit data older than 54 hours.
+      - name: Import model kits
+        continue-on-error: true
+        run: npx tsx scripts/import-kits.ts
       - name: Commit data (this commit is the daily release)
         run: |
           set -euo pipefail
