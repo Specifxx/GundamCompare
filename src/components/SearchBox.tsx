@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
-interface Hit { slug: string; name: string; set: string; image: string | null; price: string; kind: string }
+interface Hit { slug: string; href?: string; name: string; set: string; image: string | null; price: string; kind: string }
 
 export function SearchBox({ big = false, placeholder }: { big?: boolean; placeholder?: string }) {
   const [q, setQ] = useState("");
@@ -45,7 +45,7 @@ export function SearchBox({ big = false, placeholder }: { big?: boolean; placeho
         <ul className="absolute z-50 mt-1 max-h-96 w-full overflow-auto rounded-lg border border-ink-700 bg-ink-900 shadow-xl">
           {hits.map((h) => (
             <li key={h.slug}>
-              <a href={`/card/${h.slug}`} className="flex items-center gap-3 px-3 py-2 hover:bg-ink-800">
+              <a href={h.href ?? `/card/${h.slug}`} className="flex items-center gap-3 px-3 py-2 hover:bg-ink-800">
                 {h.image ? <img src={h.image} alt="" width={32} height={44} className="h-11 w-8 rounded object-cover" loading="lazy" /> : <span className="h-11 w-8" />}
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm text-fg">{h.name}</span>

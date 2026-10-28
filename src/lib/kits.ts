@@ -1,7 +1,7 @@
 // The model-kit section's data (SITE.kits): data/public/kits.json, read once
 // per server instance, like lib/data.ts. Empty when the site has no kits.
 import { SITE } from "@/site.config";
-import type { Kit, Market, Offer } from "./site-types";
+import { MARKETS, type Kit, type Market, type Offer } from "./site-types";
 import { decodeKitOffer, readKitFile, type KitFile } from "./kit-store";
 import { slugify } from "./slug";
 
@@ -43,11 +43,11 @@ export const kitInStockStores = (jan: string) => new Set(kitOffers(jan).filter((
 export function kitBestByMarket(jan: string): Offer[] {
   const out = new Map<Market, Offer>();
   for (const o of kitOffers(jan)) if (o.inStock && !out.has(o.market)) out.set(o.market, o);
-  return [...out.values()];
+  return MARKETS.map((m) => out.get(m)).filter((o): o is Offer => !!o);
 }
 
 // Grades, in the order a builder thinks of them, each a hub page.
-export const GRADE_ORDER = ["EG", "HG", "RG", "MG", "MGEX", "PG", "SD", "MGSD", "RE/100", "FM", "HiRM", "Mega Size"];
+export const GRADE_ORDER = ["EG", "HG", "RG", "MG", "MGEX", "PG", "SD", "MGSD", "RE/100", "FM", "HiRM", "Mega Size", "FG", "30 Minutes"];
 export const GRADE_LABEL: Record<string, string> = {
   EG: "Entry Grade (EG)",
   HG: "High Grade (HG)",
@@ -61,6 +61,8 @@ export const GRADE_LABEL: Record<string, string> = {
   FM: "Full Mechanics",
   HiRM: "Hi-Resolution Model",
   "Mega Size": "Mega Size",
+  FG: "First Grade (FG)",
+  "30 Minutes": "30 Minutes Missions, Sisters and Fantasy",
 };
 export const gradeSlug = (g: string) => slugify(g.replace("/", " "));
 
@@ -94,3 +96,14 @@ export function newKits(days = 30, now = Date.now()): Kit[] {
 
 /** Store keys and names, for the price table. */
 export const kitStoreNames = (): Record<string, string> => Object.fromEntries((SITE.kits?.stores ?? []).map((s) => [s.key, s.name]));
+
+/** Shopify's CDN resizes on request (`width=`); a store photo is often 2,000px. */
+export function kitImage(url: string, width: number): string {
+  try {
+    const u = new URL(url.startsWith("//") ? `https:${url}` : url);
+    if (/(^|\.)(cdn\.shopify\.com)$/.test(u.hostname) || u.pathname.includes("/cdn/shop/")) u.searchParams.set("width", String(width));
+    return u.toString();
+  } catch {
+    return url;
+  }
+}

@@ -84,12 +84,15 @@ const GRADES: [RegExp, string][] = [
   [/\bfull\s+mechanics\b/i, "FM"],
   [/\bhirm\b|\bhi-resolution\b/i, "HiRM"],
   [/\bmega\s*size\b/i, "Mega Size"],
+  [/\b30\s*m[msf]\b|\b30\s+minutes\s+(missions|sisters|fantasy)\b/i, "30 Minutes"],
+  [/\bfirst\s+grade\b|\bfg\b/i, "FG"],
   [/\bperfect\s+grade\b|\bpg(?:\s*unleashed)?\b/i, "PG"],
   [/\bmaster\s+grade\b|\bmg\b|\bmg\s*ka\b/i, "MG"],
   [/\breal\s+grade\b|\brg\b/i, "RG"],
   [/\bentry\s+grade\b|\beg\b/i, "EG"],
   [/\bsd\s*(?:cs|ex|w)?\b|\bsdcs\b|\bsdex\b|\bsdw\b|\bbb\s*senshi\b|\bsd\s+gundam\b|\bcross\s+silhouette\b/i, "SD"],
-  [/\bhigh\s+grade\b|\bhg(?:uc|ce|bf|bd(?::?r)?|ac|ibo|ib|bc|gto|fc|tb|wfm|gq|00)?\b/i, "HG"],
+  // HG plus its series letters: HGUC, HGCE, HGTWFM, HGBD:R, HGIBO, HG00…
+  [/\bhigh\s+grade\b|\bhg(?:[a-z0-9]{0,5}|bd:r)\b/i, "HG"],
 ];
 
 export function gradeOf(title: string): string | null {
@@ -127,7 +130,7 @@ export function kitCore(title: string): string {
   t = t.replace(/["“”][^"“”]{3,}["“”]/g, " "); // "Mobile Suit Gundam SEED"
   t = t.replace(/\s'[^']{6,}'(?=\s|$)/g, " ");
   t = t.replace(/\b(bandai(\s+(spirits|hobby|namco))?|gunpla|plastic\s+model(\s+kit)?|model\s+kit|kit|pre-?\s*order|preorder|new|in\s+stock|japan(ese)?\s+version|official)\b/gi, " ");
-  for (const [re] of GRADES) t = t.replace(new RegExp(re.source, "gi"), " ");
+  for (const [re, g] of GRADES) if (g !== "30 Minutes") t = t.replace(new RegExp(re.source, "gi"), " ");
   t = t.replace(/\b1\s*\/\s*(144|100|60|48|35|72)\b/g, " ");
   t = t.replace(/(^|\s)#?\d{1,3}(?=\s)/, " "); // the grade's running number "#03", "191"
   t = t.replace(/\s[-–—|:,]+\s/g, " ").replace(/\s+/g, " ").trim();
@@ -145,28 +148,35 @@ export function kitName(titles: string[]): { name: string; grade: string | null;
   const grade = vote(titles.map(gradeOf));
   const scale = vote(titles.map(scaleOf));
   const cores = titles.map(kitCore).filter((c) => c.length >= 3);
+  // One entry per wording, case aside; its best-cased spelling (a shop that
+  // doesn't shout) represents it.
   const byKey = new Map<string, { core: string; n: number }>();
+  const shouts = (c: string) => c === c.toUpperCase();
   for (const c of cores) {
     const k = c.toLowerCase();
     const e = byKey.get(k);
-    if (e) e.n++;
-    else byKey.set(k, { core: c, n: 1 });
+    if (!e) byKey.set(k, { core: c, n: 1 });
+    else {
+      e.n++;
+      if (shouts(e.core) && !shouts(c)) e.core = c;
+    }
   }
   const core = [...byKey.values()].sort((a, b) => b.n - a.n || a.core.length - b.core.length)[0]?.core ?? titles[0];
-  const name = [grade && !new RegExp(`\\b${grade.replace("/", "\\/")}\\b`, "i").test(core) ? grade : null, scale, titleCase(core)]
-    .filter(Boolean)
-    .join(" ");
+  // "30 Minutes" kits keep their own line name ("30MM bEXM-15 Portanova").
+  const prefix = grade && grade !== "30 Minutes" && !new RegExp(`\\b${grade.replace("/", "\\/")}\\b`, "i").test(core) ? grade : null;
+  const name = [prefix, scale, titleCase(core)].filter(Boolean).join(" ");
   return { name, grade, scale };
 }
 
 function titleCase(s: string): string {
   // Shops that shout ("GUNDAM AERIAL REBUILD") get words capitalised; model
-  // codes (RX-78-2, XVX-016, Ver.Ka) are left as they are.
+  // codes (RX-78-2, BEXM-21, MK-II, ZZ) and short words stay as written.
   if (s !== s.toUpperCase()) return s;
-  return s
-    .toLowerCase()
-    .replace(/\b([a-z])([a-z]*)\b/g, (_, a: string, b: string) => a.toUpperCase() + b)
-    .replace(/\b(Rx|Ms|Gn|Xvx|Zgmf|Gat|Ver|Ka|Ii|Iii|Iv|Zz|Mk)\b/g, (w) => (w.length <= 3 && w !== "Ver" ? w.toUpperCase() : w));
+  return s.replace(/[A-Z][A-Z'’]*/g, (w, at: number) => {
+    const word = s.slice(at).match(/^[^\s()]+/)?.[0] ?? w;
+    if (/\d|-/.test(word) || w.length <= 3) return w;
+    return w[0] + w.slice(1).toLowerCase();
+  });
 }
 
 export const kitsEnabled = (k: KitsConfig | undefined): k is KitsConfig => !!k && k.stores.length > 0;
@@ -194,6 +204,11 @@ export function keepConsistent(ls: KitListing[], fx: Record<string, number>): Ki
   const direct = ls.filter((l) => !l.derived);
   const grade = vote(direct) ?? vote(ls);
   let out = grade ? ls.filter((l) => !l.grade || l.grade === grade) : ls;
+  // Two listings far apart, one read from an item number: trust the barcode.
+  if (out.length === 2) {
+    const [a, b] = out.map((l) => l.cents / (fx[CURRENCY[l.market]] ?? 1));
+    if (Math.max(a, b) / Math.min(a, b) > 3) out = out.filter((l) => !l.derived);
+  }
   if (out.length >= 3) {
     const usd = (l: KitListing) => l.cents / (fx[CURRENCY[l.market]] ?? 1);
     const sorted = out.map(usd).sort((a, b) => a - b);

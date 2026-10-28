@@ -44,6 +44,10 @@ jobs:
           EBAY_AFFILIATE_CAMPAIGN: ${{ secrets.EBAY_AFFILIATE_CAMPAIGN }}
           EBAY_REFRESH: ${{ github.event_name == 'workflow_dispatch' && !inputs.ebay && 'false' || 'true' }}
         run: npx tsx scripts/import-all.ts
+      # Gunpla (SITE.kits): hobby shops' kits, matched by JAN barcode. After
+      # the card import, which writes the day's exchange rates it reads.
+      - name: Import model kits
+        run: npx tsx scripts/import-kits.ts
       - name: Commit data (this commit is the daily release)
         run: |
           set -euo pipefail
