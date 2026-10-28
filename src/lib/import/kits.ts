@@ -168,15 +168,14 @@ export function kitName(titles: string[]): { name: string; grade: string | null;
   return { name, grade, scale };
 }
 
+// Words a shop shouts ("GUNDAM AERIAL", "30MM bEXM-14T CIELNOVA") are
+// capitalised; model codes (RX-78-2, BEXM-21, MK-II), two-letter words (ZZ,
+// EW) and names written in capitals on purpose (SEED, AGE, LAH) stay.
+const KEEP_CAPS = new Set(["SEED", "ZAFT", "AEUG", "ORB", "GQUUUUUUX", "AGE", "LAH", "IBO", "MSV", "AOZ", "GMS", "UFO", "DX", "EX", "NT", "UC", "HGUC", "SDCS", "SDEX", "MGEX", "MGSD", "PG", "RG", "MG", "HG", "EG", "SD"]);
 function titleCase(s: string): string {
-  // Shops that shout ("GUNDAM AERIAL REBUILD") get words capitalised; model
-  // codes (RX-78-2, BEXM-21, MK-II, ZZ) and short words stay as written.
-  if (s !== s.toUpperCase()) return s;
-  return s.replace(/[A-Z][A-Z'’]*/g, (w, at: number) => {
-    const word = s.slice(at).match(/^[^\s()]+/)?.[0] ?? w;
-    if (/\d|-/.test(word) || w.length <= 3) return w;
-    return w[0] + w.slice(1).toLowerCase();
-  });
+  return s.replace(/(^|[\s(\/])([A-Z][A-Z'’]{2,})(?=$|[\s),\/])/g, (m, pre: string, w: string) =>
+    KEEP_CAPS.has(w.replace(/['’]/g, "")) ? m : pre + w[0] + w.slice(1).toLowerCase(),
+  );
 }
 
 export const kitsEnabled = (k: KitsConfig | undefined): k is KitsConfig => !!k && k.stores.length > 0;

@@ -82,6 +82,8 @@ test("kit pages cache a day and prerender nothing", () => {
 test("shouting shop titles are tidied, model codes kept", () => {
   assert.equal(kitName(["30MM BEXM-21 VERDENOVA (NAVY)", "Bandai 30MM BEXM-21 VERDENOVA (NAVY) 1/144"]).name, "1/144 30MM BEXM-21 Verdenova (Navy)");
   assert.equal(kitName(["HG 1/144 GUNDAM AERIAL", "Hg 1/144 Gundam Aerial"]).name, "HG 1/144 Gundam Aerial");
+  assert.equal(kitName(["30MM bEXM-14T CIELNOVA", "Bandai 30MM bEXM-14T CIELNOVA 1/144"]).name, "1/144 30MM bEXM-14T Cielnova");
+  assert.equal(kitName(["MG 1/100 GUNDAM SEED ASTRAY RED FRAME"]).name, "MG 1/100 Gundam SEED Astray Red Frame");
   assert.equal(gradeOf("1/144 FG Char's Zaku"), "FG");
 });
 
