@@ -1,0 +1,1380 @@
+[
+ {
+  "host": "ggadelaide.com.au",
+  "base": "https://ggadelaide.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (60 collections)"
+ },
+ {
+  "host": "theadventurersguild.com.au",
+  "base": "https://www.theadventurersguild.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "The Adventurers Guild",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-steel-requiem(1):1/1"
+  ],
+  "samples": [
+   "Gundam Card Game GD03 Steel Requiem Booster Box"
+  ]
+ },
+ {
+  "host": "ozziecollectables.com",
+  "base": "https://www.ozziecollectables.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (1120 collections)"
+ },
+ {
+  "host": "trollaustralia.com.au",
+  "base": "https://www.trollaustralia.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (181 collections)"
+ },
+ {
+  "host": "mintcollectables.com.au",
+  "base": "https://mintcollectables.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Mint Collectables",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(4):1/4"
+  ],
+  "samples": [
+   "Gundam Card Game: Phantom Aria [GD04] Booster Box Display"
+  ]
+ },
+ {
+  "host": "trollaustraliamelb.com.au",
+  "base": "https://trollaustraliamelb.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (138 collections)"
+ },
+ {
+  "host": "thecardhubaustralia.com.au",
+  "base": "https://thecardhubaustralia.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (577 collections)"
+ },
+ {
+  "host": "obsessiongaming.com.au",
+  "base": "https://obsessiongaming.com.au",
+  "ok": false,
+  "reason": "not Shopify or unreachable (l; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam)"
+ },
+ {
+  "host": "shuffleandcutgames.com",
+  "base": "https://shuffleandcutgames.com",
+  "market": "AU",
+  "ok": false,
+  "name": "Shuffle n Cut Melbourne",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-sealed(2):0/2"
+  ],
+  "samples": []
+ },
+ {
+  "host": "inngames.com.au",
+  "base": "https://inngames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (231 collections)"
+ },
+ {
+  "host": "manamarket.com.au",
+  "base": "https://manamarket.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Mana Market",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-1(86):0/86"
+  ],
+  "samples": []
+ },
+ {
+  "host": "thegamesdistrict.com",
+  "base": "https://thegamesdistrict.com",
+  "market": "AU",
+  "ok": false,
+  "name": "The Games District",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-sealed-1(7):0/5"
+  ],
+  "samples": []
+ },
+ {
+  "host": "quackopens.com.au",
+  "base": "https://www.quackopens.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (29 collections)"
+ },
+ {
+  "host": "acecollectibles.com.au",
+  "base": "https://acecollectibles.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "ACE Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(6):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "crithit.com.au",
+  "base": "https://crithit.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Critical Hit Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(377):2/26"
+  ],
+  "samples": [
+   "Gundam Card Game: Booster Pack – Dual Impact [GD02]",
+   "Gundam Card Game: Booster pack – Steel Requiem [GD03] [Limit 6]"
+  ]
+ },
+ {
+  "host": "thegamescorner.com.au",
+  "base": "https://www.thegamescorner.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (33 collections)"
+ },
+ {
+  "host": "crystalcollectablestcg.com.au",
+  "base": "https://crystalcollectablestcg.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (291 collections)"
+ },
+ {
+  "host": "beachestcg.com.au",
+  "base": "https://beachestcg.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "BeachesTCG ",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(3):0/3"
+  ],
+  "samples": []
+ },
+ {
+  "host": "dongames.com.au",
+  "base": "https://dongames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (89 collections)"
+ },
+ {
+  "host": "cherrycollectables.com.au",
+  "base": "https://www.cherrycollectables.com.au",
+  "market": "AU",
+  "ok": true,
+  "name": "Cherry Collectables",
+  "existingKey": null,
+  "collections": [
+   "gundam",
+   "gundam-card-game"
+  ],
+  "kind": "both",
+  "matched": 256,
+  "inStock": 48,
+  "currency": "AUD",
+  "reason": null,
+  "tried": [
+   "gundam(391):246/250",
+   "gundam-card-game(33):10/17",
+   "gundam-card-game-sealed-product(33):10/17",
+   "gundam-promotional-cards(0):0/0",
+   "gundam-single(0):0/0"
+  ],
+  "samples": [
+   "[SSP] Gundam (GD01-001) (LR++) (GD01-001) - Gundam Newtype Rising",
+   "PSA 10 Gundam Aerial Rebuild - GD01-067 - LR++ SSP Newtype Rising 736",
+   "[SSP] Gundam Aerial Rebuild (LR++) (GD01-067) - Gundam Newtype Rising",
+   "[ SSP ] Destiny Gundam (GD04-050) (LR++) - Gundam Phantom Aria",
+   "[SSP] Gundam Barbatos 1st Form (LR++) (GD02-054) - Gundam Dual Impact",
+   "[ SSP ] Zeong (GD04-017) (LR++) - Gundam Phantom Aria"
+  ]
+ },
+ {
+  "host": "gatekeeperstcg.com",
+  "base": "https://www.gatekeeperstcg.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (37 collections)"
+ },
+ {
+  "host": "gggreensborough.com.au",
+  "base": "https://gggreensborough.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (25 collections)"
+ },
+ {
+  "host": "goodgamesmorley.com.au",
+  "base": "https://www.goodgamesmorley.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (14 collections)"
+ },
+ {
+  "host": "horizontradingcards.com",
+  "base": "https://horizontradingcards.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (33 collections)"
+ },
+ {
+  "host": "mightycoolgames.com.au",
+  "base": "https://mightycoolgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (8 collections)"
+ },
+ {
+  "host": "grailborne.com.au",
+  "base": "https://grailborne.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (68 collections)"
+ },
+ {
+  "host": "kollecter.com.au",
+  "base": "https://kollecter.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Kollecter",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(1):1/1"
+  ],
+  "samples": [
+   "Gundam Card Game: Dual Impact Booster Box [GD02]"
+  ]
+ },
+ {
+  "host": "thatgamestore.com.au",
+  "base": "https://thatgamestore.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (19 collections)"
+ },
+ {
+  "host": "thecardspot.com.au",
+  "base": "https://thecardspot.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (9 collections)"
+ },
+ {
+  "host": "lunacards.com.au",
+  "base": "https://www.lunacards.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (95 collections)"
+ },
+ {
+  "host": "cardhouse.com.au",
+  "base": "https://www.cardhouse.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (126 collections)"
+ },
+ {
+  "host": "justcardstuff.com.au",
+  "base": "https://justcardstuff.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Just Card Stuff",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "tcg-gundam-sealed-product(3):0/0",
+   "tcg-gundam-1(0):0/0",
+   "tcg-gundam(0):0/0",
+   "tcg-gundam-steel-requiem-gd03(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "thecollectorsmith.com.au",
+  "base": "https://www.thecollectorsmith.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (71 collections)"
+ },
+ {
+  "host": "toysucker.com.au",
+  "base": "https://www.toysucker.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (0 collections)"
+ },
+ {
+  "host": "cardboardgamer.com.au",
+  "base": "https://cardboardgamer.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (126 collections)"
+ },
+ {
+  "host": "cardoni.com.au",
+  "base": "https://cardoni.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (38 collections)"
+ },
+ {
+  "host": "tradingcardmasters.com.au",
+  "base": "https://www.tradingcardmasters.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (179 collections)"
+ },
+ {
+  "host": "millenniumcomics.com.au",
+  "base": "https://millenniumcomics.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Millennium Comics",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(287):0/250",
+   "gundam-tcg(5):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "collectorscompany.com.au",
+  "base": "https://collectorscompany.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (441 collections)"
+ },
+ {
+  "host": "dragonslair.au",
+  "base": "https://dragonslair.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (104 collections)"
+ },
+ {
+  "host": "fabledgames.store",
+  "base": "https://fabledgames.store",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (832 collections)"
+ },
+ {
+  "host": "groovycollectables.com.au",
+  "base": "https://groovycollectables.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (53 collections)"
+ },
+ {
+  "host": "mayhemcollectables.com.au",
+  "base": "https://mayhemcollectables.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Mayhem Collectables",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-singles-gl(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "wonderlandgames.com.au",
+  "base": "https://www.wonderlandgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Wonderland Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(5):0/3"
+  ],
+  "samples": []
+ },
+ {
+  "host": "hrgames.au",
+  "base": "https://hrgames.au",
+  "market": "AU",
+  "ok": false,
+  "name": "HR Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game-dual-impact-gd02(6):0/3"
+  ],
+  "samples": []
+ },
+ {
+  "host": "collectorscolosseum.online",
+  "base": "https://www.collectorscolosseum.online",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (51 collections)"
+ },
+ {
+  "host": "dropstore.com.au",
+  "base": "https://dropstore.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (22 collections)"
+ },
+ {
+  "host": "thedragonsbeard.com.au",
+  "base": "https://thedragonsbeard.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "The Dragon's Beard",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(22):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "gdgames.com.au",
+  "base": "https://www.gdgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (77 collections)"
+ },
+ {
+  "host": "gamerholic.com.au",
+  "base": "https://gamerholic.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (412 collections)"
+ },
+ {
+  "host": "jamiestradingcards.com.au",
+  "base": "https://jamiestradingcards.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (109 collections)"
+ },
+ {
+  "host": "lightofcards.com.au",
+  "base": "https://lightofcards.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (44 collections)"
+ },
+ {
+  "host": "kawaiicollector.com.au",
+  "base": "https://kawaiicollector.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (145 collections)"
+ },
+ {
+  "host": "aussiehobbies.com.au",
+  "base": "https://www.aussiehobbies.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Aussie Hobbies ",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(443):0/250",
+   "gundam-sale(87):0/87"
+  ],
+  "samples": []
+ },
+ {
+  "host": "rhysticnostalgiagaming.com.au",
+  "base": "https://rhysticnostalgiagaming.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Rhystic Nostalgia Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg-sealed-products(53):5/30",
+   "gundam-card-game-packs(6):1/1",
+   "gundam-decks(21):0/12",
+   "all-gundam-card-game-preorders(14):0/2",
+   "gundam-assemble(9):0/9",
+   "gundam-decks-copy(8):0/2"
+  ],
+  "samples": [
+   "Eternal Nexus - Extra Booster Box [EB01]",
+   "Phantom Aria - Booster Box [GD04]",
+   "Steel Requiem - Booster Box [GD03]",
+   "Dual Impact - Booster Pack [GD02]",
+   "Dual Impact - Booster Box [GD02]",
+   "Dual Impact - Booster Pack [GD02]"
+  ]
+ },
+ {
+  "host": "legendsandcollectables.com",
+  "base": "https://www.legendsandcollectables.com",
+  "market": "AU",
+  "ok": false,
+  "name": "legendsandcollectables",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(0):0/0",
+   "gundam-tcg-1(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "pokemonworldaustralia.com",
+  "base": "https://www.pokemonworldaustralia.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (24 collections)"
+ },
+ {
+  "host": "pokesource.com.au",
+  "base": "https://pokesource.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (50 collections)"
+ },
+ {
+  "host": "onestoppokeshop.com.au",
+  "base": "https://onestoppokeshop.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "One Stop Poke Shop",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 6,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 6, in stock 0",
+  "tried": [
+   "gundam-tcg(22):6/21",
+   "gundam-booster-box(11):5/10",
+   "gundam-starter-decks(0):0/0"
+  ],
+  "samples": [
+   "Gundam Card Game: Steel Requiem Booster Box [GD03]",
+   "Gundam Card Game: Booster Pack – Dual Impact [GD02] (Single Pack)",
+   "Gundam Card Game: Booster Box – Eternal Nexus EB01",
+   "Gundam Card Game GD04 Phantom Aria Booster Box",
+   "Gundam Card Game: Single Booster Pack – Eternal Nexus EB01",
+   "Gundam Card Game: Phantom Aria Booster Box [GD04]"
+  ]
+ },
+ {
+  "host": "melbemon.com.au",
+  "base": "https://www.melbemon.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Melbemon Trading Cards",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "purplishtcg.com",
+  "base": "https://purplishtcg.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (14 collections)"
+ },
+ {
+  "host": "poketrader.com.au",
+  "base": "https://www.poketrader.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (295 collections)"
+ },
+ {
+  "host": "sportscardstore.com.au",
+  "base": "https://sportscardstore.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (19 collections)"
+ },
+ {
+  "host": "the-vault-au.com",
+  "base": "https://the-vault-au.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (165 collections)"
+ },
+ {
+  "host": "lowpop.com.au",
+  "base": "https://www.lowpop.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Low Pop Trading Co PTY LTD",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "thewanderingcollector.com.au",
+  "base": "https://thewanderingcollector.com.au",
+  "market": "AU",
+  "ok": true,
+  "name": "The Wandering Collector",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 6,
+  "inStock": 5,
+  "currency": "AUD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(6):6/6"
+  ],
+  "samples": [
+   "GUNDAM TCG: Newtype Rising - Booster Box [GD01]",
+   "GUNDAM TCG: Newtype Rising - Booster Box Sealed Case [GD01]",
+   "GUNDAM TCG: Steel Requiem - Booster Box Sealed Case [GD03]",
+   "GUNDAM TCG: Steel Requiem - Booster Box [GD03]",
+   "GUNDAM TCG: Dual Impact - Booster Box [GD02]",
+   "GUNDAM TCG: Dual Impact - Booster Box Sealed Case [GD02]"
+  ]
+ },
+ {
+  "host": "trainertown.com.au",
+  "base": "https://trainertown.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Trainer Town",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-box-sets(14):0/6"
+  ],
+  "samples": []
+ },
+ {
+  "host": "treasurevaultau.com",
+  "base": "https://treasurevaultau.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (23 collections)"
+ },
+ {
+  "host": "thegamescapital.com.au",
+  "base": "https://www.thegamescapital.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Good Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 10,
+  "inStock": 1,
+  "currency": "AUD",
+  "reason": "matched 10, in stock 1",
+  "tried": [
+   "gundam-card-game(41):10/40",
+   "gundam(1245):6/250",
+   "gundam-1-144-scale(529):0/250",
+   "gundam-1-100-scale(237):0/155"
+  ],
+  "samples": [
+   "Gundam Card Game - Steel Requiem [GD03] Booster Pack",
+   "Gundam Card Game - Steel Requiem [GD03] Booster Box",
+   "Gundam Card Game - Extra Booster Pack - Eternal Nexus [EB01]",
+   "Gundam Card Game Booster Box – Freedom Ascension [GD05]",
+   "Gundam Card Game - Extra Booster Box - Eternal Nexus [EB01]",
+   "Gundam Card Game Booster Pack – Freedom Ascension [GD05]"
+  ]
+ },
+ {
+  "host": "urbanempirecollectables.com",
+  "base": "https://urbanempirecollectables.com",
+  "market": "AU",
+  "ok": false,
+  "name": "Urban Empire Collectables",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 3,
+  "inStock": 3,
+  "currency": "AUD",
+  "reason": "matched 3, in stock 3",
+  "tried": [
+   "gundam(11):3/8"
+  ],
+  "samples": [
+   "Gundam Card Game Freedom Ascension GD05 Booster Box (English) | 24 Packs",
+   "Gundam Card Game Phantom Aria GD04 Booster Box Sealed",
+   "Gundam Card Game Eternal Nexus EB01 Extra Booster Box"
+  ]
+ },
+ {
+  "host": "awgames.com.au",
+  "base": "https://awgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (20 collections)"
+ },
+ {
+  "host": "shop.area52.com.au",
+  "base": "https://shop.area52.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (13 collections)"
+ },
+ {
+  "host": "firstgames.com.au",
+  "base": "https://firstgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (26 collections)"
+ },
+ {
+  "host": "fromthedeepgames.com.au",
+  "base": "https://fromthedeepgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "From The Deep Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(10):0/5",
+   "gundam-card-game-preorders(3):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "fastbreakcollectables.com.au",
+  "base": "https://fastbreakcollectables.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "FastBreak Cards & Collectables",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(19):0/5"
+  ],
+  "samples": []
+ },
+ {
+  "host": "tcgroupau.com.au",
+  "base": "https://www.tcgroupau.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "TCGroupAU",
+  "existingKey": null,
+  "collections": [
+   "gundam-trading-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 6,
+  "inStock": 1,
+  "currency": "AUD",
+  "reason": "matched 6, in stock 1",
+  "tried": [
+   "gundam-trading-card-game(16):6/16",
+   "english-gundam-booster-boxes(6):6/6",
+   "gundam-tcg-booster-boxes(6):6/6",
+   "gundam-tcg-dual-impact-gd02-booster-box-english(1):1/1",
+   "gundam-tcg-freedom-ascension-gd05-english(1):1/1",
+   "gundam-tcg-phantom-aria-gd04-english(1):1/1",
+   "gundam-tcg-steel-requiem-gd03-booster-box-english(1):1/1",
+   "gundam-tcg-starter-decks(10):0/10",
+   "gundam-tcg-newtype-rising-gd01-english(0):0/0"
+  ],
+  "samples": [
+   "Gundam TCG - Newtype Rising [GD01] - Booster Box",
+   "Gundam TCG - Dual Impact [GD02] - Booster Box",
+   "Gundam TCG - Steel Requiem [GD03] - Booster Box",
+   "Gundam TCG - Phantom Aria [GD04] - Booster Box",
+   "Gundam TCG - Freedom Ascension [GD05] - Booster Box",
+   "Gundam TCG - Stardust Trails [GD06] - Booster Box - English"
+  ]
+ },
+ {
+  "host": "online.lotsmoore.com.au",
+  "base": "https://online.lotsmoore.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (65 collections)"
+ },
+ {
+  "host": "gaminggrounds.com.au",
+  "base": "https://gaminggrounds.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Gaming Grounds",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-singles(43):0/43",
+   "gundam-dual-impact-singles(10):0/10",
+   "gundam-newtype-rising-singles(8):0/8"
+  ],
+  "samples": []
+ },
+ {
+  "host": "gamers-village.com.au",
+  "base": "https://gamers-village.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Gamers Village",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(45):1/16",
+   "gundam(480):0/250",
+   "gundam-builders-parts-and-tools(77):0/69",
+   "gundam-eg-entry-grade(50):0/42",
+   "gundam-base-store-and-limited-products(40):0/33",
+   "gundam-assemble(8):0/8"
+  ],
+  "samples": [
+   "Gundam Card Game: Deck Build Box Freedom Ascension [SC01]"
+  ]
+ },
+ {
+  "host": "playmantis.com.au",
+  "base": "https://playmantis.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (119 collections)"
+ },
+ {
+  "host": "megagames.com.au",
+  "base": "https://megagames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (68 collections)"
+ },
+ {
+  "host": "metrohobbies.com.au",
+  "base": "https://www.metrohobbies.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Metro Hobbies",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg-gundam-assemble(48):3/43",
+   "gundam-sale(171):1/171",
+   "gundam-coming-soon(3556):0/250",
+   "gundam-kits-in-stock(503):0/250",
+   "gundam-new-arrivals(482):0/250",
+   "2020-voucher-promo-gift-guide-gundam-over-50(180):0/176",
+   "gundam-iron-blooded-orphans(69):0/46",
+   "2020-voucher-promo-gift-guide-gundam-over-100(45):0/45",
+   "gundam-universe(26):0/1",
+   "gundam-the-witch-from-mercury(22):0/17"
+  ],
+  "samples": [
+   "Gundam Card Game Booster Pack Steel Requiem [GD03]",
+   "Gundam Card Game Booster Pack Steel Requiem [GD03]",
+   "Gundam Card Game Booster Pack Dual Impact [GD02]",
+   "Gundam Card Game Newtype Rising Booster Pack [GD01]"
+  ]
+ },
+ {
+  "host": "tcg.tabernaclegames.com.au",
+  "base": "https://tcg.tabernaclegames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (45 collections)"
+ },
+ {
+  "host": "plentyofgames.com.au",
+  "base": "https://plentyofgames.com.au",
+  "market": "AU",
+  "ok": true,
+  "name": "Plenty of Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-sealed"
+  ],
+  "kind": "sealed",
+  "matched": 10,
+  "inStock": 3,
+  "currency": "AUD",
+  "reason": null,
+  "tried": [
+   "gundam-sealed(40):10/38"
+  ],
+  "samples": [
+   "Gundam Card Game: Booster Pack - Dual Impact [GD02]",
+   "Gundam Card Game - Steel Requiem [GD03] Booster PACK",
+   "Gundam Card Game - Phantom Aria [GD04] Booster Pack",
+   "Gundam Card Game: Booster Pack - Newtype Rising [GD01]",
+   "Gundam Card Game - Steel Requiem [GD03] Booster Box",
+   "Gundam Card Game - Phantom Aria [GD04] Booster Box"
+  ]
+ },
+ {
+  "host": "unpluggedgames.com.au",
+  "base": "https://unpluggedgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (57 collections)"
+ },
+ {
+  "host": "tabletopcommons.com.au",
+  "base": "https://tabletopcommons.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (46 collections)"
+ },
+ {
+  "host": "thehallofheroes.com.au",
+  "base": "https://thehallofheroes.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "The Hall of Heroes",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(3):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "roningames.com.au",
+  "base": "https://roningames.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Ronin Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(188):0/165",
+   "gundam-entry-grade(5):0/5"
+  ],
+  "samples": []
+ },
+ {
+  "host": "vaultgames.com.au",
+  "base": "https://vaultgames.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (518 collections)"
+ },
+ {
+  "host": "cardbot.co.nz",
+  "base": "https://cardbot.co.nz",
+  "market": "AU",
+  "ok": false,
+  "name": "Card Bot",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(11):1/11"
+  ],
+  "samples": [
+   "Gundam Card Game: Freedom Ascension [GD05] -  Booster Box"
+  ]
+ },
+ {
+  "host": "collectors-space.shop",
+  "base": "https://collectors-space.shop",
+  "market": "AU",
+  "ok": false,
+  "name": "Collectors Space",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(4):1/4",
+   "gundam-singles(0):0/0"
+  ],
+  "samples": [
+   "Gundam Card Game - Booster Pack - Dual Impact [GD02]"
+  ]
+ },
+ {
+  "host": "vault-collectables.com",
+  "base": "https://vault-collectables.com",
+  "market": "AU",
+  "ok": false,
+  "name": "Filmsmen",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(14):1/14"
+  ],
+  "samples": [
+   "Gundam Card Game: Booster Pack – Phantom Aria [GD04]"
+  ]
+ },
+ {
+  "host": "lootgoblincollectables.com",
+  "base": "https://lootgoblincollectables.com",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (29 collections)"
+ },
+ {
+  "host": "rnrhobbies.com.au",
+  "base": "https://rnrhobbies.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "R&R Hobbies",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game-stardust-trails-gd06"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 1,
+  "currency": "AUD",
+  "reason": "matched 2, in stock 1",
+  "tried": [
+   "gundam-tcg(31):2/13",
+   "gundam-card-game-stardust-trails-gd06(3):2/3",
+   "gundam-assemble(9):0/9",
+   "gundam-tcg-starter-decks(9):0/2",
+   "gundam-card-game-booster-pack-steel-requiem-gd03(4):0/0"
+  ],
+  "samples": [
+   "Gundam Card Game Stardust Trails [GD06] Booster Box Case (12 boxes)",
+   "Gundam Card Game Stardust Trails [GD06] Booster Box",
+   "Gundam Card Game Stardust Trails [GD06] Booster Box Case (12 boxes)",
+   "Gundam Card Game Stardust Trails [GD06] Booster Box"
+  ]
+ },
+ {
+  "host": "diablosvault.com.au",
+  "base": "https://diablosvault.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Diablo's Vault",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(8):0/5"
+  ],
+  "samples": []
+ },
+ {
+  "host": "prohobbies.com.au",
+  "base": "https://prohobbies.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (460 collections)"
+ },
+ {
+  "host": "popincollectables.com.au",
+  "base": "https://popincollectables.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "POPin Collectables",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(4):0/4"
+  ],
+  "samples": []
+ },
+ {
+  "host": "topdeckgaming.com.au",
+  "base": "https://topdeckgaming.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Topdeck Gaming Strathfield",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 5,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 5, in stock 0",
+  "tried": [
+   "gundam-tcg(16):5/16"
+  ],
+  "samples": [
+   "Pre Order Gundam Card Game Stardust Trails GD06 Booster Box English",
+   "Gundam Card Game: Eternal Nexus Extra Booster Box EB01",
+   "Gundam Card Game GD04 Booster Box English Phantom Aria",
+   "Gundam Card Game GD03 Steel Requiem Booster Box English TCG",
+   "Gundam Card Game Dual Impact GD02 Booster Box"
+  ]
+ },
+ {
+  "host": "gametraderschermside.com.au",
+  "base": "https://gametraderschermside.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Gametraders Chermside",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-1(713):0/119",
+   "gundam-trading-cards(5):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "hobbykitz.com.au",
+  "base": "https://hobbykitz.com.au",
+  "market": "AU",
+  "ok": true,
+  "name": " Hobby Kitz",
+  "existingKey": null,
+  "collections": [
+   "card-stars-gundam-singles"
+  ],
+  "kind": "singles",
+  "matched": 40,
+  "inStock": 39,
+  "currency": "AUD",
+  "reason": null,
+  "tried": [
+   "card-stars-gundam-singles(40):40/40",
+   "gundam-non-preorders(748):0/250",
+   "gundam(688):0/250",
+   "gundam-seed(136):0/136",
+   "high-inventory-gundams(87):0/87",
+   "gundam-build-series(84):0/79",
+   "gundam-00(65):0/62",
+   "gundam-pre-orders(64):0/63",
+   "gundam-wing(52):0/45",
+   "zeta-gundam(48):0/46"
+  ],
+  "samples": [
+   "Dramatic Turnabout (R+) (GD02-100) [Dual Impact]",
+   "Gundam Mk-II (Titans) (R+) (GD02-003) [Dual Impact]",
+   "Xi Gundam (Flight Form) (R+) (GD03-036) [Steel Requiem]",
+   "Resource (R-010) (C+) (R-010) [Dual Impact]",
+   "Resource (R-026) (C+) (R-026) [Steel Requiem]",
+   "Full Armor Unicorn Gundam (Destroy Mode) (U+) (GD03-010) [Steel Requiem]"
+  ]
+ },
+ {
+  "host": "gametradersseaford.com.au",
+  "base": "https://gametradersseaford.com.au",
+  "market": "AU",
+  "ok": false,
+  "name": "Gametraders Seaford",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "AUD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(671):0/177",
+   "gundam-markers(61):0/60",
+   "gundam-tcg(31):0/6"
+  ],
+  "samples": []
+ }
+]

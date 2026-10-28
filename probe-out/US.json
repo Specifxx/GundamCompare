@@ -1,0 +1,3557 @@
+[
+ {
+  "host": "bentonville.geargamingstore.com",
+  "base": "https://bentonville.geargamingstore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (68 collections)"
+ },
+ {
+  "host": "mistymountaingames.com",
+  "base": "https://www.mistymountaingames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (11 collections)"
+ },
+ {
+  "host": "onestoptcg.com",
+  "base": "https://onestoptcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (64 collections)"
+ },
+ {
+  "host": "thecardcave.com.au",
+  "base": "https://thecardcave.com.au",
+  "market": "AU",
+  "ok": false,
+  "reason": "no gundam collection (81 collections)"
+ },
+ {
+  "host": "knightanddaygames.com",
+  "base": "https://knightanddaygames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (113 collections)"
+ },
+ {
+  "host": "singles.stompinggroundstcg.com",
+  "base": "https://singles.stompinggroundstcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (13 collections)"
+ },
+ {
+  "host": "shippintexas.com",
+  "base": "https://shippintexas.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (67 collections)"
+ },
+ {
+  "host": "thenerdmerchant.com",
+  "base": "https://thenerdmerchant.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (144 collections)"
+ },
+ {
+  "host": "foxandfablegames.com",
+  "base": "https://foxandfablegames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (13 collections)"
+ },
+ {
+  "host": "gamecraftgamestore.com",
+  "base": "https://gamecraftgamestore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (60 collections)"
+ },
+ {
+  "host": "lapinetabletopgaming.com",
+  "base": "https://lapinetabletopgaming.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (8 collections)"
+ },
+ {
+  "host": "tothetable.game",
+  "base": "https://tothetable.game",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (6 collections)"
+ },
+ {
+  "host": "mainephasehobbies.com",
+  "base": "https://mainephasehobbies.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "zamliytcg.com",
+  "base": "https://zamliytcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (71 collections)"
+ },
+ {
+  "host": "store.gglehi.com",
+  "base": "https://store.gglehi.com",
+  "market": "US",
+  "ok": false,
+  "name": "Game Grid - Lehi Store",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg-weekly-constructed-events(77):0/13",
+   "gundam-singles(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "dkscards.com",
+  "base": "https://dkscards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (5 collections)"
+ },
+ {
+  "host": "thehubtcg.com",
+  "base": "https://thehubtcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (39 collections)"
+ },
+ {
+  "host": "nexustabletopgames.com",
+  "base": "https://nexustabletopgames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Nexus Tabletop Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game-sealed"
+  ],
+  "kind": "sealed",
+  "matched": 49,
+  "inStock": 1,
+  "currency": "USD",
+  "reason": "matched 49, in stock 1",
+  "tried": [
+   "gundam-card-game-sealed(62):49/55",
+   "gundam-card-game-singles(0):0/0"
+  ],
+  "samples": [
+   "Steel Requiem Booster Pack",
+   "Freedom Ascension Booster Pack",
+   "Phantom Aria Booster Pack",
+   "Newtype Rising Booster Pack",
+   "Dual Impact Booster Pack",
+   "Phantom Aria Booster Box"
+  ]
+ },
+ {
+  "host": "thewarpgate.net",
+  "base": "https://thewarpgate.net",
+  "market": "US",
+  "ok": false,
+  "name": "The Warp Gate",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(1):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "larrysgamestore.com",
+  "base": "https://larrysgamestore.com",
+  "market": "US",
+  "ok": false,
+  "name": "Larry's Game Store",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-models(70):0/70"
+  ],
+  "samples": []
+ },
+ {
+  "host": "gamegridif.com",
+  "base": "https://gamegridif.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (50 collections)"
+ },
+ {
+  "host": "vaultgamestore.com",
+  "base": "https://vaultgamestore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (19 collections)"
+ },
+ {
+  "host": "kollectkorner.com",
+  "base": "https://kollectkorner.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "gamenerdz.com",
+  "base": "https://www.gamenerdz.com",
+  "ok": false,
+  "reason": "not Shopify or unreachable (ipt type=\"module\" async fetchpriority=\"low\" src=\"https://www.gamenerdz.com/.webm)"
+ },
+ {
+  "host": "balancegamingfl.com",
+  "base": "https://balancegamingfl.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (96 collections)"
+ },
+ {
+  "host": "spankyscardshop.com",
+  "base": "https://spankyscardshop.com",
+  "market": "US",
+  "ok": true,
+  "name": "Spankys Card Shop",
+  "existingKey": null,
+  "collections": [
+   "gundam-sealed-product"
+  ],
+  "kind": "sealed",
+  "matched": 19,
+  "inStock": 5,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-sealed-product(23):19/23"
+  ],
+  "samples": [
+   "Dual Impact Booster Pack GD02 Gundam Card Game",
+   "Dual Impact Booster Box GD02 Gundam Card Game",
+   "Starter Deck 08: Flash of Radiance - (ST08) [Gundam Trading Card Game]",
+   "Starter Deck 02: Wings of Advance - (ST02) [Gundam Trading Card Game]",
+   "Starter Deck 04: SEED Strike - (ST04) [Gundam Trading Card Game]",
+   "Starter Deck 06: Clan Unity - (ST06) [Gundam Trading Card Game]"
+  ]
+ },
+ {
+  "host": "quicktcg.com",
+  "base": "https://quicktcg.com",
+  "market": "US",
+  "ok": false,
+  "name": "QuickTCG LLC",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 2, in stock 0",
+  "tried": [
+   "gundam-tcg(2):2/2"
+  ],
+  "samples": [
+   "Gundam: Dual Impact Booster Box - Dual Impact (GD02)",
+   "Gundam: Newtype Rising Booster Box - GD01"
+  ]
+ },
+ {
+  "host": "columbuscardshop.com",
+  "base": "https://columbuscardshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (19 collections)"
+ },
+ {
+  "host": "cardcaverntradingcards.com",
+  "base": "https://www.cardcaverntradingcards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (350 collections)"
+ },
+ {
+  "host": "cardxcards.com",
+  "base": "https://cardxcards.com",
+  "market": "US",
+  "ok": false,
+  "name": "Card X Cards ",
+  "existingKey": null,
+  "collections": [
+   "riftbound-gundam-in-stock"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 2,
+  "currency": "USD",
+  "reason": "matched 2, in stock 2",
+  "tried": [
+   "riftbound-gundam-in-stock(8):2/7"
+  ],
+  "samples": [
+   "Freedom Ascension Booster Pack - Freedom Ascension",
+   "Freedom Ascension Booster Box"
+  ]
+ },
+ {
+  "host": "pullbighits.com",
+  "base": "https://www.pullbighits.com",
+  "market": "US",
+  "ok": false,
+  "name": "Do Big Things Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(11):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "us.storedevastation.com",
+  "base": "https://us.storedevastation.com",
+  "market": "US",
+  "ok": true,
+  "name": "Devastation Store",
+  "existingKey": null,
+  "collections": [
+   "sealed-gundam"
+  ],
+  "kind": "sealed",
+  "matched": 18,
+  "inStock": 9,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "sealed-gundam(27):18/20"
+  ],
+  "samples": [
+   "Newtype Rising Booster Box",
+   "Starter Deck 03: Zeon's Rush",
+   "Dual Impact Booster Box",
+   "Freedom Ascension Booster Box",
+   "Starter Deck 02: Wings of Advance",
+   "Phantom Aria Booster Box"
+  ]
+ },
+ {
+  "host": "dragonsdenshop.com",
+  "base": "https://dragonsdenshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (56 collections)"
+ },
+ {
+  "host": "epikcg.com",
+  "base": "https://www.epikcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (57 collections)"
+ },
+ {
+  "host": "dragon-egg-games.com",
+  "base": "https://www.dragon-egg-games.com",
+  "market": "US",
+  "ok": false,
+  "name": "Dragon Egg Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(67):8/66"
+  ],
+  "samples": [
+   "Gundam Card Game: Dual Impact: Booster Box",
+   "Gundam Card Game: Eternal Nexus: Booster Box",
+   "Gundam Card Game: Eternal Nexus: Booster Pack",
+   "Gundam Card Game: Freedom Ascension: Booster Pack",
+   "Gundam Card Game: Phantom Aria: Booster Box",
+   "Gundam Card Game: Phantom Aria: Booster Pack"
+  ]
+ },
+ {
+  "host": "eternalgameschesterfield.com",
+  "base": "https://eternalgameschesterfield.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (35 collections)"
+ },
+ {
+  "host": "frankscardshopnj.com",
+  "base": "https://frankscardshopnj.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (45 collections)"
+ },
+ {
+  "host": "wulfgaming.com",
+  "base": "https://wulfgaming.com",
+  "market": "US",
+  "ok": true,
+  "name": "Wulf Gaming",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg-1"
+  ],
+  "kind": "both",
+  "matched": 160,
+  "inStock": 30,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg-1(214):160/212",
+   "gundam(1):0/1",
+   "gundam-card-game-pre-orders(0):0/0"
+  ],
+  "samples": [
+   "Gundam TCG: Freedom Ascension - Freedom Ascension Booster Box (GD05)",
+   "Gundam TCG: Phantom Aria - Phantom Aria Booster Box (GD04)",
+   "Gundam TCG: Freedom Ascension - Freedom Ascension Booster Pack (GD05)",
+   "Gundam TCG: Phantom Aria - Phantom Aria Booster Pack (GD04)",
+   "Gundam TCG: Starter Deck 09: Destiny Ignition - Starter Deck 09: Destiny Ignition (ST09)",
+   "Gundam TCG: Starter Deck 08: Flash of Radiance - Starter Deck 08: Flash of Radiance (ST08)"
+  ]
+ },
+ {
+  "host": "forgottenpathgames.com",
+  "base": "https://forgottenpathgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (48 collections)"
+ },
+ {
+  "host": "galacticgamez.com",
+  "base": "https://www.galacticgamez.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (52 collections)"
+ },
+ {
+  "host": "eclipsecardsandhobby.com",
+  "base": "https://www.eclipsecardsandhobby.com",
+  "market": "US",
+  "ok": false,
+  "name": "Eclipse Cards and Hobby",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-sealed(9):0/0",
+   "gundam(6):0/1",
+   "gundam-tcg-singles(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "magicandmonsters.com",
+  "base": "https://www.magicandmonsters.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (17 collections)"
+ },
+ {
+  "host": "levelupgamesmd.com",
+  "base": "https://www.levelupgamesmd.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (106 collections)"
+ },
+ {
+  "host": "five6gaming.com",
+  "base": "https://www.five6gaming.com",
+  "market": "US",
+  "ok": false,
+  "name": "FIVE6 Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(8):1/8",
+   "gundam-sealed(2):1/2"
+  ],
+  "samples": [
+   "Gundam Steel Requiem Booster Box",
+   "Gundam Steel Requiem Booster Box"
+  ]
+ },
+ {
+  "host": "thehaventabletop.com",
+  "base": "https://thehaventabletop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (0 collections)"
+ },
+ {
+  "host": "motorcitygaming.net",
+  "base": "https://motorcitygaming.net",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (114 collections)"
+ },
+ {
+  "host": "thecollectionrealm.com",
+  "base": "https://thecollectionrealm.com",
+  "market": "US",
+  "ok": false,
+  "name": "COLLECTION REALM",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 13,
+  "inStock": 2,
+  "currency": "USD",
+  "reason": "matched 13, in stock 2",
+  "tried": [
+   "gundam-tcg(37):13/26",
+   "gundam-tcg-starter-deck(13):7/13",
+   "gundam-tcg-booster-boxes(9):6/9",
+   "gundam-pre-sale(24):0/24",
+   "gundam-tcg-booster-pack(9):0/0",
+   "gundam-tcg-pre-order(4):0/2",
+   "gundam-deluxe-set(2):0/2",
+   "gundam-premium-col-set(2):0/2",
+   "gundam-deck-build-box(1):0/1",
+   "gundam-tcg-single-pack(1):0/0"
+  ],
+  "samples": [
+   "Gundam Card Game Freedom Ascension GD05 Booster Box | 1st Anniversary Trading Card Expansion | 24 Booster Packs | Features G Gundam, Strike Freedom Gundam & Nu Gundam",
+   "Gundam Card Game EB01 Eternal Nexus Booster Box Collectible Trading Cards Sealed Display",
+   "GUNDAM CARD GAME: Phantom Aria Booster Box GD04",
+   "Gundam TCG GD 03 Steel Requiem Booster Box English Edition",
+   "Gundam TCG Starter Deck 07 Celestial Drive ST07 Card Game Deck",
+   "Gundam TCG Starter Deck 05 ST05 Iron Bloom Ready to Play Card Deck, Bandai Gundam Card Game Starter Deck, Collectible Trading Cards, Anime Cards, TCG Prebuilt Deck for Players and Collectors"
+  ]
+ },
+ {
+  "host": "gamelandia.fun",
+  "base": "https://gamelandia.fun",
+  "market": "US",
+  "ok": true,
+  "name": "Gamelandia",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 28,
+  "inStock": 14,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-card-game(45):28/40",
+   "gundam(9):0/7",
+   "gundam-assemble(9):0/7",
+   "gundam-tcg-freedom-ascension(0):0/0"
+  ],
+  "samples": [
+   "Gundam TCG: Newtype Rising Booster Pack [GD01]",
+   "Phantom Aria Booster Box [GD04]",
+   "Steel Requiem Booster Box [GD03]",
+   "Starter Deck 08: Flash of Radiance [ST08 - 8]",
+   "Starter Deck 07: Celestial Drive [ST07 - 7]",
+   "Newtype Rising Booster Box [GD01 - 000]"
+  ]
+ },
+ {
+  "host": "tradingcardworld.store",
+  "base": "https://tradingcardworld.store",
+  "market": "US",
+  "ok": false,
+  "name": "Trading Card World",
+  "existingKey": null,
+  "collections": [
+   "gundam-1"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 2,
+  "currency": "USD",
+  "reason": "matched 2, in stock 2",
+  "tried": [
+   "gundam-1(4):2/4"
+  ],
+  "samples": [
+   "Starter Deck 07: Celestial Drive - Starter Deck 07: Celestial Drive (ST07)",
+   "Starter Deck 08: Flash of Radiance - Starter Deck 08: Flash of Radiance (ST08)"
+  ]
+ },
+ {
+  "host": "solacido.com",
+  "base": "https://solacido.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (25 collections)"
+ },
+ {
+  "host": "ajtradingbros.com",
+  "base": "https://ajtradingbros.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (18 collections)"
+ },
+ {
+  "host": "progressccg.com",
+  "base": "https://progressccg.com",
+  "market": "US",
+  "ok": false,
+  "name": "Progress CCG",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-models(50):0/34",
+   "gundam-sealed(1):0/1",
+   "gundam(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "waywardcitygames.net",
+  "base": "https://waywardcitygames.net",
+  "market": "US",
+  "ok": false,
+  "name": "Wayward City Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 4,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": "matched 4, in stock 4",
+  "tried": [
+   "gundam-card-game(25):4/16",
+   "gundam-tcg(1):0/1"
+  ],
+  "samples": [
+   "Dual Impact - Booster Box",
+   "Freedom Ascension - Deck Build Box",
+   "Freedom Ascension - Booster Box",
+   "Eternal Nexus - Booster Box"
+  ]
+ },
+ {
+  "host": "thetrainercourt.com",
+  "base": "https://www.thetrainercourt.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (153 collections)"
+ },
+ {
+  "host": "blackswampgames.com",
+  "base": "https://blackswampgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (11 collections)"
+ },
+ {
+  "host": "alohacardshop.com",
+  "base": "https://www.alohacardshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (40 collections)"
+ },
+ {
+  "host": "151collectables.com",
+  "base": "https://151collectables.com",
+  "market": "US",
+  "ok": false,
+  "name": "151Collectables",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-copy(1):0/0",
+   "gundam(0):0/0",
+   "gundam-sealed-product-copy(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "boardwipe.com",
+  "base": "https://boardwipe.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (168 collections)"
+ },
+ {
+  "host": "cardhaven-games.com",
+  "base": "https://cardhaven-games.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (124 collections)"
+ },
+ {
+  "host": "bunkscardcorner.com",
+  "base": "https://bunkscardcorner.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (43 collections)"
+ },
+ {
+  "host": "theclubhousecards.com",
+  "base": "https://theclubhousecards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (96 collections)"
+ },
+ {
+  "host": "collectivecubed.com",
+  "base": "https://collectivecubed.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (17 collections)"
+ },
+ {
+  "host": "finalformcards.com",
+  "base": "https://www.finalformcards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (10 collections)"
+ },
+ {
+  "host": "glamorousgamers.com",
+  "base": "https://www.glamorousgamers.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (71 collections)"
+ },
+ {
+  "host": "dynamiccardcollectors.com",
+  "base": "https://dynamiccardcollectors.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (221 collections)"
+ },
+ {
+  "host": "cosmicgames.com",
+  "base": "https://www.cosmicgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (323 collections)"
+ },
+ {
+  "host": "keyitemscollect.com",
+  "base": "https://keyitemscollect.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (48 collections)"
+ },
+ {
+  "host": "dublin.littlerootgames.com",
+  "base": "https://dublin.littlerootgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (225 collections)"
+ },
+ {
+  "host": "collectionhousecafe.com",
+  "base": "https://collectionhousecafe.com",
+  "market": "US",
+  "ok": false,
+  "name": "Collection House Cafe",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-sealed(1):1/1",
+   "gundam-singles(0):0/0"
+  ],
+  "samples": [
+   "Freedom Ascension Sleeved Booster Pack"
+  ]
+ },
+ {
+  "host": "holohaven.com",
+  "base": "https://holohaven.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (63 collections)"
+ },
+ {
+  "host": "onendunncards.com",
+  "base": "https://onendunncards.com",
+  "ok": false,
+  "reason": "not Shopify or unreachable (https://onendunncards.com/meta.json: HTTP 404 )"
+ },
+ {
+  "host": "nolatcg.com",
+  "base": "https://nolatcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (304 collections)"
+ },
+ {
+  "host": "hoarditall.com",
+  "base": "https://www.hoarditall.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "redfoxgamingonline.com",
+  "base": "https://redfoxgamingonline.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (424 collections)"
+ },
+ {
+  "host": "lthobbies.com",
+  "base": "https://www.lthobbies.com",
+  "market": "US",
+  "ok": false,
+  "name": "L.T.’s Hobbies & Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-sealed-product(9):0/3"
+  ],
+  "samples": []
+ },
+ {
+  "host": "spankyslootstash.com",
+  "base": "https://www.spankyslootstash.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (196 collections)"
+ },
+ {
+  "host": "svsportscards.com",
+  "base": "https://svsportscards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (26 collections)"
+ },
+ {
+  "host": "thegamecornergames.com",
+  "base": "https://www.thegamecornergames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (47 collections)"
+ },
+ {
+  "host": "mightymeeple.com",
+  "base": "https://mightymeeple.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (10 collections)"
+ },
+ {
+  "host": "shufflenroll.com",
+  "base": "https://shufflenroll.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (21 collections)"
+ },
+ {
+  "host": "thenexusgnv.com",
+  "base": "https://thenexusgnv.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (2 collections)"
+ },
+ {
+  "host": "tabletopgamingcenter.com",
+  "base": "https://www.tabletopgamingcenter.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (35 collections)"
+ },
+ {
+  "host": "unsettledgeeks.com",
+  "base": "https://unsettledgeeks.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (18 collections)"
+ },
+ {
+  "host": "pro.wildthingsgames.com",
+  "base": "https://pro.wildthingsgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (16 collections)"
+ },
+ {
+  "host": "blackwolfcollectibles.com",
+  "base": "https://blackwolfcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (41 collections)"
+ },
+ {
+  "host": "allpoketcg.com",
+  "base": "https://allpoketcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (44 collections)"
+ },
+ {
+  "host": "cardtopiacollectibles.com",
+  "base": "https://cardtopiacollectibles.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (7 collections)"
+ },
+ {
+  "host": "common-lands.com",
+  "base": "https://common-lands.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (129 collections)"
+ },
+ {
+  "host": "gghobbycard.com",
+  "base": "https://gghobbycard.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (24 collections)"
+ },
+ {
+  "host": "cashcardsunlimited.com",
+  "base": "https://cashcardsunlimited.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (93 collections)"
+ },
+ {
+  "host": "collectorstore.com",
+  "base": "https://collectorstore.com",
+  "market": "US",
+  "ok": false,
+  "name": "Collector Store LLC",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "games-gundam-tcg(38):4/32",
+   "miniatures-gundam-assemble(33):0/33"
+  ],
+  "samples": [
+   "*BREAK* Gundam TCG: Phantom Aria Booster Pack [GD04]",
+   "*BREAK* Gundam TCG: Freedom Ascension Booster Pack [GD05]",
+   "Gundam TCG: Phantom Aria Booster Box (GD04)",
+   "Gundam TCG: Dual Impact Booster Box (GD02)"
+  ]
+ },
+ {
+  "host": "hobbycardshop.com",
+  "base": "https://hobbycardshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (36 collections)"
+ },
+ {
+  "host": "gamersgrove.com",
+  "base": "https://gamersgrove.com",
+  "market": "US",
+  "ok": false,
+  "name": "Gamers Grove",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-kits(45):0/12",
+   "gundam-models(45):0/12"
+  ],
+  "samples": []
+ },
+ {
+  "host": "jarocards.com",
+  "base": "https://jarocards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "geekerygames.com",
+  "base": "https://geekerygames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Geekery Games",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 11,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 11, in stock 0",
+  "tried": [
+   "gundam(14):11/13",
+   "gundam-assemble(2):0/2",
+   "gundam-assemble-copy(2):0/2",
+   "gundam-assemble-models-copy(0):0/0"
+  ],
+  "samples": [
+   "Gundam Stardust Trails Booster Box",
+   "Gundam GD05 Freedom Ascension Deck Build Box",
+   "Gundam GD05 Freedom Ascension Booster Box",
+   "Gundam Starter Deck 06 Clan Unity",
+   "Eternal Nexus Booster Box",
+   "Gundam GD04 Phantom Aria Booster Box"
+  ]
+ },
+ {
+  "host": "mhdealsplus.com",
+  "base": "https://mhdealsplus.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (73 collections)"
+ },
+ {
+  "host": "1stcapitalgaming.com",
+  "base": "https://1stcapitalgaming.com",
+  "market": "US",
+  "ok": false,
+  "name": "1st Capital Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "york-gundam-singles-for-online-kiosk(276):0/0",
+   "htown-gundam-singles-for-online-kiosk(173):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "loosepacks.com",
+  "base": "https://loosepacks.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (137 collections)"
+ },
+ {
+  "host": "hobby-addicts.com",
+  "base": "https://www.hobby-addicts.com",
+  "market": "US",
+  "ok": false,
+  "name": "Hobby Addicts",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(32):4/21"
+  ],
+  "samples": [
+   "Gundam Card Game: Dual Impact Booster Box (GD02)",
+   "Gundam Card Game: Newtype Rising Booster Box (GD01)",
+   "Gundam Card Game: Steel Requiem Booster Box (GD03)",
+   "Gundam Card Game: Freedom Ascension Deck Build Box SC01"
+  ]
+ },
+ {
+  "host": "n4ytcg.com",
+  "base": "https://www.n4ytcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (30 collections)"
+ },
+ {
+  "host": "pokemonplug.com",
+  "base": "https://pokemonplug.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (188 collections)"
+ },
+ {
+  "host": "primecitycomics.com",
+  "base": "https://primecitycomics.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (34 collections)"
+ },
+ {
+  "host": "mantisgamestudio.com",
+  "base": "https://mantisgamestudio.com",
+  "market": "US",
+  "ok": false,
+  "name": "MantisGamingStudios",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-kits(62):0/45",
+   "tcgs-other-gundam(26):0/21"
+  ],
+  "samples": []
+ },
+ {
+  "host": "skyboxct.com",
+  "base": "https://skyboxct.com",
+  "market": "US",
+  "ok": true,
+  "name": "Skybox Collectibles",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 16,
+  "inStock": 9,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(33):16/27"
+  ],
+  "samples": [
+   "Gundam TCG: Starter Deck 14 (Heavy Dominion) (SALE)",
+   "Gundam TCG: Starter Deck 13 (Silent Barrage) (SALE)",
+   "Gundam TCG: Starter Deck 12 (Raging Onslaught) (SALE)",
+   "Gundam TCG: Starter Deck 11 (Aquatic Assault) (SALE)",
+   "Gundam TCG: Freedom Ascension Deck Build Box",
+   "Gundam TCG: Freedom Ascension Booster Box (GD05)"
+  ]
+ },
+ {
+  "host": "roboskillz.com",
+  "base": "https://www.roboskillz.com",
+  "market": "US",
+  "ok": true,
+  "name": "BallSquad Shop",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 7,
+  "inStock": 7,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam(13):7/11"
+  ],
+  "samples": [
+   "Gundam Eternal Nexus EB01 Booster Pack",
+   "Gundam Steel Requiem GD03 Booster Pack",
+   "Gundam Steel Requiem GD03 Booster Box",
+   "Gundam Starter Deck 11: Aquatic Assault (ST11)",
+   "Gundam Starter Deck 12: Raging Onslaught (ST12)",
+   "Gundam Starter Deck 13: Silent Barrage (ST13)"
+  ]
+ },
+ {
+  "host": "stonebrookcollectibles.com",
+  "base": "https://stonebrookcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (46 collections)"
+ },
+ {
+  "host": "tcghobby.com",
+  "base": "https://www.tcghobby.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (116 collections)"
+ },
+ {
+  "host": "tcgora.com",
+  "base": "https://tcgora.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (8 collections)"
+ },
+ {
+  "host": "ultimasupply.com",
+  "base": "https://ultimasupply.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "accidentallycoolgames.com",
+  "base": "https://accidentallycoolgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (187 collections)"
+ },
+ {
+  "host": "poke-collect.com",
+  "base": "https://poke-collect.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (48 collections)"
+ },
+ {
+  "host": "animeimports.net",
+  "base": "https://animeimports.net",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (114 collections)"
+ },
+ {
+  "host": "animeislandca.com",
+  "base": "https://animeislandca.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (64 collections)"
+ },
+ {
+  "host": "nerdzoic.com",
+  "base": "https://nerdzoic.com",
+  "market": "US",
+  "ok": false,
+  "name": "Nerdzoic Toy Store",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-alliance(182):0/125",
+   "gundam-assemble-1(15):0/15",
+   "gundam-universe(15):0/15"
+  ],
+  "samples": []
+ },
+ {
+  "host": "atlasgames.store",
+  "base": "https://atlasgames.store",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (34 collections)"
+ },
+ {
+  "host": "astralgamesonline.com",
+  "base": "https://astralgamesonline.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (49 collections)"
+ },
+ {
+  "host": "bamcards.com",
+  "base": "https://bamcards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (173 collections)"
+ },
+ {
+  "host": "bluejayscauldron.com",
+  "base": "https://bluejayscauldron.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (57 collections)"
+ },
+ {
+  "host": "alchemistsrefuge.shop",
+  "base": "https://alchemistsrefuge.shop",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (1368 collections)"
+ },
+ {
+  "host": "bluemistcollectibles.com",
+  "base": "https://bluemistcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (208 collections)"
+ },
+ {
+  "host": "alphaomegahobby.com",
+  "base": "https://alphaomegahobby.com",
+  "market": "US",
+  "ok": false,
+  "name": "Alpha Omega Hobby",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(14):1/14",
+   "gundam(44):0/44",
+   "gundam-assemble(13):0/13"
+  ],
+  "samples": [
+   "Gundam CG : Dual Impact booster box"
+  ]
+ },
+ {
+  "host": "cardandcollectibleguys.com",
+  "base": "https://cardandcollectibleguys.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (39 collections)"
+ },
+ {
+  "host": "bytheboardgames.com",
+  "base": "https://bytheboardgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (122 collections)"
+ },
+ {
+  "host": "baxtersrealm.com",
+  "base": "https://baxtersrealm.com",
+  "market": "US",
+  "ok": false,
+  "name": "Baxter's Game Store",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(122):5/121"
+  ],
+  "samples": [
+   "Gundam - Newtype Rising Booster Pack",
+   "Gundam Dual Impact Booster Pack",
+   "Gundam Card Game Steel Requiem Booster Box",
+   "Gundam Card Game Steel Requiem Booster Pack",
+   "Gundam TCG - Eternal Nexus Booster Pack"
+  ]
+ },
+ {
+  "host": "cardnallgaming.com",
+  "base": "https://cardnallgaming.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (211 collections)"
+ },
+ {
+  "host": "boardgamesdallas.com",
+  "base": "https://boardgamesdallas.com",
+  "market": "US",
+  "ok": false,
+  "name": "Common Ground Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(37):1/3"
+  ],
+  "samples": [
+   "Gundam TCG [GD05] Deck Build Box Freedom Ascension"
+  ]
+ },
+ {
+  "host": "bricksandheroes.com",
+  "base": "https://bricksandheroes.com",
+  "market": "US",
+  "ok": false,
+  "name": "Bricks And Heroes",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-models(157):0/157"
+  ],
+  "samples": []
+ },
+ {
+  "host": "cardsafari.us",
+  "base": "https://cardsafari.us",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (17 collections)"
+ },
+ {
+  "host": "cardcooptcg.com",
+  "base": "https://cardcooptcg.com",
+  "market": "US",
+  "ok": true,
+  "name": "The Card Coop",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 9,
+  "inStock": 9,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam(20):9/10"
+  ],
+  "samples": [
+   "Starter Deck 13 (ST13) - Silent Barrage",
+   "Starter Deck 14 (ST14) - Heavy Dominion",
+   "Deck Build Box (SC01) - Freedom Ascension",
+   "Starter Deck 12 (ST12) - Raging Onslaught",
+   "Starter Deck 11 (ST11) - Aquatic Assault",
+   "Starter Deck 06 (ST06) - Clan Unity"
+  ]
+ },
+ {
+  "host": "cardpopusa.com",
+  "base": "https://cardpopusa.com",
+  "market": "US",
+  "ok": true,
+  "name": "CARDPOPUSA",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 12,
+  "inStock": 3,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam(41):12/40"
+  ],
+  "samples": [
+   "Gundam - BP01 Newtype Rising - Booster Pack",
+   "Gundam - Freedom Ascension - GD05 - Booster Box",
+   "Gundam - GD02 Dual Impact - Booster Pack",
+   "Gundam - Phantom Aria - GD04 - Booster Box",
+   "Gundam - GD03 Steel Requiem - Booster Pack",
+   "Gundam - Steel Requiem - GD03 - Booster Box"
+  ]
+ },
+ {
+  "host": "collectorsemporium.com",
+  "base": "https://collectorsemporium.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (279 collections)"
+ },
+ {
+  "host": "cardmonstergames.com",
+  "base": "https://cardmonstergames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Card Monster Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(9):0/0",
+   "gundam-tcg-sealed(9):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "championcardcollector.com",
+  "base": "https://championcardcollector.com",
+  "market": "US",
+  "ok": true,
+  "name": "Champion Card Collector",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 12,
+  "inStock": 9,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(29):12/29"
+  ],
+  "samples": [
+   "Eternal Nexus Booster Box (EB01)",
+   "GD03 Steel Requiem Booster Pack",
+   "GD03 Steel Requiem Booster Box",
+   "BP02 Dual Impact Booster Pack",
+   "BP02 Dual Impact Booster Box",
+   "GD05 Freedom Ascension Booster Pack"
+  ]
+ },
+ {
+  "host": "championtcg.com",
+  "base": "https://championtcg.com",
+  "market": "US",
+  "ok": false,
+  "name": "ChampionTCG",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 1,
+  "currency": "USD",
+  "reason": "matched 2, in stock 1",
+  "tried": [
+   "gundam(2):2/2"
+  ],
+  "samples": [
+   "Gundam - Booster Box - Eternal Nexus [EB01]",
+   "Gundam - Booster Pack - Eternal Nexus [EB01] (Loose)"
+  ]
+ },
+ {
+  "host": "cosmicbham.com",
+  "base": "https://cosmicbham.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (323 collections)"
+ },
+ {
+  "host": "darkholdgames.com",
+  "base": "https://darkholdgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (55 collections)"
+ },
+ {
+  "host": "dinoscardsandcollectibles.com",
+  "base": "https://dinoscardsandcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "name": "Dino's Cards & Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(3):0/3"
+  ],
+  "samples": []
+ },
+ {
+  "host": "digitalheroes.com",
+  "base": "https://digitalheroes.com",
+  "market": "US",
+  "ok": false,
+  "name": "Digital Heroes",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game-gd01"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 2,
+  "currency": "USD",
+  "reason": "matched 2, in stock 2",
+  "tried": [
+   "gundam-card-game-gd01(21):2/4"
+  ],
+  "samples": [
+   "GUNDAM CARD GAME Booster Pack Steel Requiem [GD03]",
+   "GUNDAM CARD GAME Starter Deck 06: Clan Unity (ST06)"
+  ]
+ },
+ {
+  "host": "cosmicdestroyers.com",
+  "base": "https://cosmicdestroyers.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (123 collections)"
+ },
+ {
+  "host": "ettingames.com",
+  "base": "https://ettingames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (87 collections)"
+ },
+ {
+  "host": "dvgtcg.com",
+  "base": "https://dvgtcg.com",
+  "market": "US",
+  "ok": false,
+  "name": "Dark Vassal Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(34):0/33",
+   "gundam-tcg(32):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "envycardstore.com",
+  "base": "https://envycardstore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (109 collections)"
+ },
+ {
+  "host": "cardsnmo.com",
+  "base": "https://cardsnmo.com",
+  "market": "US",
+  "ok": true,
+  "name": "Cards N MO",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 18,
+  "inStock": 18,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam(20):18/18",
+   "gundam-starter-deck(15):14/14",
+   "gundam-booster-box(3):2/2",
+   "gundam-booster-pack(2):2/2"
+  ],
+  "samples": [
+   "Freedom Ascension Booster Box [Freedom Ascension]",
+   "Phantom Aria Booster Pack [Phantom Aria]",
+   "Dual Impact Booster Pack [Dual Impact]",
+   "Starter Deck 14: Heavy Dominion Display [Starter Deck 14: Heavy Dominion]",
+   "Starter Deck 14: Heavy Dominion [Starter Deck 14: Heavy Dominion]",
+   "Starter Deck 13: Silent Barrage Display [Starter Deck 13: Silent Barrage]"
+  ]
+ },
+ {
+  "host": "fayetteville.geargamingstore.com",
+  "base": "https://fayetteville.geargamingstore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (67 collections)"
+ },
+ {
+  "host": "funtimetoysandgifts.com",
+  "base": "https://funtimetoysandgifts.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (99 collections)"
+ },
+ {
+  "host": "galaxygamesllc.com",
+  "base": "https://galaxygamesllc.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (34 collections)"
+ },
+ {
+  "host": "expresstcg.com",
+  "base": "https://expresstcg.com",
+  "market": "US",
+  "ok": false,
+  "name": "EXPRESS TCG",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(36):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "gamerealm.com",
+  "base": "https://gamerealm.com",
+  "market": "US",
+  "ok": false,
+  "name": "Game Realm",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg-sealed-and-singles"
+  ],
+  "kind": "sealed",
+  "matched": 8,
+  "inStock": 1,
+  "currency": "USD",
+  "reason": "matched 8, in stock 1",
+  "tried": [
+   "gundam-tcg-sealed-and-singles(35):8/28"
+  ],
+  "samples": [
+   "GD04 \"Phantom Aria\": Booster Pack",
+   "GD03 \"Steel Requiem\": Booster Pack",
+   "GD02 \"Dual Impact\": Booster Pack",
+   "GD01 \"Newtype Rising\": Booster Pack",
+   "EB01 \"Eternal Nexus\": Booster Pack",
+   "GD04 \"Phantom Aria\": Booster Box"
+  ]
+ },
+ {
+  "host": "dxgamesllc.com",
+  "base": "https://dxgamesllc.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (437 collections)"
+ },
+ {
+  "host": "evanstongames.com",
+  "base": "https://evanstongames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Evanston Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-sealed-product"
+  ],
+  "kind": "sealed",
+  "matched": 3,
+  "inStock": 2,
+  "currency": "USD",
+  "reason": "matched 3, in stock 2",
+  "tried": [
+   "gundam-sealed-product(15):3/6",
+   "gundam-events(6):0/6"
+  ],
+  "samples": [
+   "Freedom Ascension GCG Booster Box",
+   "Phantom Aria GCG Booster Box",
+   "Eternal Nexus GCG Booster Box"
+  ]
+ },
+ {
+  "host": "gameskingstore.com",
+  "base": "https://gameskingstore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (135 collections)"
+ },
+ {
+  "host": "gamersgauntlet.net",
+  "base": "https://gamersgauntlet.net",
+  "market": "US",
+  "ok": false,
+  "name": "Gamer's Gauntlet",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 4,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": "matched 4, in stock 4",
+  "tried": [
+   "gundam-card-game(14):4/13",
+   "gundam-gd02(0):0/0"
+  ],
+  "samples": [
+   "Steel Requiem Booster Pack - GD03 [Gundam Card Game]",
+   "Steel Requiem Booster Box - GD03 [Gundam Card Game]",
+   "Phantom Aria Booster Pack - GD04 [Gundam Card Game]",
+   "Phantom Aria Booster Box - GD04 [Gundam Card Game]"
+  ]
+ },
+ {
+  "host": "gamersparadisela.com",
+  "base": "https://gamersparadisela.com",
+  "market": "US",
+  "ok": false,
+  "name": "Gamers Paradise",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(9):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "gatecitygames.us",
+  "base": "https://gatecitygames.us",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "gaminggiant.com",
+  "base": "https://gaminggiant.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (52 collections)"
+ },
+ {
+  "host": "ginzamkt.com",
+  "base": "https://ginzamkt.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (23 collections)"
+ },
+ {
+  "host": "gamersngeeks.com",
+  "base": "https://gamersngeeks.com",
+  "market": "US",
+  "ok": false,
+  "name": "Gamers N Geeks",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble-copy(32):0/32",
+   "gundam-card-game-copy(2):0/2",
+   "battletech-copy(1):0/1",
+   "universus-copy(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "grailandgrade.com",
+  "base": "https://grailandgrade.com",
+  "market": "US",
+  "ok": false,
+  "name": "Grail and Grade",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 13,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 13, in stock 0",
+  "tried": [
+   "gundam(31):13/16"
+  ],
+  "samples": [
+   "Premium Card Collection GUNDAM ASSEMBLE - Mobile Suit Gundam: Iron-Blooded Orphans - [PC01A] - Gundam Promotional Cards (GCG-PR)",
+   "Premium Card Collection GUNDAM ASSEMBLE - Mobile Suit Gundam: GQuuuuuuX- [PC02A] - Gundam Promotional Cards (GCG-PR)",
+   "Phantom Aria Booster Box - Phantom Aria (GD04)",
+   "Starter Deck 06: Clan Unity - Starter Deck 06: Clan Unity (ST06)",
+   "Starter Deck 05: Iron Bloom - Starter Deck 05: Iron Bloom (ST05)",
+   "Gundam TCG: Starter Deck 04: SEED Strike - Starter Deck 04: SEED Strike (ST04)"
+  ]
+ },
+ {
+  "host": "graygauntletgames.com",
+  "base": "https://graygauntletgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (77 collections)"
+ },
+ {
+  "host": "gamescape.com",
+  "base": "https://gamescape.com",
+  "market": "US",
+  "ok": false,
+  "name": "Gamescape",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(45):1/7",
+   "gundam(194):0/194"
+  ],
+  "samples": [
+   "Gundam Card Game: Dual Impact Booster Box [GD02]"
+  ]
+ },
+ {
+  "host": "hobbyvault.com",
+  "base": "https://hobbyvault.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (26 collections)"
+ },
+ {
+  "host": "hastygoblingames.com",
+  "base": "https://hastygoblingames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Hasty Goblin Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "guubuu.com",
+  "base": "https://guubuu.com",
+  "market": "US",
+  "ok": false,
+  "name": "GuuBuu Hobby",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(22):0/22"
+  ],
+  "samples": []
+ },
+ {
+  "host": "hypercollectiblestcg.com",
+  "base": "https://hypercollectiblestcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (82 collections)"
+ },
+ {
+  "host": "immaculatetcg.com",
+  "base": "https://immaculatetcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (40 collections)"
+ },
+ {
+  "host": "holohorsegames.com",
+  "base": "https://holohorsegames.com",
+  "market": "US",
+  "ok": true,
+  "name": "Holo Horse Games LLC",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "both",
+  "matched": 11,
+  "inStock": 9,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(63):11/41"
+  ],
+  "samples": [
+   "GUNDAM CARD GAME: Deck Build Box Freedom Ascension [SC01]",
+   "Resource (R-019) (C+) - Dual Impact",
+   "Resource (R-010) (C+) - Dual Impact",
+   "Gundam X (GD02-053) - Dual Impact",
+   "Resource (RP-044) (Mobile Suit Gundam SEED Destiny) - Promotional Resource Tokens",
+   "EX Resource (EXRP-005) (Premium Card Collection Gundam Assemble - PC01A) - Promotional EX Resource Tokens (EXRP)"
+  ]
+ },
+ {
+  "host": "jerseyscc.com",
+  "base": "https://jerseyscc.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (47 collections)"
+ },
+ {
+  "host": "j2games.com",
+  "base": "https://j2games.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (301 collections)"
+ },
+ {
+  "host": "jnstoys.com",
+  "base": "https://jnstoys.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (22 collections)"
+ },
+ {
+  "host": "journeysendgames.com",
+  "base": "https://journeysendgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (584 collections)"
+ },
+ {
+  "host": "keystonecardsandgames.com",
+  "base": "https://keystonecardsandgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (13 collections)"
+ },
+ {
+  "host": "kingstablegames.com",
+  "base": "https://kingstablegames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (29 collections)"
+ },
+ {
+  "host": "kollectiblekings.com",
+  "base": "https://kollectiblekings.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (52 collections)"
+ },
+ {
+  "host": "jwwcards.com",
+  "base": "https://jwwcards.com",
+  "market": "US",
+  "ok": true,
+  "name": "JWW Sports Cards & Gaming",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 7,
+  "inStock": 7,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-card-game(17):7/7"
+  ],
+  "samples": [
+   "Gundam Card Game Starter Deck 07 - Celestial Drive",
+   "Gundam Card Game Starter Deck 03 - Zeon's Rush",
+   "Gundam Card Game Starter Deck 06 - Clan Unity",
+   "Gundam Card Game Starter Deck 02 - Wings of Advance",
+   "Gundam Card Game Starter Deck 04 - SEED Strike",
+   "Gundam Card Game Starter Deck 01 - Heroic Beginnings"
+  ]
+ },
+ {
+  "host": "galactictoys.com",
+  "base": "https://galactictoys.com",
+  "market": "US",
+  "ok": false,
+  "name": "Galactic Toys & Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-test(493):0/250",
+   "gundam-new-arrivals(455):0/250",
+   "mobile-suit-gundam(82):0/82",
+   "gundam-other-series(77):0/77",
+   "mobile-suit-gundam-1(71):0/71",
+   "gundam-seed(54):0/54",
+   "gundam-wing(38):0/38",
+   "gundam-pre-orders(37):0/37",
+   "gundam-unicorn(36):0/36",
+   "gundam-00(25):0/25"
+  ],
+  "samples": []
+ },
+ {
+  "host": "kryptonitekollectibles.com",
+  "base": "https://kryptonitekollectibles.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (417 collections)"
+ },
+ {
+  "host": "levelonegameshop.com",
+  "base": "https://levelonegameshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (164 collections)"
+ },
+ {
+  "host": "lakehartwellcollectibles.com",
+  "base": "https://lakehartwellcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "name": "Lake Hartwell Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(15):0/13"
+  ],
+  "samples": []
+ },
+ {
+  "host": "keystonegames.net",
+  "base": "https://keystonegames.net",
+  "market": "US",
+  "ok": false,
+  "name": "Keystone Games LLC",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg-events(3):0/1",
+   "gundam-pre-orders(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "madtownhobby.com",
+  "base": "https://madtownhobby.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (28 collections)"
+ },
+ {
+  "host": "lasportscards.com",
+  "base": "https://lasportscards.com",
+  "market": "US",
+  "ok": false,
+  "name": "LA Sports Cards",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(1):1/1"
+  ],
+  "samples": [
+   "Bandai Gundam Card Game Steel Requiem Booster Box"
+  ]
+ },
+ {
+  "host": "magessanctum.com",
+  "base": "https://magessanctum.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (30 collections)"
+ },
+ {
+  "host": "metagames.toys",
+  "base": "https://metagames.toys",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (102 collections)"
+ },
+ {
+  "host": "lazarus-games.com",
+  "base": "https://lazarus-games.com",
+  "market": "US",
+  "ok": false,
+  "name": "Lazarus Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(50):0/8"
+  ],
+  "samples": []
+ },
+ {
+  "host": "manathril.com",
+  "base": "https://manathril.com",
+  "market": "US",
+  "ok": false,
+  "name": "Manathril Cards and Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(5):0/5"
+  ],
+  "samples": []
+ },
+ {
+  "host": "mymintcards.com",
+  "base": "https://mymintcards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (21 collections)"
+ },
+ {
+  "host": "mindgamesandmagic.com",
+  "base": "https://mindgamesandmagic.com",
+  "market": "US",
+  "ok": false,
+  "name": "Mindgames and Magic",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(8):0/4"
+  ],
+  "samples": []
+ },
+ {
+  "host": "mythicforgegames.com",
+  "base": "https://mythicforgegames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (8 collections)"
+ },
+ {
+  "host": "moonshotgamestore.com",
+  "base": "https://moonshotgamestore.com",
+  "market": "US",
+  "ok": false,
+  "name": "Moonshot Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(17):1/17"
+  ],
+  "samples": [
+   "Bandai: Gundam Card Game - [GD03] Steel Requiem Booster Box Display"
+  ]
+ },
+ {
+  "host": "moxiecardshop.com",
+  "base": "https://moxiecardshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (213 collections)"
+ },
+ {
+  "host": "mintedtcg.com",
+  "base": "https://mintedtcg.com",
+  "market": "US",
+  "ok": true,
+  "name": "Minted TCG",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 7,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam(11):7/10"
+  ],
+  "samples": [
+   "Gundam: Phantom Aria Booster Box - Phantom Aria (GD04)",
+   "Gundam Freedom Ascension Booster Box - Freedom Ascension",
+   "Gundam: Starter Deck 07: Celestial Drive Starter Deck",
+   "Gundam: Starter Deck 05: Iron Bloom - Starter Deck 05: Iron Bloom",
+   "Gundam Starter Deck 08: Flash of Radiance",
+   "Gundam: Freedom Ascension Deck Build Box - Freedom Ascension (GD05)"
+  ]
+ },
+ {
+  "host": "nutmeggames.com",
+  "base": "https://nutmeggames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (106 collections)"
+ },
+ {
+  "host": "mythic-hobbies.com",
+  "base": "https://mythic-hobbies.com",
+  "market": "US",
+  "ok": false,
+  "name": "Mythic Hobbies",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(2):1/2"
+  ],
+  "samples": [
+   "Gundam Card Game: Starter Deck 10: Generation Pulse - Starter Deck 10: Generation Pulse (ST10)"
+  ]
+ },
+ {
+  "host": "oldschoolgamesandcards.com",
+  "base": "https://oldschoolgamesandcards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (9 collections)"
+ },
+ {
+  "host": "nexuslgs.com",
+  "base": "https://nexuslgs.com",
+  "market": "US",
+  "ok": false,
+  "name": "NEXUS Games & Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-models(18):0/18"
+  ],
+  "samples": []
+ },
+ {
+  "host": "paragoncity.shop",
+  "base": "https://paragoncity.shop",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (119 collections)"
+ },
+ {
+  "host": "overthebrick.com",
+  "base": "https://overthebrick.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (277 collections)"
+ },
+ {
+  "host": "prosoulgames.com",
+  "base": "https://prosoulgames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (52 collections)"
+ },
+ {
+  "host": "phantomich.com",
+  "base": "https://phantomich.com",
+  "market": "US",
+  "ok": false,
+  "name": "Phantomich",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 2, in stock 0",
+  "tried": [
+   "gundam-tcg(6):2/6"
+  ],
+  "samples": [
+   "Gundam: Stardust Trails Booster Box [GD06]",
+   "Gundam: Freedom Ascension Booster Box [GD05]"
+  ]
+ },
+ {
+  "host": "nxtlegacigaming.com",
+  "base": "https://nxtlegacigaming.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (33 collections)"
+ },
+ {
+  "host": "mystictcg.com",
+  "base": "https://mystictcg.com",
+  "market": "US",
+  "ok": false,
+  "name": "Mystic TCG",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(28):0/4",
+   "booster-box-gundam(5):0/0",
+   "decks-gundam-copy(4):0/1",
+   "decks-gundam(3):0/1",
+   "packs-gundam-copy(2):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "phatcatzgaming.com",
+  "base": "https://phatcatzgaming.com",
+  "market": "US",
+  "ok": false,
+  "name": "Phat Catz Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(1):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "redemptioncards.com",
+  "base": "https://redemptioncards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (14 collections)"
+ },
+ {
+  "host": "psychoturtlegames.com",
+  "base": "https://psychoturtlegames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Psycho Turtle Collectibles",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(9):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "realgoodeal.com",
+  "base": "https://realgoodeal.com",
+  "market": "US",
+  "ok": true,
+  "name": "Realgoodeal",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 27,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam(27):27/27"
+  ],
+  "samples": [
+   "Gundam Newtype Rising Booster Box",
+   "Gundam Freedom Ascension Booster Pack",
+   "Gundam Freedom Ascension Booster Box",
+   "Gundam Phantom Aria Booster Box",
+   "Gundam Steel Requiem Booster Box",
+   "Gundam Dual Impact Booster Box"
+  ]
+ },
+ {
+  "host": "riftgate.com",
+  "base": "https://riftgate.com",
+  "market": "US",
+  "ok": false,
+  "name": "Riftgate",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(24):1/19"
+  ],
+  "samples": [
+   "Gundam TCG - Starter Deck 09: Destiny Ignition (ST09)"
+  ]
+ },
+ {
+  "host": "retrofixgames.com",
+  "base": "https://retrofixgames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Retrofix Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 4,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": "matched 4, in stock 4",
+  "tried": [
+   "gundam-card-game(5):4/5"
+  ],
+  "samples": [
+   "Gundam Card Game Freedom Ascension Booster Box",
+   "Gundam Card Game Freedom Ascension Deck Build Box",
+   "Gundam Card Game G Generation Eternal Nexus Booster Box (EB01)",
+   "Gundam Card Game Phantom Aria Booster Box"
+  ]
+ },
+ {
+  "host": "saltcitygames.shop",
+  "base": "https://saltcitygames.shop",
+  "market": "US",
+  "ok": false,
+  "name": "Salt City Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-bandai(111):1/111"
+  ],
+  "samples": [
+   "Gundam TCG Dual Impact Single Pack"
+  ]
+ },
+ {
+  "host": "rocketcitytoys.com",
+  "base": "https://rocketcitytoys.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (92 collections)"
+ },
+ {
+  "host": "sleevedupcollectibles.com",
+  "base": "https://sleevedupcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (35 collections)"
+ },
+ {
+  "host": "robohunters.com",
+  "base": "https://robohunters.com",
+  "market": "US",
+  "ok": false,
+  "name": "Robo Hunters",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(261):1/79",
+   "gundam-tcg(32):1/8",
+   "gundam-assemble(2):1/1"
+  ],
+  "samples": [
+   "Gundam TCG: Premium Card Collection GUNDAM ASSEMBLE Display - Mobile Suit Gundam: Iron-Blooded Orphans - [PC01A] - Gundam Promotional Cards (GCG-PR)",
+   "Gundam TCG: Premium Card Collection GUNDAM ASSEMBLE Display - Mobile Suit Gundam: Iron-Blooded Orphans - [PC01A] - Gundam Promotional Cards (GCG-PR)",
+   "Gundam TCG: Premium Card Collection GUNDAM ASSEMBLE Display - Mobile Suit Gundam: Iron-Blooded Orphans - [PC01A] - Gundam Promotional Cards (GCG-PR)"
+  ]
+ },
+ {
+  "host": "sparkstradingcards.com",
+  "base": "https://sparkstradingcards.com",
+  "market": "US",
+  "ok": false,
+  "name": "Sparks Trading Cards",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(9):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "shop.fourhorsemencomics.com",
+  "base": "https://shop.fourhorsemencomics.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (21 collections)"
+ },
+ {
+  "host": "shallweplaygames.com",
+  "base": "https://shallweplaygames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (33 collections)"
+ },
+ {
+  "host": "stevensongames.com",
+  "base": "https://stevensongames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Stevenson Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(16):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "thegamestore.com",
+  "base": "https://thegamestore.com",
+  "market": "US",
+  "ok": false,
+  "name": "The Game Store",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(24):2/19"
+  ],
+  "samples": [
+   "Gundam Card Game – Freedom Ascension Booster Box",
+   "Gundam Card Game - Dual Impact Booster Box (Sealed)"
+  ]
+ },
+ {
+  "host": "theperkcards.com",
+  "base": "https://theperkcards.com",
+  "market": "US",
+  "ok": false,
+  "name": "The Perk",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 2, in stock 0",
+  "tried": [
+   "gundam-card-game(4):2/4"
+  ],
+  "samples": [
+   "Gundam Card Game Steel Requiem GD03 English Booster Box",
+   "Gundam Card Game Freedom Ascension GD05 Booster Box – English"
+  ]
+ },
+ {
+  "host": "swordsandspoons.com",
+  "base": "https://swordsandspoons.com",
+  "market": "US",
+  "ok": false,
+  "name": "Swords and Spoons",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg-sealed(6):0/4"
+  ],
+  "samples": []
+ },
+ {
+  "host": "store.mothershipatx.com",
+  "base": "https://store.mothershipatx.com",
+  "market": "US",
+  "ok": false,
+  "name": "Mothership Books and Games - Austin",
+  "existingKey": null,
+  "collections": [
+   "gundam-st-11-to-st-14"
+  ],
+  "kind": "sealed",
+  "matched": 4,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": "matched 4, in stock 4",
+  "tried": [
+   "gundam-st-11-to-st-14(4):4/4",
+   "gundam(11):0/1",
+   "gundam-starter-deck(8):0/0"
+  ],
+  "samples": [
+   "Gundam Card Game Starter Deck 13: Silent Barrage - LIMIT 2 DECKS TOTAL PER CUSTOMER",
+   "Gundam Card Game Starter Deck 12: Raging Onslaught - LIMIT 2 DECKS TOTAL PER CUSTOMER",
+   "Gundam Card Game Starter Deck 14: Heavy Dominion - LIMIT 2 DECKS TOTAL PER CUSTOMER",
+   "Gundam Card Game Starter Deck 11: Aquatic Assault - LIMIT 2 DECKS TOTAL PER CUSTOMER"
+  ]
+ },
+ {
+  "host": "thetoytemple.com",
+  "base": "https://thetoytemple.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (157 collections)"
+ },
+ {
+  "host": "timetravelersonline.com",
+  "base": "https://timetravelersonline.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (96 collections)"
+ },
+ {
+  "host": "tokenmtg.com",
+  "base": "https://tokenmtg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (34 collections)"
+ },
+ {
+  "host": "tradeshop.com",
+  "base": "https://tradeshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (49 collections)"
+ },
+ {
+  "host": "theshopcollectibles.com",
+  "base": "https://theshopcollectibles.com",
+  "market": "US",
+  "ok": false,
+  "name": "The Shop Collectibles LLC",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game-packs(1):1/1",
+   "gundam-card-game-sealed-product(1):1/1"
+  ],
+  "samples": [
+   "Newtype Rising Booster Pack - Newtype Rising (GD01)",
+   "Newtype Rising Booster Box - Newtype Rising (GD01)"
+  ]
+ },
+ {
+  "host": "tofustrading.com",
+  "base": "https://tofustrading.com",
+  "market": "US",
+  "ok": false,
+  "name": "Tofu's Trading",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "sagaconcepts.com",
+  "base": "https://sagaconcepts.com",
+  "market": "US",
+  "ok": false,
+  "name": "Saga Concepts",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "anime-gundam-gundam(247):1/46",
+   "gundam-freedom-ascension(233):1/46",
+   "gd-gundam-freedom-ascension(88):1/10",
+   "gundam-tcg(80):1/10",
+   "gundam-card-game(79):1/8",
+   "anime-gundam-yu-gi-oh(290):0/41",
+   "anime-gundam-digimon(234):0/31",
+   "gundam-assemble(96):0/18",
+   "gundam(73):0/29",
+   "anime-gundam-paints-tools(50):0/13"
+  ],
+  "samples": [
+   "Gundam Card Game Deck Build Box Freedom Ascension (SC01)",
+   "Gundam Card Game Deck Build Box Freedom Ascension (SC01)",
+   "Gundam Card Game Deck Build Box Freedom Ascension (SC01)",
+   "Gundam Card Game Deck Build Box Freedom Ascension (SC01)",
+   "Gundam Card Game Deck Build Box Freedom Ascension (SC01)"
+  ]
+ },
+ {
+  "host": "uppercrust.games",
+  "base": "https://uppercrust.games",
+  "market": "US",
+  "ok": true,
+  "name": "Upper Crust Games",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 6,
+  "inStock": 5,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-card-game(26):6/9"
+  ],
+  "samples": [
+   "GD05 Freedom Ascension - Booster Pack  - Gundam Card Game",
+   "EB01 Eternal Nexus Booster Pack - Gundam Card Game",
+   "GD05 Freedom Ascension - Deck Build Box - Gundam Card Game",
+   "EB01 Eternal Nexus Booster Box - Gundam Card Game",
+   "GD06 Stardust Trails - Booster Box - Gundam Card Game",
+   "GD06 Stardust Trails - Booster Pack  - Gundam Card Game"
+  ]
+ },
+ {
+  "host": "untappedmarket.games",
+  "base": "https://untappedmarket.games",
+  "market": "US",
+  "ok": false,
+  "name": "Untapped Market",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(3):1/1"
+  ],
+  "samples": [
+   "Gundam Card Game: Steel Requiem Booster Pack [GD03]"
+  ]
+ },
+ {
+  "host": "videogametrader.com",
+  "base": "https://videogametrader.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (183 collections)"
+ },
+ {
+  "host": "zcgamestcg.com",
+  "base": "https://zcgamestcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (121 collections)"
+ },
+ {
+  "host": "wilsontradingcardco.com",
+  "base": "https://wilsontradingcardco.com",
+  "market": "US",
+  "ok": true,
+  "name": "Wilson Trading Card Co.",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 11,
+  "inStock": 7,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-card-game(11):11/11"
+  ],
+  "samples": [
+   "Gundam - Phantom Aria Booster Pack - Phantom Aria (GD04)",
+   "Gundam - Dual Impact Booster Pack - Dual Impact (GD02)",
+   "Gundam - Steel Requiem Booster Pack - Steel Requiem (GD03)",
+   "Gundam - Phantom Aria booster box",
+   "Gundam - Starter Deck 07: Celestial Drive - Starter Deck 07: Celestial Drive (ST07)",
+   "Gundam- Starter Deck 14: Heavy Dominion (ST14)"
+  ]
+ },
+ {
+  "host": "theapollosvault.com",
+  "base": "https://theapollosvault.com",
+  "market": "US",
+  "ok": true,
+  "name": "Apollo's Vault",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 11,
+  "inStock": 5,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(38):11/34",
+   "gundam(51):4/41",
+   "gundam-card-game-freedom-ascension(3):3/3",
+   "gundam-card-game-eternal-nexus(3):2/2",
+   "gundam-card-game-phantom-aria(2):2/2",
+   "gundam-card-game-dual-impact(2):1/1",
+   "gundam-card-game-newtype-rising(2):1/1",
+   "gundam-starter-decks(18):0/18",
+   "gundam-release-events(7):0/2",
+   "gundam-pre-orders(3):0/3"
+  ],
+  "samples": [
+   "Dual Impact Booster Pack",
+   "Stardust Trails Booster Box",
+   "Newtype Rising Booster Pack",
+   "Steel Requiem Booster Pack",
+   "Phantom Aria Booster Box",
+   "Phantom Aria Booster Pack"
+  ]
+ },
+ {
+  "host": "zeroedingames.com",
+  "base": "https://zeroedingames.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (230 collections)"
+ },
+ {
+  "host": "pfcomics.com",
+  "base": "https://pfcomics.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (174 collections)"
+ },
+ {
+  "host": "zenithgg.com",
+  "base": "https://zenithgg.com",
+  "market": "US",
+  "ok": false,
+  "name": "Zenith GG",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(1):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "zenithtcg.com",
+  "base": "https://zenithtcg.com",
+  "market": "US",
+  "ok": false,
+  "name": "Zenith TCG",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 11,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 11, in stock 0",
+  "tried": [
+   "gundam(15):11/15"
+  ],
+  "samples": [
+   "Gundam: Freedom Ascension Deck Build Box",
+   "Gundam: Starter Deck 12 - Raging Onslaught",
+   "Gundam: Starter Deck 13 - Silent Barrage",
+   "Gundam: Starter Deck 11 - Aquatic Assault",
+   "Gundam: Starter Deck 14 - Heavy Dominion",
+   "Gundam: Starter Deck 05 - Iron Bloom"
+  ]
+ },
+ {
+  "host": "artemistavern.com",
+  "base": "https://artemistavern.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (19 collections)"
+ },
+ {
+  "host": "wnygaming.com",
+  "base": "https://wnygaming.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (36 collections)"
+ },
+ {
+  "host": "topcutcomics.com",
+  "base": "https://topcutcomics.com",
+  "market": "US",
+  "ok": false,
+  "name": "Top Cut Comics",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(100):0/100",
+   "gundam-model-stands(7):0/7",
+   "gundam-events(4):0/4"
+  ],
+  "samples": []
+ },
+ {
+  "host": "undiscoveredrealm.com",
+  "base": "https://undiscoveredrealm.com",
+  "market": "US",
+  "ok": true,
+  "name": "Undiscovered Realm",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 8,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(16):8/16",
+   "gundam-tcg-1(16):8/16",
+   "gundam-tcg-starter-decks(15):7/15",
+   "gundam-tcg-booster-box(3):3/3",
+   "gundam(21):0/20"
+  ],
+  "samples": [
+   "Gundam Card Game GD01 Newtype Rising Booster Box (24 Packs)",
+   "Gundam Card Game Steel Requiem GD03 English Booster Box (24 Packs)",
+   "Gundam TCG Starter Deck 07: Celestial Drive",
+   "Gundam TCG Starter Deck 08: Flash of Radiance",
+   "Gundam Card Game Starter Deck 11: Aquatic Assault",
+   "Gundam Card Game Starter Deck 14: Heavy Dominion"
+  ]
+ },
+ {
+  "host": "brainwashcards.com",
+  "base": "https://brainwashcards.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (22 collections)"
+ },
+ {
+  "host": "cardgodshop.com",
+  "base": "https://cardgodshop.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (9 collections)"
+ },
+ {
+  "host": "dockingbay93.com",
+  "base": "https://dockingbay93.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (11 collections)"
+ },
+ {
+  "host": "diostreasures.com",
+  "base": "https://diostreasures.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (143 collections)"
+ },
+ {
+  "host": "finalcuttcg.com",
+  "base": "https://finalcuttcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (4 collections)"
+ },
+ {
+  "host": "foxfablehaven.com",
+  "base": "https://foxfablehaven.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (26 collections)"
+ },
+ {
+  "host": "ihc.cards",
+  "base": "https://ihc.cards",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (28 collections)"
+ },
+ {
+  "host": "gnomegames.com",
+  "base": "https://gnomegames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Gnome Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(35):1/8"
+  ],
+  "samples": [
+   "Gundam Card Game: Dual Impact Booster Box [GD02]"
+  ]
+ },
+ {
+  "host": "heroesandgames.com",
+  "base": "https://heroesandgames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Heroes and Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "itstimecards.com",
+  "base": "https://itstimecards.com",
+  "market": "US",
+  "ok": false,
+  "name": "IT'S TIME! Sports Cards, TCG and eSports",
+  "existingKey": null,
+  "collections": [
+   "gundam"
+  ],
+  "kind": "sealed",
+  "matched": 3,
+  "inStock": 1,
+  "currency": "USD",
+  "reason": "matched 3, in stock 1",
+  "tried": [
+   "gundam(5):3/3"
+  ],
+  "samples": [
+   "Gundam Card Game: Steel Requiem Booster Box",
+   "Gundam Card Game: Dual Impact Booster Pack",
+   "Gundam Card Game: Deck Build Box - Freedom Ascension (SC01)"
+  ]
+ },
+ {
+  "host": "cardshq.com",
+  "base": "https://cardshq.com",
+  "market": "US",
+  "ok": false,
+  "name": "CardsHQ",
+  "existingKey": null,
+  "collections": [
+   "gundam-boxes"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 2,
+  "currency": "USD",
+  "reason": "matched 2, in stock 2",
+  "tried": [
+   "gundam-boxes(9):2/8",
+   "gundam-phantom-aria(2):2/2",
+   "gundam-steel-requiem-gd03(2):2/2",
+   "gundam-raw(550):0/0",
+   "gundam(221):0/0"
+  ],
+  "samples": [
+   "Phantom Aria Gundam Card Game Booster Box (GD04)",
+   "Steel Requiem Gundam Card Game Booster Box [GD03]",
+   "Phantom Aria Gundam Card Game Booster Box (GD04)",
+   "Phantom Aria Gundam Booster Pack (GD04)",
+   "Steel Requiem Gundam Card Game Booster Box [GD03]",
+   "Steel Requiem Gundam Card Game Booster Pack [GD03]"
+  ]
+ },
+ {
+  "host": "legendsfanshop.com",
+  "base": "https://legendsfanshop.com",
+  "market": "US",
+  "ok": false,
+  "name": "LegendsSportsGames",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-boxes(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "coffeecatcomics.com",
+  "base": "https://coffeecatcomics.com",
+  "market": "US",
+  "ok": false,
+  "name": "Coffee Cat Comics",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(85):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "lspbstore.com",
+  "base": "https://lspbstore.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (77 collections)"
+ },
+ {
+  "host": "projectccg.com",
+  "base": "https://projectccg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (482 collections)"
+ },
+ {
+  "host": "shop.millenniumgames.com",
+  "base": "https://shop.millenniumgames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Millennium Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(14):1/14"
+  ],
+  "samples": [
+   "Starter Deck 10: Generation Pulse - Starter Deck 10: Generation Pulse (ST10)"
+  ]
+ },
+ {
+  "host": "liquidgames.co",
+  "base": "https://liquidgames.co",
+  "market": "US",
+  "ok": false,
+  "name": "Liquid Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-events(0):0/0",
+   "gundam(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "safari-zone.com",
+  "base": "https://safari-zone.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (45 collections)"
+ },
+ {
+  "host": "jawbreakers.cards",
+  "base": "https://jawbreakers.cards",
+  "market": "US",
+  "ok": true,
+  "name": "jawbreakers",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg"
+  ],
+  "kind": "sealed",
+  "matched": 11,
+  "inStock": 3,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-tcg(42):11/42",
+   "gundam-booster-boxes(6):6/6",
+   "gundam-packs(4):4/4",
+   "gundam-collection-boxes(5):1/5",
+   "gundam-starter-decks(16):0/16"
+  ],
+  "samples": [
+   "Bandai - Gundam - Dual Impact - GD02 - Sleeved Booster Pack",
+   "Bandai - Gundam - Freedom Ascension - GD05 - Booster Box",
+   "Bandai - Gundam - Freedom Ascension - GD05 - Deck Build Box",
+   "Bandai - Gundam - Phantom Aria - GD04 - Booster Box",
+   "Bandai - Gundam - Dual Impact - GD02 - Booster Box",
+   "Bandai - Gundam - Steel Requiem - GD03 - Booster Box"
+  ]
+ },
+ {
+  "host": "scrubtiergaming.com",
+  "base": "https://scrubtiergaming.com",
+  "market": "US",
+  "ok": false,
+  "name": "Scrub Tier Gaming",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "spiedagames.com",
+  "base": "https://spiedagames.com",
+  "market": "US",
+  "ok": false,
+  "name": "Spieda Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(48):0/48"
+  ],
+  "samples": []
+ },
+ {
+  "host": "revcollectibles.com",
+  "base": "https://revcollectibles.com",
+  "market": "US",
+  "ok": true,
+  "name": "R.E.V. Collectibles",
+  "existingKey": null,
+  "collections": [
+   "gundam-trading-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 6,
+  "inStock": 4,
+  "currency": "USD",
+  "reason": null,
+  "tried": [
+   "gundam-trading-card-game(8):6/8",
+   "gundam(6):3/6"
+  ],
+  "samples": [
+   "Gundam TCG: Deck Build Box [Freedom Ascension]",
+   "Gundam TCG: Freedom Ascension Booster Display Box",
+   "Gundam TCG: Eternal Nexus Booster Display Box",
+   "Gundam TCG: Phantom Aria Booster Display Box",
+   "Gundam TCG: Dual Impact Booster Box",
+   "Gundam TCG : Newtype Rising Booster Display Box"
+  ]
+ },
+ {
+  "host": "treasuredcollectibles.shop",
+  "base": "https://treasuredcollectibles.shop",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (39 collections)"
+ },
+ {
+  "host": "villainstcg.com",
+  "base": "https://villainstcg.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (28 collections)"
+ },
+ {
+  "host": "4horsemencomics.com",
+  "base": "https://4horsemencomics.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (84 collections)"
+ },
+ {
+  "host": "spacecoast.games",
+  "base": "https://spacecoast.games",
+  "market": "US",
+  "ok": false,
+  "name": "Space Coast Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(10):1/9"
+  ],
+  "samples": [
+   "Gundam Card Game: Booster Box | Dual Impact [GD02]"
+  ]
+ },
+ {
+  "host": "unpluggedgamestore.com",
+  "base": "https://unpluggedgamestore.com",
+  "market": "US",
+  "ok": false,
+  "name": "Unplugged Gaming",
+  "existingKey": null,
+  "collections": [
+   "gundam-tcg-sealed"
+  ],
+  "kind": "sealed",
+  "matched": 3,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 3, in stock 0",
+  "tried": [
+   "gundam-tcg-sealed(46):3/11"
+  ],
+  "samples": [
+   "GUNDAM CARD GAME: BOOSTER PACK: DUAL IMPACT [GD02]",
+   "Steel Requiem Booster Pack - Steel Requiem (GD03) Packs",
+   "Steel Requiem Booster Box - Steel Requiem (GD03)"
+  ]
+ },
+ {
+  "host": "thegamersden.com",
+  "base": "https://thegamersden.com",
+  "market": "US",
+  "ok": false,
+  "reason": "no gundam collection (123 collections)"
+ },
+ {
+  "host": "wildcardcyclone.com",
+  "base": "https://wildcardcyclone.com",
+  "market": "US",
+  "ok": false,
+  "name": "WildCardCyclone",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game-sealed-products"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 0,
+  "currency": "USD",
+  "reason": "matched 2, in stock 0",
+  "tried": [
+   "gundam-card-game-sealed-products(4):2/4"
+  ],
+  "samples": [
+   "Gundam TCG Phantom Aria Booster Box - Phantom Aria (GD04)",
+   "GUNDAM CARD GAME NEWTYPE RISING [GD01] BOOSTER BOX"
+  ]
+ }
+]
