@@ -660,3 +660,38 @@ TCGplayer is back in Australia.
   Magic, Pokémon and Yu-Gi-Oh! singles to Australia. `tcgplayerDirectMarkets`
   (site config, off by default) lets the strip say so: YGO Compare sets `AU`;
   Gundam and Lorcana say "US marketplace · prices in US$" outside the US.
+
+## Gunpla: model kits compared by barcode — 2026-10-28
+
+**Owner:** add Gunpla to Gundam Compare for r/Gunpla (392k members), then post it
+there. Built as an engine option (`SITE.kits`, off unless set), so Lorcana and
+YGO Compare carry the code but show nothing.
+
+* **Matching is by JAN barcode only.** Every box carries one EAN-13; shops put it
+  in the SKU or the description (Shopify's public `products.json` has no barcode
+  field). Many shops key kits by Bandai's own item number instead, which maps
+  one-to-one: item 50NNNNN ↔ JAN 4573102NNNNN + check digit (HG Aerial 5063030 ↔
+  4573102630308, MG Barbatos 5058222 ↔ 4573102582225; checked across shops that
+  print both). Written as `5063030`, `G5063030`, `MK63030`, `BANMK63030` or
+  `BAN630308`. Bandai America's own codes (2478111, BNDAI-…) do not map and are
+  ignored. A listing with neither is skipped, never matched by title.
+* **Guards.** A listing read from an item number whose grade disagrees with the
+  kit's, any listing under 0.4× or over 2.5× the kit's median price (three or more
+  listings), and an item-number listing more than 3× apart from the only other
+  one are dropped (30 of 13,500 on the first run). A kit needs two shops to get a
+  page.
+* **Stores.** A probe of 285 Shopify shops (the 189 card stores plus ~95 hobby
+  shops) on 2026-10-28 found 29 whose kits carry a JAN or item number: US 6,
+  UK 8, AU 8, CA 7, no EU. Big Gunpla shops without either (Robot4Less, Hobbies
+  Online, Tokyo Toys, Gundam Place Store, Metro Hobbies) are left out; Newtype,
+  HLJ, BBTS, Mighty Ape and AmiAmi are not Shopify. First import: 1,843 kits.
+* **Pages.** `/kits` (grades, search), `/kits/grade/<grade>`, `/kit/<slug>`
+  (price table, the phone buy block, eBay and Amazon search links through `/go`
+  with the site's tags). A day's cache, nothing prerendered, in the sitemap. No
+  card ad strips on kit pages. Slugs never change once given.
+* **Cost.** One more step in the daily `refresh-prices.yml` (about two minutes,
+  two shops at a time; `continue-on-error`, so it never holds back card prices),
+  one 1.6 MB file, `data/public/kits.json`. No eBay API calls: the shared eBay
+  quota is untouched. The ops monitor checks kit data age, count and stores.
+* **Affiliates.** eBay and Amazon search links only for now; HobbyLink Japan's
+  programme (3%) needs 1,000 followers, so not yet.

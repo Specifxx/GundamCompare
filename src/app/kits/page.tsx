@@ -27,9 +27,10 @@ export default function Kits() {
   const cfg = SITE.kits;
   const hubs = gradeHubs();
   const all = kits();
-  const fresh = newKits(21).slice(0, 12);
+  const recent = newKits(21);
+  const fresh = recent.slice(0, 12);
   // The first import marks every kit new: show "new" only once it means something.
-  const showNew = fresh.length > 0 && fresh.length < all.length / 4;
+  const showNew = recent.length > 0 && recent.length < all.length / 4;
   const markets = [...new Set(cfg.stores.map((s) => s.market))];
   return (
     <div className="flex flex-col gap-8">

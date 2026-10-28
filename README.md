@@ -31,6 +31,10 @@ GitHub Actions, daily 18:17 UTC (refresh-prices.yml)
 
 ## Features
 
+**Gunpla (Gundam Compare only, `SITE.kits`):** Bandai model kits compared across
+29 hobby shops by the JAN barcode on the box (`scripts/import-kits.ts`,
+`src/lib/import/kits.ts`, `/kits`). DECISIONS.md, "Gunpla".
+
 Card and sealed pages with a price row per store (cheapest in-stock first,
 affiliate buy links through `/go`, each click a Vercel `buy_click` event),
 price history charts, set price guides, movers, a pre-order tracker, guides

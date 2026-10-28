@@ -13,6 +13,7 @@ import { amazonSearchUrl, ebaySearchUrl, goHref } from "@/lib/affiliate";
 import { meta } from "@/lib/data";
 import { abs, SHARE_IMAGE } from "@/lib/site";
 import { MARKET_LABEL } from "@/lib/site-types";
+import { sourceNameServer } from "@/lib/sources";
 
 export const revalidate = 86400; // data only changes with a release (DECISIONS.md, "Vercel cost")
 // Empty list = nothing prerendered at build; each page is cached after its first visit.
@@ -49,6 +50,8 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   const amazon = amazonSearchUrl(search);
   const related = popular(kits().filter((x) => x.grade === k.grade && x.jan !== k.jan)).slice(0, 6);
   const markets = [...new Set(inStock.map((o) => o.market))];
+  // Offers are sorted in stock first, then by price: the first per market is its cheapest.
+  const cheapestByMarket = markets.map((mk) => inStock.find((o) => o.market === mk)!);
   return (
     <article className="flex flex-col gap-8">
       <JsonLd
@@ -111,8 +114,8 @@ export default function KitPage({ params }: { params: { slug: string } }) {
           <section className="prose-site max-w-none text-sm">
             <h2>Where is {k.name} cheapest?</h2>
             <p>
-              {inStock.length
-                ? `The cheapest in-stock listing we track is ${money(inStock[0].cents, inStock[0].currency)}. `
+              {cheapestByMarket.length
+                ? `Cheapest in stock today: ${cheapestByMarket.map((o) => `${money(o.cents, o.currency)} at ${sourceNameServer(o)} (${MARKET_LABEL[o.market]})`).join(", ")}. `
                 : `No shop we track has it in stock today. `}
               We compare {cfg.stores.length} hobby shops every day and match each listing by the kit&apos;s JAN barcode ({k.jan}), so every price above is for this exact kit. Prices are before postage; the shop&apos;s checkout price is final.
             </p>
