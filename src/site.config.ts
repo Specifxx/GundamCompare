@@ -4,6 +4,7 @@
 // lives here or in src/content/. Keep engine code free of game names.
 import type { SiteConfig } from "@/lib/site-types";
 import { STORES } from "@/content/stores";
+import { KIT_STORES } from "@/content/kit-stores";
 
 export const SITE: SiteConfig = {
   key: "gundam",
@@ -83,4 +84,15 @@ export const SITE: SiteConfig = {
     { name: "Compare Empire", url: "https://www.compareempire.com", game: "Australian tech", anchor: "Australian tech prices" },
   ],
   social: { reddit: "https://www.reddit.com/r/GundamTCG/" },
+  // Gunpla (owner, 2026-10-28): Bandai model kits compared by JAN barcode
+  // across hobby shops (src/content/kit-stores.ts, DECISIONS.md "Gunpla").
+  kits: {
+    label: "Gunpla",
+    noun: "Gunpla model kits",
+    maker: "Bandai Spirits",
+    janPrefixes: ["4573102", "4549660", "4543112"],
+    itemCodeJanPrefix: "4573102",
+    searchPrefix: "gunpla",
+    stores: KIT_STORES,
+  },
 };
