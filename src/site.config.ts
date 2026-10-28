@@ -95,6 +95,7 @@ export const SITE: SiteConfig = {
     janPrefixes: ["4573102", "4549660", "4543112"],
     itemCodeJanPrefix: "4573102",
     searchPrefix: "gunpla",
+    shareImage: { url: "/og/gunpla.jpg", alt: "Gundam Compare: compare Gunpla prices across 29 hobby shops in the US, UK, Canada and Australia, matched by barcode" },
     stores: KIT_STORES,
   },
 };
