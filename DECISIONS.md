@@ -695,3 +695,20 @@ YGO Compare carry the code but show nothing.
   quota is untouched. The ops monitor checks kit data age, count and stores.
 * **Affiliates.** eBay and Amazon search links only for now; HobbyLink Japan's
   programme (3%) needs 1,000 followers, so not yet.
+
+## Store audit: 49 stores added, 11 that matched nothing out — 2026-10-28
+
+**Owner:** check every site's store health and make sure the latest stores
+are on it.
+
+* **Health.** Every store the last import read with two or fewer matches, or
+  none in stock, was re-probed from a GitHub runner in its market with the real
+  matcher on page one of each Gundam collection. The 11 that still matched
+  nothing are removed. Obsession Gaming and Kuma Cards started
+  blocking on 2026-10-27 on every sister site and stay for now.
+* **New stores (189 → 227)** come from every store on the
+  eight sister sites' registries and the official Riftbound store registry's
+  Shopify game stores, probed the same way: added only when at least five
+  products match, three are in stock, the store charges its market's currency,
+  and it is not a second address of a store already listed. Fetch TCG stays
+  out (a marketplace, not a store).
