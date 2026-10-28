@@ -1,0 +1,96 @@
+US https://www.gundamplanet.com Gundam Planet
+US https://www.usagundamstore.com USA Gundam Store
+US https://newtype.us Newtype
+US https://www.gundamplacestore.com Gundam Place Store
+US https://www.nipponyasan.com Nippon Yasan
+US https://www.plazajapan.com Plaza Japan
+US https://www.ninomania.com Ninoma
+US https://www.robot4less.com Robot4Less
+US https://www.tatsuhobby.com Tatsu Hobby
+US https://www.toyarena.com Toy Arena
+US https://www.megahobby.com Mega Hobby
+US https://www.spruebrothers.com Sprue Brothers
+US https://www.hobbyeasy.com Hobby Easy
+US https://www.galactictoys.com Galactic Toys
+US https://www.mechagundamstore.com Mecha Gundam Store
+US https://www.gundamexpo.com Gundam Expo
+US https://www.toynk.com Toynk
+US https://www.kitbash.com Kitbash
+US https://www.gunplanation.com Gunpla Nation
+US https://www.hobbygenki.com Hobby Genki
+US https://www.japan-figure.com Japan Figure
+US https://www.hlj.com HLJ
+US https://www.bigbadtoystore.com BBTS
+US https://www.banzaihobby.com Banzai Hobby
+US https://www.tokyo-otaku-mode.com Tokyo Otaku Mode
+US https://www.gundamshop.com Gundam Shop
+US https://www.hobbylinkjapan.com HLJ alt
+US https://www.animemangaplus.com AnimeManga
+US https://www.mechazone.com Mechazone
+US https://www.gundamkitscollection.com GKC
+UK https://www.gundammad.co.uk Gundam Mad
+UK https://ilovegunpla.co.uk I Love Gunpla
+UK https://gunpla.co.uk Gunpla UK
+UK https://www.uniongundam.co.uk Union Gundam
+UK https://gunplasan.co.uk Gunpla San
+UK https://www.tokyotoys.com Tokyo Toys
+UK https://www.gaijingadgets.com Gaijin Gadgets
+UK https://www.gundamlab.co.uk GundamLAB
+UK https://www.jpla.co.uk J-Pla
+UK https://www.modelverse.co.uk Modelverse
+UK https://www.oshoppu.co.uk Oshoppu
+UK https://www.travellingman.com Travelling Man
+UK https://www.wonderlandmodels.com Wonderland Models
+UK https://www.kscalemodel.co.uk K Scale Model
+UK https://www.henshin.co.uk Henshin
+UK https://www.celestialbeinggunpla.co.uk Celestial Being
+UK https://www.jadlamracingmodels.com JADLAM
+UK https://www.nerdbase.co.uk Nerd Base
+UK https://www.bigrobotrocks.com Big Robot Rocks
+UK https://www.pmstore.co.uk PMSTORE
+UK https://www.scalemodelshop.co.uk Scale Model Shop
+UK https://www.toyforest.co.uk Toy Forest
+UK https://www.ehgaming.co.uk EH Gaming
+UK https://www.dragoongaming.co.uk Dragoon Gaming
+AU https://mechaexpressaustralia.com.au Mecha Express Australia
+AU https://hobbyco.com.au Hobbyco
+AU https://www.zombster.com.au Zombster
+AU https://www.gundamshop.com.au Gundam Shop AU
+AU https://www.plamo.com.au Plamo AU
+AU https://www.gunplaaustralia.com.au Gunpla Australia
+AU https://www.mechafactory.com.au Mecha Factory
+AU https://www.hobbiesonline.com.au Hobbies Online
+AU https://www.kidstuff.com.au Kidstuff
+AU https://www.hobbyworld.com.au Hobby World
+AU https://www.modelkitsaustralia.com.au Model Kits Australia
+AU https://www.gundamguy.com.au Gundam Guy
+AU https://www.metrohobbies.com.au Metro Hobbies
+AU https://www.frontlinehobbies.com.au Frontline Hobbies
+AU https://www.tokyoparts.com.au Tokyo Parts
+AU https://www.mightyape.com.au Mighty Ape
+CA https://www.zonegunpla.com Zone Gunpla
+CA https://www.pmhobbycraft.ca PM Hobbycraft
+CA https://wheelswingshobbies.com Wheels Wings
+CA https://www.gundamhobbies.ca Gundam Hobbies CA
+CA https://www.hobbyjump.ca Hobby Jump
+CA https://www.mechanicgeek.ca Mechanic Geek
+CA https://www.plamostore.ca Plamo Store
+CA https://www.gunplacanada.ca Gunpla Canada
+CA https://www.torontogundam.com Toronto Gundam
+CA https://www.kidrobot.ca Kidrobot
+CA https://www.hobbyplanet.ca Hobby Planet
+CA https://www.otakuhobbies.ca Otaku Hobbies
+SG https://www.hobbyartgallery.com Hobby Art Gallery
+SG https://www.themworkshop.com M Workshop
+SG https://www.gunpla.sg Gunpla SG
+SG https://www.toyoutpost.com Toy Outpost
+SG https://www.hobbyfan.sg Hobby Fan
+SG https://www.gundamshop.sg Gundam Shop SG
+EU https://www.gundamshop.de Gundam Shop DE
+EU https://www.modelbouwkrikke.nl Krikke
+EU https://www.gunpla.de Gunpla DE
+EU https://www.japanshop.nl Japan Shop
+EU https://www.gundamstore.it Gundam Store IT
+EU https://www.gunpla.nl Gunpla NL
+EU https://www.gunplashop.fr Gunpla Shop FR
+EU https://www.kitmania.fr Kitmania
