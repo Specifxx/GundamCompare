@@ -629,6 +629,7 @@ real rows or a plain search, labelled "Paid link"; nothing is reordered and no
 price is estimated: the owner floated showing an estimated eBay price that
 "happens to be cheapest", which was not built because it would mislead buyers
 (Australian Consumer Law, eBay Partner Network rules).
+
 ## Card ad strips: real cards on eBay and TCGplayer, on every page — 2026-10-28
 
 **Owner:** "we need more ads everywhere … more TCGplayer ads and more eBay ads",
