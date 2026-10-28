@@ -1,0 +1,401 @@
+[
+ {
+  "host": "adventurebox.ca",
+  "base": "https://adventurebox.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (41 collections)"
+ },
+ {
+  "host": "amazingstoriesgames.ca",
+  "base": "https://amazingstoriesgames.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (198 collections)"
+ },
+ {
+  "host": "ariasnacks.ca",
+  "base": "https://ariasnacks.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (29 collections)"
+ },
+ {
+  "host": "dejouer.ca",
+  "base": "https://dejouer.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (28 collections)"
+ },
+ {
+  "host": "arcardia.ca",
+  "base": "https://arcardia.ca",
+  "market": "CA",
+  "ok": true,
+  "name": "Arcardia Collectibles & Exchange",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 5,
+  "inStock": 3,
+  "currency": "CAD",
+  "reason": null,
+  "tried": [
+   "gundam-card-game(23):5/17"
+  ],
+  "samples": [
+   "Gundam Card Game - Booster Box - GD03 - Steel Requiem - English",
+   "Gundam Card Game - Booster Box - GD04 - Phantom Aria- English",
+   "Gundam Card Game - Booster Pack - GD04 - Phantom Aria- English",
+   "Gundam Card Game - Booster Pack- GD03 - Steel Requiem - English",
+   "Gundam Card Game - Deck Build Box - SC01 - Freedom Ascension - English"
+  ]
+ },
+ {
+  "host": "allinhobbysports.com",
+  "base": "https://allinhobbysports.com",
+  "market": "CA",
+  "ok": false,
+  "name": "All-In Hobby Sports",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-cg(1):0/1"
+  ],
+  "samples": []
+ },
+ {
+  "host": "downstairscellar.ca",
+  "base": "https://downstairscellar.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (9 collections)"
+ },
+ {
+  "host": "greensteelgames.ca",
+  "base": "https://greensteelgames.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (0 collections)"
+ },
+ {
+  "host": "gamepointcentral.com",
+  "base": "https://gamepointcentral.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (4 collections)"
+ },
+ {
+  "host": "hardbrickgames.com",
+  "base": "https://hardbrickgames.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (28 collections)"
+ },
+ {
+  "host": "bdcosmos.com",
+  "base": "https://bdcosmos.com",
+  "market": "CA",
+  "ok": false,
+  "name": "BD Cosmos",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(9):0/9"
+  ],
+  "samples": []
+ },
+ {
+  "host": "dragonpourpre.com",
+  "base": "https://dragonpourpre.com",
+  "ok": false,
+  "reason": "not Shopify or unreachable (ale=1\"/><link rel=\"stylesheet\" href=\"/assets/reset-D9GqL1Za.css\"/><link rel=\"sty)"
+ },
+ {
+  "host": "iwantthatstuff.store",
+  "base": "https://iwantthatstuff.store",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (15 collections)"
+ },
+ {
+  "host": "okanagansportscardsandcomics.com",
+  "base": "https://okanagansportscardsandcomics.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (13 collections)"
+ },
+ {
+  "host": "lazytradingcards.com",
+  "base": "https://lazytradingcards.com",
+  "market": "CA",
+  "ok": false,
+  "name": "Lazy Trading Cards",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam(17):0/12"
+  ],
+  "samples": []
+ },
+ {
+  "host": "lesomerset.com",
+  "base": "https://lesomerset.com",
+  "market": "CA",
+  "ok": false,
+  "name": "Le Somerset",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-cg(12):0/4"
+  ],
+  "samples": []
+ },
+ {
+  "host": "omggames.ca",
+  "base": "https://omggames.ca",
+  "ok": false,
+  "reason": "not Shopify or unreachable (l-scale=1, viewport-fit=cover\"/><link rel=\"preload\" as=\"image\" imageSrcSet=\"/api)"
+ },
+ {
+  "host": "swirlyeg.com",
+  "base": "https://swirlyeg.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (30 collections)"
+ },
+ {
+  "host": "soulvaria.ca",
+  "base": "https://soulvaria.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (1 collections)"
+ },
+ {
+  "host": "heroesworld.ca",
+  "base": "https://heroesworld.ca",
+  "market": "CA",
+  "ok": false,
+  "name": "Heroes World",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-models(67):0/64",
+   "gundam-infinity(0):0/0"
+  ],
+  "samples": []
+ },
+ {
+  "host": "tcgzonecanada.com",
+  "base": "https://tcgzonecanada.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (3 collections)"
+ },
+ {
+  "host": "dragonguelph.com",
+  "base": "https://dragonguelph.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (43 collections)"
+ },
+ {
+  "host": "theswordandboardtoronto.com",
+  "base": "https://theswordandboardtoronto.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (176 collections)"
+ },
+ {
+  "host": "thevaultsportscards.com",
+  "base": "https://thevaultsportscards.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (81 collections)"
+ },
+ {
+  "host": "topdecktrades.com",
+  "base": "https://topdecktrades.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (0 collections)"
+ },
+ {
+  "host": "treasuresnmore.ca",
+  "base": "https://treasuresnmore.ca",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (3 collections)"
+ },
+ {
+  "host": "raincity.games",
+  "base": "https://raincity.games",
+  "market": "CA",
+  "ok": false,
+  "name": "Rain City Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-tcg(14):0/7"
+  ],
+  "samples": []
+ },
+ {
+  "host": "woodforsheep.ca",
+  "base": "https://woodforsheep.ca",
+  "ok": false,
+  "reason": "not Shopify or unreachable (https://woodforsheep.ca/meta.json: HTTP 404 )"
+ },
+ {
+  "host": "wegotgamezcanada.com",
+  "base": "https://wegotgamezcanada.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (32 collections)"
+ },
+ {
+  "host": "pastimesports.ca",
+  "base": "https://pastimesports.ca",
+  "market": "CA",
+  "ok": false,
+  "name": "Pastime Sports & Games",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "game_gundam-card-game(34):2/17"
+  ],
+  "samples": [
+   "Gundam Card Game Dual Impact Booster Box/Case",
+   "Gundam Card Game Newtype Rising Booster Box/Case"
+  ]
+ },
+ {
+  "host": "westcoast-hobbies.com",
+  "base": "https://westcoast-hobbies.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (29 collections)"
+ },
+ {
+  "host": "kevinstcg99.com",
+  "base": "https://kevinstcg99.com",
+  "market": "CA",
+  "ok": false,
+  "reason": "no gundam collection (27 collections)"
+ },
+ {
+  "host": "tabletoprenaissance.ca",
+  "base": "https://tabletoprenaissance.ca",
+  "market": "CA",
+  "ok": false,
+  "name": "Tabletop Renaissance Games & Hobbies",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-card-game(53):4/37",
+   "gundam-marker(54):0/53",
+   "gundam-assemble(8):0/0"
+  ],
+  "samples": [
+   "Gundam CG: Newtype Rising Booster Pack",
+   "Gundam CG: Deck Build Box SC01 Freedom Ascension",
+   "Gundam CG: EB01 Eternal Nexus Booster Pack",
+   "Gundam CG: EB01 Eternal Nexus Booster Box"
+  ]
+ },
+ {
+  "host": "kingdomtitans.ca",
+  "base": "https://kingdomtitans.ca",
+  "market": "CA",
+  "ok": false,
+  "name": "Kingdom of the Titans",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "CAD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-cg(48):1/47",
+   "gundam-cg-sealed-products(46):1/45",
+   "springbreak-promo_gundam(326):0/250",
+   "super-deformed-cross-silhouette-gundam-kits(109):0/109",
+   "mega-size-model-gundam-kits(6):0/6"
+  ],
+  "samples": [
+   "Gundam CG Impulse Gundam ST09-001 LR+ NM",
+   "Gundam CG Impulse Gundam ST09-001 LR+ NM"
+  ]
+ },
+ {
+  "host": "zone151.ca",
+  "base": "https://zone151.ca",
+  "market": "CA",
+  "ok": false,
+  "name": "Zone 151",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game"
+  ],
+  "kind": "sealed",
+  "matched": 2,
+  "inStock": 2,
+  "currency": "CAD",
+  "reason": "matched 2, in stock 2",
+  "tried": [
+   "gundam-card-game(3):2/3",
+   "gundam-booster-box(2):1/2",
+   "gundam-extra-booster-pack(1):1/1",
+   "gundam(2):0/2"
+  ],
+  "samples": [
+   "GUNDAM CARD GAME STEEL REQUIEM ( GD03 ) BOOSTER BOX",
+   "Gundam Card Game - Eternal Nexus Booster Box",
+   "GUNDAM CARD GAME STEEL REQUIEM ( GD03 ) BOOSTER BOX",
+   "Gundam Card Game - Eternal Nexus Booster Box"
+  ]
+ }
+]

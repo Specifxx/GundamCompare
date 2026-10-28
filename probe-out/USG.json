@@ -1,0 +1,103 @@
+[
+ {
+  "host": "fyendalhobby.com",
+  "base": "https://fyendalhobby.com",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (76 collections)"
+ },
+ {
+  "host": "cardconnectsg.com",
+  "base": "https://cardconnectsg.com",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (24 collections)"
+ },
+ {
+  "host": "gameshaventcg.com",
+  "base": "https://gameshaventcg.com",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (37 collections)"
+ },
+ {
+  "host": "huattoru.com",
+  "base": "https://huattoru.com",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (15 collections)"
+ },
+ {
+  "host": "hideyoshitcg.com",
+  "base": "https://hideyoshitcg.com",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (9 collections)"
+ },
+ {
+  "host": "theimaginariumsg.com",
+  "base": "https://theimaginariumsg.com",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (42 collections)"
+ },
+ {
+  "host": "universecards.sg",
+  "base": "https://universecards.sg",
+  "market": "SG",
+  "ok": false,
+  "reason": "no gundam collection (14 collections)"
+ },
+ {
+  "host": "paintandplay.sg",
+  "base": "https://paintandplay.sg",
+  "market": "SG",
+  "ok": false,
+  "name": "Paint & Play",
+  "existingKey": null,
+  "collections": [],
+  "kind": "sealed",
+  "matched": 0,
+  "inStock": 0,
+  "currency": "SGD",
+  "reason": "matched 0, in stock 0",
+  "tried": [
+   "gundam-assemble(4):0/3"
+  ],
+  "samples": []
+ },
+ {
+  "host": "game-academia.com",
+  "base": "https://game-academia.com",
+  "market": "SG",
+  "ok": true,
+  "name": "Game Academia Singapore",
+  "existingKey": null,
+  "collections": [
+   "gundam-card-game-gd-02-singles-copy",
+   "gundam-card-game-gd-02-singles"
+  ],
+  "kind": "singles",
+  "matched": 216,
+  "inStock": 15,
+  "currency": "SGD",
+  "reason": null,
+  "tried": [
+   "gundam-card-game-gd-02-singles-copy(143):110/143",
+   "gundam-card-game-gd-02-singles(134):106/134",
+   "battle-spirits-tcg-cb13-gundam-singles(94):0/94",
+   "gundam-card-game-english-booster-box(11):0/6",
+   "gundam-card-game-english-starter-deck(9):0/9",
+   "gundam-card-game-special-set(2):0/2",
+   "gundam-card-game-pre-order(0):0/0"
+  ],
+  "samples": [
+   "GCG-GD03-001 LR Gundam NT-1",
+   "GCG-GD03-002 LR The-O",
+   "GCG-GD03-003 R Messala",
+   "GCG-GD03-003 R+ Messala",
+   "GCG-GD03-004 R Hambrabi",
+   "GCG-GD03-006 R Penelope (Middle Form)"
+  ]
+ }
+]
