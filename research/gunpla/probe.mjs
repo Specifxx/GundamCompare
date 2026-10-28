@@ -1,3 +1,5 @@
+// Input: a JSON list of { key, name, base, market } (the 2026-10-28 run used
+// candidates.txt plus every card store); output: store-probe-2026-10-28.json.
 // One-off probe (temporary workflow): which Shopify stores sell Gunpla, in
 // which collections, and whether their listings carry the kit's JAN barcode.
 // Two stores at a time (Shopify 429s a runner that pages many shops at once).
