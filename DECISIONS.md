@@ -763,12 +763,16 @@ from a one-line strip under the header on every page, the homepage's
 nothing prerendered at build. Family links now point at dexcompare.app and
 compareempire.com, the canonical hosts (their www names lost DNS on 2026-10-26).
 
-## 2026-10-29: set chase posts and LR++ / LR+ / Legend Rare lists
+## 2026-10-29: set chase posts
 
 Owner, 2026-10-29: RiftCompare's Google traffic comes from its blog and guides,
-and the smaller sites need the same, aimed at set and chase-card searches. Nine
+and the smaller sites need the same, aimed at set and chase-card searches. Six
 posts in `src/content/blog/set-chase.ts`: "<Set> Most Valuable Cards" for GD01
-to GD05 and EB01, and cross-set LR++, LR+ and Legend Rare lists. They are
+to GD05 and EB01. Cross-set rarity lists were written and then dropped the same
+day: `/cards/rarity/<slug>` already ranks every LR++, LR+ and Legend Rare, and
+a blog post with the same list would split the query with it (the
+consolidation lesson from RiftCompare's set galleries). The posts link those
+hubs instead. They are
 written from the 28 October data by a script, so counts are typed with that
 date, but every table and `{{price}}` is live. They never say "card list",
 which is what `/sets/<slug>` ranks for, and they link each set page.
