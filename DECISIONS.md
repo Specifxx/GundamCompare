@@ -775,3 +775,17 @@ which is what `/sets/<slug>` ranks for, and they link each set page.
 GD06 keeps its existing post. Edition Beta has no post: its TCGplayer market
 prices come from a handful of listings (an LR+ at US$15,000), not a market.
 Content only; no engine file changed.
+
+## DexCompare's buy layout: market bar, one loud button, buy rows on set pages — 2026-10-29
+
+Fourteen days to 29 October (Vercel): DexCompare turned ~44% of visitors into
+a store click, Gundam 12%, Lorcana 25%, YGO 4%. YGO's visitors came from a
+Reddit post that linked a set page, which listed sealed only as tiles: no
+price in the visitor's currency and no button. Three things ported from Dex:
+the price table opens with the market its prices are for, its in-stock store
+count and a one-tap market switch (the header picker alone went unnoticed);
+only the best price gets the solid "Buy now" button and every other row says
+"View deal" (Dex's red-button rule); and a set page opens with its booster
+boxes and sealed, each with its cheapest price in the visitor's market and a
+"Buy now" through /go (`SealedQuickBuy`, from=set_quickbuy) before the card
+list. Measure buy_click per visitor again around 12 November.
