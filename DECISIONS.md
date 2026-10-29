@@ -762,3 +762,16 @@ from a one-line strip under the header on every page, the homepage's
 "Pre-orders and new releases" block, the set page and the sitemap. Six hours,
 nothing prerendered at build. Family links now point at dexcompare.app and
 compareempire.com, the canonical hosts (their www names lost DNS on 2026-10-26).
+
+## 2026-10-29: set chase posts and LR++ / LR+ / Legend Rare lists
+
+Owner, 2026-10-29: RiftCompare's Google traffic comes from its blog and guides,
+and the smaller sites need the same, aimed at set and chase-card searches. Nine
+posts in `src/content/blog/set-chase.ts`: "<Set> Most Valuable Cards" for GD01
+to GD05 and EB01, and cross-set LR++, LR+ and Legend Rare lists. They are
+written from the 28 October data by a script, so counts are typed with that
+date, but every table and `{{price}}` is live. They never say "card list",
+which is what `/sets/<slug>` ranks for, and they link each set page.
+GD06 keeps its existing post. Edition Beta has no post: its TCGplayer market
+prices come from a handful of listings (an LR+ at US$15,000), not a market.
+Content only; no engine file changed.

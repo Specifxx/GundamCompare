@@ -5,5 +5,6 @@ import { post as banList } from "./ban-list";
 import { post as rarities } from "./rarities";
 import { post as whereToBuy } from "./where-to-buy";
 import { post as boxOrSingles } from "./box-or-singles";
+import { SET_POSTS } from "./set-chase";
 
-export const POSTS: Post[] = [gd06, expensive, banList, rarities, whereToBuy, boxOrSingles];
+export const POSTS: Post[] = [gd06, expensive, banList, rarities, whereToBuy, boxOrSingles, ...SET_POSTS];
