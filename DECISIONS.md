@@ -740,3 +740,16 @@ matched by title. Bandai's newer kits carry JANs under 4580886 (seen in Gundam
 Extra's barcodes, e.g. item 5084493 ↔ 4580886844937), now a kit prefix. The
 first run: 2,138 kits (from 1,909); Frontline 1,235 kits matched, Gundam Extra
 1,229.
+
+## 2026-10-29: set chase posts and LR++ / LR+ / Legend Rare lists
+
+Owner, 2026-10-29: RiftCompare's Google traffic comes from its blog and guides,
+and the smaller sites need the same, aimed at set and chase-card searches. Nine
+posts in `src/content/blog/set-chase.ts`: "<Set> Most Valuable Cards" for GD01
+to GD05 and EB01, and cross-set LR++, LR+ and Legend Rare lists. They are
+written from the 28 October data by a script, so counts are typed with that
+date, but every table and `{{price}}` is live. They never say "card list",
+which is what `/sets/<slug>` ranks for, and they link each set page.
+GD06 keeps its existing post. Edition Beta has no post: its TCGplayer market
+prices come from a handful of listings (an LR+ at US$15,000), not a market.
+Content only; no engine file changed.
