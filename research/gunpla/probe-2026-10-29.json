@@ -1,0 +1,185 @@
+{
+ "https://www.frontlinehobbies.com.au": {
+  "base": "https://www.frontlinehobbies.com.au",
+  "home": {
+   "status": 200,
+   "url": "https://www.frontlinehobbies.com.au/",
+   "server": "cloudflare"
+  },
+  "markers": [
+   "neto",
+   "cloudflare"
+  ],
+  "janOnHome": [],
+  "shopify": false,
+  "productsJson": 404,
+  "woo": 404,
+  "search": {
+   "status": 200,
+   "url": "https://www.frontlinehobbies.com.au/search/",
+   "jans": [],
+   "len": 253615
+  },
+  "sitemap": {
+   "status": 404,
+   "head": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx</center>\r\n<script>window.__CF$cv$params={r:'a521b18dc9a1a1fb',t:'MTc5MzI3MTgwNQ==',u:'01a18754358775eab419b769aac43265',ut:'kVudePRieNctohVgO40MT3iGAA.ow73TozEGZLG5Atk-1793271805-1.2.1.1-oiIKzVWmZiKqV6i.KDt0QbAel7CwAZALftfaal_ftxyaT6hzjjm7P8OR.y77vuqCOI6Glx9A0qAdnsbZ3jswWD5cLQJGAeqaILI6JY1cq88',i:60};(function(){if(!document.body)return;var l=window.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var"
+  },
+  "robots": "User-agent: *\nCrawl-delay: 1\n#Disallow: /\nDisallow: /_cpanel\nDisallow: /cgi-bin/suppliers/\nDisallow: /_mycart\nDisallow: /_myacct\nDisallow: /do/\nDisallow: /*?*rf=\n\nSitemap: http://www.frontlinehobbies.com.au/sitemap_index.xml.gz\n"
+ },
+ "https://gundamextra.com": {
+  "base": "https://gundamextra.com",
+  "home": {
+   "status": 200,
+   "url": "https://gundamextra.com/",
+   "server": "cloudflare"
+  },
+  "markers": [
+   "Shopify",
+   "cloudflare"
+  ],
+  "janOnHome": [],
+  "shopify": true,
+  "currency": "CAD",
+  "collections": [
+   "a-certain-scientific-railgun-t (1)",
+   "arriving-aug-24gunprimer (23)",
+   "arriving-apr-15gunprimer (30)",
+   "arriving-apr-9gunprimer (37)",
+   "arriving-sep-2-gunprimer (26)",
+   "arriving-feb-26gunprimer (25)",
+   "arriving-jan-21gunprimer (29)",
+   "arriving-jan-6gunprimer (38)",
+   "arrived-july-21-p-bandai (43)",
+   "arriving-july-4gunprimer (29)",
+   "arriving-july-10gunprimer (25)",
+   "arriving-may-11gunprimer-g-rework-decal (26)",
+   "arriving-may-29gunprimer-g-reworks (36)",
+   "arriving-nov-13 (51)",
+   "arriving-nov-22-gunprimer-g-rework (32)",
+   "arriving-nov-29gunprimer (11)",
+   "arriving-oct-20-p-bandai-avaliable-9am-pst (26)",
+   "arriving-oct-28gunprimer (25)",
+   "arriving-oct-10gunprimer (46)",
+   "arriving-sep-18gunprimer (14)",
+   "bandai-preorder (70)",
+   "bandai-tamashii-nations (83)",
+   "decals (56)",
+   "chinese-kits (36)",
+   "entry-grades (19)",
+   "featured-kits (22)",
+   "fm-re-100-non-grade-1-100 (41)"
+  ],
+  "listSamples": [
+   {
+    "t": "Bandai Hobby MG 1/100 ZZ Gundam Ver.Ka (2017) (Damaged Box)",
+    "sku": "5063151",
+    "price": "88.99"
+   },
+   {
+    "t": "(Pre-Order)  ETA June-July 2027 HG 1/144 GUNDAM ZERO",
+    "sku": "5072317",
+    "price": "29.99"
+   },
+   {
+    "t": "(Pre-Order)  ETA Mar-Apr 2027 HG 1/144 ARK-10 GUNDAM HELIX",
+    "sku": "5072316",
+    "price": "29.99"
+   },
+   {
+    "t": "(Pre-Order)  ETA Apr-May 2027 HG 1/144 TRA122E/B CALICE",
+    "sku": "5084493",
+    "price": "33.99"
+   },
+   {
+    "t": "(Pre-Order)  ETA Apr-May 2027 HG 1/144 BMP4/6 BAU BAHLAM",
+    "sku": "5084491",
+    "price": "33.99"
+   },
+   {
+    "t": "(Pre-Order)  ETA Jun-July 2027 HG MOBILE SUIT GUNDAM RG XARX-ZERO NEW ITEM A(tentative)",
+    "sku": "5084459",
+    "price": "31.49"
+   },
+   {
+    "t": "(Pre-Order)  ETA Mar-Apr 2027 HG 1/144 STRIKE FREEDOM GUNDAM SEED FREEDOM ZERO Ver. (Tentative)",
+    "sku": "5072315",
+    "price": "32.99"
+   },
+   {
+    "t": "(Pre-Order)  ETA Apr-May 2027 HG 1/144 INFINITE JUSTICE GUNDAM & BOOSTER UNIT (Tentative)",
+    "sku": "5084877",
+    "price": "44.99"
+   }
+  ],
+  "single": [
+   {
+    "t": "Bandai Hobby MG 1/100 ZZ Gundam Ver.Ka (2017) (Damaged Box)",
+    "status": 200,
+    "barcode": [
+     "4573102631510"
+    ]
+   },
+   {
+    "t": "(Pre-Order)  ETA June-July 2027 HG 1/144 GUNDAM ZERO",
+    "status": 200,
+    "barcode": [
+     "4573102723178"
+    ]
+   },
+   {
+    "t": "(Pre-Order)  ETA Mar-Apr 2027 HG 1/144 ARK-10 GUNDAM HELIX",
+    "status": 200,
+    "barcode": [
+     "4573102723161"
+    ]
+   },
+   {
+    "t": "(Pre-Order)  ETA Apr-May 2027 HG 1/144 TRA122E/B CALICE",
+    "status": 200,
+    "barcode": [
+     "4580886844937"
+    ]
+   },
+   {
+    "t": "(Pre-Order)  ETA Apr-May 2027 HG 1/144 BMP4/6 BAU BAHLAM",
+    "status": 200,
+    "barcode": [
+     "4580886844913"
+    ]
+   },
+   {
+    "t": "(Pre-Order)  ETA Jun-July 2027 HG MOBILE SUIT GUNDAM RG XARX-ZERO NEW ITEM A(tentative)",
+    "status": 200,
+    "barcode": [
+     "4580886844593"
+    ]
+   }
+  ]
+ },
+ "https://www.metrohobbies.ca": {
+  "base": "https://www.metrohobbies.ca",
+  "home": {
+   "status": 200,
+   "url": "https://www.metrohobbies.ca/",
+   "server": "cloudflare"
+  },
+  "markers": [
+   "cloudflare"
+  ],
+  "janOnHome": [],
+  "shopify": false,
+  "productsJson": 404,
+  "woo": 404,
+  "search": {
+   "status": 404,
+   "url": "https://www.metrohobbies.ca/search?q=gundam%20hg",
+   "jans": [],
+   "len": 1547
+  },
+  "sitemap": {
+   "status": 200,
+   "head": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><url><loc>https://www.metrohobbies.ca/</loc><changefreq>weekly</changefreq><priority>0.8</priority><lastmod>2026-10-27T22:51:08+00:00</lastmod></url><url><loc>https://www.metrohobbies.ca/product/2-5-dimensional-figuarts-mini-liliel-ririsa-key-visual/6038</loc><changefreq>daily</changefreq><priority>1.0</priority><lastmod>2026-09-05T00:14:56+00:00</lastmod></url><url><loc>https://www.metrohobbies.ca/product/2-5-dimensional-figuarts-mini-miriella-mikari-key-visual/6037</loc><changefreq>daily</chang"
+  },
+  "robots": "User-agent: *\nDisallow: /s/search\nDisallow: /s/cart/\nDisallow: /s/checkout/\nDisallow: /store/checkout\nDisallow: /store/status\nDisallow: /product/*/*/leave-review\nCrawl-delay: 5\n\nUser-agent: Googlebot\nDisallow:\nUser-agent: Googlebot-Image\nDisallow:\n\nSitemap: https://www.metrohobbies.ca/sitemap.xml\n\n"
+ }
+}
