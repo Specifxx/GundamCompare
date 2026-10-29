@@ -9,15 +9,15 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - run: node research/gunpla/probe2.mjs research/gunpla/probe-2026-10-29.json
+      - run: node research/gunpla/probe2.mjs research/gunpla/probe-2026-10-29b.json
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add research/gunpla/probe-2026-10-29.json
+          git add research/gunpla/probe-2026-10-29b.json
           git commit -m "Gunpla store probe result (3 shops)"
           git push
