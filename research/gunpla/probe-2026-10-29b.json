@@ -1,0 +1,147 @@
+{
+ "frontline": {
+  "indexStatus": 200,
+  "maps": [
+   "https://www.frontlinehobbies.com.au/sitemap_1.xml.gz",
+   "https://www.frontlinehobbies.com.au/sitemap_2.xml.gz",
+   "https://www.frontlinehobbies.com.au/sitemap_3.xml.gz",
+   "https://www.frontlinehobbies.com.au/sitemap_4.xml.gz"
+  ],
+  "urlCount": 138080,
+  "kitUrlCount": 2023,
+  "kitUrlSample": [
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/perfect-grade/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/master-grade/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/real-grade/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/high-grade/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/sd-gundam/",
+   "https://www.frontlinehobbies.com.au/model-building/bandai-gundam-model-kits/gundam-other-grades/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-gunpla-model-kits/30-minute-missions-sisters/30-minute-missions/",
+   "https://www.frontlinehobbies.com.au/model-building/bandai-gundam-model-kits/star-wars-model-kits/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-gunpla-model-kits/30-minute-missions-sisters/30-minute-sisters/",
+   "https://www.frontlinehobbies.com.au/model-building/bandai-gundam-model-kits/pokemon-model-kits/",
+   "https://www.frontlinehobbies.com.au/model-building/bandai-gundam-model-kits/other-sci-fi-and-anime-model-kits/",
+   "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/builders-parts/",
+   "https://www.frontlinehobbies.com.au/model-building/bandai-gundam-model-kits/display-stands-action-bases/",
+   "https://www.frontlinehobbies.com.au/games-puzzles/trading-card-games/bandai-gundam-trading-card-game/"
+  ],
+  "pages": [
+   {
+    "u": "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/perfect-grade/",
+    "status": 200,
+    "ld": [],
+    "jans": [],
+    "gtin": [],
+    "meta": [],
+    "sku": [
+     "SKU\" >SKU",
+     "sku3ImiXG5060765\" name=\"sku3ImiXG5060765\" value=\"G5060765\">\r\n\t\t",
+     "skud9AZ9G5063825\" name=\"skud9AZ9G5063825\" value=\"G5063825\">\r\n\t\t",
+     "skuxMsrAaFNgZgQXQ8AINz3CtdH79STEgtkOEwRQ1CUGK3pu3z7Q0B7yD0k40X5",
+     "skuiw3tNG5069361\" name=\"skuiw3tNG5069361\" value=\"G5069361\">\r\n\t\t",
+     "skuS8XCQG5069191\" name=\"skuS8XCQG5069191\" value=\"G5069191\">\r\n\t\t",
+     "skuGKWQfG50672481\" name=\"skuGKWQfG50672481\" value=\"G50672481\">\r",
+     "skuPZIXuG5063057\" name=\"skuPZIXuG5063057\" value=\"G5063057\">\r\n\t\t"
+    ]
+   },
+   {
+    "u": "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/master-grade/",
+    "status": 200,
+    "ld": [],
+    "jans": [],
+    "gtin": [],
+    "meta": [],
+    "sku": [
+     "SKU\" >SKU",
+     "sku8rTTNG5066308\" name=\"sku8rTTNG5066308\" value=\"G5066308\">\r\n\t\t",
+     "skuxL95CG5060760\" name=\"skuxL95CG5060760\" value=\"G5060760\">\r\n\t\t",
+     "skuDhWH4G5063194\" name=\"skuDhWH4G5063194\" value=\"G5063194\">\r\n\t\t",
+     "skuirmkNG5063147\" name=\"skuirmkNG5063147\" value=\"G5063147\">\r\n\t\t",
+     "skue5xSQG5061590\" name=\"skue5xSQG5061590\" value=\"G5061590\">\r\n\t\t",
+     "sku9CKcFG5061607\" name=\"sku9CKcFG5061607\" value=\"G5061607\">\r\n\t\t",
+     "skupUZVwG5063542\" name=\"skupUZVwG5063542\" value=\"G5063542\">\r\n\t\t"
+    ]
+   },
+   {
+    "u": "https://www.frontlinehobbies.com.au/model-building/gundam-plastic-models/",
+    "status": 200,
+    "ld": [],
+    "jans": [],
+    "gtin": [],
+    "meta": [],
+    "sku": [
+     "SKU\" >SKU",
+     "skuD64o2G5060765\" name=\"skuD64o2G5060765\" value=\"G5060765\">\r\n\t\t",
+     "skumEQbaG5066295\" name=\"skumEQbaG5066295\" value=\"G5066295\">\r\n\t\t",
+     "sku36bA3G5066285\" name=\"sku36bA3G5066285\" value=\"G5066285\">\r\n\t\t",
+     "skuOy1IHG5066284\" name=\"skuOy1IHG5066284\" value=\"G5066284\">\r\n\t\t",
+     "skuJdDHBG5066308\" name=\"skuJdDHBG5066308\" value=\"G5066308\">\r\n\t\t",
+     "skubXMIiG5060760\" name=\"skubXMIiG5060760\" value=\"G5060760\">\r\n\t\t",
+     "skuYu4CeG5061616\" name=\"skuYu4CeG5061616\" value=\"G5061616\">\r\n\t\t"
+    ]
+   }
+  ]
+ },
+ "metro": {
+  "urlCount": 7558,
+  "kitUrlCount": 1617,
+  "kitUrlSample": [
+   "https://www.metrohobbies.ca/product/-backorder-2026-q3-pg-unleashed-rx-78-2-gundam/23OWEFIV4AKBATJVEHZGYUAY",
+   "https://www.metrohobbies.ca/product/-backorder-2026-q3-pg-unleashed-nu-gundam-led-unit-only/YX4KZMNZBKJPTWMYPMCFMNVC",
+   "https://www.metrohobbies.ca/product/-pre-order-2026-q3-patlabor-rg-1-48-av-98plus-ingram-ingram-plus-/FIXZT5KLNF5ZPZMZ4U7NHE3S",
+   "https://www.metrohobbies.ca/product/-pre-order-2026-q4-macross-hg-1-100-vf-25g-messiah-valkyrie-michael/T7YIXLE3LLTPABOB6QHBWETP",
+   "https://www.metrohobbies.ca/product/-pre-order-2026-q4-macross-hg-1-100-vf-25g-messiah-valkyrie-michael-deluxe-set/WXC657IBRLPD2WJD725IXVKZ",
+   "https://www.metrohobbies.ca/product/-pre-order-2026-q4-mgsd-kshatriya-gundam-unicorn-/RD7LWIGV7A3DTMOGVMIE4AAY",
+   "https://www.metrohobbies.ca/product/-pre-order-apr-14-due-bandainamco-q-gundam-gquuuuuux-pajamars-box-8-/XEPS6N3R4MTLASAOTEMJKKUU",
+   "https://www.metrohobbies.ca/product/-pre-order-apr-27-due-gundam-shokugan-box-collection-5-styles-12pcs-display-box-/UNOMF54UBMMZSWFU2R4L5TV6",
+   "https://www.metrohobbies.ca/product/-sale-chogokin-gundam-aerial-the-witch-from-mercury/4853",
+   "https://www.metrohobbies.ca/product/-sale-cross-silhouette-sd-gundam-mighty-strike-freedom/5932",
+   "https://www.metrohobbies.ca/product/-sale-cross-silhouette-sd-mazinkaiser/3311",
+   "https://www.metrohobbies.ca/product/-sale-evangelion-hg-new-movie-ha-ver-mark-06/682",
+   "https://www.metrohobbies.ca/product/-sale-evangelion-rg-mark-06/3072",
+   "https://www.metrohobbies.ca/product/-sale-evangelion-rg-unit-01-humanoid-dx-transportation-set/401",
+   "https://www.metrohobbies.ca/product/-sale-evangelion-rg-unit-03-dx-the-enchanted-shield-of-virtue-set/2993"
+  ],
+  "pages": [
+   {
+    "u": "https://www.metrohobbies.ca/product/-pre-order-2026-q3-patlabor-rg-1-48-av-98plus-ingram-ingram-plus-/FIXZT5KLNF5ZPZMZ4U7NHE3S",
+    "status": 200,
+    "ld": [],
+    "jans": [],
+    "gtin": [],
+    "meta": [],
+    "sku": [],
+    "title": "[Pre-Order 2026 Q3] Patlabor RG 1/48 AV-98Plus INGRAM (INGRAM.PLUS) | www.sakuramedia.com"
+   },
+   {
+    "u": "https://www.metrohobbies.ca/product/-pre-order-2026-q4-macross-hg-1-100-vf-25g-messiah-valkyrie-michael/T7YIXLE3LLTPABOB6QHBWETP",
+    "status": 200,
+    "ld": [],
+    "jans": [],
+    "gtin": [],
+    "meta": [],
+    "sku": [],
+    "title": "[Pre-Order 2026 Q4] Macross HG 1/100 VF-25G MESSIAH VALKYRIE MICHAEL | www.sakuramedia.com"
+   },
+   {
+    "u": "https://www.metrohobbies.ca/product/-pre-order-2026-q4-macross-hg-1-100-vf-25g-messiah-valkyrie-michael-deluxe-set/WXC657IBRLPD2WJD725IXVKZ",
+    "status": 200,
+    "ld": [],
+    "jans": [],
+    "gtin": [],
+    "meta": [],
+    "sku": [],
+    "title": "[Pre-Order 2026 Q4] Macross HG 1/100 VF-25G MESSIAH VALKYRIE MICHAEL Deluxe Set | www.sakuramedia.com"
+   }
+  ]
+ },
+ "gundamextra": {
+  "all": 250,
+  "gunpla": 0,
+  "bandai": 0,
+  "high-grade": 0,
+  "master-grade": 0,
+  "allProducts": 2930
+ }
+}

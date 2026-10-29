@@ -6,7 +6,9 @@
 // (lib/import/kits.ts). Shops that sell Gunpla without either (Robot4Less,
 // Hobbies Online, Tokyo Toys, Gundam Place Store…) are left out: their kits
 // cannot be matched without guessing. Keys equal the card store's key where
-// the shop is the same.
+// the shop is the same. Metro Hobbies (metrohobbies.ca, Square Online) was
+// asked for on 2026-10-29 but its pages carry no SKU, item number or JAN, so
+// it is left out on the same rule.
 import type { KitStoreConfig } from "@/lib/site-types";
 
 export const KIT_STORES: KitStoreConfig[] = [
@@ -35,6 +37,23 @@ export const KIT_STORES: KitStoreConfig[] = [
   { key: "generalgames", name: "General Games Chirnside Park", base: "https://generalgames.com.au", market: "AU", collections: ["gundam"] },
   { key: "hobbycollectorsaustralia", name: "Hobby Collectors Australia", base: "https://hobbycollectorsaustralia.com.au", market: "AU", collections: ["gunpla"] },
   { key: "turtletcg", name: "Turtle TCG", base: "https://turtletcg.com.au", market: "AU", collections: ["gundam"] },
+  // Neto, not Shopify: category pages, each card naming the Bandai item number (owner's request, 2026-10-29).
+  {
+    key: "frontlinehobbies",
+    name: "Frontline Hobbies",
+    base: "https://www.frontlinehobbies.com.au",
+    market: "AU",
+    platform: "neto",
+    collections: [
+      "model-building/gundam-plastic-models/high-grade",
+      "model-building/gundam-plastic-models/master-grade",
+      "model-building/gundam-plastic-models/real-grade",
+      "model-building/gundam-plastic-models/perfect-grade",
+      "model-building/gundam-plastic-models/sd-gundam",
+      "model-building/bandai-gundam-model-kits/gundam-other-grades",
+      "model-building/gundam-gunpla-model-kits/30-minute-missions-sisters/30-minute-missions",
+    ],
+  },
   // Canada
   { key: "401games", name: "401 Games", base: "https://store.401games.ca", market: "CA", collections: ["bandai-gunpla"] },
   { key: "bananagames", name: "Banana Games & Hobby", base: "https://bananagames.ca", market: "CA", collections: ["gundams", "bandai-model-kits"] },
@@ -43,4 +62,6 @@ export const KIT_STORES: KitStoreConfig[] = [
   { key: "torchlightgh", name: "Torchlight Games and Hobbies", base: "https://torchlightgh.com", market: "CA", collections: ["all-gunpla"] },
   { key: "zonegunpla", name: "Zone Gunpla", base: "https://www.zonegunpla.com", market: "CA", collections: ["high-grade", "master-grade", "realgrade", "perfect-grade", "entry-grade", "sd", "mgex", "mgsd", "precommandes"] },
   { key: "clawmebaby", name: "Claw Me Baby", base: "https://clawmebaby.ca", market: "CA", collections: ["gundams"] },
+  // SKU is the Bandai item number (owner's request, 2026-10-29).
+  { key: "gundamextra", name: "Gundam Extra", base: "https://gundamextra.com", market: "CA", collections: ["all"] },
 ];

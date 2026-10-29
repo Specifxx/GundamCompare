@@ -725,3 +725,18 @@ below the page; `/kits` and each grade page carry the full strip of their popula
 eBay search for that kit's name in the visitor's market (`from=kit-mini-ebay-kit`, `kit-ebay-kit-strip`,
 `kits-…`, `kit-grade-…`), so it costs no eBay API call. The card footer pair no longer shows on kit pages
 (`FooterCardAds` OWN_STRIPS). Engine code: only a site with `SITE.kits` renders it.
+
+## Gunpla: Frontline Hobbies and Gundam Extra; Metro Hobbies left out — 2026-10-29
+
+The owner asked for three shops. Gundam Extra (Canada) is Shopify with Bandai's
+item number as each SKU, so it joined like the others. Frontline Hobbies
+(Australia) runs Neto, not Shopify: the importer now reads a Neto shop's public
+category pages (`platform: "neto"`, `lib/import/kits-neto.ts`), where each
+card names the item number (`itemprop="mpn"`, "G5066295"), price, currency and
+an In Stock / Out of Stock sign; robots.txt allows it, two seconds a page.
+Metro Hobbies (metrohobbies.ca) runs Square Online and its pages carry no SKU,
+item number or JAN, so it stays out under the barcode rule rather than being
+matched by title. Bandai's newer kits carry JANs under 4580886 (seen in Gundam
+Extra's barcodes, e.g. item 5084493 ↔ 4580886844937), now a kit prefix. The
+first run: 2,138 kits (from 1,909); Frontline 1,235 kits matched, Gundam Extra
+1,229.
