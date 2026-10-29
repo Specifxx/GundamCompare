@@ -1,23 +1,24 @@
-# TEMPORARY (Gunpla store probe). Removed before the branch merges.
-name: tmp gunpla probe
+# TEMPORARY (Gunpla kit import on the branch). Removed before the branch merges.
+name: tmp gunpla import
 on:
   push:
     branches: [claude/project-thread-hvyp1n]
-    paths: [research/gunpla/probe2.mjs, .github/workflows/tmp-gunpla-probe.yml]
+    paths: [scripts/import-kits.ts, src/content/kit-stores.ts, .github/workflows/tmp-gunpla-probe.yml]
 permissions:
   contents: write
 jobs:
-  probe:
+  kits:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - run: node research/gunpla/probe2.mjs research/gunpla/probe-2026-10-29c.json
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - run: npx tsx scripts/import-kits.ts
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add research/gunpla/probe-2026-10-29c.json research/gunpla/raw
-          git commit -m "Gunpla store probe result (3 shops)"
+          git add data/public/kits.json
+          git commit -m "data: Gunpla import with the new shops (branch test)"
           git push
