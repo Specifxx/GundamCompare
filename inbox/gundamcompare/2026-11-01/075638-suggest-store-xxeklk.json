@@ -1,0 +1,15 @@
+{
+ "v": 1,
+ "at": "2026-11-01T07:56:38Z",
+ "site": "gundamcompare",
+ "kind": "suggest-store",
+ "page": "/stores",
+ "product": null,
+ "store": "Test",
+ "storeUrl": "test.com",
+ "region": "AU",
+ "shown": null,
+ "actual": null,
+ "issue": null,
+ "note": "Test"
+}
