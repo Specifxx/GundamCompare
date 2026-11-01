@@ -69,6 +69,10 @@ export const SITE: SiteConfig = {
     headline: "Night Raid: Zeon's in the shadows until 31 October",
     blurb: "Halloween on the battlefield — hunt down the cheapest Legend Rare parallels before the clock strikes midnight.",
   },
+  christmas: {
+    headline: "Operation Christmas",
+    blurb: "booster boxes and starter decks to gift, cheapest store first",
+  },
 
   stores: STORES,
   // The whole Compare Empire family, card games first (2026-10-27, DECISIONS.md
