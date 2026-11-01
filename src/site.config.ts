@@ -26,7 +26,7 @@ export const SITE: SiteConfig = {
     "gd06 stardust trails price",
   ],
   adminEmails: ["bill.jyang101@gmail.com"],
-  supportEmail: "riftcompare@gmail.com",
+  supportEmail: "compareempire@gmail.com",
   ownerEmail: "bill.jyang101@gmail.com",
   impactSiteVerification: "3ab0538e-afa1-4fe4-9cac-ce9a84159716",
 
