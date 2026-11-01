@@ -52,6 +52,12 @@ export const SITE: SiteConfig = {
 
   // Card numbers look like "GD02-048" (unique across sets; parallels share it).
   numberStyle: "code",
+  // Crawlable hubs by card attribute (/cards/<facet>/<slug>), 2026-11-01.
+  cardHubs: [
+    { facet: "color", attr: "Color", noun: ["colour", "colours"], blurb: "Every Gundam Card Game unit, pilot and command is one of five colours." },
+    { facet: "type", attr: "CardType", noun: ["card type", "card types"], title: "{game} {v} cards" },
+    { facet: "trait", attr: "Trait", noun: ["trait", "traits"], split: "\\)\\s*\\(", minItems: 15, blurb: "Traits are the factions and series printed in brackets on a card, such as (Zeon) or (Earth Federation)." },
+  ],
   rarityOrder: ["LR++", "LR+", "Legend Rare", "R+", "Rare", "U+", "Uncommon", "C++", "C+", "Common", "Promo"],
   chaseRarities: ["LR++", "LR+", "R+"],
 
