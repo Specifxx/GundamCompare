@@ -96,6 +96,7 @@ export const SITE: SiteConfig = {
     { name: "CamCompare", url: "https://www.camcompare.app", game: "Cameras", anchor: "Camera and lens prices" },
     { name: "Compare Empire", url: "https://compareempire.com", game: "Tech", anchor: "Tech and appliance prices" },
   ],
+  family: { id: "gundam" },
   social: { reddit: "https://www.reddit.com/r/GundamTCG/" },
   // Gunpla (owner, 2026-10-28): Bandai model kits compared by JAN barcode
   // across hobby shops (src/content/kit-stores.ts, DECISIONS.md "Gunpla").

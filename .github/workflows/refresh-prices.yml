@@ -50,6 +50,11 @@ jobs:
       - name: Import model kits
         continue-on-error: true
         run: npx tsx scripts/import-kits.ts
+      # The Compare Empire network (scripts/family-sync.ts): this site's best deals and pre-orders for
+      # its sisters, and their feeds for this site's "Also in this cluster" blocks. Never fatal.
+      - name: Family feed
+        continue-on-error: true
+        run: npx tsx scripts/family-sync.ts
       - name: Commit data (this commit is the daily release)
         run: |
           set -euo pipefail
