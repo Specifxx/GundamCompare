@@ -31,6 +31,8 @@ export const SITE: SiteConfig = {
   impactSiteVerification: "3ab0538e-afa1-4fe4-9cac-ce9a84159716",
 
   priceAlerts: true,
+  // Amazon US tracking ID in the owner's US Associates account (verified live 2026-10-28).
+  amazonUsTag: "gundamcompare-20",
   tcgcsvCategoryId: 86,
   tcgplayerSlug: "gundam-card-game",
   ebay: {
