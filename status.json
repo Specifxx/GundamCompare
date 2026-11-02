@@ -1,0 +1,38 @@
+{
+ "v": 1,
+ "site": "www.gundamcompare.com",
+ "at": "2026-11-02T02:52:40.237Z",
+ "overall": "ok",
+ "checks": [
+  {
+   "name": "Live site",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "A card page",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "Daily price import",
+   "status": "ok",
+   "detail": "4.8h old"
+  },
+  {
+   "name": "Store imports",
+   "status": "ok",
+   "detail": "227 stores"
+  },
+  {
+   "name": "eBay budget",
+   "status": "ok",
+   "detail": "918/1150 calls on 2026-11-01, 632 eligible"
+  },
+  {
+   "name": "Model kit import",
+   "status": "ok",
+   "detail": "2140 kits from 31 stores, 4.8h old"
+  }
+ ]
+}
