@@ -1025,3 +1025,17 @@ part search engines credit) and a plain-HTML badge for the stores we compare. Th
 instead of asking for a link (owner, 2026-11-02: growth must be passive). The badge is a route handler reading only
 `src/lib/data.ts`, noindex, cached a day by its CDN header; a missing slug answers 404 with a 5-minute cache.
 RiftCompare has had the same widgets since 2026-09.
+
+## 2026-11-02 — Seasonal sale pages
+
+`/boxing-day`, `/january-sales` and `/lunar-new-year` (owner-approved growth plan, 2026-11-02): one URL
+each, kept every year like `/black-friday`, built weeks ahead so Google has indexed them before the day.
+Dates, the year a page is about (it rolls over a week after the event) and the homepage window are pure
+in `src/lib/sale-seasons.ts` (tests in `tests/sale-seasons.test.ts`); Lunar New Year is a published-date
+table to 2040 (6 February 2027). The site covers several countries, so no page reads as one country's:
+the opening sentence names every market we have stores in, and the page has one section per market,
+in that market's own currency, never converted. Each section lists `storeDealsIn(market)`: the cheapest
+in-stock store at least 10% (and at most 45%: past that it is likelier a wrong match than a sale) under
+the median of three or more stores there, stores only; the US section also keeps the Black Friday
+page's under-TCGplayer `deals()`. Never a "was" price, a countdown or an invented sale. The footer and
+sitemap always link them; the homepage only from a few weeks before each event to two days after.
