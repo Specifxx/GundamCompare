@@ -62,6 +62,17 @@ export const SITE: SiteConfig = {
     { facet: "type", attr: "CardType", noun: ["card type", "card types"], title: "{game} {v} cards" },
     { facet: "trait", attr: "Trait", noun: ["trait", "traits"], split: "\\)\\s*\\(", minItems: 15, blurb: "Traits are the factions and series printed in brackets on a card, such as (Zeon) or (Earth Federation)." },
   ],
+  // Homepage copy for this game alone (SEO report, 2026-11-03; lib/home-faq.ts adds the live questions).
+  home: {
+    description: "Gundam Card Game prices for every card, LR++ and booster box, plus Gunpla model kits matched by barcode, across TCGplayer, eBay and hobby stores.",
+    h1: "Card Game and Gunpla prices, every store",
+    titles: ["Gundam Card Game Prices & Gunpla | Gundam Compare"],
+    faqs: [
+      { q: "What is an LR++ card in the Gundam Card Game?", a: "LR++ is the top alternate-art version of a Legend Rare and the most valuable thing you can pull. Every rarity also has a \"+\" parallel (C+, U+, R+, LR+) with the same number and game text but premium foil and often new art, and each is priced as its own card." },
+      { q: "Does Gundam Compare cover Gunpla model kits?", a: "Yes. Alongside the card game, it compares Bandai Gunpla kits across hobby shops, matched by the barcode on the box, so an HG and an MG of the same suit are never confused." },
+      { q: "Is a Gundam Card Game booster box worth it?", a: "Boxes are best value around release, when stores discount them and singles are still high. Once a set is a few months old and box prices have climbed, buying the singles you need usually costs less." },
+    ],
+  },
   rarityOrder: ["LR++", "LR+", "Legend Rare", "R+", "Rare", "U+", "Uncommon", "C++", "C+", "Common", "Promo"],
   chaseRarities: ["LR++", "LR+", "R+"],
 
