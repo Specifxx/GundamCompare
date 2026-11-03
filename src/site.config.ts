@@ -73,7 +73,7 @@ export const SITE: SiteConfig = {
     pageDark: "#070b14",
     inkDark: ["#05080f", "#0a0f1b", "#0f1626", "#151e33", "#24304d", "#37476d"],
     wordmarkGradient: "linear-gradient(180deg, #ffffff 0%, #b9ceff 45%, #3d7bff 100%)",
-    displayFont: "Orbitron",
+    displayFont: "Plus Jakarta Sans",
   },
   halloween: {
     headline: "Night Raid: Zeon's in the shadows until 31 October",
@@ -95,6 +95,7 @@ export const SITE: SiteConfig = {
     { name: "Lorcana Compare", url: "https://lorcanacompare.com", game: "Disney Lorcana", anchor: "Disney Lorcana card prices", search: "https://lorcanacompare.com/cards?q={q}" },
     { name: "YGO Compare", url: "https://ygocompare.com", game: "Yu-Gi-Oh!", anchor: "Yu-Gi-Oh! card prices", search: "https://ygocompare.com/cards?q={q}" },
     { name: "Cyberpunk Compare", url: "https://cyberpunkcompare.com", game: "Cyberpunk TCG", anchor: "Cyberpunk TCG prices", search: "https://cyberpunkcompare.com/cards?q={q}" },
+    { name: "BandaiCompare", url: "https://bandaicompare.com", game: "Union Arena, Fusion World & Digimon", anchor: "Union Arena, Fusion World and Digimon prices", search: "https://bandaicompare.com/cards?q={q}" },
     { name: "WargameCompare", url: "https://wargamecompare.com", game: "Wargames", anchor: "Miniature wargame prices" },
     { name: "FigureCompare", url: "https://figurecompare.com", game: "Anime figures", anchor: "Anime figure prices" },
     { name: "CamCompare", url: "https://www.camcompare.app", game: "Cameras", anchor: "Camera and lens prices" },
