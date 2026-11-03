@@ -33,6 +33,7 @@ export const SITE: SiteConfig = {
   priceAlerts: true,
   // Amazon US tracking ID in the owner's US Associates account (verified live 2026-10-28).
   amazonUsTag: "gundamcompare-20",
+  amazonAuTag: "gundamcompare-22",
   tcgcsvCategoryId: 86,
   tcgplayerSlug: "gundam-card-game",
   ebay: {
