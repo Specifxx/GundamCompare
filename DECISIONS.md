@@ -1293,8 +1293,6 @@ minutes or on return from a store tab, at most three times 14 days apart, always
 While no ad script is on the page it says "We don't run banner ads, so if this helped, please leave us a review." (owner, same
 day). No email asked for, never review markup. RiftCompare's DECISIONS.md, "Every site's reviews, approved in one queue".
 
-<<<<<<< HEAD
-=======
 ## Amazon is the third pinned row (2026-11-03)
 
 Engine change, in all four repos. The owner wants Amazon on every site "up there with eBay and TCGplayer", as "the third
@@ -1303,7 +1301,6 @@ sit right under the first eBay row, so on a product where eBay led it came befor
 the last pinned row (eBay and TCGplayer, the cheaper first), or first when neither is shown. Still sealed only (a single
 card's Amazon search finds the wrong thing), still product pages only (no Amazon in the quick view), never ranked, never
 the cheapest.
->>>>>>> origin/claude/project-thread-r5d8h6
 ## 2026-11-03 — Engine: several games on one site (`SITE.lines`), "series" numbers, BandaiCompare joins
 
 BandaiCompare (`Specifxx/bandaicompare`, bandaicompare.com) runs this engine for three games at once: Union Arena,
@@ -1314,7 +1311,6 @@ per-game eBay words and TCGplayer links, ad strips that stay inside a game), `Nu
 /terms). This site sets none of them, so its pages, slugs and matching are unchanged. BandaiCompare is in the
 family registry and in `sisterSites`; the sister-sites test now allows eleven or more. BandaiCompare's
 DECISIONS.md has the reasons.
-<<<<<<< HEAD
 
 ## Amazon is the third pinned row (2026-11-03)
 
@@ -1355,5 +1351,3 @@ RiftCompare's homepage as the gold standard (minus accounts and Pro). What chang
   without them.
 - **The creators bubble** (`components/creators/CreatorsBubble.tsx`): a small pill in the hero's corner into `/creators`
   (RiftCompare's), on sites with creators; the big homepage card is gone.
-=======
->>>>>>> origin/claude/project-thread-r5d8h6
