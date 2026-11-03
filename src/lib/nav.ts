@@ -20,6 +20,7 @@ export interface NavGroup {
 
 export function navGroups(): NavGroup[] {
   const prices: NavLink[] = [
+    ...(SITE.lines ?? []).map((l) => ({ href: `/games/${l.slug}`, label: l.short })),
     { href: "/cards", label: "Card prices" },
     { href: "/sets", label: "Set price guides" },
     { href: "/sealed", label: "Sealed products" },
@@ -47,6 +48,7 @@ export function navGroups(): NavGroup[] {
 /** The short row for the phone header: the pages most visitors want, in order. */
 export function phoneNav(): NavLink[] {
   return [
+    ...(SITE.lines ?? []).map((l) => ({ href: `/games/${l.slug}`, label: l.short })),
     { href: "/cards", label: "Cards" },
     { href: "/sets", label: "Sets" },
     { href: "/sealed", label: "Sealed" },

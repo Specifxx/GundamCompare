@@ -25,7 +25,7 @@ export function GET(_req: Request, { params }: { params: { slug: string } }) {
       img: p.image ? imageAt(p.image, "400w") : null,
       // The same small eBay + TCGplayer pair the card page shows under its price (owner, 2026-11-03: the ads live on card pages and in the quick view, nowhere else).
       ads: cardAds({ setId: p.setId, kind: p.kind, exclude: p.id, fill: true, limit: 6 }),
-      adSearch: adSearch(setById(p.setId)?.name),
+      adSearch: adSearch(setById(p.setId)?.name, setById(p.setId)),
     },
     { headers: { "Cache-Control": "public, s-maxage=21600, stale-while-revalidate=86400" } },
   );

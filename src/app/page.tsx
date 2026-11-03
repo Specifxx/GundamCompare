@@ -24,6 +24,7 @@ import { KitGrid } from "@/components/KitTile";
 import { SealedHero } from "@/components/SealedHero";
 import { SiteReviews } from "@/components/site-reviews/SiteReviews";
 import { sealedHero } from "@/lib/sealed-hero";
+import { GameTiles } from "@/components/GameTiles";
 
 // The homepage leads with "<game> Card Prices" and the number of stores compared, as Rift Compare's does.
 export function generateMetadata(): Metadata {
@@ -124,6 +125,9 @@ export default function Home() {
         </p>
         <p className="mt-3 text-sm"><Link href="/cards" className="link font-semibold">All {m?.counts.cards.toLocaleString() ?? ""} cards in the database →</Link></p>
       </section>
+
+      {/* Multi-game sites (SITE.lines): one tile per game, straight under the hero. */}
+      <GameTiles />
 
       {topDeals.length > 0 && (
         <section className="sd">
