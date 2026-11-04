@@ -41,7 +41,7 @@ export function footerColumns(history: boolean): { title: string; links: FooterL
         { href: "/forum", label: "Community forum · beta" },
         ...(creatorsOn() ? [{ href: "/creators", label: "Creators" }] : []),
         { href: "/contact", label: "Contact" },
-        { href: "/stores#suggest", label: "Suggest a store" },
+        { href: "/list-your-store", label: "List your store" },
         { href: "/how-we-pick-stores", label: "How we pick stores" },
         { href: "/privacy", label: "Privacy" },
         { href: "/terms", label: "Terms" },
