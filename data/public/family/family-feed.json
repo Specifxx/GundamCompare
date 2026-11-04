@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-03T23:30:24.638Z",
+ "generatedAt": "2026-11-04T23:47:39.969Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -47,7 +47,7 @@
    "currency": "USD",
    "store": "Papa Joey's Collectibles",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/710628_200w.jpg",
-   "refCents": 1067,
+   "refCents": 1065,
    "refLabel": "TCGplayer market price",
    "savingPct": 44
   },
@@ -69,29 +69,29 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Starter Deck 07: Celestial Drive",
-   "url": "https://www.gundamcompare.com/card/starter-deck-07-celestial-drive",
-   "cents": 1999,
-   "currency": "USD",
-   "store": "The Card Coop",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/662121_200w.jpg",
-   "refCents": 2327,
-   "refLabel": "TCGplayer market price",
-   "savingPct": 14
-  },
-  {
-   "kind": "deal",
-   "cluster": "cards",
-   "region": "US",
    "title": "Newtype Rising Booster Box",
    "url": "https://www.gundamcompare.com/card/newtype-rising-booster-box",
    "cents": 34999,
    "currency": "USD",
    "store": "Impact Gaming Center",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619072_200w.jpg",
-   "refCents": 40908,
+   "refCents": 40249,
    "refLabel": "TCGplayer market price",
-   "savingPct": 14
+   "savingPct": 13
+  },
+  {
+   "kind": "deal",
+   "cluster": "cards",
+   "region": "US",
+   "title": "Dual Impact Booster Box",
+   "url": "https://www.gundamcompare.com/card/dual-impact-booster-box",
+   "cents": 13300,
+   "currency": "USD",
+   "store": "Skybox Collectibles",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/650748_200w.jpg",
+   "refCents": 14748,
+   "refLabel": "TCGplayer market price",
+   "savingPct": 10
   },
   {
    "kind": "deal",
@@ -351,27 +351,13 @@
    "region": "US",
    "title": "HG 1/144 Messer Type-M01 (Gawman Use)",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-messer-type-m01-gawman-use",
-   "cents": 2669,
+   "cents": 2560,
    "currency": "USD",
    "store": "Japan Figure",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-me02r-m01-messer-type-m01-gawman-use-base.jpg?v=1779736258",
    "refCents": 4499,
    "refLabel": "median store price",
-   "savingPct": 41
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "US",
-   "title": "HG 1/144 GT-9600 Gundam Leopard",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-hgaw-gt-9600-gundam-leopard",
-   "cents": 2292,
-   "currency": "USD",
-   "store": "Japan Figure",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgaw-gt-9600-gundam-leopard-base.jpg?v=1785789540",
-   "refCents": 3095,
-   "refLabel": "median store price",
-   "savingPct": 26
+   "savingPct": 43
   },
   {
    "kind": "deal",
@@ -386,6 +372,34 @@
    "refCents": 1999,
    "refLabel": "median store price",
    "savingPct": 25
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "US",
+   "title": "HG 1/144 GT-9600 Gundam Leopard",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-hgaw-gt-9600-gundam-leopard",
+   "cents": 2418,
+   "currency": "USD",
+   "store": "Japan Figure",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgaw-gt-9600-gundam-leopard-base.jpg?v=1785789540",
+   "refCents": 3095,
+   "refLabel": "median store price",
+   "savingPct": 22
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "US",
+   "title": "HG 1/144 Gouf Ignited Haine Westenfluss Model",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-gouf-ignited-haine-westenfluss-model",
+   "cents": 2683,
+   "currency": "USD",
+   "store": "Japan Figure",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgce-zgmf-2000-gouf-ignited-heine-westenfluss-base.jpg?v=1783961827",
+   "refCents": 3399,
+   "refLabel": "median store price",
+   "savingPct": 21
   },
   {
    "kind": "deal",
@@ -414,20 +428,6 @@
    "refCents": 2699,
    "refLabel": "median store price",
    "savingPct": 20
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "US",
-   "title": "HG 1/144 Gundam Barbatos Lupus",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-barbatos-lupus",
-   "cents": 1399,
-   "currency": "USD",
-   "store": "Toy Arena",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-ibo-gundam-barbatos-lupus-00.jpg?v=1737664944",
-   "refCents": 1695,
-   "refLabel": "median store price",
-   "savingPct": 17
   }
  ]
 }
