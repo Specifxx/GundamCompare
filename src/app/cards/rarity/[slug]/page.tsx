@@ -9,8 +9,7 @@ import { ChipList } from "@/components/ChipList";
 import { TileGrid } from "@/components/ProductTile";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-export const revalidate = 86400; // data only changes with a release (DECISIONS.md, "Vercel cost")
-export const generateStaticParams = () => [];
+export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
 const hub = (slug: string) => rarityHubs().find((h) => h.slug === slug) ?? null;
 

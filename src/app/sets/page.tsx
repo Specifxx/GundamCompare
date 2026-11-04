@@ -39,7 +39,7 @@ export default function Sets() {
               const value = cards.reduce((a, p) => a + (refCents(p.id) ?? 0), 0);
               return (
                 <tr key={s.id} className="border-t border-ink-800">
-                  <td className="px-3 py-2"><Link className="link" href={`/sets/${s.slug}`}>{s.name}</Link>{s.upcoming && <span className="chip ml-2">Upcoming</span>}</td>
+                  <td className="px-3 py-2"><Link className="link" href={`/sets/${s.slug}`}>{s.name}</Link>{s.upcoming && <span className="tag ml-2">Upcoming</span>}</td>
                   <td className="px-3 py-2 text-muted">{s.releasedOn}</td>
                   <td className="px-3 py-2 text-right">{cards.length}</td>
                   <td className="px-3 py-2 text-right font-semibold">{value ? money(value) : "—"}</td>

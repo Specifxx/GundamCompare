@@ -17,10 +17,7 @@ import { postsAbout } from "@/lib/posts";
 import { imageAt } from "@/lib/image";
 import { SealedQuickBuy } from "@/components/SealedQuickBuy";
 
-export const revalidate = 86400; // data only changes with a release (DECISIONS.md, "Vercel cost")
-// Empty list = nothing prerendered at build, but each page is cached (ISR)
-// after its first visit instead of rendering on every request.
-export const generateStaticParams = () => [];
+export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const s = setBySlug(params.slug);
@@ -123,7 +120,7 @@ export default function SetPage({ params }: { params: { slug: string } }) {
       {others.length > 0 && (
         <section>
           <h2 className="mb-3 text-lg font-bold">Other {SITE.gameShort} card lists</h2>
-          <div className="flex flex-wrap gap-2">{others.map((x) => <Link key={x.id} href={`/sets/${x.slug}`} className="chip hover:border-brand">{x.name}</Link>)}</div>
+          <div className="flex flex-wrap gap-2">{others.map((x) => <Link key={x.id} href={`/sets/${x.slug}`} className="chip">{x.name}</Link>)}</div>
         </section>
       )}
     </div>

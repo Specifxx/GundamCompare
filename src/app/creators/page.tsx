@@ -84,7 +84,7 @@ function Spotlight({ c }: { c: Creator }) {
             </dl>
           )}
           <ul role="list" className="mt-4 flex flex-wrap justify-center gap-1.5 sm:justify-start">
-            {c.tags.slice(0, 4).map((t) => <li key={t} className="chip">{t}</li>)}
+            {c.tags.slice(0, 4).map((t) => <li key={t} className="tag">{t}</li>)}
           </ul>
           <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
             {c.links.map((l) => <ExternalLink key={l.url} link={l} creator={c} big />)}

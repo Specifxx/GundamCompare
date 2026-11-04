@@ -1385,3 +1385,42 @@ hosts not in `src/content/stores.ts`; `scripts/probe-stores.ts` on a runner read
 candidates (Cura Cards, Games Paradise, Gumnut, Jenes, Card Chasers, Capybara, Card Arena, Games Haven, Jeux Kingdom,
 OBO, Leisure Games) have no collection for this game. Site content only: nothing in `engine.json` changed.
 Not addable, and why (the same list every card site hit): the biggest US and UK names run platforms with no public feed or a robots.txt that forbids reading — BigCommerce (Star City Games, Game Nerdz, Game Goblins, ToyWiz, Magic Madhouse), CrystalCommerce stores whose robots.txt disallows everything (Three Kings Loot, Carta Magica, Gamekeeper, The Connection, Card Titan, Collector's Cache, Nerd Rage, Pastimes), bot walls that answer 403 or a Cloudflare challenge (Chaos Cards, Big Orbit, Wayland, Firestorm, Mighty Ape AU and NZ, Gamesmen, EB Games, MTG Mate, Imaginaire, Le Valet, Bazaar of Magic, FantasyWelt, Keepseven, Nedgame, Poromagia, Dave & Adam's, Pro-Play, Pokémon Center, Red Hobby) and custom storefronts (Card Kingdom, CoolStuffInc, ABUGames, CoreTCG, Ideal808, Noble Knight, Miniature Market, Play-in, Parkage, Agora Hobby, Hobby Master NZ). A bot wall is never worked around. A BigCommerce reader would unlock the most (Star City Games, Miniature Market, Game Nerdz, Magic Madhouse, Game Goblins) and is the next adapter worth writing.
+
+## 2026-11-04 — Gundam Compare runs the Dex / MTG Compare engine's look, on its own data
+
+The owner: Gundam Compare "runs at too much of a loss" and should "run on the same engine as MTG Compare and
+Dex Compare", then "let's move Gundam Compare entirely to the same engine … let's just do that", with "all the
+affiliates on the website", "the new ad change that we had for that MTG / Dex Compare engine", "TCGplayer ads
+are also very welcome" and "as much juice out of the eBay API as possible".
+
+What the numbers said first: Gundam's Vercel bill was A$2.42 in the last week (A$2.96 over four weeks), so the
+engine swap is not what lowers the cost; the real levers are ISR writes and the ad layout. Done as WargameCompare
+was on 2026-11-03: the Dex / MTG presentation layer on Gundam's own data layer, every URL, title, description,
+canonical, robots, Open Graph, JSON-LD, h1 and h2 outline unchanged (compared page by page against `main` with
+scripts off, 21 pages, identical). The quick view, the market preference, the price-history files, the eBay
+plan, the import, the sitemap and the kits section are untouched.
+
+- **Design system.** `globals.css` carries the engine's tokens (`--bg --surface --raised --line --ink --muted
+  --brand …`), dark by default, Gundam's blue as `--brand`; `tailwind.config.ts` maps them and keeps the old
+  names (`ink-*`, `fg`, `brand-400`, `buy`) as aliases, so the 70-odd files not rewritten still draw right.
+  Bricolage Grotesque and Inter are bundled (`src/app/fonts`, OFL); the Google Fonts request is gone.
+- **Shell.** One-row sticky header (logo, Cards / Sealed / Gunpla / Deals / Browse dropdown / Guides, a labelled
+  eBay search, search box, theme, market), a `<dialog>` phone menu, the sidebar in the flow beside `<main>`
+  from xl (its group labels are `<p>`, so the h2 outline is unchanged), the engine's footer with the same links.
+- **Ads, the engine's layout.** The eBay + TCGplayer banner under the home hero (`LandingAds.tsx`) and the two
+  side rails from 1864px (`SideAds.tsx`: eBay left, TCGplayer right, browser-only, as many tiles as fit, never
+  a clipped one), both from the import's own eBay results and TCGplayer prices (`lib/card-ads.ts`): no fetch,
+  no extra eBay call, no Amazon. The price table keeps eBay / TCGplayer / Amazon pinned as labelled rows; eBay
+  rows get the eBay-blue `.btn-ad`, the cheapest the brand button. The compact pair stays on card pages and in
+  the quick view. The 2026-11-03 "no card ads on the homepage or the layout" rule is reversed by the owner's
+  2026-11-04 ask.
+- **Caching.** The card, kit, set, sealed, hub (facet, rarity, game, grade) and pre-order pages are
+  `dynamic = "force-dynamic"` with `Vercel-CDN-Cache-Control: public, s-maxage=86400, stale-while-revalidate=86400`
+  from `next.config.js` (`CDN_PAGES`), as MTG and OP Compare: one CDN copy per URL, no ISR write, no data-cache
+  entry, nothing prerendered. `/go` and `/api` are never under that header. `tests/vercel-cost.test.ts` pins it.
+- **Out of the card-engine family.** `engine.json`, the engine-drift workflow and the sync scripts are deleted
+  here, and `Specifxx/GundamCompare` is removed from the four sisters' `engine.json` and CLAUDE.md, so the weekly
+  drift check no longer compares against this repo. Future engine-presentation changes are ported by hand.
+- **eBay quota.** Gundam already spends its full 1,150 calls a day of the app shared with Lorcana and YGO
+  (4,500 of 5,000 allotted). More calls need the owner to re-split the app; the plan itself is unchanged.
+- Rollback is one revert of the merge: the data layer did not move.

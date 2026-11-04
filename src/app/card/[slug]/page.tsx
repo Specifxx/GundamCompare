@@ -27,10 +27,7 @@ import { attrHref, rarityHref, sealedHref } from "@/lib/hubs";
 import { cardTitleCandidates, fitTitle } from "@/lib/seo-title";
 import { cardIndexable, priceValidUntil } from "@/lib/indexing";
 
-export const revalidate = 86400; // data only changes with a release (DECISIONS.md, "Vercel cost")
-// Empty list = nothing prerendered at build, but each page is cached (ISR)
-// after its first visit instead of rendering on every request.
-export const generateStaticParams = () => [];
+export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const p = productBySlug(params.slug);
@@ -115,11 +112,11 @@ export default function CardPage({ params }: { params: { slug: string } }) {
           <header>
             <div className="flex items-start gap-3">
               {p.image && <img src={imageAt(p.image, "200w")!} alt={name} className="w-20 shrink-0 rounded-md md:hidden" width={80} height={112} />}
-              <h1 className="min-w-0 flex-1 font-display text-2xl font-black md:text-3xl">{name} {p.number && <span className="text-muted">{p.number}</span>} price</h1>
+              <h1 className="min-w-0 flex-1 font-display text-2xl font-bold tracking-tight md:text-3xl">{name} {p.number && <span className="text-muted">{p.number}</span>} price</h1>
               <ShareButton path={`/card/${p.slug}`} name={`${name}${p.number ? ` ${p.number}` : ""}`} medium={p.kind === "sealed" ? "sealed" : "card"} offers={e.offers} compact className="mt-1" />
             </div>
             <div className="mt-3 flex flex-wrap items-baseline gap-x-6 gap-y-2">
-              <p><span className="text-3xl font-black text-brand-400">{money(ref)}</span> <span className="text-sm text-muted">TCGplayer market</span></p>
+              <p><span className="tabular font-display text-3xl font-bold text-ink">{money(ref)}</span> <span className="text-sm text-muted">TCGplayer market</span></p>
               <p className="text-sm">7d <span className={(e.change7d ?? 0) >= 0 ? "text-up" : "text-down"}>{pct(e.change7d)}</span> · 30d <span className={(e.change30d ?? 0) >= 0 ? "text-up" : "text-down"}>{pct(e.change30d)}</span></p>
               <p className="text-sm text-muted">{inStock.length} in-stock listing{inStock.length === 1 ? "" : "s"} worldwide</p>
             </div>
@@ -127,7 +124,7 @@ export default function CardPage({ params }: { params: { slug: string } }) {
             {Object.keys(e.tcg).length > 1 && (
               <p className="mt-2 flex flex-wrap gap-2 text-xs">
                 {Object.entries(e.tcg).map(([k, v]) => (
-                  <span key={k} className="chip">{k}: {money(v.market ?? v.mid ?? v.low)}</span>
+                  <span key={k} className="tag">{k}: {money(v.market ?? v.mid ?? v.low)}</span>
                 ))}
               </p>
             )}
