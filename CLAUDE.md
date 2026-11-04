@@ -1,23 +1,29 @@
 # Working in this repo
 
-Read `README.md` first. This is Gundam Compare; Lorcana Compare runs the same engine.
-Engine code (`src/lib`, `src/app`, `src/components`, `scripts`) must stay
-game-agnostic: anything game-specific goes in `src/site.config.ts` or
-`src/content/`. When you change the engine, make the same change in the other
-two repos (YGO Compare, `Specifxx/ygocompare`, runs it too).
+Read `README.md` first. This is Gundam Compare: the Gundam Card Game and Gunpla model
+kits, compared across stores. Since 2026-11-04 (owner) it runs the **Dex / MTG Compare
+engine's look** (the design tokens in `src/app/globals.css` and `tailwind.config.ts`, the
+one-row sticky header with the Browse dropdown, the `<dialog>` phone menu, the in-flow
+sidebar from xl, the engine's cards, price rows, quick view, ad banner and side rails) on
+its own data layer. It is NO LONGER a sister of the card engine (Lorcana, YGO, Cyberpunk,
+Bandai): there is no `engine.json`, no engine-drift workflow and nothing to sync. Change
+this repo on its own. When the Dex / MTG engine's presentation changes, port it here by
+hand as WargameCompare does. Game-specific facts still live in `src/site.config.ts` and
+`src/content/`.
 
-## One engine, three repos
+## The port's rules (DECISIONS.md, 2026-11-04)
 
-Gundam Compare, Lorcana Compare, YGO Compare and Cyberpunk Compare
-(`Specifxx/cyberpunkcompare`, since 2026-11-01) run ONE engine. `engine.json`
-lists its files (the code, tests and build config; never `src/site.config.ts`,
-`src/content/`, icons, share images, workflows or `data/`), and they must be
-byte-identical in all three repos. After an engine change here, copy it with
-`scripts/engine-sync.sh ../<sister> ../<sister>`, run the checks in each and
-open the three PRs together; `npx tsx scripts/engine-drift.ts ../<sister>…`
-shows what still differs. The weekly *Engine drift* workflow fails (and
-emails the owner) if `main` differs from a sister's `main`. Anything one game
-needs is an option in `site.config.ts`, off by default.
+- URLs, titles, meta descriptions, canonicals, robots, Open Graph, JSON-LD, the h1 and
+  the h2 outline of every page are unchanged by design work. The sidebar's and menu's
+  group labels are `<p>`, never headings. Compare a sample of pages against `main`
+  with scripts off before merging a redesign.
+- The old class names (`card-surface`, `btn-buy`, `text-fg`, `bg-ink-*`, `text-brand-400`,
+  `.link`, `.prose-site`) are aliases of the engine tokens in `tailwind.config.ts`; new
+  work uses the engine names (`card`, `btn-primary`, `text-ink`, `bg-surface`, `chip`,
+  `tag`, `ad-box`, `ad-pill`).
+- The side rails (`SideAds.tsx`) and the home banner (`LandingAds.tsx`) draw the import's
+  own eBay results and TCGplayer prices (`lib/card-ads.ts`); they never fetch, never call
+  eBay, never show Amazon, and the rails are browser-only above 1864px.
 
 ## Deploys are gated — do not add `[deploy]` to commit subjects
 

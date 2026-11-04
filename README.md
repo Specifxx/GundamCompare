@@ -3,9 +3,11 @@
 Free Gundam Card Game price comparison: every card and sealed product, compared across
 TCGplayer, eBay and Gundam game stores (US, UK, Canada, Australia, EU), updated daily.
 
-Built on the Rift Compare playbook (riftcompare.com, repo `Specifxx/TCGEmpire`),
-rebuilt as one lean engine shared with Lorcana Compare. The only game-specific files
-are `src/site.config.ts` and `src/content/` (stores, blog posts, pre-order copy).
+Built on the Rift Compare playbook (riftcompare.com, repo `Specifxx/TCGEmpire`). Since
+2026-11-04 the site runs the Dex / MTG Compare engine's look (design tokens, header,
+sidebar, cards, price rows, ads) on its own data layer; it no longer shares code with
+the card engine (Lorcana, YGO, Cyberpunk, Bandai). Game-specific files are
+`src/site.config.ts` and `src/content/` (stores, blog posts, pre-order copy).
 
 ## How it works
 
@@ -20,8 +22,9 @@ GitHub Actions, daily 18:17 UTC (refresh-prices.yml)
 ```
 
 * **Public pages never touch the database.** They read the committed JSON
-  (`src/lib/data.ts`), shipped with the deployment. Pages revalidate every 6–24
-  hours and card pages are cached on first visit (nothing prerendered at build).
+  (`src/lib/data.ts`), shipped with the deployment. Catalogue pages (card, kit, set, sealed, hub and
+  pre-order pages) are one CDN copy per URL for a day (`next.config.js` CDN_PAGES), never
+  ISR; the rest revalidate every 6–24 hours. Nothing is prerendered at build.
 * **There is no database.** No accounts, no Premium, no email: the site
   compares prices and earns through affiliate links (eBay, TCGplayer, Amazon).
   The removed account/Premium code is in `archive/accounts-premium/`.
