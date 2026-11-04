@@ -5478,38 +5478,6 @@
   ]
  },
  {
-  "key": "hbtcollectables",
-  "name": "HBT Collectables",
-  "base": "https://www.hbtcollectables.com",
-  "market": "AU",
-  "existing": true,
-  "shopify": true,
-  "finalBase": "https://www.hbtcollectables.com",
-  "currency": "AUD",
-  "collections": [],
-  "suggest": [
-   "Gundam Astray Red Frame Custom (EX) [EB01 - EB01-001]",
-   "Gundam Astray Gold Frame Amatsu (U+) [EB01 - EB01-006]",
-   "Psycho Haro (EX) [EB01 - EB01-042]",
-   "Justice Gundam (EX) [EB01 - EB01-044]",
-   "Blue Destiny Unit-1 (EX) [EB01 - EB01-043]",
-   "Gundam Card Game: Phantom Aria [GD04] Booster Box",
-   "Hi-Nu Gundam (EX) (LR+) [EB01 - EB01-002]",
-   "Gundam Card Game: Booster Box - Dual Impact [GD02]",
-   "Gundam Card Game: Booster Box – Steel Requiem [GD03]",
-   "Gundam Card Game: Phantom Aria [GD04] Booster Box SEALED Case (12 Boxes)"
-  ],
-  "sampled": 0,
-  "kitLike": 0,
-  "inStock": 0,
-  "hasBarcodeKey": false,
-  "janInSku": 0,
-  "janInBody": 0,
-  "janAnywhere": 0,
-  "vendors": [],
-  "samples": []
- },
- {
   "key": "guf",
   "name": "Guf",
   "base": "https://guf.com.au",

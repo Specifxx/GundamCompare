@@ -1424,3 +1424,13 @@ plan, the import, the sitemap and the kits section are untouched.
 - **eBay quota.** Gundam already spends its full 1,150 calls a day of the app shared with Lorcana and YGO
   (4,500 of 5,000 allotted). More calls need the owner to re-split the app; the plan itself is unchanged.
 - Rollback is one revert of the merge: the data layer did not move.
+
+## 2026-11-04 — HBT Collectables is removed and banned: they asked not to be linked
+
+HBT Collectables (hbtcollectables.com, AU) answered the store outreach email by sending it to their lawyers as
+"unauthorised linking" under their site's terms. The owner's call: take them off every site, apologise, send them
+no more visitors. Here the store leaves `src/content/stores.ts` (so `decodeOffer` drops any row of theirs an older
+data commit still holds) and its rows leave `data/public/` (prices, summary counts, meta) and the research
+files. Both hosts are on RiftCompare's `data/store-vetting/banned.json`, so the weekly vetting goes red if any
+site lists them again. Not a judgement on the store: it does not want the traffic, so we don't send it. The
+change rides the next daily data release.

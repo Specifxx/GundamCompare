@@ -19,7 +19,6 @@ export const STORES: StoreConfig[] = [
   { key: "gamesportal", name: "Games Portal", base: "https://www.gamesportal.com.au", market: "AU", collections: ["gundam-card-game-sealed", "gundam-card-game-preorders", "gundam-card-game-event-tickets"], kind: "sealed" },
   { key: "generalgames", name: "General Games Chirnside Park", base: "https://generalgames.com.au", market: "AU", collections: ["gundam_singles"], kind: "both" },
   { key: "goodgames", name: "Good Games", base: "https://www.goodgames.com.au", market: "AU", collections: ["gundam-card-game"], kind: "both" },
-  { key: "hbtcollectables", name: "HBT Collectables", base: "https://www.hbtcollectables.com", market: "AU", collections: ["gundam-card-game-singles-eng", "gundam-card-game"], kind: "both" },
   { key: "hobbycollectorsaustralia", name: "Hobby Collectors Australia", base: "https://hobbycollectorsaustralia.com.au", market: "AU", collections: ["gundam-card-game"], kind: "both" },
   { key: "hobbykitz", name: "Hobby Kitz", base: "https://hobbykitz.com.au", market: "AU", collections: ["card-stars-gundam-singles"], kind: "singles" },
   { key: "oneplacetcs", name: "One Place Trading Card Store", base: "https://oneplacetcs.com.au", market: "AU", collections: ["gundam"], kind: "both" },
