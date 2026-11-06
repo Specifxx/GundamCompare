@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-05T23:45:50.885Z",
+ "generatedAt": "2026-11-06T23:15:52.224Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -19,7 +19,7 @@
    "currency": "USD",
    "store": "Atlantis Games & Comics",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619080_200w.jpg",
-   "refCents": 5841,
+   "refCents": 5832,
    "refLabel": "TCGplayer market price",
    "savingPct": 49
   },
@@ -27,15 +27,15 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Starter Deck 11: Aquatic Assault",
-   "url": "https://www.gundamcompare.com/card/starter-deck-11-aquatic-assault",
-   "cents": 600,
+   "title": "Stardust Trails Booster Pack",
+   "url": "https://www.gundamcompare.com/card/stardust-trails-booster-pack",
+   "cents": 499,
    "currency": "USD",
-   "store": "Papa Joey's Collectibles",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710628_200w.jpg",
-   "refCents": 1036,
+   "store": "Constellation Collective",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710651_200w.jpg",
+   "refCents": 921,
    "refLabel": "TCGplayer market price",
-   "savingPct": 42
+   "savingPct": 46
   },
   {
    "kind": "deal",
@@ -47,7 +47,7 @@
    "currency": "USD",
    "store": "The Castle Games",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619067_200w.jpg",
-   "refCents": 2295,
+   "refCents": 2311,
    "refLabel": "TCGplayer market price",
    "savingPct": 35
   },
@@ -61,7 +61,7 @@
    "currency": "USD",
    "store": "Double Infinity Gaming",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/650748_200w.jpg",
-   "refCents": 13847,
+   "refCents": 13728,
    "refLabel": "TCGplayer market price",
    "savingPct": 13
   },
@@ -75,9 +75,9 @@
    "currency": "USD",
    "store": "Impact Gaming Center",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619072_200w.jpg",
-   "refCents": 39721,
+   "refCents": 39463,
    "refLabel": "TCGplayer market price",
-   "savingPct": 12
+   "savingPct": 11
   },
   {
    "kind": "deal",
@@ -89,7 +89,7 @@
    "currency": "USD",
    "store": "Double Infinity Gaming",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/682302_200w.jpg",
-   "refCents": 11630,
+   "refCents": 11629,
    "refLabel": "TCGplayer market price",
    "savingPct": 10
   },
