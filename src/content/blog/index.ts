@@ -10,5 +10,6 @@ import { post as boxOrSingles } from "./box-or-singles";
 import { post as giftGuide } from "./gift-guide";
 import { post as colours } from "./colours";
 import { SET_POSTS } from "./set-chase";
+import { post as blackFriday } from "./black-friday";
 
-export const POSTS: Post[] = [fakeCards, sixSetsIn, giftGuide, colours, gd06, expensive, banList, rarities, whereToBuy, boxOrSingles, ...SET_POSTS];
+export const POSTS: Post[] = [blackFriday, fakeCards, sixSetsIn, giftGuide, colours, gd06, expensive, banList, rarities, whereToBuy, boxOrSingles, ...SET_POSTS];
