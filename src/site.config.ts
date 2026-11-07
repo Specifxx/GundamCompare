@@ -55,6 +55,9 @@ export const SITE: SiteConfig = {
   },
 
   // Card numbers look like "GD02-048" (unique across sets; parallels share it).
+  // The low-traction cull (owner, 2026-11-07): cards under $1 leave the catalogue once their set is
+  // 120 days old; any card page Search Console shows people finding stays. ~890 of ~2,200 cards.
+  catalogMinCardCents: 100,
   numberStyle: "code",
   // Crawlable hubs by card attribute (/cards/<facet>/<slug>), 2026-11-01.
   cardHubs: [
