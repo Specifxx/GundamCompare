@@ -1577,3 +1577,12 @@ the owner accepted the remaining risk. The quick view shows the link only (the i
 else the tagged search), never Amazon's price: that stays on the product page under the 24-hour licence. Uninvited
 overlays (a phone ad dock, a corner card, an exit pop-up) still never carry Amazon, and an Amazon page is never framed
 (item (n)).
+
+## 2026-11-07 — The low-traction cull: cheap cards leave the catalogue, culled URLs 301 to their set
+
+Owner, 2026-11-07: apply Compare Empire's focus cull to every site. Search Console (56 days, on this repo's
+`demand` branch from RiftCompare's sister-demand job) gives cards under $1 almost no impressions. Same
+change as the Lorcana / Cyberpunk / Bandai engine: `SITE.catalogMinCardCents: 100` (≈2,330 → 1,440
+products; sealed, kits and sets under 120 days old stay whole), a card page with a click or 10+
+impressions stays (`lib/import/demand.ts`), and `data/public/culled.json` 301s a culled card to its set
+(`lib/culled.ts`). History keeps every card.
