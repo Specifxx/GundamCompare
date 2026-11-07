@@ -1586,3 +1586,17 @@ change as the Lorcana / Cyberpunk / Bandai engine: `SITE.catalogMinCardCents: 10
 products; sealed, kits and sets under 120 days old stay whole), a card page with a click or 10+
 impressions stays (`lib/import/demand.ts`), and `data/public/culled.json` 301s a culled card to its set
 (`lib/culled.ts`). History keeps every card.
+## 2026-11-07 — Black Friday strip and Cyber Monday page (owner: "capture all of the Black Friday SEO")
+
+Black Friday is 27 November 2026 and Cyber Monday 30 November. Three additions, every Compare site:
+
+- **`/cyber-monday`**, its own URL for its own searches ("<game> cyber monday deals"), kept every year like
+  `/black-friday`, listing the same real store deals. In the sitemap and footer; the two pages link each other.
+- **The holiday strip**: one line under the header on every page, in the server HTML, linking `/black-friday`
+  from 1 November to the Saturday after it, then `/cyber-monday` to the day after Cyber Monday, then nothing
+  (`saleStrip` in `lib/black-friday.ts`, tested). The same link leads the nav while it shows. A link, never a
+  pop-up (pop-up policy: no uninvited interruption on a visit's first page), never a countdown or "ends soon".
+- **More on both pages, nothing taken away**: the URL, title and h1 of `/black-friday` are unchanged; below the
+  existing rows come each other market's own store deals (its currency, never converted) and four visible
+  questions (the dates, whether stores have sales, shipping, how often it updates). No FAQ rich-result markup:
+  Google shows those only for government and health sites since 2023, so the text is what ranks.
