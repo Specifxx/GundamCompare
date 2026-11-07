@@ -36,6 +36,8 @@ export const SITE: SiteConfig = {
   amazonAuTag: "gundamcompare-22",
   tcgcsvCategoryId: 86,
   tcgplayerSlug: "gundam-card-game",
+  // Booster boxes in one Booster Box Case (eBay titles and store listings, 2026-11-07): a listing stating another count is another product.
+  caseUnits: 12,
   ebay: {
     query: "gundam",
     singlesCategoryId: "183454",
