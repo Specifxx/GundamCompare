@@ -1,0 +1,48 @@
+{
+ "v": 1,
+ "site": "www.gundamcompare.com",
+ "at": "2026-11-07T10:48:30.121Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "name": "Live site",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "A card page",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "Daily price import",
+   "status": "ok",
+   "detail": "11.7h old"
+  },
+  {
+   "name": "Store imports",
+   "status": "warn",
+   "detail": "magictraders: 0 matched; masterset: https://masterset.ca/collections/gundam-card-game-singles/products.json?limit=250&page=1&country=CA: fetch failed"
+  },
+  {
+   "name": "eBay budget",
+   "status": "ok",
+   "detail": "906/1150 calls on 2026-11-06, 620 eligible"
+  },
+  {
+   "name": "Family feed",
+   "status": "ok",
+   "detail": "30 items, 11.5h old; 8 sister feeds (rift, op, dex, mtg, lorcana, ygo, cyberpunk, bandai)"
+  },
+  {
+   "name": "Amazon ASIN finder",
+   "status": "ok",
+   "detail": "AU: off, 12h ago; CA: off, 12h ago; EU: off, 12h ago; UK: off, 12h ago; US: off, 12h ago"
+  },
+  {
+   "name": "Model kit import",
+   "status": "ok",
+   "detail": "2141 kits from 31 stores, 11.6h old"
+  }
+ ]
+}
