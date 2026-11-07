@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-06T23:15:52.224Z",
+ "generatedAt": "2026-11-07T21:57:51.046Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -33,9 +33,9 @@
    "currency": "USD",
    "store": "Constellation Collective",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/710651_200w.jpg",
-   "refCents": 921,
+   "refCents": 911,
    "refLabel": "TCGplayer market price",
-   "savingPct": 46
+   "savingPct": 45
   },
   {
    "kind": "deal",
@@ -75,7 +75,7 @@
    "currency": "USD",
    "store": "Impact Gaming Center",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619072_200w.jpg",
-   "refCents": 39463,
+   "refCents": 39186,
    "refLabel": "TCGplayer market price",
    "savingPct": 11
   },
@@ -89,9 +89,9 @@
    "currency": "USD",
    "store": "Double Infinity Gaming",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/682302_200w.jpg",
-   "refCents": 11629,
+   "refCents": 11549,
    "refLabel": "TCGplayer market price",
-   "savingPct": 10
+   "savingPct": 9
   },
   {
    "kind": "deal",
@@ -139,20 +139,6 @@
    "kind": "deal",
    "cluster": "hobby",
    "region": "AU",
-   "title": "HG 1/144 Char's Zaku (GQ)",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-chars-zaku-gq",
-   "cents": 2924,
-   "currency": "AUD",
-   "store": "Gap Games",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-ms-06s-chars-zaku-gq-ver-base.jpg?v=1764626966",
-   "refCents": 4224,
-   "refLabel": "median store price",
-   "savingPct": 31
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "AU",
    "title": "Option Parts Set (Ride-On Set)",
    "url": "https://www.gundamcompare.com/kit/option-parts-set-ride-on-set",
    "cents": 2449,
@@ -167,15 +153,29 @@
    "kind": "deal",
    "cluster": "hobby",
    "region": "AU",
-   "title": "HG 1/144 Gundam Gp-02A",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-gp-02a",
-   "cents": 2599,
+   "title": "HG 1/144 ZZ Gundam",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-zz-gundam",
+   "cents": 3054,
    "currency": "AUD",
    "store": "Gap Games",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-rx-78-gundam-gp02a-physalis-00.jpg?v=1737658843",
-   "refCents": 3699,
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-msz-010-zz-gundam-00.jpg?v=1737660275",
+   "refCents": 4299,
    "refLabel": "median store price",
-   "savingPct": 30
+   "savingPct": 29
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "AU",
+   "title": "MG G-Fighter",
+   "url": "https://www.gundamcompare.com/kit/mg-g-fighter",
+   "cents": 7629,
+   "currency": "AUD",
+   "store": "Gap Games",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/mg-g-fighter-00.jpg?v=1737659539",
+   "refCents": 10699,
+   "refLabel": "median store price",
+   "savingPct": 29
   },
   {
    "kind": "deal",
