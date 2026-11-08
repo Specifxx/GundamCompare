@@ -462,3 +462,46 @@ html:has(.menu-sheet[open]) {
 @media (min-width: 768px) and (max-width: 1100px) { .game-fan { display: none; } .game-tile-name, .game-tile-blurb { padding-right: 0; } }
 @media (max-width: 480px) { .game-fan { width: 96px; height: 90px; top: 12px; right: 8px; } .game-fan-card { width: 52px; } .game-fan-0 { right: 32px; } .game-fan-1 { right: 16px; } .game-tile-name, .game-tile-blurb { padding-right: 100px; } }
 @media (prefers-reduced-motion: reduce) { .game-tile { transition: none; } .game-tile:hover { transform: none; } .game-fan-card { transition: none; } }
+
+
+/* ── The full-width layout and the featured-product hero (owner, 2026-11-08: "how they feature some products on the hero and how it
+   uses the full screen", KaeYoung and ScentCompare's) ─────────────────────────────────────────────────────────────────────────────
+   From 1280px the shell runs the full width of the window, and from 1864px from the eBay rail's edge to the TCGplayer rail's, so the sidebar sits flush against the
+   left rail and nothing floats in a gap. Margins, not a max-width of 100vw - 272px: 100vw counts a desktop scrollbar, which would push
+   the shell under a rail. The header keeps its full width (its own xl:max-w-shell is a different class). */
+@media (min-width: 1280px) {
+  .max-w-shell {
+    max-width: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Gundam's rails are 160px wide and show only from 1864px (components/SideAds.tsx MIN_WIDTH): the shell meets them there. */
+@media (min-width: 1864px) {
+  .max-w-shell {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+}
+/* The hero's stat line, as chips. */
+.hero-stat {
+  @apply inline-flex min-h-9 items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 text-sm text-muted;
+}
+.hero-stat b {
+  @apply font-bold text-ink;
+}
+/* A featured product card (components/home/HeroCards.tsx): photo on the plate, then type, name, price and stores. */
+.hc-card {
+  @apply card flex h-full flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lift;
+}
+.hc-art {
+  @apply relative flex aspect-square items-center justify-center rounded-none ring-0;
+}
+.hc-save {
+  @apply absolute left-2 top-2 rounded-full bg-open-soft px-2 py-0.5 text-xs font-bold text-open;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hc-card { transition: none; }
+  .hc-card:hover { transform: none; }
+}
