@@ -1708,3 +1708,19 @@ and sees whether it is a good price.
   above it "you can pay less", with the saving. A listing that was out of stock says so instead. eBay, Amazon, marketplaces, stores
   we don't read and unmatched pages fall back to a search from the link's words, each linking to its price table.
 - Pasting a link into the header search opens the checker (`#link=` in the fragment, so the CDN keeps one copy of the page).
+
+## 2026-11-08 — Japanese boxes and wrong set codes never match
+
+The 8 Nov data had The Avid Collectors' (SG) Japanese Stardust Trails box (`...-gd06-jpn`, S$70) on the English box's
+page: `isForeign` knew "jp" and "japanese" but not "JPN". The replay of every stored sealed row found 11 such rows (The
+Avid Collectors and Gundam Lab list every set's Japanese box).
+
+- `isForeign` (`lib/import/match.ts`) now also refuses JPN, JAP, CHN, KOR, Thai, Indonesian, "(kr)" and any Japanese,
+  Chinese or Korean script. The importer checks the listing's URL handle for the same words (`handleOf`), for a store
+  that says the language only there.
+- The handle is read for the language ONLY, never for the set. Stores duplicate a listing and retitle it: Level Up
+  Games' `gundam-freedom-ascension-booster-box-gd05-copy` and Northumbrian Tin Soldier's `...-gd05-1` are their real
+  GD06 boxes (each store has a separate GD05 row on the GD05 box, at its own price). Those two rows stay.
+- A sealed title that names a set code ("[GD05]", "GD-06", "EB01") must name the product's own set, or a set whose name
+  the product's set carries (SC01 "Deck Build Box Freedom Ascension" is sold as GD05). "Stardust Trails Booster Box
+  [GD05]" is no match: a store's typo loses a row rather than a guess putting it on the wrong page.
