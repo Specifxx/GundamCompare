@@ -1641,3 +1641,16 @@ logo, candy-cane stripes and seasonal palette swaps) is gone, with its art in `p
 touch, drawn in the site's own colours: the gifts line in the hero (`ChristmasGifts`, `.xmas-pill`), a plain pill that inherits the hero's text colour, with no gift icon or red glow. (wording still `SITE.christmas`). It still starts and ends by itself (`lib/season.ts`, 1 November to
 Boxing Day), and the tests pin that nothing else comes back. Black Friday and Cyber Monday (strip, pages, nav) are
 unchanged. The same rule went to every sister site: the site's own identity first.
+
+## 2026-11-08 — Full-width shell and a featured-product hero
+
+Owner, 2026-11-08: KaeYoung and ScentCompare's hero ("feature some products on the hero … uses the full screen") on the Dex / MTG
+engine family (DexCompare #154, MTG Compare #104, YGO Compare #125), ported by hand:
+
+- From 1280px the shell takes the window's full width; from 1864px, where the 160px side rails appear, it runs from the eBay rail's
+  edge to the TCGplayer rail's (`.max-w-shell` margins of 160px, not a max-width: `100vw` counts a desktop scrollbar), so nothing
+  floats in a gap. `.page` 1440px. The rails' own rules (1864px, 160px) are unchanged.
+- The homepage hero is two columns from lg: the same eyebrow, h1, paragraph, search, region row and trending chips on the left (now
+  left-aligned), the stat line as chips, and two featured sealed products on the right (`components/home/HeroCards.tsx`: the sealed
+  shelf's first two with a photo, `featuredSealed`, with TCGplayer's market price and the in-stock store count, as on the tiles).
+  Nothing in the cards is a heading; URLs, titles and metadata unchanged. Seasonal decor unchanged.

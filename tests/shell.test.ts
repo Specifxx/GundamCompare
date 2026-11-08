@@ -21,6 +21,9 @@ test("the shell is the engine's: header, sidebar beside main, no fixed rail vari
   const css = readFileSync("src/app/globals.css", "utf8");
   assert.match(css, /--hdr: 60px/);
   assert.match(css, /:root:not\(\[data-theme="light"\]\)/);
+  // The full-width shell (owner, 2026-11-08): full width from 1280px, flush against the 160px rails from 1864px.
+  assert.match(css, /@media \(min-width: 1864px\) \{\s*\.max-w-shell \{\s*margin-left: 160px;\s*margin-right: 160px;/);
+  assert.match(readFileSync("src/app/page.tsx", "utf8"), /<HeroCards items=\{heroPicks\} \/>/);
 });
 
 test("the current section is marked by whole path segments", () => {
