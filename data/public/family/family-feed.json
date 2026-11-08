@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-07T21:57:51.046Z",
+ "generatedAt": "2026-11-08T22:15:16.396Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -27,15 +27,15 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Stardust Trails Booster Pack",
-   "url": "https://www.gundamcompare.com/card/stardust-trails-booster-pack",
-   "cents": 499,
+   "title": "Starter Deck 11: Aquatic Assault",
+   "url": "https://www.gundamcompare.com/card/starter-deck-11-aquatic-assault",
+   "cents": 600,
    "currency": "USD",
-   "store": "Constellation Collective",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710651_200w.jpg",
-   "refCents": 911,
+   "store": "Papa Joey's Collectibles",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710628_200w.jpg",
+   "refCents": 1035,
    "refLabel": "TCGplayer market price",
-   "savingPct": 45
+   "savingPct": 42
   },
   {
    "kind": "deal",
@@ -61,7 +61,7 @@
    "currency": "USD",
    "store": "Double Infinity Gaming",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/650748_200w.jpg",
-   "refCents": 13728,
+   "refCents": 13803,
    "refLabel": "TCGplayer market price",
    "savingPct": 13
   },
@@ -75,9 +75,9 @@
    "currency": "USD",
    "store": "Impact Gaming Center",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619072_200w.jpg",
-   "refCents": 39186,
+   "refCents": 38676,
    "refLabel": "TCGplayer market price",
-   "savingPct": 11
+   "savingPct": 10
   },
   {
    "kind": "deal",
@@ -89,9 +89,9 @@
    "currency": "USD",
    "store": "Double Infinity Gaming",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/682302_200w.jpg",
-   "refCents": 11549,
+   "refCents": 11365,
    "refLabel": "TCGplayer market price",
-   "savingPct": 9
+   "savingPct": 8
   },
   {
    "kind": "deal",
