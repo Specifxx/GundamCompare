@@ -37,3 +37,8 @@ test("the scale hubs are in the sitemap and the CDN rules", () => {
   assert.match(readFileSync("src/app/sitemap.ts", "utf8"), /kits\/scale/);
   assert.match(readFileSync("next.config.js", "utf8"), /"\/kits\/scale\/:scale"/);
 });
+
+test("the search finds a product by its set code and the header box names what it finds", () => {
+  assert.match(readFileSync("src/app/api/search/route.ts", "utf8"), /setById\(p\.setId\)\?\.code/);
+  assert.match(readFileSync("src/components/SearchBox.tsx", "utf8"), /Search cards, sealed, /);
+});

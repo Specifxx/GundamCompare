@@ -1745,3 +1745,4 @@ one "Browse" dropdown of generic groups, the sidebar a flat "Prices" list. Audit
   and the CDN rules, links the grades and scales, and the kit page's Scale row links it. Gunpla series is not in the data, so there
   is no series hub; do not guess one from kit names.
 - Hubs, URLs, titles, canonicals and JSON-LD of existing pages are unchanged. The footer's single /our-sites link stays.
+- The header search says "Search cards, sealed, Gunpla…" (it finds all three) and finds a product by its set code (GD01).
