@@ -1729,3 +1729,19 @@ Avid Collectors and Gundam Lab list every set's Japanese box).
 ## 2026-11-09 — TokyoToys (UK) added for Gundam Card Game
 
 TokyoToys (tokyotoys.com, Shopify, GBP, UK mainland delivery only; vetted for Cyberpunk Compare, see its DECISIONS.md) lists Gundam Card Game sealed through its `trading-card-games` collection (read by hand 2026-11-09, items in stock with tracked inventory). UK market only. Its titles carry a "RELEASE <date>:" prefix. Dex and MTG Compare already list it; One Piece, Pokemon (English) and Union Arena / Digimon / Fusion World sealed are not stocked, so those sites do not.
+
+
+## 2026-11-09 — Navigation by the game's own dimensions, and a Gunpla scale hub (owner: "navigation is very, very important")
+
+Two audiences share this site and each looks for something different: a Gundam Card Game player thinks colour, rarity, card type
+and set; a builder thinks Gunpla grade and then scale; a sealed buyer thinks product type. The header had Cards, Sealed, Gunpla and
+one "Browse" dropdown of generic groups, the sidebar a flat "Prices" list. Audit: `/mnt/project-files/nav-audit/gundam.json`.
+
+- `lib/shop-nav.ts` builds one list from the hubs that already exist (`attrFacets`, `rarityHubs`, `sealedHubs`, the set list,
+  `gradeHubs`, `scaleHubs`). The header's Cards, Sealed and Gunpla items each open a dropdown (`HeaderNav.tsx`, CSS-only, plain links
+  in the server HTML; the panel is sized to its columns); "Browse" became "More" (deals, tools, guides); the sidebar and phone menu
+  lead with "Cards by colour / rarity / card type / trait", "Card sets", "Sealed by type", "Gunpla by grade / by scale".
+- New: `/kits/scale/<scale>` (1/144, 1/100, 1/60 and 1/72 today). A scale hub exists only with `SCALE_MIN` (20) kits, is in the sitemap
+  and the CDN rules, links the grades and scales, and the kit page's Scale row links it. Gunpla series is not in the data, so there
+  is no series hub; do not guess one from kit names.
+- Hubs, URLs, titles, canonicals and JSON-LD of existing pages are unchanged. The footer's single /our-sites link stays.

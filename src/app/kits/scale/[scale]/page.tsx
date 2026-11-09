@@ -1,0 +1,66 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "@/components/Link";
+import { SITE } from "@/site.config";
+import { canon, KITS_SHARE_IMAGE } from "@/lib/site";
+import { gradeHubs, kitAdTiles, kitBestByMarket, scaleHubBySlug, scaleHubs } from "@/lib/kits";
+import { KitEbayStrip } from "@/components/KitAds";
+import { KitGrid } from "@/components/KitTile";
+import { KitPrice } from "@/components/KitPrice";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+
+export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
+
+// Tiles for the first kits, a plain list for the rest: an HG hub holds
+// hundreds of kits, and a tile each is hundreds of store photos.
+const TILES = 60;
+
+export function generateMetadata({ params }: { params: { scale: string } }): Metadata {
+  const h = SITE.kits ? scaleHubBySlug(params.scale) : null;
+  if (!h || !SITE.kits) return {};
+  return {
+    title: `${h.scale} ${SITE.kits.label} prices: compare ${SITE.kits.stores.length} shops`,
+    description: `Compare prices for ${h.items.length} ${h.scale} scale kits across ${SITE.kits.stores.length} hobby shops in the US, UK, Canada and Australia, cheapest in-stock first.`,
+    ...canon(`/kits/scale/${h.slug}`, KITS_SHARE_IMAGE),
+  };
+}
+
+export default function ScalePage({ params }: { params: { scale: string } }) {
+  const h = SITE.kits ? scaleHubBySlug(params.scale) : null;
+  if (!h || !SITE.kits) notFound();
+  const rest = h.items.slice(TILES);
+  return (
+    <div className="flex flex-col gap-8">
+      <header>
+        <Breadcrumbs items={[{ name: SITE.kits.label, href: "/kits" }, { name: h.label }]} />
+        <h1 className="font-display text-3xl font-black">{h.scale} scale {SITE.kits.label} prices</h1>
+        <p className="mt-2 text-muted">{h.items.length} kits, the ones most shops have in stock first. Open a kit to compare every shop.</p>
+      </header>
+      <nav aria-label="Scales" className="flex flex-wrap gap-2">
+        {scaleHubs().map((g) => (
+          <Link key={g.slug} href={`/kits/scale/${g.slug}`} className={`chip ${g.slug === h.slug ? "chip-on" : ""}`}>{g.scale}</Link>
+        ))}
+      </nav>
+      <nav aria-label="Grades" className="flex flex-wrap gap-2">
+        {gradeHubs().map((g) => (
+          <Link key={g.slug} href={`/kits/grade/${g.slug}`} className="chip">{g.label}</Link>
+        ))}
+      </nav>
+      <KitGrid items={h.items.slice(0, TILES)} />
+      <KitEbayStrip tiles={kitAdTiles(h.items, 12)} page="kit-grade" title={`${h.scale} ${SITE.kits.label} on eBay`} />
+      {rest.length > 0 && (
+        <section>
+          <h2 className="mb-3 text-xl font-bold">More {h.scale} kits</h2>
+          <ul className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2 lg:grid-cols-3">
+            {rest.map((k) => (
+              <li key={k.jan} className="flex min-w-0 items-baseline justify-between gap-3 border-b border-ink-800 py-1.5">
+                <Link href={`/kit/${k.slug}`} className="min-w-0 truncate hover:underline">{k.name}</Link>
+                <span className="shrink-0 tabular-nums text-brand-400"><KitPrice best={kitBestByMarket(k.jan)} /></span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  );
+}

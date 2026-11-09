@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
 import { canon, KITS_SHARE_IMAGE } from "@/lib/site";
-import { gradeHubs, kitAdTiles, kits, kitsOn, kitsUpdatedAt, newKits, popular } from "@/lib/kits";
+import { gradeHubs, kitAdTiles, kits, kitsOn, kitsUpdatedAt, newKits, popular, scaleHubs } from "@/lib/kits";
 import { KitGrid } from "@/components/KitTile";
 import { KitEbayStrip } from "@/components/KitAds";
 import { KitSearch } from "@/components/KitSearch";
@@ -49,6 +49,13 @@ export default function Kits() {
         {hubs.map((h) => (
           <Link key={h.slug} href={`/kits/grade/${h.slug}`} className="chip text-sm hover:border-brand">
             {h.label} <span className="text-muted">· {h.items.length}</span>
+          </Link>
+        ))}
+      </nav>
+      <nav aria-label="Scales" className="-mt-4 flex flex-wrap gap-2">
+        {scaleHubs().map((h) => (
+          <Link key={h.slug} href={`/kits/scale/${h.slug}`} className="chip text-sm hover:border-brand">
+            {h.scale} <span className="text-muted">· {h.items.length}</span>
           </Link>
         ))}
       </nav>

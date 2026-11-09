@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
 import { canon, KITS_SHARE_IMAGE } from "@/lib/site";
-import { gradeHubBySlug, gradeHubs, kitAdTiles, kitBestByMarket } from "@/lib/kits";
+import { gradeHubBySlug, gradeHubs, kitAdTiles, kitBestByMarket, scaleHubs } from "@/lib/kits";
 import { KitEbayStrip } from "@/components/KitAds";
 import { KitGrid } from "@/components/KitTile";
 import { KitPrice } from "@/components/KitPrice";
@@ -39,6 +39,11 @@ export default function GradePage({ params }: { params: { grade: string } }) {
       <nav aria-label="Grades" className="flex flex-wrap gap-2">
         {gradeHubs().map((g) => (
           <Link key={g.slug} href={`/kits/grade/${g.slug}`} className={`chip ${g.slug === h.slug ? "chip-on" : ""}`}>{g.label}</Link>
+        ))}
+      </nav>
+      <nav aria-label="Scales" className="-mt-4 flex flex-wrap gap-2">
+        {scaleHubs().map((g) => (
+          <Link key={g.slug} href={`/kits/scale/${g.slug}`} className="chip">{g.scale}</Link>
         ))}
       </nav>
       <KitGrid items={h.items.slice(0, TILES)} />

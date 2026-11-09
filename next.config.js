@@ -8,7 +8,7 @@
 // render refreshes it. No ISR write, no data-cache entry per page, nothing prerendered at build. The header never covers
 // /go (a redirect per click) or /api.
 const CDN_CACHE = "public, s-maxage=86400, stale-while-revalidate=86400";
-const CDN_PAGES = ["/card/:slug", "/kit/:slug", "/sets/:slug", "/sealed/:type", "/cards/rarity/:slug", "/cards/:facet", "/cards/:facet/:slug", "/games/:slug", "/kits/grade/:grade", "/preorders/:slug"];
+const CDN_PAGES = ["/card/:slug", "/kit/:slug", "/sets/:slug", "/sealed/:type", "/cards/rarity/:slug", "/cards/:facet", "/cards/:facet/:slug", "/games/:slug", "/kits/grade/:grade", "/kits/scale/:scale", "/preorders/:slug"];
 
 module.exports = {
   reactStrictMode: true,
