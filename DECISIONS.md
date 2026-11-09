@@ -1724,3 +1724,8 @@ Avid Collectors and Gundam Lab list every set's Japanese box).
 - A sealed title that names a set code ("[GD05]", "GD-06", "EB01") must name the product's own set, or a set whose name
   the product's set carries (SC01 "Deck Build Box Freedom Ascension" is sold as GD05). "Stardust Trails Booster Box
   [GD05]" is no match: a store's typo loses a row rather than a guess putting it on the wrong page.
+
+
+## 2026-11-09 — TokyoToys (UK) added for Gundam Card Game
+
+TokyoToys (tokyotoys.com, Shopify, GBP, UK mainland delivery only; vetted for Cyberpunk Compare, see its DECISIONS.md) lists Gundam Card Game sealed through its `trading-card-games` collection (read by hand 2026-11-09, items in stock with tracked inventory). UK market only. Its titles carry a "RELEASE <date>:" prefix. Dex and MTG Compare already list it; One Piece, Pokemon (English) and Union Arena / Digimon / Fusion World sealed are not stocked, so those sites do not.
