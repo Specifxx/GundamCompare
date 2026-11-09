@@ -163,6 +163,7 @@ export const STORES: StoreConfig[] = [
   { key: "totalcards", name: "Total Cards", base: "https://totalcards.net", market: "UK", collections: ["gundam-tcg-single-cards", "gundam", "gundam-tcg", "gundam-tcg-best-sellers", "gundam-tcg-booster-boxes"], kind: "singles" },
   { key: "ultimatetcg", name: "Ultimate TCG Limited", base: "https://ultimatetcg.co.uk", market: "UK", collections: ["gundam-card-game"], kind: "sealed" },
   { key: "ultrararecards", name: "Ultra Rare Cards", base: "https://ultrararecards.co.uk", market: "UK", collections: ["gundam-singles-cards"], kind: "singles" },
+  { key: "tokyotoys", name: "TokyoToys", base: "https://tokyotoys.com", market: "UK", collections: ["trading-card-games"], kind: "sealed" },
   { key: "allaccesscardshop", name: "All Access Card Shop", base: "https://allaccesscardshop.com", market: "US", collections: ["gundam-singles"], kind: "both" },
   { key: "atlantiscomics", name: "Atlantis Games & Comics", base: "https://atlantis-comics.com", market: "US", collections: ["gundam", "gundam-sealed"], kind: "singles" },
   { key: "atomilicollectables", name: "ATOMILI COLLECTABLES", base: "https://atomilicollectables.com", market: "US", collections: ["gundam-card-game", "gcg-starter-decks"], kind: "both" },
