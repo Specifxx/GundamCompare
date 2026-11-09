@@ -78,6 +78,32 @@ export function gradeHubs(): GradeHub[] {
 }
 export const gradeHubBySlug = (slug: string) => gradeHubs().find((h) => h.slug === slug) ?? null;
 
+// Scales, the builder's second question after the grade ("1/144", "1/100"): a hub per scale with enough kits to be worth a page.
+export const SCALE_MIN = 20;
+export const scaleSlug = (s: string) => slugify(s.replace("/", " "));
+export interface ScaleHub {
+  scale: string;
+  slug: string;
+  label: string;
+  items: Kit[];
+}
+let scaleMemo: { at: Kit[]; hubs: ScaleHub[] } | null = null;
+/** Biggest scale first. Only a scale with SCALE_MIN kits or more has a hub, so the sitemap never lists a thin page. */
+export function scaleHubs(): ScaleHub[] {
+  const all = kits();
+  if (scaleMemo && scaleMemo.at === all) return scaleMemo.hubs;
+  const by = new Map<string, Kit[]>();
+  for (const k of all) if (k.scale) by.set(k.scale, [...(by.get(k.scale) ?? []), k]);
+  const hubs = [...by.entries()]
+    .filter(([, list]) => list.length >= SCALE_MIN)
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([scale, list]) => ({ scale, slug: scaleSlug(scale), label: `${scale} scale`, items: popular(list) }));
+  scaleMemo = { at: all, hubs };
+  return hubs;
+}
+export const scaleHubBySlug = (slug: string) => scaleHubs().find((h) => h.slug === slug) ?? null;
+export const scaleHubOf = (k: Kit) => (k.scale ? scaleHubs().find((h) => h.scale === k.scale) ?? null : null);
+
 /** Most stores in stock first, then newest. */
 export function popular(list: Kit[]): Kit[] {
   return list

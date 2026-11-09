@@ -71,7 +71,7 @@ export function SearchBox({ big = false, size, placeholder }: { big?: boolean; s
         }}
         type="search"
         autoComplete="off"
-        placeholder={placeholder ?? (size === "sm" ? "Search cards…" : SITE.kits ? `Search any card, sealed product or ${SITE.kits.label} kit…` : "Search any card or sealed product…")}
+        placeholder={placeholder ?? (size === "sm" ? (SITE.kits ? `Search cards, sealed, ${SITE.kits.label}…` : "Search cards…") : SITE.kits ? `Search any card, sealed product or ${SITE.kits.label} kit…` : "Search any card or sealed product…")}
         aria-label="Search cards"
         role="combobox"
         aria-expanded={listed}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
-import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitImage, kitOffers, kits, kitsUpdatedAt, popular } from "@/lib/kits";
+import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitImage, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
 import { money } from "@/lib/format";
 import { PriceTable } from "@/components/PriceTable";
 import { CardStickyBuyBar, CardTopBuy, CheckedAgo } from "@/components/CardBuy";
@@ -85,7 +85,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
           {k.image && <img src={kitImage(k.image, 640)} alt={`${k.name} box`} className="hidden w-full rounded-xl bg-white object-contain md:block" width={320} height={320} />}
           <dl className="card-surface grid grid-cols-2 gap-x-3 gap-y-1.5 p-4 text-sm">
             {k.grade && (<><dt className="text-muted">Grade</dt><dd><Link className="link" href={`/kits/grade/${gradeSlug(k.grade)}`}>{GRADE_LABEL[k.grade] ?? k.grade}</Link></dd></>)}
-            {k.scale && (<><dt className="text-muted">Scale</dt><dd>{k.scale}</dd></>)}
+            {k.scale && (<><dt className="text-muted">Scale</dt><dd>{scaleHubOf(k) ? <Link className="link" href={`/kits/scale/${scaleHubOf(k)!.slug}`}>{k.scale}</Link> : k.scale}</dd></>)}
             <dt className="text-muted">Maker</dt><dd>{cfg.maker}</dd>
             <dt className="text-muted">JAN barcode</dt><dd className="tabular-nums">{k.jan}</dd>
           </dl>

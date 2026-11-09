@@ -7,7 +7,7 @@ import { preorderPath } from "@/lib/preorders";
 import { SITE_URL } from "@/lib/site";
 import { creatorsOn } from "@/lib/creators";
 import { SITE } from "@/site.config";
-import { gradeHubs, kits } from "@/lib/kits";
+import { gradeHubs, kits, scaleHubs } from "@/lib/kits";
 
 export const revalidate = 86400;
 
@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? [
           { url: `${SITE_URL}/kits`, lastModified: at, changeFrequency: "daily" as const, priority: 0.8 },
           ...gradeHubs().map((h) => ({ url: `${SITE_URL}/kits/grade/${h.slug}`, lastModified: at, priority: 0.6 })),
+          ...scaleHubs().map((h) => ({ url: `${SITE_URL}/kits/scale/${h.slug}`, lastModified: at, priority: 0.6 })),
           ...kits().map((k) => ({ url: `${SITE_URL}/kit/${k.slug}`, lastModified: at, priority: 0.5 })),
         ]
       : []),
