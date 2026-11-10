@@ -1772,8 +1772,8 @@ The thread "Rethink GundamCompare strategy" (A$0 earned, 23 Google clicks a week
   (Frontline Hobbies, Gundam Planet, Gundam Lab, Toy Arena…). The site's buyers are mostly Gunpla builders, and their clicks went unpaid.
 - Search Console, 28 days: 5,430 impressions, 49 clicks, position 11.7. The searches are GD06 chase cards ("zz gundam lr+" 128
   impressions at 6.0, "argama sp", "gundam bael lr+", "harry ord r+"): pages ranked 4th to 8th and got 0 clicks.
-- Stores are not the problem: 227 card stores read, 226 ok (magictraders sells 11 Gundam products and none is a single we can match;
-  masterset.ca's collection is gone). Neither is the catalogue: 1,441 card and sealed products, 2,141 kits in 31 shops.
+- Stores are not the problem: 227 card stores read, 226 ok (magictraders lists 11 Gundam products and none matched a printing;
+  masterset.ca's collection did not load). Neither is the catalogue: 1,441 card and sealed products, 2,141 kits in 31 shops.
 
 What changed:
 
