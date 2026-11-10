@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { SITE } from "@/site.config";
-import { CURRENCY, type Kit, type Offer, type StoreStatus } from "./site-types";
+import { CURRENCY, type Kit, type Market, type Offer, type StoreStatus } from "./site-types";
 
 export const KITS_FILE = path.join(process.cwd(), "data", "public", "kits.json");
 
@@ -23,6 +23,8 @@ export interface KitFile {
   kits: Kit[];
   offers: Record<string, KitOfferTuple[]>;
   stores: Record<string, StoreStatus>;
+  /** eBay rows per kit (lib/import/kit-ebay.ts, 2026-11-10): [market, cents, shippingCents, url]. Display only. */
+  ebay?: Record<string, [Market, number, number, string][]>;
 }
 
 export const EMPTY_KIT_FILE: KitFile = { generatedAt: "", kits: [], offers: {}, stores: {} };

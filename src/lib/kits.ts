@@ -1,7 +1,7 @@
 // The model-kit section's data (SITE.kits): data/public/kits.json, read once
 // per server instance, like lib/data.ts. Empty when the site has no kits.
 import { SITE } from "@/site.config";
-import { MARKETS, type Kit, type Market, type Offer } from "./site-types";
+import { CURRENCY, MARKETS, type Kit, type Market, type Offer } from "./site-types";
 import { decodeKitOffer, readKitFile, type KitFile } from "./kit-store";
 import { slugify } from "./slug";
 
@@ -28,6 +28,21 @@ export function kitOffers(jan: string): Offer[] {
     decoded.set(jan, hit);
   }
   return hit;
+}
+
+/** The kit's eBay rows (one per market at most), for the kit page's price table only: never a shop, a tile, the
+ *  prose's cheapest, structured data or the alert feed (lib/import/kit-ebay.ts). */
+export function kitEbayOffers(jan: string): Offer[] {
+  return (load().file.ebay?.[jan] ?? []).map(([market, cents, shippingCents, url]) => ({
+    source: "ebay",
+    market,
+    currency: CURRENCY[market],
+    cents,
+    shippingCents,
+    inStock: true,
+    url,
+    title: "",
+  }));
 }
 
 /** The cheapest in-stock offer in one market. */

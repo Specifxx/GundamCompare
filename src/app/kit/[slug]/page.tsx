@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
-import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitImage, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
+import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitEbayOffers, kitImage, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
 import { money } from "@/lib/format";
 import { PriceTable } from "@/components/PriceTable";
 import { CardStickyBuyBar, CardTopBuy, CheckedAgo } from "@/components/CardBuy";
@@ -42,6 +42,9 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   if (!k || !SITE.kits) notFound();
   const cfg = SITE.kits;
   const offers = kitOffers(k.jan);
+  // The price table, buy block and sticky bar also get the kit's eBay row (GUN-1, 2026-11-10: pinned first, "Ad", the
+  // barcode's cheapest new listing); the prose, structured data and counts below stay shops only.
+  const withEbay = [...kitEbayOffers(k.jan), ...offers];
   const inStock = offers.filter((o) => o.inStock);
   const usOffers = inStock.filter((o) => o.currency === "USD");
   const m = meta();
@@ -102,7 +105,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
             <p className="mt-2 text-sm text-muted">
               {inStock.length} in-stock listing{inStock.length === 1 ? "" : "s"}{markets.length ? ` in ${markets.map((x) => MARKET_LABEL[x]).join(", ")}` : ""}.
             </p>
-            <CardTopBuy offers={offers} productId={pid} ebayQuery={search} />
+            <CardTopBuy offers={withEbay} productId={pid} ebayQuery={search} />
           </header>
           {/* The small eBay row of this kit and its grade (2026-10-29: kit
               ads, not card ads, beside a kit). */}
@@ -112,7 +115,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
               <h2 className="text-lg font-bold">Compare prices</h2>
               <CheckedAgo at={kitsUpdatedAt() ?? m?.updatedAt} />
             </div>
-            <PriceTable offers={offers} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} />
+            <PriceTable offers={withEbay} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} />
             <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <a className="link font-semibold" rel="sponsored nofollow noopener" target="_blank" href={goHref({ url: ebaySearchUrl(search, "US"), source: "ebay", market: "US" }, pid, "kit_ebay_search")}>Check eBay listings →</a>
               <span className="rounded bg-ink-800 px-1.5 py-0.5 text-[10px] text-muted">Paid link</span>
@@ -136,7 +139,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
         </section>
       )}
       <KitEbayStrip tiles={adTiles} page="kit" title={`${k.name} and more ${GRADE_LABEL[k.grade ?? ""] ?? cfg.label} kits on eBay`} />
-      <CardStickyBuyBar offers={offers} productId={pid} />
+      <CardStickyBuyBar offers={withEbay} productId={pid} />
     </article>
   );
 }

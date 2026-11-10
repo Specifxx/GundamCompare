@@ -171,7 +171,8 @@ async function main() {
       const token = await ebayToken();
       const remaining = await ebayRemaining(token);
       const reserve = Number(process.env.EBAY_RESERVE ?? 100);
-      const ownLeft = SITE.ebay.dailyBudget - usage.calls;
+      // The kit pass (scripts/import-kits.ts) runs next and spends SITE.ebay.kitCalls of the same budget.
+      const ownLeft = SITE.ebay.dailyBudget - (SITE.kits ? SITE.ebay.kitCalls ?? 0 : 0) - usage.calls;
       const budget = Math.max(0, Math.min(ownLeft, remaining == null ? ownLeft : remaining - reserve));
       const recentSets = new Set(
         sets
