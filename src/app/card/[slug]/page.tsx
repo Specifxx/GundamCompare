@@ -38,8 +38,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const set = setById(p.setId);
   const ref = refCents(p.id);
   const name = shortName(p.name);
-  // "<card> <number> Price — <game> <set>", stepped down to fit 60 characters (lib/seo-title.ts).
-  const title = fitTitle(cardTitleCandidates(name, p.number, set?.name ?? null, p.kind === "sealed")).absolute;
+  // "<card> <number> Price: $X — <set>" (today’s TCGplayer market), stepped down to fit 60 characters (lib/seo-title.ts).
+  const title = fitTitle(cardTitleCandidates(name, p.number, set?.name ?? null, p.kind === "sealed", ref ? money(ref) : null)).absolute;
   const stores = new Set(priceOf(p.id).offers.map((o) => o.source)).size;
   const description = `${name} (${set?.name ?? SITE.gameShort}${p.rarity ? `, ${p.rarity}` : ""}) ${ref ? `is worth about ${money(ref)} today` : "has no TCGplayer market price yet"}. Compare ${stores} live prices from TCGplayer, eBay and ${SITE.gameShort} stores, with price history.`;
   return {

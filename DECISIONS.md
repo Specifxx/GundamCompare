@@ -1762,3 +1762,31 @@ one "Browse" dropdown of generic groups, the sidebar a flat "Prices" list. Audit
 - Not done: removing the side panel (the menus do not yet cover its deep groups, and it carries the current-section state for the
   deep levels; revisit once the menus have been in use), a phone bottom sheet (the `<dialog>` menu stays), and the side rails and
   footer links, which are the owner's own decisions. Deals is a hover menu: nothing is added to the deploy cadence.
+
+## 2026-11-10: Gunpla first, Amazon on every kit page, the price in card titles (owner: "execute the queue")
+
+The thread "Rethink GundamCompare strategy" (A$0 earned, 23 Google clicks a week). Real numbers, 30 days to 2026-11-10:
+
+- Vercel Analytics: 1,054 visitors; `/kits` alone had 498, the grade hubs another ~200; Reddit sent 397 of them (r/Gunpla), Google 75.
+  241 buy clicks: TCGplayer 47, eBay 37, Amazon 6, and about 150 (62%) to hobby shops and card stores we earn nothing from
+  (Frontline Hobbies, Gundam Planet, Gundam Lab, Toy Arena…). The site's buyers are mostly Gunpla builders, and their clicks went unpaid.
+- Search Console, 28 days: 5,430 impressions, 49 clicks, position 11.7. The searches are GD06 chase cards ("zz gundam lr+" 128
+  impressions at 6.0, "argama sp", "gundam bael lr+", "harry ord r+"): pages ranked 4th to 8th and got 0 clicks.
+- Stores are not the problem: 227 card stores read, 226 ok (magictraders sells 11 Gundam products and none is a single we can match;
+  masterset.ca's collection is gone). Neither is the catalogue: 1,441 card and sealed products, 2,141 kits in 31 shops.
+
+What changed:
+
+- **Amazon on every kit page.** `scripts/amazon-asins.ts` searches each market's kits (most in-stock shops first, `AMAZON_KIT_CALLS`
+  600 calls a market a day) by the JAN, then by "Bandai <name>", and keeps an ASIN only when Amazon's own `externalIds` carry that
+  JAN. `fetch-amazon-prices.ts` prices them at build (`AMAZON_KIT_BUILD_CALLS`, 30 calls = 300 kits a market) within 60–160% of the
+  hobby-shop median, and the kit page's `PriceTable` pins the Amazon row (amber, under eBay) with that price for 24 hours, else the
+  tagged search. The loose "Check Amazon →" link under the table went into the row. US first: it is the store whose Creators API
+  access is open (806 US kits in stock). Three failed calls in a row now end a market, so a store the credential can't serve costs
+  three calls, not hundreds.
+- **Card titles lead with today's price**: "ZZ Gundam (LR+) GD06-033 Price: $76.28 — Stardust Trails" (`cardTitleCandidates`'s
+  `price`), the TCGplayer market price the description already states, within 60 characters; no price, the old title.
+
+Not done, on purpose: no merge into BandaiCompare (it is sealed-only TCG with 2 Google clicks a week, and half this site's visitors
+are Gunpla builders it has no page for); no new hobby-shop affiliates (none of the shops our buyers click is on Impact or Awin today;
+check again when one joins). Recheck at the late-January review: Amazon kit clicks and earnings, CTR of the GD06 card pages.

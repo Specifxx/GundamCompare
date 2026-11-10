@@ -101,6 +101,13 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export class AmazonRefused extends Error {}
 
+/** Whether Amazon's own barcodes for an item include ours (a 13-digit JAN/EAN; a UPC-A is that EAN minus its 0). */
+export function barcodeMatches(item: Item, ean: string): boolean {
+  const ours = new Set([ean, ean.replace(/^0/, ""), `0${ean}`]);
+  const theirs = [...(item.itemInfo?.externalIds?.eans?.displayValues ?? []), ...(item.itemInfo?.externalIds?.upcs?.displayValues ?? [])];
+  return theirs.some((b) => ours.has(b.trim()));
+}
+
 /** A signed-in caller for one store: one request a second, stops on 401/403/429 (access closed or limit hit). */
 export async function creatorsClient(region: Market, tag: string, creds: Credentials) {
   const market = MARKETS[region];

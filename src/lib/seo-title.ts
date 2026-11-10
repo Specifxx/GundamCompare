@@ -34,13 +34,21 @@ export function setTitleCandidates(setName: string, cardCount: number, upcoming 
   ];
 }
 
-/** "<Card> <number> Price — <game> <set>", stepping down to the card and its number. */
-export function cardTitleCandidates(name: string, number: string | null, setName: string | null, sealed: boolean): string[] {
+/**
+ * "<Card> <number> Price — <game> <set>", stepping down to the card and its number. With today's reference price
+ * (2026-11-10: card pages ranked 5th to 8th for "zz gundam lr+" and the like with 0 clicks in 28 days), the price
+ * leads: "<Card> <number> Price: $76.28 — <set>", the one fact the searcher came for, visible in the result itself.
+ */
+export function cardTitleCandidates(name: string, number: string | null, setName: string | null, sealed: boolean, price: string | null = null): string[] {
   const g = SITE.gameShort;
   // Store names often carry the number already ("Jagd Doga (GD05-057)"): say it once.
   const bare = number ? name.replace(` (${number})`, "") : name;
   const head = number && !sealed && !bare.includes(number) ? `${bare} ${number}` : bare;
   const out: string[] = [];
+  if (price) {
+    if (setName && !bare.includes(setName)) out.push(`${head} Price: ${price} — ${g} ${setName}`, `${head} Price: ${price} — ${setName}`);
+    out.push(`${head} Price: ${price}`);
+  }
   if (setName && !bare.includes(setName)) out.push(`${head} Price — ${g} ${setName}`, `${head} Price — ${setName}`);
   out.push(`${head} Price — ${g}`, `${head} Price`, head);
   return out;

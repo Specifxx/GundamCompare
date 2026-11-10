@@ -83,6 +83,9 @@ another site's down by the same amount; the three must total 4,500 or less.
 git-ignored `data/amazon-live/`; `lib/amazon-live.ts` gives the card page its Amazon row's link and 24-hour price. Prices
 are never committed, never a sort, cheapest, deal, feed or quick view. Credentials `AMAZON_CREATORS_AU_*` (GitHub + Vercel)
 serve every store; a store without API access is skipped. `tests/amazon-api.test.ts`; the ops monitor reads the status.
+**Gunpla kits too (owner, 2026-11-10):** the same pass searches each kit by its JAN and keeps an ASIN ONLY when Amazon's own
+`externalIds` carry that JAN (`barcodeMatches`), never by title; the kit page's table pins the Amazon row with its 24-hour
+price, held to 60–160% of the kit's hobby-shop median. Keyed by the JAN in the same `asins-<MARKET>.json`.
 
 ## Matching
 
