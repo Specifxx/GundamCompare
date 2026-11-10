@@ -1812,6 +1812,17 @@ find through Google (the `demand` branch) refresh daily, the rest every three da
 search impressions and how many shops stock the kit, US before UK, AU and CA. Ops monitor: "Model kit eBay rows" (warn
 only).
 
+## 2026-11-10: Amazon joins the paid alternative under the cheapest shop on kit pages
+
+The zero-earnings diagnosis (10 Nov) found 229 buy clicks in 30 days, 90 of them to a link that can earn, and nothing
+earned. Kit pages already carry RiftCompare's paid-alternative line in the phone's top buy block (`CardTopBuy`, eBay's
+row by JAN since #132, within `PAID_ALTERNATIVE_BAND`, 50% here since 2026-10-28). Amazon's own listing of the kit
+(matched by the JAN, #128) now counts too: when the cheapest shop pays nothing and Amazon's live price is in the same
+currency and within the band, the line names whichever of eBay and Amazon is cheaper ("or $54.99 on Amazon (+6%)",
+"Paid link"). Amazon's price is quoted only while under 24 hours old, checked in the browser like the table's
+`AmazonPrice`. It is the row's real price, never "Cheapest", never a reorder. Clicks are `/go` `from=card_top_alt`, so
+`buy_click` counts them as before. The phone sticky bar stays one line and is unchanged.
+
 ## 2026-11-10: Canada becomes an eBay market for cards, at the UK's size (`SITE.ebay.marketShares`)
 
 **Why.** The 30 days to 11 Nov (`/mnt/project-files/strategy/ebay-site-region-split-2026-11-10.html`): 120 Canadian
