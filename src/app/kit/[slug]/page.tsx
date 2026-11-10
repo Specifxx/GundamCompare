@@ -105,7 +105,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
             <p className="mt-2 text-sm text-muted">
               {inStock.length} in-stock listing{inStock.length === 1 ? "" : "s"}{markets.length ? ` in ${markets.map((x) => MARKET_LABEL[x]).join(", ")}` : ""}.
             </p>
-            <CardTopBuy offers={withEbay} productId={pid} ebayQuery={search} />
+            <CardTopBuy offers={withEbay} productId={pid} ebayQuery={search} amazon={amazon} />
           </header>
           {/* The small eBay row of this kit and its grade (2026-10-29: kit
               ads, not card ads, beside a kit). */}
