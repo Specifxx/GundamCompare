@@ -10,7 +10,8 @@ import { KitGrid } from "@/components/KitTile";
 import { JsonLd } from "@/components/JsonLd";
 import { CompactKitAds, KitEbayStrip } from "@/components/KitAds";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { amazonSearchUrl, ebaySearchUrl, goHref } from "@/lib/affiliate";
+import { amazonSearchUrls, ebaySearchUrl, goHref } from "@/lib/affiliate";
+import { amazonCells } from "@/lib/amazon-live";
 import { meta } from "@/lib/data";
 import { abs, KITS_SHARE_IMAGE } from "@/lib/site";
 import { MARKET_LABEL } from "@/lib/site-types";
@@ -46,7 +47,9 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   const m = meta();
   const pid = Number(k.jan);
   const search = `${cfg.searchPrefix} ${k.name}`;
-  const amazon = amazonSearchUrl(search);
+  // Amazon's row in the table (pinned under eBay): the kit's own Amazon page where the daily refresh found its ASIN by
+  // the JAN on the box, with this build's price for 24 hours; else the tagged search (2026-11-10).
+  const amazon = amazonCells(pid, amazonSearchUrls(search));
   const sameGrade = popular(kits().filter((x) => x.grade === k.grade && x.jan !== k.jan));
   const related = sameGrade.slice(0, 6);
   // eBay ads of the kit itself first, then its grade's popular kits.
@@ -109,11 +112,10 @@ export default function KitPage({ params }: { params: { slug: string } }) {
               <h2 className="text-lg font-bold">Compare prices</h2>
               <CheckedAgo at={kitsUpdatedAt() ?? m?.updatedAt} />
             </div>
-            <PriceTable offers={offers} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} />
+            <PriceTable offers={offers} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} />
             <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <a className="link font-semibold" rel="sponsored nofollow noopener" target="_blank" href={goHref({ url: ebaySearchUrl(search, "US"), source: "ebay", market: "US" }, pid, "kit_ebay_search")}>Check eBay listings →</a>
-              {amazon && <a className="link font-semibold" rel="sponsored nofollow noopener" target="_blank" href={goHref({ url: amazon, source: "amazon", market: "US" }, pid, "kit_amazon_search")}>Check Amazon →</a>}
-              <span className="rounded bg-ink-800 px-1.5 py-0.5 text-[10px] text-muted">Paid links</span>
+              <span className="rounded bg-ink-800 px-1.5 py-0.5 text-[10px] text-muted">Paid link</span>
             </p>
           </section>
           <section className="prose-site max-w-none text-sm">

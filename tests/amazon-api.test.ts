@@ -74,11 +74,11 @@ test("an item link goes to the market's own Amazon with its tag", () => {
 
 const walk = (d: string): string[] => readdirSync(d).flatMap((f) => (statSync(path.join(d, f)).isDirectory() ? walk(path.join(d, f)) : [path.join(d, f)]));
 
-test("the Creators API client stays script-side; only the card page reads live Amazon prices (the quick view takes its links); prices are never committed", () => {
+test("the Creators API client stays script-side; only the card and kit pages read live Amazon prices (the quick view takes its links); prices are never committed", () => {
   for (const f of [...walk("src/app"), ...walk("src/components"), ...walk("src/lib")].filter((f) => /\.tsx?$/.test(f))) {
     const s = readFileSync(f, "utf8");
     if (f !== "src/lib/amazon-creators.ts") assert.ok(!/amazon-creators/.test(s), `${f} imports the Creators API client`);
-    if (/import \{[^}]*\} from "@\/lib\/amazon-live"/.test(s)) assert.ok(["src/app/card/[slug]/page.tsx", "src/app/api/quick/[slug]/route.ts"].includes(f), `${f} reads live Amazon prices`);
+    if (/import \{[^}]*\} from "@\/lib\/amazon-live"/.test(s)) assert.ok(["src/app/card/[slug]/page.tsx", "src/app/kit/[slug]/page.tsx", "src/app/api/quick/[slug]/route.ts"].includes(f), `${f} reads live Amazon prices`);
     assert.ok(!/AMAZON_CREATORS/.test(s) || f === "src/lib/amazon-creators.ts", `${f} names the credentials`);
   }
   assert.match(readFileSync(".gitignore", "utf8"), /^data\/amazon-live\/$/m);
@@ -92,4 +92,16 @@ test("the quick view's Amazon row is the card page's tagged link, never Amazon's
   assert.doesNotMatch(src, /amazon: null,/, "the quick view keeps the Amazon link");
   assert.match(src, /amazonCells\(id, amazonSearchUrls\(`\$\{SITE\.game\} \$\{name\}`\)\)/, "the same links as the card page");
   assert.match(src, /c\.url\]/, "the link only: the price stays on the card page");
+});
+
+test("a Gunpla kit's Amazon ASIN is kept only when Amazon's own barcodes carry the kit's JAN (2026-11-10)", async () => {
+  const { barcodeMatches } = await import("../src/lib/amazon-creators");
+  const item = (eans: string[], upcs: string[] = []) => ({ asin: "B0ABCDEFGH", itemInfo: { externalIds: { eans: { displayValues: eans }, upcs: { displayValues: upcs } } } });
+  assert.ok(barcodeMatches(item(["4573102651181"]), "4573102651181"));
+  assert.ok(!barcodeMatches(item(["4573102651182"]), "4573102651181"), "a neighbouring JAN is another kit");
+  assert.ok(!barcodeMatches({ asin: "B0ABCDEFGH" }, "4573102651181"), "no barcode, no match: never by title");
+  assert.ok(barcodeMatches(item([], ["012345678905"]), "0012345678905"), "a UPC-A is the EAN without its leading 0");
+  const asins = readFileSync("scripts/amazon-asins.ts", "utf8");
+  assert.match(asins, /barcodeMatches\(it, k\.jan\)/);
+  assert.ok(!/amazonTitleMatches\([^)]*k\./.test(asins), "kits are never matched by title");
 });

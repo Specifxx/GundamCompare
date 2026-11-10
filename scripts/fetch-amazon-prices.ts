@@ -6,6 +6,8 @@
 // seconds of build each). A price under 60% or over 160% of the product's in-stock store median is dropped (a different
 // count, a marketplace seller's fantasy). Without credentials, or on any error, it writes nothing and never fails the
 // build; a store whose account has no API access yet (403) is skipped and the next market still runs.
+// Gunpla kits (2026-11-10) follow the sealed products with their own AMAZON_KIT_BUILD_CALLS (30 by default), keyed by JAN and
+// held to the same 60–160% of the kit's in-stock hobby-shop median.
 //   npx tsx scripts/fetch-amazon-prices.ts
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -13,7 +15,7 @@ import { AMAZON_STORES } from "@/lib/affiliate";
 import { AmazonRefused, credentialsFor, creatorsClient, MARKETS as API, pickListing, PRICE_RESOURCES } from "@/lib/amazon-creators";
 import type { AsinFile, LiveFile } from "@/lib/amazon-live";
 import type { Market } from "@/lib/site-types";
-import { API_MARKETS, marketSealed, median } from "./amazon-shared";
+import { API_MARKETS, marketKits, marketSealed, median } from "./amazon-shared";
 
 const asinsFile = (m: Market) => path.join(process.cwd(), "data", "amazon", `asins-${m}.json`);
 const OUT_DIR = path.join(process.cwd(), "data", "amazon-live");
@@ -25,15 +27,22 @@ async function market(m: Market) {
   const creds = credentialsFor(m);
   if (!creds || !existsSync(asinsFile(m))) return console.log(`Amazon prices ${m}: no credentials or no ASINs yet, skipped.`);
   const known = JSON.parse(readFileSync(asinsFile(m), "utf8")) as AsinFile;
-  const wanted = marketSealed(m).filter((x) => known[String(x.p.id)]?.asin);
-  const todo = wanted.slice(0, Number(process.env.AMAZON_BUILD_CALLS || 30) * 10);
+  const sealed = marketSealed(m)
+    .filter((x) => known[String(x.p.id)]?.asin)
+    .slice(0, Number(process.env.AMAZON_BUILD_CALLS || 30) * 10)
+    .map((x) => ({ key: String(x.p.id), prices: x.prices }));
+  const kitRows = marketKits(m)
+    .filter((k) => known[k.jan]?.asin)
+    .slice(0, Number(process.env.AMAZON_KIT_BUILD_CALLS || 30) * 10)
+    .map((k) => ({ key: k.jan, prices: k.prices }));
+  const todo = [...sealed, ...kitRows];
   if (!todo.length) return console.log(`Amazon prices ${m}: no ASINs for in-stock products yet.`);
   const client = await creatorsClient(m, store.tag, creds);
   const fetchedAt = new Date().toISOString();
   const prices: LiveFile["prices"] = {};
   for (let i = 0; i < todo.length; i += 10) {
     const batch = todo.slice(i, i + 10);
-    const ids = [...new Set(batch.map((x) => known[String(x.p.id)].asin!))];
+    const ids = [...new Set(batch.map((x) => known[x.key].asin!))];
     let items;
     try {
       items = await client.call("getItems", { itemIds: ids, itemIdType: "ASIN", resources: PRICE_RESOURCES });
@@ -43,14 +52,14 @@ async function market(m: Market) {
       continue;
     }
     for (const x of batch) {
-      const asin = known[String(x.p.id)].asin!;
+      const asin = known[x.key].asin!;
       const it = items.find((it) => it.asin === asin);
       const pick = it && pickListing(it, api.currency);
       if (!pick) continue;
       const cents = Math.round(pick.amount * 100);
       const ref = median(x.prices);
       if (ref && (cents < ref * 0.6 || cents > ref * 1.6)) continue;
-      prices[String(x.p.id)] = { asin, cents };
+      prices[x.key] = { asin, cents };
     }
   }
   if (!Object.keys(prices).length) return console.log(`Amazon prices ${m}: none (${client.calls()} calls).`);

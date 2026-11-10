@@ -44,3 +44,10 @@ test("an unreleased set with revealed cards is titled for the spoiler search, in
   assert.ok(t.length <= TITLE_MAX + 20);
   assert.match(setTitleCandidates("First Set", 0, true)[0], /Card List/);
 });
+
+test("a card's title leads with today's price when it has one, and still fits", () => {
+  const t = fitTitle(cardTitleCandidates("ZZ Gundam (LR+)", "GD06-033", "Stardust Trails", false, "$76.28")).absolute;
+  assert.match(t, /^ZZ Gundam \(LR\+\) GD06-033 Price: \$76\.28/);
+  assert.ok(t.length <= TITLE_MAX, t);
+  assert.match(fitTitle(cardTitleCandidates("ZZ Gundam (LR+)", "GD06-033", "Stardust Trails", false)).absolute, /Price — /, "no price, the old title");
+});
