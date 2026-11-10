@@ -107,6 +107,9 @@ export interface SiteConfig {
     minPriceUsd: number;
     /** This site's share of the eBay app's daily Browse quota. */
     dailyBudget: number;
+    /** Of dailyBudget, the calls kept for the model kits' eBay rows (lib/import/kit-ebay.ts); the card pass stops this
+     *  many short. */
+    kitCalls?: number;
     runHourUtc: number;
   };
   /** "fraction" 42/204 (Lorcana), "code" GD02-048 (Gundam), "plain" 001 / B001

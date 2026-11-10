@@ -12,13 +12,83 @@
 import fs from "node:fs";
 import path from "node:path";
 import { SITE } from "@/site.config";
-import { CURRENCY, type Kit, type KitStoreConfig, type Meta, type StoreConfig, type StoreStatus } from "@/lib/site-types";
+import { CURRENCY, type Kit, type KitStoreConfig, type Meta, type Offer, type StoreConfig, type StoreStatus } from "@/lib/site-types";
 import { fetchJson, fetchText, sleep } from "@/lib/import/http";
 import { parseNetoCategory } from "@/lib/import/kits-neto";
 import { countryOf, storeCurrency } from "@/lib/import/shopify";
 import { gradeOf, isKitPreorder, isKitTitle, janOf, kitName, kitsEnabled, keepConsistent, type KitListing } from "@/lib/import/kits";
 import { slugify } from "@/lib/slug";
-import { KITS_FILE, encodeKitOffer, readKitFile, type KitFile } from "@/lib/kit-store";
+import { KITS_FILE, decodeKitOffer, encodeKitOffer, readKitFile, type KitFile } from "@/lib/kit-store";
+import { ebayCredentials, ebayRemaining, ebayToken } from "@/lib/import/ebay";
+import { kitDemand, kitEbayRows, planKitEbay, searchKit, type KitEbayState } from "@/lib/import/kit-ebay";
+import { execFileSync } from "node:child_process";
+
+const STATE = path.join(process.cwd(), "data", "state");
+
+/** Kit pages people find through Google (the demand branch's gsc-pages.json); empty when it can't be read. */
+function readKitDemand(): Map<string, number> {
+  try {
+    execFileSync("git", ["fetch", "--quiet", "--depth=1", "origin", "demand"], { stdio: "ignore", timeout: 60_000 });
+    const raw = execFileSync("git", ["show", "FETCH_HEAD:gsc-pages.json"], { encoding: "utf8", timeout: 30_000 });
+    return kitDemand((JSON.parse(raw) as { pages?: Record<string, number[]> }).pages ?? {});
+  } catch {
+    return new Map();
+  }
+}
+
+/** The kits' eBay pass (GUN-1, 2026-11-10; lib/import/kit-ebay.ts): what is left of the site's own eBay count today. */
+async function kitEbay(kits: Kit[], offersOf: (jan: string) => Offer[], now: Date): Promise<KitFile["ebay"]> {
+  const stateFile = path.join(STATE, "kit-ebay.json");
+  const usageFile = path.join(STATE, "ebay-usage.json");
+  let state: KitEbayState = {};
+  try { state = JSON.parse(fs.readFileSync(stateFile, "utf8")) as KitEbayState; } catch {}
+  let usage = { day: "", calls: 0 };
+  try { usage = JSON.parse(fs.readFileSync(usageFile, "utf8")) as typeof usage; } catch {}
+  const day = now.toISOString().slice(0, 10);
+  if (usage.day !== day) usage = { day, calls: 0 };
+  if (ebayCredentials() && process.env.EBAY_REFRESH !== "false") {
+    try {
+      const token = await ebayToken();
+      const remaining = await ebayRemaining(token);
+      const reserve = Number(process.env.EBAY_RESERVE ?? 100);
+      const ownLeft = SITE.ebay.dailyBudget - usage.calls;
+      const budget = Math.max(0, Math.min(ownLeft, remaining == null ? ownLeft : remaining - reserve));
+      const demand = readKitDemand();
+      const plan = planKitEbay({ kits, offers: offersOf, demand, state, budget, now });
+      console.log(`[kits:ebay] own ${usage.calls}/${SITE.ebay.dailyBudget} used today, app remaining ${remaining ?? "unknown"} → budget ${budget}; ${plan.eligible} kit×market pairs, ${demand.size} kits with search demand, ${plan.calls.length} planned`);
+      const queue = plan.calls.slice();
+      let found = 0;
+      let stop = false;
+      await Promise.all(
+        Array.from({ length: 4 }, async () => {
+          while (!stop && queue.length) {
+            const c = queue.shift()!;
+            try {
+              usage.calls++;
+              const offer = await searchKit(token, c);
+              (state[c.kit.jan] ??= {})[c.market] = { at: now.toISOString(), offer };
+              if (offer) found++;
+            } catch (e) {
+              if ((e as { quota?: boolean }).quota) stop = true;
+              console.warn(`[kits:ebay] ${c.kit.jan} ${c.market}: ${(e as Error).message}`);
+            }
+          }
+        }),
+      );
+      console.log(`[kits:ebay] ${found} listings found`);
+    } catch (e) {
+      console.warn(`[kits:ebay] skipped: ${(e as Error).message}`);
+    }
+  }
+  const live = new Set(kits.map((k) => k.jan));
+  for (const jan of Object.keys(state)) if (!live.has(jan)) delete state[jan];
+  fs.mkdirSync(STATE, { recursive: true });
+  fs.writeFileSync(stateFile, JSON.stringify(state) + "\n");
+  fs.writeFileSync(usageFile, JSON.stringify(usage) + "\n");
+  const rows = kitEbayRows(state, kits, offersOf, now);
+  console.log(`[kits:ebay] ${Object.keys(rows).length} kits show an eBay row`);
+  return rows;
+}
 
 const STORE_CARRY_H = 72;
 const MAX_PAGES = 30;
@@ -205,7 +275,9 @@ async function main() {
     offers[jan] = ls.sort((a, b) => Number(b.inStock) - Number(a.inStock) || a.cents - b.cents).map(encodeKitOffer);
   }
   kits.sort((a, b) => a.name.localeCompare(b.name));
-  const file: KitFile = { generatedAt: now.toISOString(), kits, offers, stores: status };
+  const decodedOffers = new Map(Object.entries(offers).map(([jan, ts]) => [jan, ts.map(decodeKitOffer).filter((o): o is Offer => !!o)]));
+  const ebay = await kitEbay(kits, (jan) => decodedOffers.get(jan) ?? [], now);
+  const file: KitFile = { generatedAt: now.toISOString(), kits, offers, stores: status, ebay };
   fs.mkdirSync(path.dirname(KITS_FILE), { recursive: true });
   fs.writeFileSync(KITS_FILE, JSON.stringify(file) + "\n");
   const ok = Object.values(status).filter((s) => s.ok).length;

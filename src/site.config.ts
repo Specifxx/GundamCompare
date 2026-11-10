@@ -50,6 +50,9 @@ export const SITE: SiteConfig = {
     // eligible product while YGO's 3,400 eligible products hit the cap). Never
     // raise one without lowering another by the same amount.
     dailyBudget: 1150,
+    // Of those, 450 go to the Gunpla kit pages' eBay rows (GUN-1, 2026-11-10: 318 of 388 visitors a week opened kit
+    // pages, which had no eBay price). The card pass stops 450 short; the kits spend the rest of the day's count.
+    kitCalls: 450,
     // Lorcana Compare runs at 06 UTC and YGO Compare at 12 UTC on the same eBay
     // app; eBay's daily count resets at midnight Pacific, so each eBay day
     // holds one run of each site.

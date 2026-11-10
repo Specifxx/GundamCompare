@@ -1790,3 +1790,24 @@ What changed:
 Not done, on purpose: no merge into BandaiCompare (it is sealed-only TCG with 2 Google clicks a week, and half this site's visitors
 are Gunpla builders it has no page for); no new hobby-shop affiliates (none of the shops our buyers click is on Impact or Awin today;
 check again when one joins). Recheck at the late-January review: Amazon kit clicks and earnings, CTR of the GD06 card pages.
+
+## 2026-11-10: Gunpla kit pages get a real eBay row, inside the existing 1,150 calls
+
+**Why.** 318 of Gundam Compare's 388 visitors in the week to 9 Nov opened kit pages, and a kit page's only paid links
+were two text searches ("Check eBay listings", "Check Amazon"). The site earned A$0. Card pages, where eBay is a priced
+row pinned first, are a small share of visits. (Site review 2026-11-10, task GUN-1; Amazon's kit rows came in #128.)
+
+**What.** `scripts/import-kits.ts` now runs an eBay pass after the shops (`src/lib/import/kit-ebay.ts`): one Browse
+search per kit and market, by GTIN (the JAN on the box), New, Buy It Now, a seller in that country with stated postage,
+priced inside 60–300% of that market's in-stock shop median (no shop in a market, no search there). Titles reading used,
+built, painted, bootleg, no box, a lot or a multiple are refused, unless the kit's own name carries the word ("GM
+Custom", "Crossbone X1"). The cheapest delivered listing becomes `kits.json`'s `ebay` row for that kit and market, shown
+for seven days at most and only while still inside today's window. The kit page passes it to the price table, buy block
+and sticky bar exactly as the card page does: eBay first with the green outline, "Ad", Amazon under it. The prose, JSON-LD,
+metadata, tiles and alert feed stay shops only.
+
+**Budget.** No new calls. `SITE.ebay.kitCalls` (450) of the site's 1,150 go to kits: the card pass now stops 450 short,
+and the kit pass spends what is left of the day's own count (so anything the cards leave also goes to kits). Kits people
+find through Google (the `demand` branch) refresh daily, the rest every three days, most overdue first weighted by
+search impressions and how many shops stock the kit, US before UK, AU and CA. Ops monitor: "Model kit eBay rows" (warn
+only).

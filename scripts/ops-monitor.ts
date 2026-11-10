@@ -99,6 +99,18 @@ async function main() {
             if (bad.length) return { status: bad.length > total / 3 ? "fail" : "warn", detail: bad.map(([k, s]) => `${k}: ${s.error ?? "0 matched"}`).join("; ") };
             return { status: age > 30 ? "warn" : "ok", detail: `${f.kits.length} kits from ${total} stores, ${age.toFixed(1)}h old` };
           }),
+          // The kits' eBay rows (GUN-1, 2026-11-10): searched once the kit pass has run with the eBay keys.
+          check("Model kit eBay rows", async () => {
+            const f = readKitFile();
+            let checked = 0;
+            try {
+              checked = Object.keys(JSON.parse(fs.readFileSync(path.join(process.cwd(), "data", "state", "kit-ebay.json"), "utf8"))).length;
+            } catch {}
+            const shown = Object.keys(f.ebay ?? {}).length;
+            if (!checked) return { status: "warn", detail: "no kit searched on eBay yet (the kit step runs after the card pass, with what is left of the day's calls)" };
+            if (checked >= 200 && shown === 0) return { status: "warn", detail: `${checked} kits searched, none with an eBay row: check the kit step's [kits:ebay] log` };
+            return { status: "ok", detail: `${shown} of ${f.kits.length} kits show an eBay row (${checked} searched)` };
+          }),
         ]
       : []),
   ]);

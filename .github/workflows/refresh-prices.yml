@@ -49,6 +49,11 @@ jobs:
       # kit data older than 54 hours.
       - name: Import model kits
         continue-on-error: true
+        # The kits' eBay rows (GUN-1, 2026-11-10) spend what is left of SITE.ebay.dailyBudget after the card pass.
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH: ${{ github.event_name == 'workflow_dispatch' && !inputs.ebay && 'false' || 'true' }}
         run: npx tsx scripts/import-kits.ts
       # Amazon ASINs for the sealed pages' Amazon row (Creators API searchItems, matched by the store matcher; ASINs only,
       # prices are fetched by each Vercel build and never committed: DECISIONS.md 2026-11-05). A no-op until the secrets exist.
