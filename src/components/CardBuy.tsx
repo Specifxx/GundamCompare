@@ -13,8 +13,9 @@
 import { useEffect, useState } from "react";
 import { ebaySearchUrl, goHref } from "@/lib/affiliate";
 import { ago, money } from "@/lib/format";
-import { priceRows } from "@/lib/price-rows";
-import { MARKET_LABEL, type Offer } from "@/lib/site-types";
+import { PAID_ALTERNATIVE_BAND, priceRows } from "@/lib/price-rows";
+import type { AmazonCell } from "@/lib/amazon-live";
+import { MARKET_LABEL, type Market, type Offer } from "@/lib/site-types";
 import { useMarket } from "./ClientPrefs";
 import { PRICE_TABLE_ID, sourceName } from "./PriceTable";
 
@@ -29,9 +30,22 @@ function buyClass(o: Offer) {
   return o.source === "ebay" ? "btn bg-[#0064d2] px-4 py-2 text-white hover:bg-[#0053ad]" : "btn-buy px-4 py-2";
 }
 
-export function CardTopBuy({ offers, productId, ebayQuery }: { offers: Offer[]; productId: number; ebayQuery?: string }) {
+const AMAZON_MAX_AGE_MS = 24 * 3600_000;
+
+export function CardTopBuy({ offers, productId, ebayQuery, amazon = null }: { offers: Offer[]; productId: number; ebayQuery?: string; /** Kit pages: Amazon's row per market (lib/amazon-live.ts amazonCells), a candidate for the paid alternative (2026-11-10) */ amazon?: Partial<Record<Market, string | AmazonCell>> | null }) {
   const { market } = useMarket();
-  const { cheapest: best, paidAlternative: alt } = priceRows(offers, market);
+  const { cheapest: best, paidAlternative: rowAlt } = priceRows(offers, market);
+  // Amazon's own listing of the kit (matched by JAN) counts as a paid alternative like eBay's, at its live price, in the same
+  // currency and band, and only while that price is under 24 hours old (its licence; checked again in the browser).
+  const cell = amazon?.[market];
+  const live = typeof cell === "object" ? cell.live : undefined;
+  const [fresh, setFresh] = useState(false);
+  useEffect(() => setFresh(!!live && Date.now() - Date.parse(live.at) < AMAZON_MAX_AGE_MS), [live]);
+  const amazonAlt =
+    best && fresh && typeof cell === "object" && live?.cents && live.currency === best.currency && best.source !== "ebay" && best.source !== "tcgplayer" && live.cents <= best.cents * PAID_ALTERNATIVE_BAND
+      ? { offer: { source: "amazon", market, currency: live.currency, cents: live.cents, inStock: true, url: cell.url, title: "" } as Offer, pctMore: Math.max(0, Math.round(((live.cents - best.cents) / best.cents) * 100)) }
+      : null;
+  const alt = amazonAlt && (!rowAlt || amazonAlt.offer.cents < rowAlt.offer.cents) ? amazonAlt : rowAlt;
   if (!best) return null;
   // No eBay or TCGplayer row close enough: a labelled eBay search instead (owner, 2026-10-28: push eBay harder). Never a price.
   const searchMarket = market === "UK" || market === "AU" || market === "CA" ? market : "US";
@@ -49,7 +63,7 @@ export function CardTopBuy({ offers, productId, ebayQuery }: { offers: Offer[]; 
         </a>
       </div>
       {/* A store that pays nothing is cheapest: name eBay or TCGplayer when
-          within 50% (lib/price-rows.ts paidAlternative), else an eBay search. */}
+          within 50% (lib/price-rows.ts paidAlternative), or Amazon on a kit page, else an eBay search. */}
       {alt && (
         <div className="mt-2 flex items-center gap-2 border-t border-line pt-1 text-xs text-muted">
           <a
@@ -58,7 +72,7 @@ export function CardTopBuy({ offers, productId, ebayQuery }: { offers: Offer[]; 
             target="_blank"
             className="block min-w-0 flex-1 truncate py-2 font-semibold text-brand-400 hover:underline"
           >
-            or <span className="tabular-nums">{money(alt.offer.cents, alt.offer.currency)}</span> on {alt.offer.source === "ebay" ? "eBay" : "TCGplayer"}
+            or <span className="tabular-nums">{money(alt.offer.cents, alt.offer.currency)}</span> on {alt.offer.source === "ebay" ? "eBay" : alt.offer.source === "amazon" ? "Amazon" : "TCGplayer"}
             {alt.pctMore > 0 ? ` (+${alt.pctMore}%)` : ""} →
           </a>
           <span className="shrink-0 ad-pill">Paid link</span>
