@@ -1811,3 +1811,19 @@ and the kit pass spends what is left of the day's own count (so anything the car
 find through Google (the `demand` branch) refresh daily, the rest every three days, most overdue first weighted by
 search impressions and how many shops stock the kit, US before UK, AU and CA. Ops monitor: "Model kit eBay rows" (warn
 only).
+
+## 2026-11-10: Canada becomes an eBay market for cards, at the UK's size (`SITE.ebay.marketShares`)
+
+**Why.** The 30 days to 11 Nov (`/mnt/project-files/strategy/ebay-site-region-split-2026-11-10.html`): 120 Canadian
+visitors and no Canadian eBay search for cards or sealed (the kit pass, added the same day, already searches Canada).
+The UK had 39 visitors and Australia 246. Bill approved the recommended region split the same day: Canada at the UK's
+size, the site's 1,150 and the shared keyset unchanged.
+
+**What.** The option Lorcana and Cyberpunk Compare got the same day, ported by hand: `SITE.ebay.marketShares` (default
+US 0.75, UK and AU 0.125, no Canada); `marketShares()` keeps only eBay sites we can search, requires the US and refuses
+a total over 1. Gundam sets US 0.625, UK, AU and CA 0.125 each, of the card pass's 700 (1,150 less the kits' 450): US
+437 plus whatever the others leave, 87 each for the others. The brief's "about 143" for Canada was written before the
+kit pass took 450; at the UK's size inside today's card budget it is 87. A dry run on today's catalogue and state plans
+US 439 / UK 87 / AU 87 / CA 87 = 700; only about 165 US products are due a day, so the US loses no due refresh (the rest
+of its calls re-check products early). Canada uses `EBAY_CA`: Canadian sellers, CAD, stated postage. `/stores` now
+names Canada among the eBay sites.

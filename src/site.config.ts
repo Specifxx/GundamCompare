@@ -53,6 +53,10 @@ export const SITE: SiteConfig = {
     // Of those, 450 go to the Gunpla kit pages' eBay rows (GUN-1, 2026-11-10: 318 of 388 visitors a week opened kit
     // pages, which had no eBay price). The card pass stops 450 short; the kits spend the rest of the day's count.
     kitCalls: 450,
+    // Canada joins the card pass at the UK's size (owner's region split, 2026-11-10: 120 Canadian visitors a month,
+    // no Canadian eBay search for cards; kits already search Canada). Of the card pass's 700: US 437 plus any slots
+    // the others leave, UK, Australia and Canada 87 each.
+    marketShares: { US: 0.625, UK: 0.125, AU: 0.125, CA: 0.125 },
     // Lorcana Compare runs at 06 UTC and YGO Compare at 12 UTC on the same eBay
     // app; eBay's daily count resets at midnight Pacific, so each eBay day
     // holds one run of each site.
