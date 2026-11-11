@@ -1859,3 +1859,13 @@ pricing model from it. Built first on RiftCompare (TCGEmpire #412), then One Pie
   price", never in the feed, an alert, a deal, a basket, JSON-LD or the quick view.
 - A file older than three days is ignored. Ops monitor check "Fetch TCG row" (warn at most).
 - Recheck about 18 November with the first Fetch clicks and Fetch's commission rate.
+
+## 2026-11-11: Amazon US links use the shared riftcompare-20 tag
+
+**Why.** Bill asked why Gundam Compare had no earnings and said every site uses the RiftCompare Amazon tag. Gundam's US
+links carried `tag=gundamcompare-20`, a per-site ID that was never confirmed to exist in the US Associates account
+(approved 2026-11-05 with store ID `riftcompare-20`). Amazon pays nothing on a tag that is not in the account.
+
+**What.** `amazonUsTag` removed from `site.config.ts`, so `AMAZON_TAG` falls back to `riftcompare-20`. The `ascsubtag`
+(`gundam-<market>-<placement>`) still splits sales by site where Amazon reports it. AU (`gundamcompare-22`, created in the
+AU account 2026-11-03) is unchanged. No other Amazon logic changed.

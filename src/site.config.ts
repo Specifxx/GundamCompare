@@ -31,8 +31,7 @@ export const SITE: SiteConfig = {
   impactSiteVerification: "3ab0538e-afa1-4fe4-9cac-ce9a84159716",
 
   priceAlerts: true,
-  // Amazon US tracking ID in the owner's US Associates account (verified live 2026-10-28).
-  amazonUsTag: "gundamcompare-20",
+  // Amazon US uses the shared riftcompare-20 ID (owner, 2026-11-11: every site does); no per-site US ID.
   amazonAuTag: "gundamcompare-22",
   tcgcsvCategoryId: 86,
   tcgplayerSlug: "gundam-card-game",
