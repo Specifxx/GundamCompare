@@ -48,6 +48,13 @@ export const FETCH_MAX_AGE_MS = 3 * 86400e3;
 
 const norm = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9+]+/g, "");
 
+/** The catalogue spells a rarity out ("Rare", "Legend Rare"); Fetch abbreviates it ("R", "LR"). The "+" tiers agree. */
+const RARITY: Record<string, string> = { common: "c", uncommon: "uc", rare: "r", legendrare: "lr", promo: "p" };
+const rarityKey = (s: string) => {
+  const k = norm(s);
+  return RARITY[k] ?? k;
+};
+
 let cache: { index: Map<string, FetchLiveCard[]>; at: string } | null | undefined;
 
 function load(): typeof cache {
@@ -83,7 +90,7 @@ export function fetchRowsFor(card: { name: string; number: string | null; rarity
   if (!l || !card.number || !card.setName) return null;
   const hits = l.index.get(card.number.toUpperCase());
   if (!hits) return null;
-  const named = hits.filter((h) => norm(h.s) === norm(card.setName!) && norm(h.n) === norm(card.name) && norm(h.r) === norm(card.rarity ?? ""));
+  const named = hits.filter((h) => norm(h.s) === norm(card.setName!) && norm(h.n) === norm(card.name) && rarityKey(h.r) === rarityKey(card.rarity ?? ""));
   if (named.length !== 1 || !(named[0].p > 0)) return null;
   return { rows: [{ condition: named[0].c, priceCents: named[0].p, url: named[0].u }], at: l.at };
 }
