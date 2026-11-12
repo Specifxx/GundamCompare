@@ -65,7 +65,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
   // the very top. And it has a different colored outline"): eBay is always the first
   // row with a green outline, Amazon the second with an amber one, and both carry the
   // store row's thumbs and cart button (lib/cart-list.ts: manual lines on their tagged
-  // links). With no Amazon price the row is "Also check on Amazon", a tagged link.
+  // links). With no Amazon price there is no row (owner, 2026-11-12).
   const { inStock, refs, outOfStock, cheapest, display, pinned } = priceRows(offers, market);
   const rows = display;
   const cur = CURRENCY[market];
@@ -106,7 +106,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
   const amazonUrl = typeof amazonCell === "string" ? amazonCell : amazonCell?.url;
   const amazonLive = typeof amazonCell === "object" ? amazonCell.live : undefined;
   const amazonCart = amazonUrl && amazonLive?.cents ? { href: tagged(amazonUrl, subId(market, `${page}_cart`, productId)), productUrl: amazonUrl, storeName: "Amazon", title: product ?? "", priceCents: amazonLive.cents, currency: amazonLive.currency ?? cur, image } : null;
-  const amazonRow = amazonUrl ? (
+  const amazonRow = amazonUrl && amazonLive ? (
     <tr data-amazon-row className={`border-t border-line ${PIN_OUTLINE.amazon}`}>
       <td className="px-3 py-2.5">
         <span className="font-medium text-ink">Amazon</span>
@@ -114,25 +114,25 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
         {!compact && amazonCart && <span className="block sm:hidden"><CartAddButton {...amazonCart} inline className="text-xs" /></span>}
         <span className="ad-pill ml-2">Ad</span>
       </td>
-      <td className="hidden px-3 py-2.5 text-xs text-muted sm:table-cell">{amazonLive ? "New, in stock on Amazon" : "Also check the price on Amazon"}</td>
-      <td className="px-3 py-2.5 text-right font-semibold tabular-nums">{amazonLive ? <AmazonPrice {...amazonLive} fallback="Also check on Amazon" /> : <span className="text-xs font-normal text-muted">Also check on Amazon</span>}</td>
+      <td className="hidden px-3 py-2.5 text-xs text-muted sm:table-cell">New, in stock on Amazon</td>
+      <td className="px-3 py-2.5 text-right font-semibold tabular-nums"><AmazonPrice {...amazonLive} /></td>
       <td className="px-3 py-2.5 text-right">
         <span className="inline-flex items-center justify-end gap-2">
           {!compact && amazonCart && <CartAddButton {...amazonCart} className="hidden text-muted sm:inline-flex" />}
           <a href={goHref({ url: amazonUrl, source: "amazon", market }, productId, `${page}_pinned`)} rel="sponsored nofollow noopener" target="_blank" className="btn-soft px-3 py-1.5 min-h-10 whitespace-nowrap">
-            {amazonLive ? "View deal" : "Check Amazon"} <span aria-hidden="true">↗</span>
+            View deal <span aria-hidden="true">↗</span>
           </a>
         </span>
       </td>
     </tr>
   ) : null;
-  // Fetch TCG (owner, 2026-11-11): Australia's own marketplace, a row after eBay and Amazon, never ranked, never "Best price".
+  // Fetch TCG is an ordinary store row (owner, 2026-11-12: "we are not getting paid, it is just another usual store"):
+  // ranked among the stores by price, no pin, no Ad tag, never "Best price".
   const fetchRow = market === "AU" && fetchTcg
-    ? fetchTcg.rows.map((r) => (
-        <tr key="fetchtcg" data-fetch-row className={`border-t border-line ${PIN_OUTLINE.fetch}`}>
+    ? fetchTcg.rows.map((r) => ({ r, node: (
+        <tr key="fetchtcg" data-fetch-row className="border-t border-line">
           <td className="px-3 py-2.5">
             <span className="font-medium text-ink">Fetch TCG</span>
-            <span className="tag ml-2">Marketplace</span>
           </td>
           <td className="hidden px-3 py-2.5 text-xs text-muted sm:table-cell">
             <span className="tag mr-1">{r.condition}</span>
@@ -145,8 +145,16 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
             </a>
           </td>
         </tr>
-      ))
-    : null;
+      ) }))
+    : [];
+  // Where a Fetch row sits: after the last open store row that costs no more, else after the pinned rows.
+  const fetchAt = (cents: number) => {
+    let at = -1;
+    shown.forEach((o, i) => { if (!pinned.includes(o) && o.inStock && o.currency === "AUD" && o.cents <= cents) at = i; });
+    if (at < 0) shown.forEach((o, i) => { if (pinned.includes(o)) at = i; });
+    return at;
+  };
+  const fetchRowsAt = (i: number) => fetchRow.filter((f) => fetchAt(f.r.priceCents) === i).map((f) => f.node);
   // Amazon is the second row, right under eBay (first when there is no eBay row).
   const amazonAfter = shown.findIndex((o) => o.source === "ebay" && pinned.includes(o));
   return (
@@ -163,7 +171,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
         </thead>
         <tbody>
           {amazonAfter < 0 && amazonRow}
-          {amazonAfter < 0 && fetchRow}
+          {fetchRowsAt(-1)}
           {shown.map((o, i) => {
             const c = conv(o);
             const best = o === cheapest;
@@ -200,14 +208,14 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
                     {!compact && o.inStock && o.source !== "tcgplayer" && (
                       <CartAddButton href={tagged(o.url, subId(o.market, `${page}_cart`, productId), { checkout: true })} productUrl={o.url} storeName={sourceName(o)} title={product ?? o.title} detail={o.printing && o.printing !== "Normal" ? o.printing : null} priceCents={o.cents} currency={o.currency} image={image} className="hidden text-muted sm:inline-flex" />
                     )}
-                    <a href={goHref(o, productId, pinned.includes(o) ? `${page}_pinned` : page)} rel="sponsored nofollow noopener" target="_blank" className={`min-h-10 whitespace-nowrap ${best ? "btn-primary px-3 py-1.5" : o.inStock ? "btn-soft px-3 py-1.5" : "btn-ghost px-3 py-1.5 opacity-80"}`}>
+                    <a href={goHref(o, productId, pinned.includes(o) ? `${page}_pinned` : page)} rel="sponsored nofollow noopener" target="_blank" className={`min-h-10 whitespace-nowrap ${best || (pinned.includes(o) && o.inStock) ? "btn-primary px-3 py-1.5" : o.inStock ? "btn-soft px-3 py-1.5" : "btn-ghost px-3 py-1.5 opacity-80"}`}>
                       {best ? "Buy now" : o.inStock ? "View deal" : "View"} <span aria-hidden="true">↗</span>
                     </a>
                     </span>
                   </td>
                 </tr>
                 {i === amazonAfter && amazonRow}
-                {i === amazonAfter && fetchRow}
+                {fetchRowsAt(i)}
               </Fragment>
             );
           })}
