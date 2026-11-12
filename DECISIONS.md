@@ -1869,3 +1869,19 @@ links carried `tag=gundamcompare-20`, a per-site ID that was never confirmed to 
 **What.** `amazonUsTag` removed from `site.config.ts`, so `AMAZON_TAG` falls back to `riftcompare-20`. The `ascsubtag`
 (`gundam-<market>-<placement>`) still splits sales by site where Amazon reports it. AU (`gundamcompare-22`, created in the
 AU account 2026-11-03) is unchanged. No other Amazon logic changed.
+
+## 2026-11-12: the front page features the pricier items (owner)
+
+**Ask.** Bill: promote the more expensive items, so a sale earns more commission; the cheap ones should not be advertised on the
+front page. For the TCG sites that means sealed: booster boxes and the like.
+
+**What.** `SITE.featureMinCents` = 4000 ($40). The home page's sealed shelf (`featuredSealed`), today's top deals (`deals()`: the
+reference price must clear it, not just 500), the pre-order boxes in the shelf's tabs carry only products at or
+above it (TCGplayer market; `worthFeaturing` in `lib/data.ts`). Cheaper products keep their page, their set and hub listings, search,
+alerts and the sitemap; only the front page's selection changed, so URLs, titles, metadata and JSON-LD structure are as before.
+Starter Deck Display joins the shelf's fill types. A pre-order with no TCGplayer price yet is still shown. Store rows within a
+product are still sorted by price, never by commission; the reference price is TCGplayer's market and eBay is never a deal.
+The home kit grid (`featuredKits`) takes kits whose median in-stock shop price is at least the floor, most stores first. 
+
+**Why this floor.** From the day's data (TCGplayer market, sealed): booster boxes median $121.79; starter decks median $61.89; packs median $8.49; kits median about $30, p75 $60. The floor keeps the real
+earners and drops packs and the cheapest decks. Revisit with the click-to-sale numbers (which placements earn) in the Monday report.

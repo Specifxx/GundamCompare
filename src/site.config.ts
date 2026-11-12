@@ -74,6 +74,7 @@ export const SITE: SiteConfig = {
     { facet: "trait", attr: "Trait", noun: ["trait", "traits"], split: "\\)\\s*\\(", minItems: 15, blurb: "Traits are the factions and series printed in brackets on a card, such as (Zeon) or (Earth Federation)." },
   ],
   rarityOrder: ["LR++", "LR+", "Legend Rare", "R+", "Rare", "U+", "Uncommon", "C++", "C+", "Common", "Promo"],
+  featureMinCents: 4000,
   chaseRarities: ["LR++", "LR+", "R+"],
 
   theme: {

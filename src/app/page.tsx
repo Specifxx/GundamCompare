@@ -18,7 +18,7 @@ import { featuredSealed, preorderSetList, sealedHubs } from "@/lib/hubs";
 import { isPreorder, preorderPath } from "@/lib/preorders";
 import { inSeason as bfSeason } from "@/lib/black-friday";
 import { CORE_SALES, salesInSeason } from "@/lib/sale-seasons";
-import { kits, kitsOn, popular } from "@/lib/kits";
+import { featuredKits, kits, kitsOn } from "@/lib/kits";
 import { KitGrid } from "@/components/KitTile";
 import { SealedHero } from "@/components/SealedHero";
 import { SiteReviews } from "@/components/site-reviews/SiteReviews";
@@ -188,7 +188,7 @@ export default function Home() {
       {/* Model kits (SITE.kits): the kits most shops have in stock. */}
       {SITE.kits && kitsOn() && (
         <Section className="sd" title={`${SITE.kits.label} prices`} href="/kits" sub={`${kits().length.toLocaleString()} ${SITE.kits.noun} across ${SITE.kits.stores.length} hobby shops, matched by barcode.`}>
-          <KitGrid items={popular(kits()).slice(0, 6)} />
+          <KitGrid items={featuredKits().slice(0, 6)} />
         </Section>
       )}
 

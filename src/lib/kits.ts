@@ -127,6 +127,19 @@ export function popular(list: Kit[]): Kit[] {
     .map((x) => x.k);
 }
 
+/** The home page's kits (owner, 2026-11-12): the kits whose median in-stock shop price clears SITE.featureMinCents, most
+ *  stores first. A cheaper kit keeps its page, its grade hub and its search result; it is just not featured. Falls back to
+ *  `popular` when nothing clears the floor, so the section never empties. */
+export function featuredKits(list: Kit[] = kits()): Kit[] {
+  const floor = SITE.featureMinCents ?? 0;
+  const median = (jan: string) => {
+    const c = kitOffers(jan).filter((o) => o.inStock).map((o) => o.cents).sort((a, b) => a - b);
+    return c.length ? c[c.length >> 1] : 0;
+  };
+  const pricey = list.filter((k) => median(k.jan) >= floor);
+  return popular(pricey.length ? pricey : list);
+}
+
 /** Kits first listed in the last `days` days, newest first. */
 export function newKits(days = 30, now = Date.now()): Kit[] {
   const since = new Date(now - days * 86_400_000).toISOString().slice(0, 10);
