@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-12T00:58:48.045Z",
+ "generatedAt": "2026-11-12T23:45:01.313Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -19,7 +19,7 @@
    "currency": "USD",
    "store": "Atlantis Games & Comics",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619080_200w.jpg",
-   "refCents": 5824,
+   "refCents": 5815,
    "refLabel": "TCGplayer market price",
    "savingPct": 48
   },
@@ -27,57 +27,57 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Starter Deck 11: Aquatic Assault",
-   "url": "https://www.gundamcompare.com/card/starter-deck-11-aquatic-assault",
-   "cents": 600,
+   "title": "Gundam Aerial (Permet Score Six) (LR+)",
+   "url": "https://www.gundamcompare.com/card/gundam-aerial-permet-score-six-lr",
+   "cents": 3200,
    "currency": "USD",
-   "store": "Papa Joey's Collectibles",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710628_200w.jpg",
-   "refCents": 1087,
+   "store": "ATOMILI COLLECTABLES",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/641457_200w.jpg",
+   "refCents": 4468,
    "refLabel": "TCGplayer market price",
-   "savingPct": 45
+   "savingPct": 28
   },
   {
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Stardust Trails Booster Pack",
-   "url": "https://www.gundamcompare.com/card/stardust-trails-booster-pack",
-   "cents": 499,
+   "title": "Gundam (LR+)",
+   "url": "https://www.gundamcompare.com/card/gundam-lr",
+   "cents": 10534,
    "currency": "USD",
-   "store": "Constellation Collective",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710651_200w.jpg",
-   "refCents": 855,
+   "store": "PunkOuter Games",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/641452_200w.jpg",
+   "refCents": 13647,
    "refLabel": "TCGplayer market price",
-   "savingPct": 42
+   "savingPct": 23
   },
   {
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Newtype Rising Booster Pack",
-   "url": "https://www.gundamcompare.com/card/newtype-rising-booster-pack",
-   "cents": 1500,
+   "title": "Gundam Epyon (LR+)",
+   "url": "https://www.gundamcompare.com/card/gundam-epyon-lr-dual-impact",
+   "cents": 9471,
    "currency": "USD",
-   "store": "The Castle Games",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/619067_200w.jpg",
-   "refCents": 2311,
+   "store": "PunkOuter Games",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/659248_200w.jpg",
+   "refCents": 11438,
    "refLabel": "TCGplayer market price",
-   "savingPct": 35
+   "savingPct": 17
   },
   {
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Starter Deck 14: Heavy Dominion",
-   "url": "https://www.gundamcompare.com/card/starter-deck-14-heavy-dominion",
-   "cents": 800,
+   "title": "EX Resource (EXR-004) (C+) (SP)",
+   "url": "https://www.gundamcompare.com/card/ex-resource-exr-004-c-sp",
+   "cents": 18200,
    "currency": "USD",
-   "store": "Papa Joey's Collectibles",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/710643_200w.jpg",
-   "refCents": 1177,
+   "store": "Card Boyz",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/707586_200w.jpg",
+   "refCents": 21829,
    "refLabel": "TCGplayer market price",
-   "savingPct": 32
+   "savingPct": 17
   },
   {
    "kind": "deal",
@@ -89,9 +89,9 @@
    "currency": "USD",
    "store": "Impact Gaming Center",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619072_200w.jpg",
-   "refCents": 38410,
+   "refCents": 37950,
    "refLabel": "TCGplayer market price",
-   "savingPct": 9
+   "savingPct": 8
   },
   {
    "kind": "deal",
@@ -351,13 +351,13 @@
    "region": "US",
    "title": "HG 1/144 Messer Type-M01 (Gawman Use)",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-messer-type-m01-gawman-use",
-   "cents": 2560,
+   "cents": 2494,
    "currency": "USD",
    "store": "Japan Figure",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-me02r-m01-messer-type-m01-gawman-use-base.jpg?v=1779736258",
    "refCents": 4499,
    "refLabel": "median store price",
-   "savingPct": 43
+   "savingPct": 45
   },
   {
    "kind": "deal",
@@ -379,13 +379,13 @@
    "region": "US",
    "title": "HG 1/144 GT-9600 Gundam Leopard",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-hgaw-gt-9600-gundam-leopard",
-   "cents": 2418,
+   "cents": 2345,
    "currency": "USD",
    "store": "Japan Figure",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgaw-gt-9600-gundam-leopard-base.jpg?v=1785789540",
    "refCents": 3095,
    "refLabel": "median store price",
-   "savingPct": 22
+   "savingPct": 24
   },
   {
    "kind": "deal",
@@ -393,13 +393,13 @@
    "region": "US",
    "title": "HG 1/144 Gouf Ignited Haine Westenfluss Model",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-gouf-ignited-haine-westenfluss-model",
-   "cents": 2683,
+   "cents": 2651,
    "currency": "USD",
    "store": "Japan Figure",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgce-zgmf-2000-gouf-ignited-heine-westenfluss-base.jpg?v=1783961827",
    "refCents": 3399,
    "refLabel": "median store price",
-   "savingPct": 21
+   "savingPct": 22
   },
   {
    "kind": "deal",
