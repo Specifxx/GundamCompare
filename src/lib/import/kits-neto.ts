@@ -1,7 +1,7 @@
 // A Neto (Maropost) shop's public category pages, for the model-kit import:
 // each product card names the kit's maker item number (itemprop "mpn", e.g.
 // "G5066295"), its title, price and currency, and an "In Stock" or "Out of
-// Stock" sign. Pure, so tests/kits.test.ts can feed it a saved card.
+// Stock" sign (or, on a theme with no sign, an add-to-cart button). Pure, so tests/kits.test.ts can feed it a saved card.
 
 export interface NetoCard {
   sku: string;
@@ -18,8 +18,9 @@ const unescape = (s: string) => s.replace(/&amp;/g, "&").replace(/&quot;/g, '"')
 
 export function parseNetoCategory(html: string): { cards: NetoCard[]; lastPage: number } {
   const cards: NetoCard[] = [];
-  for (const chunk of html.split(/<article\b/).slice(1)) {
-    const card = chunk.split(/<\/article>/)[0];
+  // Frontline Hobbies wraps each card in <article>; Rhypla Builds' theme in a "c_productThumbnail" div.
+  const chunks = /<article\b/.test(html) ? html.split(/<article\b/).slice(1).map((c) => c.split(/<\/article>/)[0]) : html.split(/c_productThumbnail\b/).slice(1);
+  for (const card of chunks) {
     const sku = attr(card, /itemprop="mpn"\s+content="([^"]+)"/);
     const href = attr(card, /itemprop="name"[^>]*>\s*<a\s+href="([^"]+)"/);
     const title = attr(card, /itemprop="name"[^>]*>\s*<a[^>]*>([^<]+)</);
@@ -39,7 +40,8 @@ export function parseNetoCategory(html: string): { cards: NetoCard[]; lastPage: 
       title: unescape(title.trim()),
       cents: Math.round(Number(price) * 100),
       currency: attr(card, /itemprop="priceCurrency"\s+content="([A-Z]{3})"/),
-      inStock: /^\s*in stock/i.test(sign),
+      // No sign on the card (Rhypla Builds): a kit that can be bought has an add-to-cart button.
+      inStock: /^\s*in stock/i.test(sign) || (!sign && /<button[^>]*class="[^"]*\baddtocart\b[^"]*"[^>]*>\s*(Add to Cart|Pre-?\s*Order)/i.test(card)),
       path,
       image: img ? img.replace(/\?.*$/, "") : null,
     });
