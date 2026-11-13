@@ -24,9 +24,9 @@ import { SealedHero } from "@/components/SealedHero";
 import { SiteReviews } from "@/components/site-reviews/SiteReviews";
 import { sealedHero } from "@/lib/sealed-hero";
 import { GameTiles } from "@/components/GameTiles";
-import { LandingAds } from "@/components/LandingAds";
+import { InlineAds } from "@/components/InlineAds";
 import { Section } from "@/components/Section";
-import { cardAds } from "@/lib/card-ads";
+import { adSearch, cardAds } from "@/lib/card-ads";
 import { HeroCards } from "@/components/home/HeroCards";
 
 // The homepage leads with "<game> Card Prices" and the number of stores compared, as Rift Compare's does.
@@ -151,9 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The engine's ad banner (DexCompare / MTG Compare, owner 2026-11-03): eBay beside TCGplayer, real cards and today's prices. */}
-      <LandingAds ads={cardAds({ limit: 10 })} />
-
       {/* Multi-game sites (SITE.lines): one tile per game, straight under the hero. */}
       <GameTiles />
 
@@ -177,6 +174,9 @@ export default function Home() {
           </div>
         </Section>
       )}
+
+      {/* The page's one ad block (owner, 2026-11-13): native, horizontal, between the deals and the sealed shelf; never in the hero. */}
+      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
 
       {/* Sealed is as big a market as singles: one section the size of the chase-cards one, tabs for the boxes and each pre-order. */}
       {hero.featured.length + hero.preorders.length > 0 && (

@@ -1,19 +1,20 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { navGroups, phoneNav } from "@/lib/nav";
 import { isActivePath } from "@/components/NavLink";
-import { tilesThatFit, MIN_WIDTH, MAX_TILES, ebayTilesFor } from "@/components/SideAds";
+import { MAX_TILES } from "@/components/DockAds";
+import { ebayTilesFor } from "@/lib/inline-ads";
 import type { CardAds } from "@/lib/card-ads";
 
 // The engine's shell (2026-11-04: Gundam Compare runs the Dex / MTG Compare engine's look): one sticky header row, the
-// sidebar in the flow beside <main> from xl, the phone menu a <dialog>, and the side rails outside the shell only on a wide screen.
+// sidebar in the flow beside <main> from xl, the phone menu a <dialog>, and no side rails (owner, 2026-11-13).
 test("the shell is the engine's: header, sidebar beside main, no fixed rail variable", () => {
   const layout = readFileSync("src/app/layout.tsx", "utf8");
   assert.match(layout, /max-w-shell/);
   assert.match(layout, /<SideNav /);
   assert.match(layout, /<main id="main" className="min-w-0 flex-1">/);
-  assert.match(layout, /<SideAds /);
+  assert.match(layout, /<DockAds /);
   assert.doesNotMatch(layout, /sidenav-w|fonts\.googleapis/);
   assert.match(readFileSync("src/components/SideNav.tsx", "utf8"), /hidden w-60 shrink-0 xl:block/);
   assert.match(readFileSync("src/components/Header.tsx", "utf8"), /h-\[var\(--hdr\)\]/);
@@ -33,11 +34,9 @@ test("the current section is marked by whole path segments", () => {
   assert.ok(!isActivePath("/", "/cards"));
 });
 
-test("the side rails fit only a wide, tall window and never a clipped tile", () => {
-  assert.equal(MIN_WIDTH, 1864);
-  assert.equal(tilesThatFit(300), 0);
-  assert.ok(tilesThatFit(900) >= 2);
-  assert.equal(tilesThatFit(5000), MAX_TILES);
+test("no side rails: the dock is the only fixed ad, and the rail code is gone", () => {
+  assert.equal(MAX_TILES, 6);
+  assert.ok(!existsSync("src/components/SideAds.tsx"), "the rail code is deleted");
   const t = (id: number) => ({ id, slug: `s${id}`, name: "x", image: null, cents: 100, currency: "USD", url: "https://www.ebay.com/itm/1", ref: null });
   const ads: CardAds = { ebay: { US: [t(1), t(2), t(3)], UK: [t(4)] }, tcgplayer: [] };
   assert.equal(ebayTilesFor(ads, "UK").market, "US");
@@ -70,7 +69,7 @@ test("every rail link points at a page of the site, and prices come first", () =
 
 test("the homepage is RiftCompare's order: hero, ads, deals, sealed, chase cards, reviews, guides, FAQ, and nothing else", () => {
   const src = readFileSync("src/app/page.tsx", "utf8");
-  const order = ["<HeroSparks />", "<CreatorsBubble />", "<LandingAds ", "Today's top deals", "<SealedHero", "chase cards", "<SiteReviews />", 'title="Guides"', "Frequently asked questions"];
+  const order = ["<HeroSparks />", "<CreatorsBubble />", "Today's top deals", "<InlineAds ", "<SealedHero", "chase cards", "<SiteReviews />", 'title="Guides"', "Frequently asked questions"];
   let at = -1;
   for (const o of order) {
     const i = src.indexOf(o, at + 1);

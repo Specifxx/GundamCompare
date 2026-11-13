@@ -16,6 +16,8 @@ import { fitTitle, setTitleCandidates } from "@/lib/seo-title";
 import { postsAbout } from "@/lib/posts";
 import { imageAt } from "@/lib/image";
 import { SealedQuickBuy } from "@/components/SealedQuickBuy";
+import { InlineAds } from "@/components/InlineAds";
+import { adSearch, cardAds } from "@/lib/card-ads";
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
@@ -82,6 +84,7 @@ export default function SetPage({ params }: { params: { slug: string } }) {
       />
       {cards.length > 0 && (<section><h2 className="mb-3 text-xl font-bold">Most valuable {s.name} cards</h2><TileGrid items={cards.slice(0, 18)} /></section>)}
       {sealed.length > 0 && (<section><h2 className="mb-3 text-xl font-bold">{s.name} booster boxes and sealed</h2><TileGrid items={sealed.slice(0, 12)} /></section>)}
+      <InlineAds ads={cardAds({ setId: s.id, fill: true, limit: 10 })} search={adSearch(s.name, s)} page="set" />
       {cards.length > 0 && (
         <section>
           <h2 className="mb-3 text-xl font-bold">Full {s.name} card list with prices</h2>
