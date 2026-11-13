@@ -22,7 +22,7 @@ test("the shell is the engine's: header, sidebar beside main, no fixed rail vari
   assert.match(css, /--hdr: 60px/);
   assert.match(css, /:root:not\(\[data-theme="light"\]\)/);
   // The full-width shell (owner, 2026-11-08): full width from 1280px, flush against the 160px rails from 1864px.
-  assert.match(css, /@media \(min-width: 1864px\) \{\s*\.max-w-shell \{\s*margin-left: 160px;\s*margin-right: 160px;/);
+  assert.doesNotMatch(css, /margin-left: 160px/, "no side rails (owner, 2026-11-13): the shell keeps the whole width");
   assert.match(readFileSync("src/app/page.tsx", "utf8"), /<HeroCards items=\{heroPicks\} \/>/);
 });
 

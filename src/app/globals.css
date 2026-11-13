@@ -553,13 +553,6 @@ html:has(.menu-sheet[open]) {
     margin-right: 0;
   }
 }
-/* Gundam's rails are 160px wide and show only from 1864px (components/SideAds.tsx MIN_WIDTH): the shell meets them there. */
-@media (min-width: 1864px) {
-  .max-w-shell {
-    margin-left: 160px;
-    margin-right: 160px;
-  }
-}
 /* The hero's stat line, as chips. */
 .hero-stat {
   @apply inline-flex min-h-9 items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 text-sm text-muted;

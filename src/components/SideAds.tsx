@@ -58,6 +58,13 @@ export interface AdSearch {
   tcgplayerUrl: string;
 }
 
+/**
+ * The side rails are OFF (owner, 2026-11-13: "banner ads on the side … doesn't look as good … fill in that space on the side again").
+ * The ads are the horizontal strips inside the page (and the phone dock on small screens). The rail code below stays so a rail can
+ * be tried again; nothing renders it while this is false, and globals.css gives the page column the whole width.
+ */
+export const SIDE_RAILS = false;
+
 export function SideAds({ ads, search }: { ads: CardAds; search: AdSearch }) {
   const [fit, setFit] = useState(0);
   const [narrow, setNarrow] = useState(false);
@@ -80,7 +87,7 @@ export function SideAds({ ads, search }: { ads: CardAds; search: AdSearch }) {
   }, []);
   // Too narrow for the rails (phones, tablets, a small window): the same tiles in the phone dock (AdDock.tsx).
   if (narrow) return <PhoneDock ads={ads} />;
-  if (fit < 1) return null;
+  if (!SIDE_RAILS || fit < 1) return null;
   return (
     <>
       <EbayRail ads={ads} fit={fit} query={search.ebayQuery} />
