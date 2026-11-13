@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { gradeOf, isKitTitle, janFromItemCode, janOf, jansIn, keepConsistent, kitCore, kitName, scaleOf, validEan13, type KitListing } from "@/lib/import/kits";
+import { gradeOf, isKitPreorder, isKitTitle, janFromItemCode, janOf, jansIn, keepConsistent, kitCore, kitName, scaleOf, validEan13, type KitListing } from "@/lib/import/kits";
 
 // Real shop titles and SKUs from the 2026-10-28 store probe.
 const BANDAI = ["4573102", "4549660", "4543112"];
@@ -113,6 +113,32 @@ test("a Neto category card: item number, title, price, currency and stock sign",
   assert.equal(cards[1].inStock, false);
   assert.equal(cards[1].title, "Bandai Gundam HG 1/144 Full Armor Gundam & Co");
   assert.equal(janFromItemCode(cards[0].sku, "4573102"), "4573102662958");
+});
+
+test("Rhypla Builds' Neto theme: cards without <article>, stock from the add-to-cart button", async () => {
+  const { parseNetoCategory } = await import("@/lib/import/kits-neto");
+  // rhyplabuilds.com.au/gunpla/hg-high-grade/ (2026-11-13, trimmed).
+  const card = (sku: string, slug: string, title: string, price: string, button: string) => `<div class="wrapper-thumbnail col-xs-8 col-sm-6 col-md-3 col-lg-3">
+<div class="thumbnail c_productThumbnail c_galleryThumbnail" itemscope itemtype="http://schema.org/Product">
+<meta itemprop="brand" content="Bandai"/> <meta itemprop="mpn" content="${sku}"/>
+<a href="https://www.rhyplabuilds.com.au/${slug}" class="thumbnail-image"> <img src="/assets/thumbL/${sku}.jpg?20261021161717" class="product-image" alt="${title}" rel="itmimg${sku}" itemprop="image"> </a>
+<div class="caption"> <h3 itemprop="name"><a href="https://www.rhyplabuilds.com.au/${slug}" title="${title}">${title}</a></h3>
+<p class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"> <span itemprop="price" content="${price}">$${price}</span> <meta itemprop="priceCurrency" content="AUD"> </p> </div>
+<form class="form-inline buying-options">${button}</form> </div> </div>`;
+  const cart = (label: string) => `<button type="button" title="${label}" class="addtocart btn btn-info col-xs-12 btn-loads btn-lg" rel="x">${label === "Pre-Order Now!" ? "Pre-Order" : label}</button>`;
+  const html =
+    card("G5074249", "hg-1-144-gouf-ignited-heine-westenfluss-custom", "HG 1/144 Gouf Ignited (Heine Westenfluss Custom)", "47.5", cart("Add to Cart")) +
+    card("G5072316", "pre-order-hg-1-144-ark-10-gundam-helix", "- PRE ORDER - HG 1/144 Ark-10 Gundam Helix", "44.99", cart("Pre-Order Now!")) +
+    card("G5063137", "hg-1-144-sold-out-kit", "HG 1/144 Sold Out Kit", "30", `<a class="btn btn-default">Notify Me</a>`) +
+    `<a href="/gunpla/hg-high-grade/?pgnum=2">2</a><a href="/gunpla/hg-high-grade/?pgnum=4">4</a>`;
+  const { cards, lastPage } = parseNetoCategory(html);
+  assert.equal(lastPage, 4);
+  assert.deepEqual(cards[0], { sku: "G5074249", title: "HG 1/144 Gouf Ignited (Heine Westenfluss Custom)", cents: 4750, currency: "AUD", inStock: true, path: "hg-1-144-gouf-ignited-heine-westenfluss-custom", image: "/assets/thumbL/G5074249.jpg" });
+  assert.equal(cards[1].inStock, true);
+  assert.equal(isKitPreorder(cards[1].title), true);
+  assert.equal(kitCore(cards[1].title), "Ark-10 Gundam Helix");
+  assert.equal(cards[2].inStock, false);
+  assert.equal(cards.length, 3);
 });
 
 test("a pre-order's ETA and '(Tentative)' stay out of the kit's name", () => {

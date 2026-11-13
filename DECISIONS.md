@@ -1977,3 +1977,39 @@ the grid on lists, never beside a buy button and never in the quick view (which 
 the card page's small pair, the kit page's two strips and the rail code (`SideAds`: both rails, `rail-scroll`) are deleted; the phone
 dock stays (`DockAds.tsx`, the rails' old file trimmed to it) and yields to the block. `tests/inline-ads.test.ts`,
 `tests/card-ads.test.ts` and `tests/shell.test.ts` pin it. Measure clicks per `*-inline-*` placement against the old strips on 20 Nov.
+
+## 2026-11-13: what r/Gunpla asked for (40 upvotes, 11 comments, then removed by the moderators)
+
+The 11 November r/Gunpla post about Australian kit prices drew eleven comments before it was removed. Two asks carried the votes.
+
+**"Delivery matters massively… free delivery over X" (18 upvotes) and "a cheapest delivered would be very nice" (7).** The kit pages
+said "prices are before postage" and nothing more. Now `scripts/kit-shipping.ts` (`kit-shipping.yml`, Sundays 03:47 UTC, four
+runners) asks each Shopify kit shop's own cart, the endpoints its "estimate shipping" box uses, what delivery costs for one
+in-stock HG-size kit (A$15 to A$70 in the shop's currency, `KIT_BAND`) to one address per market (Sydney, New York, London,
+Toronto), then grows the basket until delivery turns free. `data/public/kit-shipping.json` holds each shop's fee, the basket we
+saw go free and the day asked; it is committed without a deploy marker and rides the next daily release. Ported from KaeYoung's
+weekly quotes (its DECISIONS.md, 2026-10-30).
+
+On a kit page each shop row says "+A$9.95 delivery to Sydney (free from A$150)" under the shop's name, and one line under the
+table adds it up: "Cheapest delivered to Sydney: A$X at Shop", with how many shops were quoted and the day. Rules:
+- The table's order, "Best price", tiles, the alert feed, structured data and the prose's cheapest stay the kit's own price.
+  Delivery is a note and one line (`cheapestDelivered`, `tests/kit-shipping.test.ts`).
+- The line needs two quoted shops in the market, shops only (never eBay, Amazon or TCGplayer), and leaves out a shop whose
+  threshold sits between what we saw charged and what we saw free.
+- It is a quote for a small box: the line says a big box or another address can cost more. A fee over 40 units, or a quote
+  over 45 days old, is not shown. Neto shops (Frontline Hobbies, Rhypla Builds) have no such cart and get no note.
+- Nothing is bought and the cart is emptied; a 403, 429 or bot challenge stops that shop for the run.
+- The ops monitor's "Kit delivery quotes" check goes amber when the newest quote is over ten days old.
+
+**Shops people named.** Each opened by hand on 2026-11-13:
+- Hearns Hobbies (Shopify, 2,246 products in its Gundam collection, Bandai item number in 248 of 250 SKUs read), Hobbykitz
+  (Shopify, 202 of 250), Metro Hobbies Australia (Shopify, 207 of 250; not the Canadian Metro Hobbies left out on 2026-10-29),
+  Principality of G (Shopify, 221 of 250) and Rhypla Builds (Neto, the item number in every card's `mpn`; three commenters
+  asked for it): added. Rhypla's theme has no `<article>` cards and no stock sign, so `parseNetoCategory` also splits on
+  `c_productThumbnail` and reads stock from the add-to-cart button.
+- Gundams Plus: Shopify, but most kits have no SKU and no barcode. Left out.
+- Little Robot: the commenter said its site was down. Not checked further.
+
+Not acted on: shops with no online store, the Gundam Base opening, and "where did you get the pictures?" (they are the shops'
+own listing photos, hotlinked).
+

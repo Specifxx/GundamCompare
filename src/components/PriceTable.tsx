@@ -15,6 +15,7 @@ import { Flag } from "./Flag";
 import { goHref, subId, tagged } from "@/lib/affiliate";
 import { CartAddButton } from "./cart/CartAddButton";
 import { priceRows } from "@/lib/price-rows";
+import { cheapestDelivered, deliveryNote, type KitShippingData } from "@/lib/kit-shipping";
 import type { FetchRows } from "@/lib/fetchtcg";
 import { useMarket } from "./ClientPrefs";
 import { ReportPrice } from "./ReportForms";
@@ -48,7 +49,7 @@ export const PIN_OUTLINE = {
 /** Where the phone's sticky buy bar hides (components/CardBuy.tsx). */
 export const PRICE_TABLE_ID = "price-comparison";
 
-export function PriceTable({ offers, fx, productId, page, compact = false, amazon = null, tableId = PRICE_TABLE_ID, product, image = null, fetchTcg = null }: { /** Fetch TCG's own price of this card (Australia only, lib/fetchtcg.ts): a marketplace row after eBay and Amazon, never ranked */ fetchTcg?: FetchRows | null } & { /** the product's picture, for the cart list (components/cart) */ image?: string | null; offers: Offer[]; fx: Record<string, number>; productId: number; page: string; compact?: boolean; amazon?: Partial<Record<Market, string | AmazonCell>> | null; /** null in the quick view: the page's own table keeps the id the buy bar watches */ tableId?: string | null; /** the product's name: shows "Report a wrong price" under the table */ product?: string }) {
+export function PriceTable({ offers, fx, productId, page, compact = false, amazon = null, tableId = PRICE_TABLE_ID, product, image = null, fetchTcg = null, delivery = null }: { /** each kit shop's weekly delivery quote (lib/kit-shipping.ts): a note on its row and the "cheapest delivered" line; never the order or the best price */ delivery?: KitShippingData | null } & { /** Fetch TCG's own price of this card (Australia only, lib/fetchtcg.ts): a marketplace row after eBay and Amazon, never ranked */ fetchTcg?: FetchRows | null } & { /** the product's picture, for the cart list (components/cart) */ image?: string | null; offers: Offer[]; fx: Record<string, number>; productId: number; page: string; compact?: boolean; amazon?: Partial<Record<Market, string | AmazonCell>> | null; /** null in the quick view: the page's own table keeps the id the buy bar watches */ tableId?: string | null; /** the product's name: shows "Report a wrong price" under the table */ product?: string }) {
   const { market, setMarket } = useMarket();
   const [showOut, setShowOut] = useState(false);
   // eBay and TCGplayer lead the table (lib/price-rows.ts `display`); "Cheapest"
@@ -97,6 +98,10 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
       </div>
     );
   const live = [...inStock, ...refs];
+  // Delivery (kit pages): each shop's own quote beside its price, and the one line that adds them up.
+  const noteOf = (o: Offer) => (delivery && o.inStock && o.source !== "ebay" && o.source !== "tcgplayer" ? deliveryNote(delivery[o.source], o.cents, (c) => money(c, o.currency)) : null);
+  const delivered = compact ? null : cheapestDelivered(offers, market, delivery);
+  const quoteDay = delivered ? delivery?.[delivered.offer.source]?.at : null;
   // Out-of-stock rows show when asked, or when nothing is in stock at all.
   const unfold = showOut || live.length === 0;
   const shown = compact ? rows.slice(0, 6) : unfold ? rows : rows.filter((o) => live.includes(o));
@@ -187,6 +192,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
                     )}
                     {o.source === "ebay" && <span className="ad-pill ml-2">Ad</span>}
                     {best && <span className="ml-2 rounded-full bg-open-soft px-2 py-0.5 text-[10px] font-bold uppercase text-open">Best price</span>}
+                    {noteOf(o) && <span className="block text-xs font-normal text-muted" data-delivery-note>{noteOf(o)}</span>}
                   </td>
                   <td className="hidden px-3 py-2.5 text-xs text-muted sm:table-cell">
                     {o.printing && o.printing !== "Normal" && <span className="tag mr-1">{o.printing}</span>}
@@ -221,6 +227,15 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
           })}
         </tbody>
       </table>
+      {delivered && (
+        <p className="border-t border-line px-3 py-2.5 text-sm" data-cheapest-delivered>
+          <b className="text-ink">Cheapest delivered to {delivered.to}: {money(delivered.total, delivered.offer.currency)} at {sourceName(delivered.offer)}</b>{" "}
+          <span className="text-muted">
+            ({money(delivered.offer.cents, delivered.offer.currency)} {delivered.fee === 0 ? "with free delivery" : `+ ${money(delivered.fee, delivered.offer.currency)} delivery`}).
+            Each shop&apos;s own checkout quote for one small kit{quoteDay ? `, asked ${new Date(`${quoteDay}T00:00:00Z`).toLocaleDateString("en-AU", { day: "numeric", month: "short", timeZone: "UTC" })}` : ""}; {delivered.quoted} of {delivered.of} shops quoted. A big box or another address can cost more.
+          </span>
+        </p>
+      )}
       {amazonLive && <p className="border-t border-line px-3 py-2 text-[11px] text-muted">* Amazon price: {AMAZON_PRICE_DISCLAIMER}</p>}
       {folded > 0 && (
         <button type="button" onClick={() => setShowOut(true)} className="w-full border-t border-line px-3 py-2.5 text-left text-sm text-muted hover:bg-raised hover:text-ink">

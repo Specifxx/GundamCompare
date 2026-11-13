@@ -89,6 +89,14 @@ serve every store; a store without API access is skipped. `tests/amazon-api.test
 `externalIds` carry that JAN (`barcodeMatches`), never by title; the kit page's table pins the Amazon row with its 24-hour
 price, held to 60–160% of the kit's hobby-shop median. Keyed by the JAN in the same `asins-<MARKET>.json`.
 
+## Kit delivery quotes (r/Gunpla, 2026-11-13)
+
+`scripts/kit-shipping.ts` (`kit-shipping.yml`, weekly) asks each Shopify kit shop's own cart what delivery costs for one
+HG-size kit to one address per market and where it turns free → `data/public/kit-shipping.json` (`lib/kit-shipping.ts`,
+`lib/kit-shipping-data.ts`). The kit page shows it as a note under each shop and ONE "Cheapest delivered to <city>" line.
+Delivery never decides the table's order, "Best price", a tile, the alert feed or structured data, never counts eBay or
+Amazon, and always says where to, when, and that a bigger box can cost more. `tests/kit-shipping.test.ts` pins it.
+
 ## Matching
 
 `src/lib/import/match.ts`: a wrong match is worse than none. Every card match

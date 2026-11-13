@@ -8,7 +8,10 @@
 // cannot be matched without guessing. Keys equal the card store's key where
 // the shop is the same. Metro Hobbies (metrohobbies.ca, Square Online) was
 // asked for on 2026-10-29 but its pages carry no SKU, item number or JAN, so
-// it is left out on the same rule.
+// it is left out on the same rule. Metro Hobbies Australia (metrohobbies.com.au) is a
+// different shop on Shopify whose SKUs are Bandai item numbers: added 2026-11-13.
+// Gundams Plus (gundamsplus.com.au) has no SKU on most kits and Little Robot's site
+// did not answer: both left out.
 import type { KitStoreConfig } from "@/lib/site-types";
 
 export const KIT_STORES: KitStoreConfig[] = [
@@ -37,6 +40,12 @@ export const KIT_STORES: KitStoreConfig[] = [
   { key: "generalgames", name: "General Games Chirnside Park", base: "https://generalgames.com.au", market: "AU", collections: ["gundam"] },
   { key: "hobbycollectorsaustralia", name: "Hobby Collectors Australia", base: "https://hobbycollectorsaustralia.com.au", market: "AU", collections: ["gunpla"] },
   { key: "turtletcg", name: "Turtle TCG", base: "https://turtletcg.com.au", market: "AU", collections: ["gundam"] },
+  // Named by r/Gunpla commenters under the 11 November 2026 post; each checked by hand on 2026-11-13: Shopify, the
+  // SKU is Bandai's item number ("G5068839") on 248 of 250, 202 of 250, 207 of 250 and 221 of 250 products read.
+  { key: "hearnshobbies", name: "Hearns Hobbies", base: "https://www.hearnshobbies.com", market: "AU", collections: ["gundam"] },
+  { key: "hobbykitz", name: "Hobbykitz", base: "https://www.hobbykitz.com.au", market: "AU", collections: ["gundam-non-preorders", "gundam-pre-orders"] },
+  { key: "metrohobbiesau", name: "Metro Hobbies", base: "https://www.metrohobbies.com.au", market: "AU", collections: ["gundam-kits-in-stock", "gundam-new-arrivals", "bandai-30-minute-missions"] },
+  { key: "principalityofg", name: "Principality of G", base: "https://principalityofg.com.au", market: "AU", collections: ["all-gundam-kits"] },
   // Neto, not Shopify: category pages, each card naming the Bandai item number (owner's request, 2026-10-29).
   {
     key: "frontlinehobbies",
@@ -52,6 +61,25 @@ export const KIT_STORES: KitStoreConfig[] = [
       "model-building/gundam-plastic-models/sd-gundam",
       "model-building/bandai-gundam-model-kits/gundam-other-grades",
       "model-building/gundam-gunpla-model-kits/30-minute-missions-sisters/30-minute-missions",
+    ],
+  },
+  // Neto as well (r/Gunpla, three commenters, 2026-11-13): every card's "mpn" is the Bandai item number.
+  {
+    key: "rhyplabuilds",
+    name: "Rhypla Builds",
+    base: "https://www.rhyplabuilds.com.au",
+    market: "AU",
+    platform: "neto",
+    collections: [
+      "gunpla/hg-high-grade",
+      "gunpla/mg-master-grade",
+      "gunpla/rg-real-grade",
+      "gunpla/pg-perfect-grade",
+      "gunpla/eg-entry-grade",
+      "gunpla/sd-gundam",
+      "gunpla/re-100-reborn-one-hundred-ng-100",
+      "gunpla/mega-mega-size",
+      "gunpla/30mm-30-minute-mission",
     ],
   },
   // Canada
