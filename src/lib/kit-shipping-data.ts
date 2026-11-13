@@ -24,3 +24,15 @@ export function kitShipping(now = Date.now()): KitShippingData {
 export function freshQuotes(raw: KitShippingData, now: number): KitShippingData {
   return Object.fromEntries(Object.entries(raw).filter(([, q]) => q.fee <= MAX_SMALL_ORDER_FEE && (now - Date.parse(q.at)) / 86_400_000 <= QUOTE_MAX_DAYS));
 }
+
+/** The ops monitor's reading of the weekly quotes (scripts/ops-monitor.ts): amber when the newest is over ten days old (a weekly job missed) or fewer
+ *  than a third of the Shopify kit shops have one. */
+export function judgeKitShipping(raw: Record<string, { at: string }>, shops: number, now = Date.now()): { status: "ok" | "warn"; detail: string } {
+  const days = Object.values(raw).map((q) => (now - Date.parse(q.at)) / 86_400_000);
+  const n = days.length;
+  if (!n) return { status: "warn", detail: "no kit shop has a delivery quote: check the Kit delivery quotes workflow" };
+  const newest = Math.min(...days);
+  if (newest > 10) return { status: "warn", detail: `the newest delivery quote is ${newest.toFixed(0)} days old: the weekly Kit delivery quotes workflow has not run` };
+  if (n < shops / 3) return { status: "warn", detail: `only ${n} of ${shops} Shopify kit shops have a delivery quote` };
+  return { status: "ok", detail: `${n} of ${shops} Shopify kit shops quoted, newest ${newest.toFixed(0)} days old` };
+}

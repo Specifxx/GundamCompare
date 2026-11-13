@@ -1,0 +1,63 @@
+{
+ "v": 1,
+ "site": "www.gundamcompare.com",
+ "at": "2026-11-13T05:14:48.958Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "name": "Live site",
+   "status": "warn",
+   "detail": "SITE_URL repository variable not set — live checks skipped"
+  },
+  {
+   "name": "A card page",
+   "status": "warn",
+   "detail": "SITE_URL repository variable not set — live checks skipped"
+  },
+  {
+   "name": "Daily price import",
+   "status": "ok",
+   "detail": "5.6h old"
+  },
+  {
+   "name": "Store imports",
+   "status": "warn",
+   "detail": "magictraders: 0 matched; masterset: https://masterset.ca/collections/gundam-card-game-singles/products.json?limit=250&page=1&country=CA: fetch failed"
+  },
+  {
+   "name": "eBay budget",
+   "status": "warn",
+   "detail": "EBAY_CLIENT_ID not set in GitHub secrets — no eBay prices"
+  },
+  {
+   "name": "Family feed",
+   "status": "ok",
+   "detail": "30 items, 5.5h old; 9 sister feeds (rift, op, dex, mtg, wax, lorcana, ygo, cyberpunk, bandai)"
+  },
+  {
+   "name": "Amazon ASIN finder",
+   "status": "ok",
+   "detail": "AU: refused, 0 ASINs, 5h ago; CA: ok, 0 ASINs, 5h ago; EU: ok, 0 ASINs, 5h ago; UK: ok, 0 ASINs, 5h ago; US: ok, 714 ASINs, 6h ago"
+  },
+  {
+   "name": "Fetch TCG row",
+   "status": "warn",
+   "detail": "SITE_URL repository variable not set — live checks skipped"
+  },
+  {
+   "name": "Model kit import",
+   "status": "ok",
+   "detail": "2142 kits from 36 stores, 5.6h old"
+  },
+  {
+   "name": "Model kit eBay rows",
+   "status": "ok",
+   "detail": "196 of 2142 kits show an eBay row (615 searched)"
+  },
+  {
+   "name": "Kit delivery quotes",
+   "status": "warn",
+   "detail": "data/public/kit-shipping.json missing: run the Kit delivery quotes workflow"
+  }
+ ]
+}

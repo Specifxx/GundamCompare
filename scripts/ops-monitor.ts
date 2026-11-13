@@ -12,6 +12,8 @@ import { SITE } from "@/site.config";
 import type { Meta } from "@/lib/site-types";
 import { SITE_HOST } from "@/lib/site";
 import { readKitFile } from "@/lib/kit-store";
+import { KIT_SHIPPING_FILE, judgeKitShipping } from "@/lib/kit-shipping-data";
+
 
 type Result = { name: string; status: "ok" | "warn" | "fail"; detail: string };
 const site = (process.env.NEXT_PUBLIC_SITE_URL || `https://${SITE_HOST}`).replace(/\/$/, "");
@@ -122,6 +124,17 @@ async function main() {
             if (!checked) return { status: "warn", detail: "no kit searched on eBay yet (the kit step runs after the card pass, with what is left of the day's calls)" };
             if (checked >= 200 && shown === 0) return { status: "warn", detail: `${checked} kits searched, none with an eBay row: check the kit step's [kits:ebay] log` };
             return { status: "ok", detail: `${shown} of ${f.kits.length} kits show an eBay row (${checked} searched)` };
+          }),
+          // The weekly delivery quotes (scripts/kit-shipping.ts, 2026-11-13). Amber only: without them the kit pages
+          // simply show no delivery line.
+          check("Kit delivery quotes", async () => {
+            let raw: Record<string, { at: string }> = {};
+            try {
+              raw = JSON.parse(fs.readFileSync(KIT_SHIPPING_FILE, "utf8"));
+            } catch {
+              return { status: "warn", detail: "data/public/kit-shipping.json missing: run the Kit delivery quotes workflow" };
+            }
+            return judgeKitShipping(raw, SITE.kits!.stores.filter((x) => x.platform !== "neto").length);
           }),
         ]
       : []),

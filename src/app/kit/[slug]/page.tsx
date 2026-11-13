@@ -16,6 +16,7 @@ import { meta } from "@/lib/data";
 import { abs, KITS_SHARE_IMAGE } from "@/lib/site";
 import { MARKET_LABEL } from "@/lib/site-types";
 import { sourceNameServer } from "@/lib/sources";
+import { kitShipping } from "@/lib/kit-shipping-data";
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
@@ -115,7 +116,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
               <h2 className="text-lg font-bold">Compare prices</h2>
               <CheckedAgo at={kitsUpdatedAt() ?? m?.updatedAt} />
             </div>
-            <PriceTable offers={withEbay} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} />
+            <PriceTable offers={withEbay} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} delivery={kitShipping()} />
             <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <a className="link font-semibold" rel="sponsored nofollow noopener" target="_blank" href={goHref({ url: ebaySearchUrl(search, "US"), source: "ebay", market: "US" }, pid, "kit_ebay_search")}>Check eBay listings →</a>
               <span className="rounded bg-ink-800 px-1.5 py-0.5 text-[10px] text-muted">Paid link</span>
@@ -127,7 +128,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
               {cheapestByMarket.length
                 ? `Cheapest in stock today: ${cheapestByMarket.map((o) => `${money(o.cents, o.currency)} at ${sourceNameServer(o)} (${MARKET_LABEL[o.market]})`).join(", ")}. `
                 : `No shop we track has it in stock today. `}
-              We compare {cfg.stores.length} hobby shops every day and match each listing by the kit&apos;s JAN barcode ({k.jan}), so every price above is for this exact kit. Prices are before postage; the shop&apos;s checkout price is final.
+              We compare {cfg.stores.length} hobby shops every day and match each listing by the kit&apos;s JAN barcode ({k.jan}), so every price above is for this exact kit. Prices are before postage and stay sorted by the kit&apos;s own price; where a shop&apos;s checkout gave us a delivery quote, it is shown under the shop&apos;s name with the order value that makes delivery free. The shop&apos;s checkout price is final.
             </p>
           </section>
         </div>
