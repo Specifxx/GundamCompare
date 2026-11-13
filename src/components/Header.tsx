@@ -28,7 +28,7 @@ export function headerNavItems(all: NavGroup[], shop: ShopMenus, sale: { href: s
     { href: "/sealed", label: "Sealed", also: ["/preorders"], menu: shop.sealed.length ? shop.sealed : undefined },
     ...(SITE.kits ? [{ href: "/kits", label: SITE.kits.label, also: ["/kit"], menu: shop.kits.length ? shop.kits : undefined }] : []),
     { href: "/tools/deal-finder", label: "Deals", also: ["/black-friday", "/cyber-monday", "/boxing-day", "/january-sales", "/lunar-new-year", "/movers", "/preorders", "/stores"], menu: deals.length ? deals : undefined },
-    { href: "/tools", label: "More", also: ["/price-report", "/forum", "/blog"], menu: more },
+    { href: "/tools", label: "More", rest: "tools and guides", also: ["/price-report", "/forum", "/blog"], menu: more },
   ];
 }
 
