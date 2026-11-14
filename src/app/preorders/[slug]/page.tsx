@@ -118,7 +118,7 @@ export default function PreorderRelease({ params }: { params: { slug: string } }
       </header>
 
       <section className="flex flex-col gap-6">
-        <h2 className="text-2xl font-bold">{pre ? `Where to pre-order ${s.name}` : `Where to buy ${s.name}`}</h2>
+        <h2 className="font-display text-2xl font-bold">{pre ? `Where to pre-order ${s.name}` : `Where to buy ${s.name}`}</h2>
         {sealed.length === 0 && (
           <div className="card-surface p-5 text-sm text-muted">
             No store we track lists {s.name} yet. Stores usually open pre-orders six to ten weeks before release; this page adds each one, and TCGplayer and eBay, as soon as its listing appears, refreshed daily. Nothing here is ever an estimate.
@@ -144,7 +144,7 @@ export default function PreorderRelease({ params }: { params: { slug: string } }
 
       {chase.length > 0 && (
         <section>
-          <h2 className="mb-1 text-2xl font-bold">{s.name} chase cards</h2>
+          <h2 className="mb-1 font-display text-2xl font-bold">{s.name} chase cards</h2>
           <p className="mb-3 text-sm text-muted">{pre ? "The most valuable cards so far, at TCGplayer market. Pre-release prices move fast." : "The most valuable cards at TCGplayer market."} <Link className="link" href={`/sets/${s.slug}`}>Full card list →</Link></p>
           <TileGrid items={chase} />
         </section>
@@ -154,13 +154,13 @@ export default function PreorderRelease({ params }: { params: { slug: string } }
         <section className="grid gap-6 md:grid-cols-2">
           {guides.length > 0 && (
             <div>
-              <h2 className="mb-2 text-lg font-bold">{s.name} guides</h2>
+              <h2 className="mb-2 font-display text-lg font-bold">{s.name} guides</h2>
               <ul className="list-disc pl-5 text-sm">{guides.map((g) => <li key={g.slug}><Link className="link" href={`/blog/${g.slug}`}>{g.title}</Link></li>)}</ul>
             </div>
           )}
           {others.length > 0 && (
             <div>
-              <h2 className="mb-2 text-lg font-bold">Other {SITE.gameShort} releases</h2>
+              <h2 className="mb-2 font-display text-lg font-bold">Other {SITE.gameShort} releases</h2>
               <ul className="list-disc pl-5 text-sm">
                 {others.map((x) => <li key={x.id}><Link className="link" href={preorderPath(x)}>{x.name}</Link> <span className="text-muted">· {isPreorder(x) ? "out" : "released"} {longDate(x.releasedOn)}</span></li>)}
               </ul>

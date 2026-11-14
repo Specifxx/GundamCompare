@@ -43,7 +43,7 @@ export default function SealedHub({ params }: { params: { type: string } }) {
       <TileGrid items={items} />
       <InlineAds ads={cardAds({ kind: "sealed", limit: 10 })} search={adSearch()} page="sealed-type" />
       <section>
-        <h2 className="mb-3 text-lg font-bold">Other sealed products</h2>
+        <h2 className="mb-3 font-display text-lg font-bold">Other sealed products</h2>
         <div className="flex flex-wrap gap-2">
           {sealedHubs().filter((x) => x.slug !== h.slug).map((x) => <Link key={x.slug} href={`/sealed/${x.slug}`} className="chip">{x.label}</Link>)}
         </div>

@@ -36,7 +36,7 @@ export default function RarityHub({ params }: { params: { slug: string } }) {
       </header>
       <TileGrid items={h.items.slice(0, 120)} />
       <section>
-        <h2 className="mb-3 text-lg font-bold">Other rarities</h2>
+        <h2 className="mb-3 font-display text-lg font-bold">Other rarities</h2>
         <ChipList items={rarityHubs().filter((x) => x.slug !== h.slug).map((x) => ({ key: x.slug, href: `/cards/rarity/${x.slug}`, label: x.label }))} more="rarities" />
       </section>
     </div>

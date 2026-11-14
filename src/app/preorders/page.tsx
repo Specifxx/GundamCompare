@@ -41,7 +41,7 @@ export default function Preorders() {
         {box?.image ? <img src={imageAt(box.image, "200w")!} alt={box.name} className="h-24 w-20 shrink-0 object-contain" loading="lazy" /> : null}
         <div className="min-w-0">
           <p className="text-xs uppercase tracking-wide text-brand-400">{isPreorder(s) ? `Out ${longDate(s.releasedOn)}${days != null && days > 0 ? ` · ${days} days` : ""}` : `Released ${longDate(s.releasedOn)}`}</p>
-          <h2 className="text-lg font-bold">{s.name} {isPreorder(s) ? "pre-orders" : "prices"}</h2>
+          <h2 className="font-display text-lg font-bold">{s.name} {isPreorder(s) ? "pre-orders" : "prices"}</h2>
           <p className="text-sm text-muted">
             {sealed.length ? <>{sealed.length} sealed product{sealed.length === 1 ? "" : "s"} · {stores} store{stores === 1 ? "" : "s"}</> : "No store listings yet"}
             {box && refCents(box.id) ? <> · {shortName(box.name)} {money(refCents(box.id))} on TCGplayer</> : null}

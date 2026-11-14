@@ -42,7 +42,7 @@ export default function Cards() {
       {rising.length > 0 && (
         <section>
           <div className="mb-3 flex items-baseline justify-between gap-3">
-            <h2 className="text-xl font-bold">Rising this week</h2>
+            <h2 className="font-display text-xl font-bold sm:text-2xl">Rising this week</h2>
             <Link className="link text-sm" href="/movers">All movers →</Link>
           </div>
           <TileGrid items={rising} />
@@ -51,21 +51,21 @@ export default function Cards() {
 
       <section>
         <div className="mb-3 flex items-baseline justify-between gap-3">
-          <h2 className="text-lg font-bold">Latest sets</h2>
+          <h2 className="font-display text-lg font-bold">Latest sets</h2>
           <Link className="link text-sm" href="/sets">All {listed.length} sets →</Link>
         </div>
         <ChipList items={latest.map((s) => ({ key: s.id, href: `/sets/${s.slug}`, label: s.name }))} limit={10} />
       </section>
 
       <section>
-        <h2 className="mb-3 text-lg font-bold">Browse by rarity</h2>
+        <h2 className="mb-3 font-display text-lg font-bold">Browse by rarity</h2>
         <ChipList items={rarityHubs().map((h) => ({ key: h.slug, href: `/cards/rarity/${h.slug}`, label: h.label }))} more="rarities" />
       </section>
 
       {attrFacets().map((f) => (
         <section key={f.cfg.facet}>
           <div className="mb-3 flex items-baseline justify-between gap-3">
-            <h2 className="text-lg font-bold">Browse by {f.cfg.noun[0]}</h2>
+            <h2 className="font-display text-lg font-bold">Browse by {f.cfg.noun[0]}</h2>
             <Link className="link text-sm" href={`/cards/${f.cfg.facet}`}>All {f.hubs.length} {f.cfg.noun[1]} →</Link>
           </div>
           <ChipList items={f.hubs.map((h) => ({ key: h.slug, href: `/cards/${f.cfg.facet}/${h.slug}`, label: h.label }))} more={f.cfg.noun[1]} />
