@@ -1,0 +1,63 @@
+{
+ "v": 1,
+ "site": "www.gundamcompare.com",
+ "at": "2026-11-14T18:28:12.138Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "name": "Live site",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "A card page",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "Daily price import",
+   "status": "ok",
+   "detail": "18.9h old"
+  },
+  {
+   "name": "Store imports",
+   "status": "warn",
+   "detail": "spindown: https://spindown.com.au/collections/gundam-card-game-gcg/products.json?limit=250&page=3&country=AU: HTTP 404 {\n  \"errors\": [\n    {\n      \"message\": \"The page you were looking for could not be found.\",\n      \"extensions\": {\n        \"code\": \"NOT_FOUND\"\n      }\n    }\n  ]\n}\n; generalgames: https://generalgames.com.au/collections/gundam_singles/products.json?limit=250&page=7&country=AU: HTTP 404 {\n  \"errors\": [\n    {\n      \"message\": \"The page you were looking for could not be found.\",\n      \"extensions\": {\n        \"code\": \"NOT_FOUND\"\n      }\n    }\n  ]\n}\n; magictraders: 0 matched"
+  },
+  {
+   "name": "eBay budget",
+   "status": "ok",
+   "detail": "700/1150 calls on 2026-11-13, 609 eligible"
+  },
+  {
+   "name": "Family feed",
+   "status": "ok",
+   "detail": "30 items, 18.8h old; 9 sister feeds (rift, op, dex, mtg, wax, lorcana, ygo, cyberpunk, bandai)"
+  },
+  {
+   "name": "Amazon ASIN finder",
+   "status": "ok",
+   "detail": "AU: refused, 0 ASINs, 19h ago; CA: ok, 0 ASINs, 19h ago; EU: ok, 0 ASINs, 19h ago; UK: ok, 0 ASINs, 19h ago; US: ok, 722 ASINs, 19h ago"
+  },
+  {
+   "name": "Fetch TCG row",
+   "status": "ok",
+   "detail": "the Fetch TCG row is on /card/zgok"
+  },
+  {
+   "name": "Model kit import",
+   "status": "ok",
+   "detail": "2328 kits from 36 stores, 18.8h old"
+  },
+  {
+   "name": "Model kit eBay rows",
+   "status": "ok",
+   "detail": "217 of 2328 kits show an eBay row (759 searched)"
+  },
+  {
+   "name": "Kit delivery quotes",
+   "status": "ok",
+   "detail": "20 of 34 Shopify kit shops quoted, newest 2 days old"
+  }
+ ]
+}
