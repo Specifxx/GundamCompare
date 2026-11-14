@@ -78,13 +78,13 @@ export default function SetPage({ params }: { params: { slug: string } }) {
       </header>
       </div>
       {/* Booster boxes first with a buy button each (components/SealedQuickBuy.tsx), before the card list. */}
+      <InlineAds ads={cardAds({ setId: s.id, fill: true, limit: 10 })} search={adSearch(s.name, s)} page="set" />
       <SealedQuickBuy
         title={`Buy ${s.name} booster boxes and sealed`}
         items={sealedInSet(s.id).slice(0, 6).map((p) => ({ id: p.id, slug: p.slug, name: shortName(p.name), image: imageAt(p.image, "200w"), best: summaryOf(p.id).best, stores: summaryOf(p.id).listedSources }))}
       />
       {cards.length > 0 && (<section><h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Most valuable {s.name} cards</h2><TileGrid items={cards.slice(0, 18)} /></section>)}
       {sealed.length > 0 && (<section><h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">{s.name} booster boxes and sealed</h2><TileGrid items={sealed.slice(0, 12)} /></section>)}
-      <InlineAds ads={cardAds({ setId: s.id, fill: true, limit: 10 })} search={adSearch(s.name, s)} page="set" />
       {cards.length > 0 && (
         <section>
           <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Full {s.name} card list with prices</h2>

@@ -151,6 +151,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The two big ad banners (owner, 2026-11-14): eBay and TCGplayer apart, directly under the hero, never in it. */}
+      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
+
       {/* Multi-game sites (SITE.lines): one tile per game, straight under the hero. */}
       <GameTiles />
 
@@ -175,8 +178,6 @@ export default function Home() {
         </Section>
       )}
 
-      {/* The page's one ad block (owner, 2026-11-13): native, horizontal, between the deals and the sealed shelf; never in the hero. */}
-      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
 
       {/* Sealed is as big a market as singles: one section the size of the chase-cards one, tabs for the boxes and each pre-order. */}
       {hero.featured.length + hero.preorders.length > 0 && (

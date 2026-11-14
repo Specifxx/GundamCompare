@@ -69,7 +69,7 @@ test("every rail link points at a page of the site, and prices come first", () =
 
 test("the homepage is RiftCompare's order: hero, ads, deals, sealed, chase cards, reviews, guides, FAQ, and nothing else", () => {
   const src = readFileSync("src/app/page.tsx", "utf8");
-  const order = ["<HeroSparks />", "<CreatorsBubble />", "Today's top deals", "<InlineAds ", "<SealedHero", "chase cards", "<SiteReviews />", 'title="Guides"', "Frequently asked questions"];
+  const order = ["<HeroSparks />", "<CreatorsBubble />", "<InlineAds ", "Today's top deals", "<SealedHero", "chase cards", "<SiteReviews />", 'title="Guides"', "Frequently asked questions"];
   let at = -1;
   for (const o of order) {
     const i = src.indexOf(o, at + 1);

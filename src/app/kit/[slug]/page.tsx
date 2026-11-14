@@ -93,6 +93,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
       />
       )}
       <Breadcrumbs items={[{ name: cfg.label, href: "/kits" }, ...(k.grade ? [{ name: GRADE_LABEL[k.grade] ?? k.grade, href: `/kits/grade/${gradeSlug(k.grade)}` }] : []), { name: k.name }]} />
+      <InlineAds kit={adTiles} page="kit" />
       <div className="grid gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
         <div className="order-2 flex flex-col gap-4 md:order-1">
           {k.image && <img src={kitImage(k.image, 640)} alt={`${k.name} box`} className="plate hidden aspect-square w-full object-contain p-3 md:block" width={320} height={320} />}
@@ -144,7 +145,6 @@ export default function KitPage({ params }: { params: { slug: string } }) {
           <KitGrid items={related} />
         </section>
       )}
-      <InlineAds kit={adTiles} page="kit" />
       <CardStickyBuyBar offers={withEbay} productId={pid} />
     </article>
   );
