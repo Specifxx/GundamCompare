@@ -57,17 +57,17 @@ export default function AttrHubPage({ params }: { params: { facet: string; slug:
       {h.items.length > 120 && <p className="text-sm text-muted">Showing the 120 most valuable of {h.items.length}. <Link className="link" href="/cards">Search every card</Link>.</p>}
       {setChips.length > 1 && (
         <section>
-          <h2 className="mb-3 text-lg font-bold">{h.label} cards by set</h2>
+          <h2 className="mb-3 font-display text-lg font-bold">{h.label} cards by set</h2>
           <ChipList items={setChips} more="sets" />
         </section>
       )}
       <section>
-        <h2 className="mb-3 text-lg font-bold">Other {f.cfg.noun[1]}</h2>
+        <h2 className="mb-3 font-display text-lg font-bold">Other {f.cfg.noun[1]}</h2>
         <ChipList items={f.hubs.filter((x) => x.slug !== h.slug).map((x) => ({ key: x.slug, href: `/cards/${f.cfg.facet}/${x.slug}`, label: x.label }))} more={f.cfg.noun[1]} />
       </section>
       {others.map((o) => (
         <section key={o.cfg.facet}>
-          <h2 className="mb-3 text-lg font-bold">Browse by {o.cfg.noun[0]}</h2>
+          <h2 className="mb-3 font-display text-lg font-bold">Browse by {o.cfg.noun[0]}</h2>
           <ChipList items={o.hubs.map((x) => ({ key: x.slug, href: `/cards/${o.cfg.facet}/${x.slug}`, label: x.label }))} more={o.cfg.noun[1]} />
         </section>
       ))}

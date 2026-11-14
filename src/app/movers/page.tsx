@@ -33,7 +33,7 @@ export default function Movers() {
 function List({ title, rows }: { title: string; rows: ReturnType<typeof movers>["up"] }) {
   return (
     <section className="card-surface p-4">
-      <h2 className="mb-2 text-lg font-bold">{title}</h2>
+      <h2 className="mb-2 font-display text-lg font-bold">{title}</h2>
       {!rows.length && <p className="text-sm text-muted">Not enough history yet — movers appear after the first week of daily prices.</p>}
       <ol>
         {rows.slice(0, 25).map((r, i) => (

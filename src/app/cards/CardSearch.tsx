@@ -27,18 +27,14 @@ export function CardSearch() {
   if (!q) return null;
   return (
     <section className="mt-8" aria-live="polite">
-      <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Results for “{q}”</h2>
-      {hits === null && <p className="text-sm text-muted">Searching…</p>}
+      <h2 className="mb-3 font-display text-xl font-bold sm:mb-4 sm:text-2xl">Results for “{q}”</h2>
+      {hits === null && <p className="text-sm leading-6 text-muted">Searching…</p>}
+      {/* No results: a short paragraph close to the height "Searching…" held, so the page below barely moves (results arrive after paint). */}
       {hits?.length === 0 && (
-        <div className="card px-5 py-8 text-center sm:px-8">
-          <p className="font-semibold text-ink">Nothing matches that yet.</p>
-          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-muted">Try fewer words, a card number such as GD01-001, or a kit grade such as HG or MG. You can also browse:</p>
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
-            <a className="chip min-h-10" href="/kits">Gunpla prices</a>
-            <a className="chip min-h-10" href="/sealed">Booster boxes and sealed</a>
-            <a className="chip min-h-10" href="/sets">Every set</a>
-          </div>
-        </div>
+        <p className="max-w-2xl text-sm leading-6 text-muted">
+          <span className="font-semibold text-ink">Nothing matches that yet.</span> Try fewer words, or browse{" "}
+          <a className="link" href="/kits">Gunpla prices</a>, <a className="link" href="/sealed">sealed</a> or <a className="link" href="/sets">every set</a>.
+        </p>
       )}
       {hits && hits.length > 0 && (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
@@ -60,7 +56,7 @@ export function CardSearch() {
         </div>
       )}
       {/* The same words on the other card-game sites (2026-10-28). */}
-      {hits !== null && <FamilySearch q={q} className="mt-6 text-sm leading-6 text-muted" />}
+      {hits !== null && <FamilySearch q={q} className="mt-4 text-sm leading-5 text-muted" />}
     </section>
   );
 }

@@ -16,7 +16,7 @@ const SIZE = {
 export function StockPill({ state, size = "md", className = "", children }: { state: StockState; size?: keyof typeof SIZE; className?: string; children: React.ReactNode }) {
   return (
     <span className={`inline-flex items-center whitespace-nowrap rounded-full font-semibold ${SIZE[size]} ${STYLE[state]} ${className}`}>
-      <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-current ${state === "open" ? "animate-pulse" : ""}`} aria-hidden="true" />
+      <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-current ${state === "open" ? "animate-pulse motion-reduce:animate-none" : ""}`} aria-hidden="true" />
       {children}
     </span>
   );

@@ -2114,3 +2114,26 @@ A product page on a sister engine showed an eBay row badged "Best price" and nam
 tiles and the quick buy could lead with an eBay price). Both now skip eBay and Amazon (`neverCheapest` in
 `src/lib/price-rows.ts`); eBay keeps its pinned row and its own ad list (`e`), and a paid alternative is never cheaper
 than the cheapest. `tests/never-cheapest.test.ts` pins it. The summary is rebuilt by the next import.
+
+## 2026-11-14: review of the design pass (#157): search no-results shift, the rest of the section titles, motion and one contrast fault
+
+An independent check of #157 (old build at 175f45f against `main`, 14 URLs across every page type, 390×844 and 1440×900,
+dark and light; server HTML with scripts off) found one regression and three loose ends. What changed, by page type:
+
+- **Search (`/cards?q=`), no results:** #157's tall card with three chips grew the layout shift of a nonsense search from
+  0.173 to 0.329 on a phone (0.055 to 0.119 on a desktop), because the results arrive after paint and push the page down.
+  It is now one short muted paragraph, "Nothing matches that yet. Try fewer words, or browse Gunpla prices, sealed or every
+  set.", with the same three links, in about the space "Searching…" held; the other-sites line keeps its old spacing.
+  Measured again: 0.173 phone and 0.057 desktop, as before the pass.
+- **List, set, hub and pre-order pages:** #157 moved only the big section titles to the display face. The remaining ones
+  on `/cards`, card facet and rarity hubs, `/sets/<slug>` (guides, other lists), `/sealed/<type>`, `/preorders`,
+  `/preorders/<slug>` and `/movers` now use it too, at their old sizes. Same h2 words.
+- **Reduced motion:** the in-stock dot (`StockPill`) pulsed for visitors who ask for reduced motion, on every page with a
+  tile; it now stands still for them (`motion-reduce:animate-none`).
+- **Home sealed shelf:** the "−N%" saving badge was white on the dark theme's bright green (2.0:1); it is the surface
+  colour now, as `.btn-buy` became in #153.
+
+Unchanged, checked with scripts off on 14 URLs: titles, meta descriptions, canonicals, robots, Open Graph, JSON-LD and h1
+are identical to the pre-pass build; no internal link was lost; every paid link (pinned eBay, TCGplayer and Amazon rows,
+"Check eBay listings", the ad block, the header eBay link) is in the same order with the same words and hrefs; no placement
+name changed. So the 19 November clicks-per-placement recheck is unaffected. No URL, redirect or metadata changed.

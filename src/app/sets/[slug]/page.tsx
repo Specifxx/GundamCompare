@@ -112,7 +112,7 @@ export default function SetPage({ params }: { params: { slug: string } }) {
       )}
       {guides.length > 0 && (
         <section>
-          <h2 className="mb-3 text-lg font-bold">{s.name} guides</h2>
+          <h2 className="mb-3 font-display text-lg font-bold">{s.name} guides</h2>
           <ul className="list-disc pl-5 text-sm">{guides.map((g) => <li key={g.slug}><Link className="link" href={`/blog/${g.slug}`}>{g.title}</Link></li>)}</ul>
         </section>
       )}
@@ -122,7 +122,7 @@ export default function SetPage({ params }: { params: { slug: string } }) {
       </nav>
       {others.length > 0 && (
         <section>
-          <h2 className="mb-3 text-lg font-bold">Other {SITE.gameShort} card lists</h2>
+          <h2 className="mb-3 font-display text-lg font-bold">Other {SITE.gameShort} card lists</h2>
           <div className="flex flex-wrap gap-2">{others.map((x) => <Link key={x.id} href={`/sets/${x.slug}`} className="chip">{x.name}</Link>)}</div>
         </section>
       )}
