@@ -2106,3 +2106,11 @@ Open Graph, JSON-LD and h1 are identical; the set of internal links is identical
 eBay, TCGplayer and Amazon rows, "Check eBay listings", the ad block, the menu's eBay search) is in the same order with the same
 words and hrefs; no placement name changed. So the 19 November clicks-per-placement recheck is unaffected. The three shared CSS
 faults (the `:where()` vault button, white words on the dark theme's green, the bare "More" link) were already fixed in #153.
+
+## 2026-11-14: eBay and Amazon are never the cheapest
+
+A product page on a sister engine showed an eBay row badged "Best price" and named eBay in its "Cheapest in" box:
+`priceRows` took the first in-stock row whatever its source, and `summarize` kept eBay as a market's cheapest (so list
+tiles and the quick buy could lead with an eBay price). Both now skip eBay and Amazon (`neverCheapest` in
+`src/lib/price-rows.ts`); eBay keeps its pinned row and its own ad list (`e`), and a paid alternative is never cheaper
+than the cheapest. `tests/never-cheapest.test.ts` pins it. The summary is rebuilt by the next import.
