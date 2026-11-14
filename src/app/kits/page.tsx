@@ -61,13 +61,13 @@ export default function Kits() {
       </nav>
       {showNew && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">New in stores</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">New in stores</h2>
           <KitGrid items={fresh} />
         </section>
       )}
       {hubs.map((h) => (
         <section key={h.slug}>
-          <h2 className="mb-3 text-xl font-bold"><Link className="hover:underline" href={`/kits/grade/${h.slug}`}>{h.label} →</Link></h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl"><Link className="hover:underline" href={`/kits/grade/${h.slug}`}>{h.label} →</Link></h2>
           <KitGrid items={h.items.slice(0, 12)} />
         </section>
       ))}
@@ -75,7 +75,7 @@ export default function Kits() {
         const rest = popular(all.filter((k) => !k.grade)).slice(0, 12);
         return rest.length ? (
           <section>
-            <h2 className="mb-3 text-xl font-bold">Other kits</h2>
+            <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Other kits</h2>
             <KitGrid items={rest} />
           </section>
         ) : null;

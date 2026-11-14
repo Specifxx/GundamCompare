@@ -144,7 +144,7 @@ export default function CardPage({ params }: { params: { slug: string } }) {
           </header>
           <section>
             <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4">
-              <h2 className="text-lg font-bold">Compare prices</h2>
+              <h2 className="font-display text-xl font-bold">Compare prices</h2>
               <CheckedAgo at={m?.updatedAt} />
             </div>
             <div className="mb-3"><EbayCallout offers={e.offers} productId={p.id} query={`${SITE.ebay.query} ${name} ${p.number ?? ""}`.trim()} /></div>
@@ -153,7 +153,7 @@ export default function CardPage({ params }: { params: { slug: string } }) {
           </section>
           <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_CARD} />
           <section className="card-surface p-4">
-            <h2 className="mb-2 text-lg font-bold">Price history</h2>
+            <h2 className="mb-2 font-display text-xl font-bold">Price history</h2>
             <PriceChart series={series} days={365} />
           </section>
           <section className="prose-site max-w-none text-sm">
@@ -167,7 +167,7 @@ export default function CardPage({ params }: { params: { slug: string } }) {
       </div>
       {related.length > 0 && (
         <section>
-          <h2 className="mb-3 text-lg font-bold">More from {set?.name}</h2>
+          <h2 className="mb-4 font-display text-xl font-bold">More from {set?.name}</h2>
           <TileGrid items={related} />
         </section>
       )}

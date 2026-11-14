@@ -172,7 +172,7 @@ export default function PreorderRelease({ params }: { params: { slug: string } }
       <FamilyCluster cluster="cards" kind="preorder" />
 
       <section className="max-w-3xl">
-        <h2 className="mb-3 text-xl font-bold">{s.name} {pre ? "pre-order" : "price"} FAQ</h2>
+        <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">{s.name} {pre ? "pre-order" : "price"} FAQ</h2>
         {faq.map((f) => (
           <div key={f.q} className="border-b border-ink-800 py-3"><h3 className="font-medium">{f.q}</h3><p className="mt-1 text-sm text-muted">{f.a}</p></div>
         ))}

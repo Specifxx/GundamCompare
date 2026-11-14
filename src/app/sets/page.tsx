@@ -27,7 +27,7 @@ export default function Sets() {
       <p className="-mt-3 mb-6 text-sm text-muted">Newest first. Open a set for its full card list with prices.</p>
       {(isMultiGame ? LINES.map((l) => ({ line: l as GameLine | null, list: listed.filter((s) => s.line === l.id) })) : [{ line: null as GameLine | null, list: listed }]).map(({ line, list }) => (
       <section key={line?.id ?? "all"} className="mb-8">
-      {line && <h2 className="mb-3 text-xl font-bold"><Link className="hover:underline" href={`/games/${line.slug}`}>{line.name} sets</Link></h2>}
+      {line && <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl"><Link className="hover:underline" href={`/games/${line.slug}`}>{line.name} sets</Link></h2>}
       <div className="overflow-hidden rounded-xl border border-ink-700/60">
         <table className="w-full text-sm">
           <thead className="bg-ink-850 text-left text-xs uppercase text-muted">

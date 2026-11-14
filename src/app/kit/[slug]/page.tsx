@@ -95,7 +95,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
       <Breadcrumbs items={[{ name: cfg.label, href: "/kits" }, ...(k.grade ? [{ name: GRADE_LABEL[k.grade] ?? k.grade, href: `/kits/grade/${gradeSlug(k.grade)}` }] : []), { name: k.name }]} />
       <div className="grid gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
         <div className="order-2 flex flex-col gap-4 md:order-1">
-          {k.image && <img src={kitImage(k.image, 640)} alt={`${k.name} box`} className="hidden w-full rounded-xl bg-white object-contain md:block" width={320} height={320} />}
+          {k.image && <img src={kitImage(k.image, 640)} alt={`${k.name} box`} className="plate hidden aspect-square w-full object-contain p-3 md:block" width={320} height={320} />}
           <dl className="card-surface grid grid-cols-2 gap-x-3 gap-y-1.5 p-4 text-sm">
             {k.grade && (<><dt className="text-muted">Grade</dt><dd><Link className="link" href={`/kits/grade/${gradeSlug(k.grade)}`}>{GRADE_LABEL[k.grade] ?? k.grade}</Link></dd></>)}
             {k.scale && (<><dt className="text-muted">Scale</dt><dd>{scaleHubOf(k) ? <Link className="link" href={`/kits/scale/${scaleHubOf(k)!.slug}`}>{k.scale}</Link> : k.scale}</dd></>)}
@@ -106,17 +106,19 @@ export default function KitPage({ params }: { params: { slug: string } }) {
         <div className="order-1 flex min-w-0 flex-col gap-6 md:order-2">
           <header>
             <div className="flex items-start gap-3">
-              {k.image && <img src={kitImage(k.image, 160)} alt={k.name} className="w-20 shrink-0 rounded-md bg-white object-contain md:hidden" width={80} height={80} />}
+              {k.image && <img src={kitImage(k.image, 200)} alt={k.name} className="plate h-[88px] w-[88px] shrink-0 object-contain p-1 md:hidden" width={88} height={88} />}
               <h1 className="font-display text-2xl font-black md:text-3xl">{k.name} price</h1>
             </div>
             <p className="mt-2 text-sm text-muted">
-              {inStock.length} in-stock listing{inStock.length === 1 ? "" : "s"}{markets.length ? ` in ${markets.map((x) => MARKET_LABEL[x]).join(", ")}` : ""}.
+              {inStock.length
+                ? `${inStock.length} in-stock listing${inStock.length === 1 ? "" : "s"}${markets.length ? ` in ${markets.map((x) => MARKET_LABEL[x]).join(", ")}` : ""}.`
+                : "Sold out at every shop we track today."}
             </p>
             <CardTopBuy offers={withEbay} productId={pid} ebayQuery={search} amazon={amazon} />
           </header>
           <section>
             <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4">
-              <h2 className="text-lg font-bold">Compare prices</h2>
+              <h2 className="font-display text-xl font-bold">Compare prices</h2>
               <CheckedAgo at={kitsUpdatedAt() ?? m?.updatedAt} />
             </div>
             <PriceTable offers={withEbay} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} delivery={kitShipping()} />
@@ -138,7 +140,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
       </div>
       {related.length > 0 && (
         <section>
-          <h2 className="mb-3 text-lg font-bold">More {GRADE_LABEL[k.grade!] ?? k.grade} kits</h2>
+          <h2 className="mb-4 font-display text-xl font-bold">More {GRADE_LABEL[k.grade!] ?? k.grade} kits</h2>
           <KitGrid items={related} />
         </section>
       )}

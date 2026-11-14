@@ -50,7 +50,7 @@ export default function GradePage({ params }: { params: { grade: string } }) {
       <InlineAds kit={kitAdTiles(h.items, 12)} page="kit-grade" />
       {rest.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">More {h.label} kits</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">More {h.label} kits</h2>
           <ul className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((k) => (
               <li key={k.jan} className="flex min-w-0 items-baseline justify-between gap-3 border-b border-ink-800 py-1.5">

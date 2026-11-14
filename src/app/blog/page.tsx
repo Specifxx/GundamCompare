@@ -13,20 +13,25 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <div className="max-w-3xl">
-      <h1 className="mb-6 font-display text-3xl font-black">{SITE.gameShort} guides</h1>
-      <ul className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
+      <header>
+        <h1 className="font-display text-3xl font-black">{SITE.gameShort} guides</h1>
+        <p className="mt-2 text-muted">Buying guides and price explainers, with today&apos;s prices in every one.</p>
+      </header>
+      <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {posts().map((p) => (
-          <li key={p.slug} className="card-surface p-5">
+          <li key={p.slug} className="group card relative flex flex-col overflow-hidden transition-colors hover:border-ink/40">
             {p.image && (
-              <Link href={`/blog/${p.slug}`} className="mb-4 block" tabIndex={-1}>
+              <Link href={`/blog/${p.slug}`} className="block" tabIndex={-1} aria-hidden="true">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image.src} alt={p.image.alt} width={1200} height={630} loading="lazy" decoding="async" className="aspect-[1200/630] w-full rounded-lg object-cover" />
+                <img src={p.image.src} alt={p.image.alt} width={1200} height={630} loading="lazy" decoding="async" className="aspect-[1200/630] w-full border-b border-line object-cover" />
               </Link>
             )}
-            <Link href={`/blog/${p.slug}`} className="text-lg font-semibold hover:underline">{p.title}</Link>
-            <p className="mt-1 text-sm text-muted">{p.description}</p>
-            <p className="mt-2 text-xs text-muted">{p.updated ?? p.date}</p>
+            <div className="flex flex-1 flex-col p-5">
+              <Link href={`/blog/${p.slug}`} className="font-display text-lg font-bold leading-snug text-ink after:absolute after:inset-0 group-hover:text-brand">{p.title}</Link>
+              <p className="mt-2 line-clamp-3 text-sm leading-6 text-muted">{p.description}</p>
+              <p className="tabular mt-auto pt-3 text-xs text-muted">{p.updated ?? p.date}</p>
+            </div>
           </li>
         ))}
       </ul>

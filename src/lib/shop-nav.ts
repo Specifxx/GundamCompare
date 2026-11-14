@@ -63,11 +63,12 @@ function build(): ShopNav {
     ...dims.slice(0, 3).map((d) => ({ title: d.title, links: cap(d.links, MENU_LINKS, d.all) })),
     { title: "Newest sets", links: cap(setLinks, 8, { href: "/sets", label: `All ${listed.length} sets` }) },
   ];
+  // Gunpla first (2026-11-14): kits are half the site's visits, so the sidebar and the phone menu open on grade and scale.
   const groups: NavGroup[] = [
+    ...kitGroups.map((g) => ({ title: `${SITE.kits!.label} ${g.title.toLowerCase()}`, links: g.links })),
     ...dims.map((d, i) => ({ title: `Cards ${d.title.toLowerCase()}`, links: [...(i === 0 ? [{ href: "/cards", label: "All cards" }] : []), ...cap(d.links, 10, d.all)] })),
     { title: "Card sets", links: cap(setLinks, 10, { href: "/sets", label: "Every set" }) },
     ...(sealedLinks.length ? [{ title: "Sealed by type", links: [...sealedLinks, { href: "/sealed", label: "All sealed" }] }] : []),
-    ...kitGroups.map((g) => ({ title: `${SITE.kits!.label} ${g.title.toLowerCase()}`, links: g.links })),
   ];
   const seen = new Set<string>();
   const unique = groups.map((g) => ({ ...g, links: g.links.filter((l) => !seen.has(l.href) && !!seen.add(l.href)) })).filter((g) => g.links.length);

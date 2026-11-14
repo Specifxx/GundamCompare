@@ -37,7 +37,7 @@ export function ProductTile({ p, change }: { p: Product; change?: number | null 
       <div className="card-body flex flex-1 flex-col gap-1 px-1 pb-1 pt-2.5">
         <p className="line-clamp-2 text-sm font-semibold leading-5 text-ink group-hover:text-brand">{name}</p>
         <p className="truncate text-xs text-muted">{set}{p.number ? ` · ${p.number}` : ""}</p>
-        <div className="mt-auto flex items-center justify-between gap-2 pt-1.5">
+        <div className="mt-auto pt-1.5">
           <StockPill state={stores > 0 ? "open" : "soldout"} size="sm">
             {stores > 0 ? (
               <>
@@ -47,10 +47,13 @@ export function ProductTile({ p, change }: { p: Product; change?: number | null 
               "Sold out"
             )}
           </StockPill>
-          {ch != null && <span className={`tabular text-xs font-semibold ${ch >= 0 ? "text-up" : "text-down"}`}>{pct(ch)}</span>}
         </div>
         <div className="flex flex-col gap-0.5">
-          <span className="tabular text-base font-bold text-ink">{money(ref)}</span>
+          {/* The week's change sits beside the price it describes: on a 2-up phone card it no longer runs off the edge. */}
+          <span className="flex flex-wrap items-baseline justify-between gap-x-2">
+            <span className="tabular text-base font-bold text-ink">{money(ref)}</span>
+            {ch != null && <span className={`tabular text-xs font-semibold ${ch >= 0 ? "text-up" : "text-down"}`}>{pct(ch)}</span>}
+          </span>
           <span className="text-[11px] font-semibold text-brand">Compare {e.listedSources} price{e.listedSources === 1 ? "" : "s"} →</span>
         </div>
       </div>

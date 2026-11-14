@@ -2069,3 +2069,40 @@ text button (`inline`) is drawn as a bordered button (`cart.css`). Neutral, neve
 filled action and the calm three-colour rule holds. Nothing else moved: which rows can be added (open store rows, eBay and
 Amazon with a live price; never a marketplace or a search row), the line's buy link and its affiliate tag, the row order, the
 buy button and every placement are unchanged. A caller can still ask for the bare icon (`label={false}`).
+
+## 2026-11-14: every page type brought up to the home page's standard (design polish, no money or metadata change)
+
+Owner: "can we make all the other pages more aesthetic as well". The home page's language is the spec: display-font section
+titles (`Section.tsx`), the product tile (photo on a plate, name, one line of detail, stock pill, price, "Compare N prices"),
+neutral chips, one brand-coloured action, green only for money. What changed, by page type:
+
+- **Product tiles everywhere (home shelves, sets, lists, "More from"):** a card's 7-day change now sits on the price line beside
+  the price it describes. On a 2-up phone card it used to share the stock pill's line and ran off the card's edge ("-10.(").
+- **Kit and card pages:** section titles ("Compare prices", "Price history", "Where is … cheapest?", "More … kits") share one
+  display size. The kit's photo sits on the same white plate as the tiles (88px beside the h1 on a phone, square from md).
+  The price table's six market buttons stay on one row on a 390px phone (they wrapped to three lines), scrolling sideways if a
+  narrower screen needs it. A kit sold out everywhere says "Sold out at every shop we track today." instead of "0 in-stock
+  listings.".
+- **List and set pages** (`/kits`, grade and scale hubs, `/sealed`, `/sets/*`, `/cards`, pre-orders): section titles in the
+  home page's display face and size.
+- **Guides:** article typography in `.prose-site`: a ~68-character measure, a heading scale that follows the home page's, ink
+  body text instead of grey, quiet list markers, and every table (`lib/post-render.ts` wraps each in `.table-scroll`) scrolling
+  inside its own rounded box with a 34rem minimum instead of squeezing names into one-word lines. The post header is date
+  eyebrow, h1, lede; "More guides" and "Free price tools" are two cards. `/blog` is a grid of cards (one column on a phone,
+  two from sm, three from xl) with a one-line lede under the h1.
+- **Search (`/cards?q=`):** results use the home page's tile instead of their own (price in ink, not the brand colour; kit
+  boxes on a square plate at 400px instead of a stretched 120px thumbnail). No results now says so kindly and offers three
+  existing pages (Gunpla prices, booster boxes and sealed, every set). The results still arrive after first paint: the page is
+  one static CDN copy for every query, so a direct load of a search URL still shifts (CLS 0.56 phone, as before). Fixing that
+  needs a per-query render, which the cost rules rule out.
+- **Stores:** each store is one row (name, then its count in tabular figures, two columns from sm) instead of an underlined
+  bulleted list; "1 listings" reads "1 listing". The suggest button is the brand's, not money green.
+- **404:** an eyebrow, one warm line, the search, four ways in (Gunpla, cards, sealed, sets) and a way home.
+- **Gunpla first in the navigation:** the sidebar and the phone menu open on "Gunpla by grade" and "Gunpla by scale" (kits are
+  half the site's visits, DECISIONS 2026-11-10); the same links, reordered.
+
+Not changed, checked on 13 sampled URLs with scripts off against `origin/main`: titles, meta descriptions, canonicals, robots,
+Open Graph, JSON-LD and h1 are identical; the set of internal links is identical; no h2 was lost; every paid link (the pinned
+eBay, TCGplayer and Amazon rows, "Check eBay listings", the ad block, the menu's eBay search) is in the same order with the same
+words and hrefs; no placement name changed. So the 19 November clicks-per-placement recheck is unaffected. The three shared CSS
+faults (the `:where()` vault button, white words on the dark theme's green, the bare "More" link) were already fixed in #153.
