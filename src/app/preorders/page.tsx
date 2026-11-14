@@ -61,13 +61,13 @@ export default function Preorders() {
       </header>
       {upcoming.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">Coming soon</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Coming soon</h2>
           <div className="grid gap-3 md:grid-cols-2">{upcoming.map(card)}</div>
         </section>
       )}
       {recent.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">Just released</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Just released</h2>
           <div className="grid gap-3 md:grid-cols-2">{recent.map(card)}</div>
         </section>
       )}
@@ -75,7 +75,7 @@ export default function Preorders() {
       <FamilyCluster cluster="cards" kind="preorder" />
       {PREORDER_COPY.faq.length > 0 && (
         <section className="max-w-3xl">
-          <h2 className="mb-3 text-xl font-bold">Pre-order FAQ</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Pre-order FAQ</h2>
           {PREORDER_COPY.faq.map((f) => (
             <div key={f.q} className="border-b border-ink-800 py-3"><h3 className="font-medium">{f.q}</h3><p className="mt-1 text-sm text-muted">{f.a}</p></div>
           ))}

@@ -27,7 +27,7 @@ export default function Sealed() {
       </header>
       {groups.map((g) => (
         <section key={g.t}>
-          <h2 className="mb-3 text-xl font-bold">{sealedHref(g.t) ? <Link className="hover:underline" href={sealedHref(g.t)!}>{PLURAL[g.t] ?? g.t} →</Link> : PLURAL[g.t] ?? g.t}</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">{sealedHref(g.t) ? <Link className="hover:underline" href={sealedHref(g.t)!}>{PLURAL[g.t] ?? g.t} →</Link> : PLURAL[g.t] ?? g.t}</h2>
           <TileGrid items={g.items.sort((a, b) => (setById(b.setId)?.releasedOn ?? "").localeCompare(setById(a.setId)?.releasedOn ?? "")).slice(0, 24)} />
         </section>
       ))}

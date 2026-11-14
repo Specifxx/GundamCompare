@@ -3,35 +3,64 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { FamilySearch } from "@/components/FamilySearch";
 
-interface Hit { slug: string; href?: string; name: string; set: string; image: string | null; price: string; number: string | null; rarity: string | null }
+interface Hit { slug: string; href?: string; name: string; set: string; image: string | null; price: string; number: string | null; rarity: string | null; kind?: string }
 
+/** A bigger copy of a result's photo for a tile: TCGplayer's 400w file, or a Shopify kit box at 400px. */
+function tileImage(h: Hit): string | null {
+  if (!h.image) return null;
+  if (h.kind === "kit") return h.image.replace(/([?&]width=)\d+/, "$1400");
+  return h.image.replace("_200w", "_400w");
+}
+
+/**
+ * The search page's results: the same tile as the home page's shelves (photo on a plate, name, set, price), and a no-results state
+ * that offers the ways in that do exist. Drawn in the browser from /api/search: the page itself is one static CDN copy for every
+ * query, so the results necessarily arrive after the first paint.
+ */
 export function CardSearch() {
   const q = useSearchParams().get("q") ?? "";
   const [hits, setHits] = useState<Hit[] | null>(null);
   useEffect(() => {
     if (!q) return setHits(null);
-    fetch(`/api/search?q=${encodeURIComponent(q)}&limit=60`).then((r) => r.json()).then((d: { hits: Hit[] }) => setHits(d.hits));
+    fetch(`/api/search?q=${encodeURIComponent(q)}&limit=60`).then((r) => r.json()).then((d: { hits: Hit[] }) => setHits(d.hits)).catch(() => setHits([]));
   }, [q]);
   if (!q) return null;
   return (
-    <section className="mb-8">
-      <h2 className="mb-3 text-lg font-bold">Results for “{q}”</h2>
-      {hits === null && <p className="text-muted">Searching…</p>}
-      {hits?.length === 0 && <p className="text-muted">No cards match. Try fewer words, or a card number.</p>}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-        {hits?.map((h) => (
-          <a key={h.href ?? h.slug} href={h.href ?? `/card/${h.slug}`} className="card-surface overflow-hidden hover:border-brand/60">
-            <div className="aspect-[5/7] bg-ink-850">{h.image && <img src={h.image.replace("_200w", "_400w")} alt={h.name} className="h-full w-full object-contain p-1.5" loading="lazy" />}</div>
-            <div className="p-2.5">
-              <p className="line-clamp-2 text-sm">{h.name}</p>
-              <p className="truncate text-xs text-muted">{h.set}{h.number ? ` · ${h.number}` : ""}</p>
-              <p className="font-bold text-brand-400">{h.price}</p>
-            </div>
-          </a>
-        ))}
-      </div>
+    <section className="mt-8" aria-live="polite">
+      <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Results for “{q}”</h2>
+      {hits === null && <p className="text-sm text-muted">Searching…</p>}
+      {hits?.length === 0 && (
+        <div className="card px-5 py-8 text-center sm:px-8">
+          <p className="font-semibold text-ink">Nothing matches that yet.</p>
+          <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-muted">Try fewer words, a card number such as GD01-001, or a kit grade such as HG or MG. You can also browse:</p>
+          <div className="mt-5 flex flex-wrap justify-center gap-2">
+            <a className="chip min-h-10" href="/kits">Gunpla prices</a>
+            <a className="chip min-h-10" href="/sealed">Booster boxes and sealed</a>
+            <a className="chip min-h-10" href="/sets">Every set</a>
+          </div>
+        </div>
+      )}
+      {hits && hits.length > 0 && (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {hits.map((h) => {
+            const img = tileImage(h);
+            return (
+              <a key={h.href ?? h.slug} href={h.href ?? `/card/${h.slug}`} className="group card flex flex-col overflow-hidden p-2 transition-colors hover:border-ink/40">
+                <div className={`plate ${h.kind === "kit" ? "aspect-square" : "aspect-[5/7]"}`}>
+                  {img ? <img src={img} alt={h.name} className="h-full w-full object-contain p-1.5 transition-transform group-hover:scale-[1.02]" loading="lazy" decoding="async" /> : <div className="flex h-full items-center justify-center p-3 text-center text-xs text-neutral-500">No image yet</div>}
+                </div>
+                <div className="flex flex-1 flex-col gap-1 px-1 pb-1 pt-2.5">
+                  <p className="line-clamp-2 text-sm font-semibold leading-5 text-ink group-hover:text-brand">{h.name}</p>
+                  <p className="truncate text-xs text-muted">{h.set}{h.number ? ` · ${h.number}` : ""}</p>
+                  <p className="tabular mt-auto pt-1 text-base font-bold text-ink">{h.price}</p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      )}
       {/* The same words on the other card-game sites (2026-10-28). */}
-      {hits !== null && <FamilySearch q={q} className="mt-4" />}
+      {hits !== null && <FamilySearch q={q} className="mt-6 text-sm leading-6 text-muted" />}
     </section>
   );
 }

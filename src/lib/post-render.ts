@@ -26,6 +26,15 @@ function table(rows: Product[], withSet: boolean): string {
 }
 
 export function renderPost(html: string): string {
+  return wrapTables(fill(html));
+}
+
+/** Each table scrolls sideways inside its own box on a narrow screen (globals.css .table-scroll); the text is unchanged. */
+function wrapTables(html: string): string {
+  return html.replace(/<table(\s[^>]*)?>/g, (m) => `<div class="table-scroll">${m}`).replace(/<\/table>/g, "</table></div>");
+}
+
+function fill(html: string): string {
   return html
     .replace(/\{\{price:(\d+)\}\}/g, (_, id) => money(refCents(Number(id))))
     .replace(/\{\{card:(\d+)\}\}/g, (_, id) => {

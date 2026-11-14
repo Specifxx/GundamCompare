@@ -35,7 +35,7 @@ export default function Cards() {
       </header>
 
       <section>
-        <h2 className="mb-3 text-xl font-bold">Most valuable {SITE.gameShort} cards</h2>
+        <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Most valuable {SITE.gameShort} cards</h2>
         <TileGrid items={top} />
       </section>
 

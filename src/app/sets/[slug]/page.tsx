@@ -82,12 +82,12 @@ export default function SetPage({ params }: { params: { slug: string } }) {
         title={`Buy ${s.name} booster boxes and sealed`}
         items={sealedInSet(s.id).slice(0, 6).map((p) => ({ id: p.id, slug: p.slug, name: shortName(p.name), image: imageAt(p.image, "200w"), best: summaryOf(p.id).best, stores: summaryOf(p.id).listedSources }))}
       />
-      {cards.length > 0 && (<section><h2 className="mb-3 text-xl font-bold">Most valuable {s.name} cards</h2><TileGrid items={cards.slice(0, 18)} /></section>)}
-      {sealed.length > 0 && (<section><h2 className="mb-3 text-xl font-bold">{s.name} booster boxes and sealed</h2><TileGrid items={sealed.slice(0, 12)} /></section>)}
+      {cards.length > 0 && (<section><h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Most valuable {s.name} cards</h2><TileGrid items={cards.slice(0, 18)} /></section>)}
+      {sealed.length > 0 && (<section><h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">{s.name} booster boxes and sealed</h2><TileGrid items={sealed.slice(0, 12)} /></section>)}
       <InlineAds ads={cardAds({ setId: s.id, fill: true, limit: 10 })} search={adSearch(s.name, s)} page="set" />
       {cards.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">Full {s.name} card list with prices</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Full {s.name} card list with prices</h2>
           <div className="overflow-x-auto rounded-xl border border-ink-700/60">
             <table className="w-full text-sm">
               <thead className="bg-ink-850 text-left text-xs uppercase text-muted"><tr><th className="px-3 py-2">#</th><th className="px-3 py-2">Card</th><th className="px-3 py-2">Rarity</th><th className="px-3 py-2 text-right">Market</th><th className="px-3 py-2 text-right">7d</th><th className="px-3 py-2 text-right">Stores</th></tr></thead>

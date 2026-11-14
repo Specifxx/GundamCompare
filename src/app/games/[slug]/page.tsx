@@ -46,21 +46,21 @@ export default function GamePage({ params }: { params: { slug: string } }) {
 
       {v.boxes.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">{line.name} booster boxes</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">{line.name} booster boxes</h2>
           <TileGrid items={v.boxes.slice(0, 6)} />
         </section>
       )}
 
       {v.topCards.length > 0 && (
         <section>
-          <h2 className="mb-3 text-xl font-bold">Most valuable {line.name} cards</h2>
+          <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Most valuable {line.name} cards</h2>
           <TileGrid items={v.topCards} />
         </section>
       )}
 
 
       <section>
-        <h2 className="mb-3 text-xl font-bold">Every {line.name} set, newest first</h2>
+        <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Every {line.name} set, newest first</h2>
         <div className="overflow-hidden rounded-xl border border-ink-700/60">
           <table className="w-full text-sm">
             <thead className="bg-ink-850 text-left text-xs uppercase text-muted">

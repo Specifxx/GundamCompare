@@ -116,6 +116,14 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* A row that may scroll sideways on a phone without drawing a scrollbar (the price table's market buttons). */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 :focus-visible {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 2px;
@@ -224,16 +232,38 @@ h1, h2, h3 { letter-spacing: -0.01em; }
     color: transparent;
     letter-spacing: 0.02em;
   }
-  .prose-site h2 { @apply mb-3 mt-8 font-display text-xl font-bold text-ink; }
-  .prose-site h3 { @apply mb-1 mt-6 text-lg font-semibold text-ink; }
-  .prose-site p { @apply my-3 leading-7 text-muted; }
-  .prose-site ul { @apply my-3 list-disc space-y-1 pl-6 text-muted; }
-  .prose-site ol { @apply my-3 list-decimal space-y-1 pl-6 text-muted; }
-  .prose-site a { @apply font-medium text-brand underline underline-offset-2; }
-  .prose-site table { @apply my-4 w-full text-sm; }
-  .prose-site th { @apply border-b border-line py-2 text-left; }
-  .prose-site td { @apply border-b border-line py-2 pr-3; }
+  /* Article typography (2026-11-14): one measure (~68 characters) for running text, a heading scale that follows the home
+     page's section titles, ink-soft body text, lists with quiet markers, and tables that scroll inside their own box
+     (lib/post-render.ts wraps each table in .table-scroll) instead of squeezing a phone's column. */
+  .prose-site { @apply text-ink/80; }
+  .prose-site > :first-child { @apply mt-0; }
+  .prose-site h2 { @apply mb-3 mt-10 scroll-mt-24 font-display text-[22px] font-bold leading-tight text-ink sm:text-2xl; }
+  .prose-site h3 { @apply mb-2 mt-7 text-lg font-semibold leading-snug text-ink; }
+  .prose-site p { @apply my-4 max-w-[68ch] leading-7; }
+  .prose-site ul { @apply my-4 max-w-[68ch] list-disc space-y-1.5 pl-6 leading-7; }
+  .prose-site ol { @apply my-4 max-w-[68ch] list-decimal space-y-1.5 pl-6 leading-7; }
+  .prose-site li::marker { @apply text-faint; }
+  .prose-site b, .prose-site strong { @apply font-semibold text-ink; }
+  .prose-site a { @apply font-medium text-brand underline decoration-brand/40 underline-offset-2 transition-colors hover:decoration-brand; }
+  .prose-site table { @apply my-4 w-full text-sm; font-variant-numeric: tabular-nums; }
+  .prose-site th { @apply border-b border-line py-2 pr-3 text-left text-xs font-semibold uppercase tracking-wide text-muted; }
+  .prose-site td { @apply border-b border-line py-2.5 pr-3 align-top; }
+  .prose-site tr:last-child td { @apply border-b-0; }
+  .prose-site .table-scroll { @apply my-6 overflow-x-auto rounded-xl border border-line bg-surface; }
+  .prose-site .table-scroll table { @apply my-0; min-width: 34rem; }
+  .prose-site .table-scroll th:first-child, .prose-site .table-scroll td:first-child { @apply pl-4; }
+  .prose-site .table-scroll th { @apply bg-raised; }
+  /* A list of stores (/stores): name and count on one row each, two columns from sm, no bullets. */
+  .prose-site ul.store-list { @apply my-4 grid max-w-none list-none gap-x-8 space-y-0 pl-0 sm:grid-cols-2; }
+  .prose-site ul.store-list > li { @apply flex min-h-11 items-baseline justify-between gap-3 border-b border-line py-2.5; }
+  .prose-site ul.store-list a { @apply min-w-0 text-ink no-underline hover:text-brand hover:underline; }
+  .prose-site ul.store-list span { @apply shrink-0 text-right text-sm tabular-nums text-muted; }
 }
+
+/* A product page's prose (text-sm): its heading matches the page's other section titles. An attribute selector, because a
+   rule that names the .text-sm class would make every `@apply text-sm` above circular. */
+.prose-site[class~="text-sm"] h2 { margin-top: 0; font-size: 1.25rem; line-height: 1.75rem; }
+.prose-site[class~="text-sm"] p { line-height: 1.5rem; }
 
 /* ── The shell (components/Header.tsx, MobileMenu.tsx, Section.tsx) ─────────────────────────────────────────────── */
 

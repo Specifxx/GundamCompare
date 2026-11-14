@@ -80,9 +80,9 @@ export function PriceTable({ offers, fx, productId, page, compact = false, amazo
         Prices for <Flag code={market} /> <b className="text-ink">{MARKET_LABEL[market]}</b>
         {storesIn > 0 && <> · {storesIn} store{storesIn === 1 ? "" : "s"} in stock</>}
       </span>
-      {!compact && <span className="flex flex-wrap gap-1" role="group" aria-label="Show prices for">
+      {!compact && <span className="no-scrollbar flex max-w-full gap-1 overflow-x-auto sm:flex-wrap" role="group" aria-label="Show prices for">
         {MARKETS.map((m) => (
-          <button key={m} type="button" onClick={() => setMarket(m)} aria-pressed={m === market} className={`inline-flex min-h-8 items-center gap-1 rounded-full border px-2.5 text-[11px] font-semibold transition-colors ${m === market ? "border-ink bg-ink text-surface" : "border-line bg-surface text-ink hover:border-ink/30"}`}>
+          <button key={m} type="button" onClick={() => setMarket(m)} aria-pressed={m === market} className={`inline-flex min-h-8 shrink-0 items-center gap-1 rounded-full border px-2 text-[11px] font-semibold transition-colors sm:px-2.5 ${m === market ? "border-ink bg-ink text-surface" : "border-line bg-surface text-ink hover:border-ink/30"}`}>
             <Flag code={m} />{m}
           </button>
         ))}
