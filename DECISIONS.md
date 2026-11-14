@@ -2030,3 +2030,31 @@ and the components' markup, so any class on an element the reset styles is held 
 - The header's "More" (`/tools`) was a link Lighthouse's SEO check counts as having no descriptive text (YGO Compare went 92 to 100 on
   the same fix). It carries `rest: "tools and guides"`, drawn as `sr-only` words after the label: still "More" to the eye.
   `tests/header-links.test.ts`. Ported from YGO Compare #154. The store thumbs buttons stay tiny on purpose (owner).
+
+## 2026-11-14: kit pages with only sold-out shops stay indexed; noindex only a kit with no price at all
+
+An earlier check counted 1,025 of 2,328 Gunpla kit pages with no shop that has the kit in stock, all indexable and in the
+sitemap, and asked whether the owner's "noindex thin pages" rule should take them out. Measured on the 2026-11-13 data:
+
+- Every one of the 1,025 still shows two or more shop rows with the shop's own price (507 have two, the rest three to eleven),
+  because the import keeps a kit only while two shops list it, sold out included. 83 of them have a shop's pre-order listing.
+- None has an eBay row (the eBay pass needs an in-stock shop price as its reference) and none has an Amazon ASIN; kits have no price
+  history (`data/history/` is cards only).
+- 104 of them have Search Console impressions in the `demand` branch's 56 days (MGEX Unicorn Ver.Ka, RG Tallgeese III and others).
+
+A sold-out shop row with its price tells a buyer what to expect and where to watch for a restock, and those pages are being found,
+so they are not thin and stay indexed. The rule is now code instead of an accident of the import: `kitIndexable` in
+`lib/indexing.ts` (beside `cardIndexable`) says a kit page is indexable while any shop lists it at a price, in stock or not, or it has
+an eBay row; otherwise the page is `noindex, follow` and out of the sitemap, with its URL, title and canonical unchanged
+(`kitIsIndexable` in `lib/kits.ts`). Today that is zero pages: indexable kit pages 2,328 before and after, sitemap 3,575 URLs before
+and after. An Amazon ASIN alone is not counted (its price lives only 24 hours, and reading it in metadata would break
+`tests/amazon-api.test.ts`'s reader list); no kit has one without shop prices anyway.
+
+Two things the measurement turned up, done in the same change:
+
+- The prose of a kit page with nothing in stock said only "No shop we track has it in stock today." It now names each market's
+  cheapest last listed shop price, marked sold out or pre-order, from the same rows the price table shows.
+- The kit page drew a Product JSON-LD block with no `offers` when no US shop had it in stock (1,513 of 2,328 pages), the Search
+  Console error the card page fixed on 2026-11-04. The block is now drawn only when an in-stock US shop backs it, as on card pages.
+
+`tests/kit-indexing.test.ts` pins the rule, the page's robots and JSON-LD gate, and the sitemap's filter.

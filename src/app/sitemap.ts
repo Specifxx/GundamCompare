@@ -7,7 +7,7 @@ import { preorderPath } from "@/lib/preorders";
 import { SITE_URL } from "@/lib/site";
 import { creatorsOn } from "@/lib/creators";
 import { SITE } from "@/site.config";
-import { gradeHubs, kits, scaleHubs } from "@/lib/kits";
+import { gradeHubs, kitIsIndexable, kits, scaleHubs } from "@/lib/kits";
 
 export const revalidate = 86400;
 
@@ -37,13 +37,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...products()
       .filter((p) => (p.kind === "sealed" ? p.sealedType !== "Insert" : (refCents(p.id) ?? 0) >= (SITE.sitemapMinCardCents ?? 50)))
       .map((p) => ({ url: `${SITE_URL}/card/${p.slug}`, lastModified: at, priority: 0.5 })),
-    // Model kits (SITE.kits): the hub, a page per grade and per kit.
+    // Model kits (SITE.kits): the hub, a page per grade and per kit with a price from somewhere (kitIsIndexable; a
+    // sold-out shop row counts, so the kit page is noindex only when nothing at all is priced).
     ...(SITE.kits && kits().length
       ? [
           { url: `${SITE_URL}/kits`, lastModified: at, changeFrequency: "daily" as const, priority: 0.8 },
           ...gradeHubs().map((h) => ({ url: `${SITE_URL}/kits/grade/${h.slug}`, lastModified: at, priority: 0.6 })),
           ...scaleHubs().map((h) => ({ url: `${SITE_URL}/kits/scale/${h.slug}`, lastModified: at, priority: 0.6 })),
-          ...kits().map((k) => ({ url: `${SITE_URL}/kit/${k.slug}`, lastModified: at, priority: 0.5 })),
+          ...kits().filter(kitIsIndexable).map((k) => ({ url: `${SITE_URL}/kit/${k.slug}`, lastModified: at, priority: 0.5 })),
         ]
       : []),
   ];
