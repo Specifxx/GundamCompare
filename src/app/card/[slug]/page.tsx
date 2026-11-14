@@ -107,6 +107,7 @@ export default function CardPage({ params }: { params: { slug: string } }) {
         />
       )}
       <Breadcrumbs items={[{ name: p.kind === "sealed" ? "Sealed" : "Cards", href: p.kind === "sealed" ? "/sealed" : "/cards" }, ...(set ? [{ name: set.name, href: `/sets/${set.slug}` }] : []), { name }]} />
+      <InlineAds ads={cardAds({ setId: p.setId, kind: p.kind, exclude: p.id, fill: true, limit: 10 })} search={adSearch(set?.name, set)} page="card" />
       <div className="grid gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
         {/* Phones: the name, price and Buy come first; the big image and the
             details follow the prices (RiftCompare's card page, 2026-09-26). */}
@@ -171,8 +172,6 @@ export default function CardPage({ params }: { params: { slug: string } }) {
           <TileGrid items={related} />
         </section>
       )}
-      {/* The page's one ad block (owner, 2026-11-13): native and horizontal, below the price table and everything else; never beside a buy button. */}
-      <InlineAds ads={cardAds({ setId: p.setId, kind: p.kind, exclude: p.id, fill: true, limit: 10 })} search={adSearch(set?.name, set)} page="card" />
       <CardStickyBuyBar offers={e.offers} productId={p.id} />
     </article>
   );

@@ -25,13 +25,13 @@ export default function Sealed() {
         <h1 className="font-display text-3xl font-black">{SITE.gameShort} booster box and sealed prices</h1>
         <p className="mt-2 text-muted">Newest sets first within each type. Open any product to compare every store.</p>
       </header>
+      <InlineAds ads={cardAds({ kind: "sealed", limit: 10 })} search={adSearch()} page="sealed" />
       {groups.map((g) => (
         <section key={g.t}>
           <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">{sealedHref(g.t) ? <Link className="hover:underline" href={sealedHref(g.t)!}>{PLURAL[g.t] ?? g.t} →</Link> : PLURAL[g.t] ?? g.t}</h2>
           <TileGrid items={g.items.sort((a, b) => (setById(b.setId)?.releasedOn ?? "").localeCompare(setById(a.setId)?.releasedOn ?? "")).slice(0, 24)} />
         </section>
       ))}
-      <InlineAds ads={cardAds({ kind: "sealed", limit: 10 })} search={adSearch()} page="sealed" />
     </div>
   );
 }
