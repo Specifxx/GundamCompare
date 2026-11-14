@@ -18,3 +18,13 @@ export function cardIndexable(p: { kind: "card" | "sealed"; sealedType: string |
 export function priceValidUntil(now = Date.now()): string {
   return new Date(now + 86400e3).toISOString().slice(0, 10);
 }
+
+// Kit pages (SITE.kits, 2026-11-14). The same zero-data rule, measured on the 2026-11-13 data: 1,025 of 2,328 kit pages
+// had no shop with the kit in stock, but every one of them still showed two or more shop rows with the shop's own price
+// (sold out, linked), because the import keeps a kit only while two shops list it. That is buying information (the price
+// to expect, where to watch for a restock), and 104 of those pages had Search Console impressions, so they stay indexed.
+// Only a kit page with no price from anywhere (no shop listing at any stock state, no eBay row) is a template with a
+// name in it: noindex, follow, out of the sitemap, URL kept.
+export function kitIndexable(shopOffers: readonly { cents: number }[], ebayRows: number): boolean {
+  return shopOffers.some((o) => o.cents > 0) || ebayRows > 0;
+}

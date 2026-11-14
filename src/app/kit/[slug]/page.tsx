@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
-import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitEbayOffers, kitImage, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
+import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitEbayOffers, kitImage, kitIsIndexable, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
 import { money } from "@/lib/format";
 import { PriceTable } from "@/components/PriceTable";
 import { CardStickyBuyBar, CardTopBuy, CheckedAgo } from "@/components/CardBuy";
@@ -33,6 +33,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title,
     description,
     alternates: { canonical: `/kit/${k.slug}` },
+    // No price from anywhere: reachable, links followed, out of the index and the sitemap (lib/indexing.ts kitIndexable).
+    ...(kitIsIndexable(k) ? {} : { robots: { index: false, follow: true } }),
     openGraph: { type: "website", siteName: SITE.name, url: `/kit/${k.slug}`, title, description, images },
     twitter: { card: "summary_large_image", images },
   };
@@ -61,8 +63,13 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   const markets = [...new Set(inStock.map((o) => o.market))];
   // Offers are sorted in stock first, then by price: the first per market is its cheapest.
   const cheapestByMarket = markets.map((mk) => inStock.find((o) => o.market === mk)!);
+  // With nothing in stock, the prose names each market's cheapest sold-out shop row instead (the price table shows them too).
+  const soldOutByMarket = inStock.length ? [] : [...new Set(offers.map((o) => o.market))].map((mk) => offers.find((o) => o.market === mk)!);
   return (
     <article className="flex flex-col gap-8">
+      {/* A Product with no offers is a Search Console error (the card page's rule, 2026-11-04): 1,513 of 2,328 kit pages had
+          no in-stock US shop on 2026-11-13, so the block is drawn only when one backs it. */}
+      {usOffers.length > 0 && (
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -74,18 +81,17 @@ export default function KitPage({ params }: { params: { slug: string } }) {
           brand: { "@type": "Brand", name: cfg.maker },
           category: "Plastic model kit",
           url: abs(`/kit/${k.slug}`),
-          offers: usOffers.length
-            ? {
-                "@type": "AggregateOffer",
-                priceCurrency: "USD",
-                lowPrice: (Math.min(...usOffers.map((o) => o.cents)) / 100).toFixed(2),
-                highPrice: (Math.max(...usOffers.map((o) => o.cents)) / 100).toFixed(2),
-                offerCount: usOffers.length,
-                availability: "https://schema.org/InStock",
-              }
-            : undefined,
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "USD",
+            lowPrice: (Math.min(...usOffers.map((o) => o.cents)) / 100).toFixed(2),
+            highPrice: (Math.max(...usOffers.map((o) => o.cents)) / 100).toFixed(2),
+            offerCount: usOffers.length,
+            availability: "https://schema.org/InStock",
+          },
         }}
       />
+      )}
       <Breadcrumbs items={[{ name: cfg.label, href: "/kits" }, ...(k.grade ? [{ name: GRADE_LABEL[k.grade] ?? k.grade, href: `/kits/grade/${gradeSlug(k.grade)}` }] : []), { name: k.name }]} />
       <div className="grid gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
         <div className="order-2 flex flex-col gap-4 md:order-1">
@@ -124,7 +130,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
             <p>
               {cheapestByMarket.length
                 ? `Cheapest in stock today: ${cheapestByMarket.map((o) => `${money(o.cents, o.currency)} at ${sourceNameServer(o)} (${MARKET_LABEL[o.market]})`).join(", ")}. `
-                : `No shop we track has it in stock today. `}
+                : `No shop we track has it in stock today.${soldOutByMarket.length ? ` Last listed: ${soldOutByMarket.map((o) => `${money(o.cents, o.currency)} at ${sourceNameServer(o)} (${MARKET_LABEL[o.market]}, ${o.preorder ? "pre-order" : "sold out"})`).join(", ")}.` : ""} `}
               We compare {cfg.stores.length} hobby shops every day and match each listing by the kit&apos;s JAN barcode ({k.jan}), so every price above is for this exact kit. Prices are before postage and stay sorted by the kit&apos;s own price; where a shop&apos;s checkout gave us a delivery quote, it is shown under the shop&apos;s name with the order value that makes delivery free. The shop&apos;s checkout price is final.
             </p>
           </section>
