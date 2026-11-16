@@ -157,27 +157,6 @@ export default function Home() {
       {/* Multi-game sites (SITE.lines): one tile per game, straight under the hero. */}
       <GameTiles />
 
-      {topDeals.length > 0 && (
-        <Section className="sd" title="Today's top deals" href="/tools/deal-finder" sub="In-stock listings below TCGplayer market, refreshed daily." linkLabel="Browse all deals">
-          {bfSeason(today) && <p className="mb-3 text-sm"><Link className="link" href="/black-friday">Black Friday deals</Link> · <Link className="link" href="/cyber-monday">Cyber Monday deals</Link>, updated daily →</p>}
-          {salesInSeason(CORE_SALES, today).map((s) => (
-            <p key={s.slug} className="mb-3 text-sm"><Link className="link" href={`/${s.slug}`}>{s.linkLabel}, updated daily →</Link></p>
-          ))}
-          <div className="sd-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {topDeals.map((d) => (
-              <Link key={`${d.p.id}${d.offer.source}`} href={`/card/${d.p.slug}`} className="card group flex min-w-0 items-center gap-3 p-3 transition-colors hover:border-ink/40">
-                <span className="plate h-20 w-14 shrink-0">{d.p.image && <img src={d.p.image} alt={d.p.name} className="h-full w-full object-contain p-0.5" loading="lazy" />}</span>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-semibold group-hover:text-brand">{shortName(d.p.name)}</p>
-                  <p className="text-xs text-muted">Market {money(d.market)}</p>
-                  <p className="tabular text-sm"><b className="text-open">{money(d.offer.cents, d.offer.currency)}</b> <span className="text-xs text-muted">({d.saving}% under)</span></p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Section>
-      )}
-
 
       {/* Sealed is as big a market as singles: one section the size of the chase-cards one, tabs for the boxes and each pre-order. */}
       {hero.featured.length + hero.preorders.length > 0 && (
@@ -196,6 +175,28 @@ export default function Home() {
       {latest && chase.length > 0 && (
         <Section className="sd" title={`${latest.name} chase cards`} href={`/sets/${latest.slug}`} sub="The most valuable cards in the newest set, with every store's price." linkLabel="Full set price guide">
           <TileGrid items={chase} />
+        </Section>
+      )}
+
+      {/* Today's top deals sit below the chase cards (owner, 2026-11-16). */}
+      {topDeals.length > 0 && (
+        <Section className="sd" title="Today's top deals" href="/tools/deal-finder" sub="In-stock listings below TCGplayer market, refreshed daily." linkLabel="Browse all deals">
+          {bfSeason(today) && <p className="mb-3 text-sm"><Link className="link" href="/black-friday">Black Friday deals</Link> · <Link className="link" href="/cyber-monday">Cyber Monday deals</Link>, updated daily →</p>}
+          {salesInSeason(CORE_SALES, today).map((s) => (
+            <p key={s.slug} className="mb-3 text-sm"><Link className="link" href={`/${s.slug}`}>{s.linkLabel}, updated daily →</Link></p>
+          ))}
+          <div className="sd-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {topDeals.map((d) => (
+              <Link key={`${d.p.id}${d.offer.source}`} href={`/card/${d.p.slug}`} className="card group flex min-w-0 items-center gap-3 p-3 transition-colors hover:border-ink/40">
+                <span className="plate h-20 w-14 shrink-0">{d.p.image && <img src={d.p.image} alt={d.p.name} className="h-full w-full object-contain p-0.5" loading="lazy" />}</span>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-semibold group-hover:text-brand">{shortName(d.p.name)}</p>
+                  <p className="text-xs text-muted">Market {money(d.market)}</p>
+                  <p className="tabular text-sm"><b className="text-open">{money(d.offer.cents, d.offer.currency)}</b> <span className="text-xs text-muted">({d.saving}% under)</span></p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </Section>
       )}
 
