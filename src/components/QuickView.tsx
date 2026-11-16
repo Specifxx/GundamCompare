@@ -15,6 +15,7 @@ import type { CardAds } from "@/lib/card-ads";
 import { ShareButton } from "./ShareButton";
 import { closeQuickViewUrl, onQuickViewHistory, openQuickViewUrl } from "@/lib/quick-view-url";
 
+import type { FetchRows } from "@/lib/fetchtcg";
 interface Head {
   slug: string;
   name: string;
@@ -29,6 +30,7 @@ interface Data {
   name: string;
   sub: string;
   img: string | null;
+  fetchTcg?: FetchRows | null;
   ads?: CardAds;
   adSearch?: { ebayQuery: string; tcgplayerUrl: string };
 }
@@ -154,7 +156,7 @@ export function QuickView() {
             <Skeleton />
           ) : data ? (
             <>
-              <PriceTable offers={data.offers} fx={data.fx} productId={data.id} page="quickview" amazon={data.amazon} tableId={null} />
+              <PriceTable offers={data.offers} fx={data.fx} productId={data.id} page="quickview" amazon={data.amazon} tableId={null} fetchTcg={data.fetchTcg ?? null} image={data.img} cartTitle={data.name} />
               {/* The small eBay + TCGplayer pair, as on the card page (owner, 2026-11-03). Never Amazon here. */}
               {data.ads && data.adSearch && <div className="mt-4"><CompactCardAds ads={data.ads} page="quickview" limit={6} {...data.adSearch} /></div>}
             </>
