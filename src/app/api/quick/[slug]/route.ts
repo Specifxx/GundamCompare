@@ -11,6 +11,7 @@ import { shortName } from "@/lib/names";
 import { adSearch, cardAds } from "@/lib/card-ads";
 import { amazonSearchUrls } from "@/lib/affiliate";
 import { amazonCarries, amazonCells } from "@/lib/amazon-live";
+import { fetchRowsFor } from "@/lib/fetchtcg";
 import { SITE } from "@/site.config";
 
 /** The card page's Amazon links (the item's own page where the ASIN is known, else the tagged search), without a price. */
@@ -29,6 +30,8 @@ export function GET(_req: Request, { params }: { params: { slug: string } }) {
       id: p.id,
       offers: priceOf(p.id).offers,
       fx: meta()?.fx ?? { USD: 1 },
+      // Fetch TCG's own AU listing, the rows the card page draws (owner, 2026-11-16: the quick view must list what the page lists).
+      fetchTcg: p.kind === "card" ? fetchRowsFor({ name: p.name, number: p.number, rarity: p.rarity, setName: setById(p.setId)?.name ?? null }) : null,
       amazon: p.kind === "sealed" && amazonCarries(p) ? amazonLinks(p.id, shortName(p.name)) : null,
       // As the tile sends them (ProductTile.tsx), for a quick view opened from a plain link.
       name: shortName(p.name),
