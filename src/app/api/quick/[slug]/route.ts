@@ -5,7 +5,7 @@
 // Site"), but never Amazon's price: that stays on the card page (24-hour licence). A function response kept by Vercel's CDN for six hours,
 // like the pages (DECISIONS.md "Vercel cost"); the data only changes with a release.
 import { NextResponse } from "next/server";
-import { meta, priceOf, productBySlug, setById } from "@/lib/data";
+import { historyOf, meta, priceOf, productBySlug, setById } from "@/lib/data";
 import { imageAt } from "@/lib/image";
 import { shortName } from "@/lib/names";
 import { adSearch, cardAds } from "@/lib/card-ads";
@@ -30,6 +30,8 @@ export function GET(_req: Request, { params }: { params: { slug: string } }) {
       id: p.id,
       offers: priceOf(p.id).offers,
       fx: meta()?.fx ?? { USD: 1 },
+      // The price history chart at the top of the panel (2026-11-17): the card page's own series.
+      history: historyOf(p),
       // Fetch TCG's own AU listing, the rows the card page draws (owner, 2026-11-16: the quick view must list what the page lists).
       fetchTcg: p.kind === "card" ? fetchRowsFor({ name: p.name, number: p.number, rarity: p.rarity, setName: setById(p.setId)?.name ?? null }) : null,
       amazon: p.kind === "sealed" && amazonCarries(p) ? amazonLinks(p.id, shortName(p.name)) : null,
