@@ -56,10 +56,6 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           <ul className="mt-3 flex flex-col gap-2.5">{TOOLS.slice(0, 4).map((t) => <li key={t.href}><Link className="font-medium leading-snug text-ink hover:text-brand hover:underline hover:underline-offset-2" href={t.href}>{t.name}</Link></li>)}</ul>
         </div>
       </nav>
-      <aside className="mt-4 rounded-xl border border-line p-5 text-sm">
-        <p className="eyebrow">Also from us</p>
-        <p className="mt-2 leading-6 text-muted">{SITE.sisterSites.map((s, i) => (<span key={s.url}>{i ? " · " : ""}<a className="link" href={s.url} rel="noopener">{s.anchor ?? s.name}</a> ({s.anchor ? s.name : s.game})</span>))}</p>
-      </aside>
     </article>
   );
 }
