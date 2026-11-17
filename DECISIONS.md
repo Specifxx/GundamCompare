@@ -2137,3 +2137,7 @@ Unchanged, checked with scripts off on 14 URLs: titles, meta descriptions, canon
 are identical to the pre-pass build; no internal link was lost; every paid link (pinned eBay, TCGplayer and Amazon rows,
 "Check eBay listings", the ad block, the header eBay link) is in the same order with the same words and hrefs; no placement
 name changed. So the 19 November clicks-per-placement recheck is unaffected. No URL, redirect or metadata changed.
+
+## 2026-11-17: booster packs on the home shelf
+
+Owner: the front page "feels like it's just the booster boxes". The home shelf gains a "Booster packs" tab (`heroPacks()` in `lib/sealed-hero.ts`): the newest released sets first, at most two packs a set, up to eight, each at its own cheapest-store price. A pack no store sells is left out and no box price is divided into a pack price. Homepage only; sealed pages, URLs and metadata are unchanged.
