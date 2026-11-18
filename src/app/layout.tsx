@@ -34,6 +34,7 @@ import { navGroups } from "@/lib/nav";
 import { shopNav } from "@/lib/shop-nav";
 import { historyOn } from "@/lib/data";
 import { cardAds } from "@/lib/card-ads";
+import { ReturnBeacon } from "@/components/ReturnBeacon";
 
 // The engine's two faces (DexCompare and MTG Compare: Bricolage Grotesque for headings, Inter for text), bundled as the latin
 // subsets of the variable fonts (OFL, src/app/fonts): no font request at build or at runtime. Display is optional, not swap:
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LeaveNudge />
         <AdFreeSync />
         <ShareArrival />
+        <ReturnBeacon />
       </body>
     </html>
   );
