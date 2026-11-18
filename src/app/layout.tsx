@@ -24,6 +24,8 @@ import { QuickView } from "@/components/QuickView";
 import { RateCard } from "@/components/site-reviews/RateCard";
 import { BuyClickTracker } from "@/components/BuyClickTracker";
 import { ReturnNudge } from "@/components/ReturnNudge";
+import { AdFreeSync } from "@/components/premium/AdFreeSync";
+import { ADFREE_BOOT_SCRIPT } from "@/lib/premium-member";
 import { ShareArrival } from "@/components/ShareArrival";
 import { SideNav } from "@/components/SideNav";
 import { DockAds } from "@/components/DockAds";
@@ -76,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     // The boot scripts stamp data-theme and data-season on this element before React hydrates; React must not report that.
     <html lang="en" className={`${display.variable} ${sans.variable}`} data-festive={CHRISTMAS_FESTIVE_LAYER ? "on" : undefined} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT + SEASON_BOOT_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT + SEASON_BOOT_SCRIPT + ADFREE_BOOT_SCRIPT }} />
         <link rel="preconnect" href="https://tcgplayer-cdn.tcgplayer.com" />
         {/* Impact's verifier reads the tag exactly as it issues it: `value`, not `content`. */}
         {SITE.impactSiteVerification && <meta name="impact-site-verification" {...{ value: SITE.impactSiteVerification }} />}
@@ -109,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <BuyClickTracker />
         <ReturnNudge />
+        <AdFreeSync />
         <ShareArrival />
       </body>
     </html>
