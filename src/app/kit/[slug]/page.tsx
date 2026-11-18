@@ -16,6 +16,7 @@ import { meta } from "@/lib/data";
 import { abs, KITS_SHARE_IMAGE } from "@/lib/site";
 import { MARKET_LABEL } from "@/lib/site-types";
 import { sourceNameServer } from "@/lib/sources";
+import { fitTitle, kitTitleCandidates } from "@/lib/seo-title";
 import { kitShipping } from "@/lib/kit-shipping-data";
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
@@ -26,11 +27,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const offers = kitOffers(k.jan);
   const stores = new Set(offers.map((o) => o.source)).size;
   const us = offers.find((o) => o.market === "US" && o.inStock);
-  const title = `${k.name} price: compare ${stores} shops`;
+  // The cheapest in-stock US price leads the title (2026-11-18, like the card pages): the fact the searcher came for, visible in the result.
+  const title = fitTitle(kitTitleCandidates(k.name, us ? money(us.cents, us.currency) : null, stores)).absolute;
   const description = `${k.name} ${SITE.kits.label} kit${us ? ` from ${money(us.cents, us.currency)} in the US` : ""}. Compare ${stores} hobby shops in the US, UK, Canada and Australia, matched by barcode (JAN ${k.jan}), cheapest in stock first.`;
   const images = k.image ? [kitImage(k.image, 1000)] : [KITS_SHARE_IMAGE];
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/kit/${k.slug}` },
     // No price from anywhere: reachable, links followed, out of the index and the sitemap (lib/indexing.ts kitIndexable).
