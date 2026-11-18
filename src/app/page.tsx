@@ -154,8 +154,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The two big ad banners (owner, 2026-11-14): eBay and TCGplayer apart, directly under the hero, never in it. */}
-      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
 
       {/* Multi-game sites (SITE.lines): one tile per game, straight under the hero. */}
       <GameTiles />
@@ -229,6 +227,8 @@ export default function Home() {
         ))}
       </section>
       <p className="sr-only">{products().length} products tracked</p>
+      {/* Ads sit below the page's own content, never above it (2026-11-19, core-update quality pass). */}
+      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
     </div>
   );
 }
