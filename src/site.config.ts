@@ -33,7 +33,7 @@ export const SITE: SiteConfig = {
   priceAlerts: true,
   // The phone bottom nav (components/BottomNav.tsx, DECISIONS.md 2026-11-18): "optin" = only a visitor who opens any page with ?bn=1
   // sees it; "on" = everyone on a phone; "off" is the rollback (it ignores ?bn=1 too).
-  bottomNav: "optin",
+  bottomNav: "on",
   // Amazon US uses the shared riftcompare-20 ID (owner, 2026-11-11: every site does); no per-site US ID.
   amazonAuTag: "gundamcompare-22",
   tcgcsvCategoryId: 86,
