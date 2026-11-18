@@ -9,14 +9,14 @@ jobs:
     steps:
       - name: Probe
         run: |
-          for base in https://hobbytechtoys.com.au; do
-            echo "=== $base"
-            curl -s -m 30 -A "GundamCompare store probe (contact: compareempire@gmail.com)" "$base/collections.json?limit=250" \
-              | jq -r '.collections[]? | select(.handle|test("gundam|gunpla|bandai|model|kit";"i")) | "\(.handle) \(.products_count)"' | grep -iE "gundam|gunpla|bandai" | head -20
-            for h in $(curl -s -m 30 -A "GundamCompare store probe" "$base/collections.json?limit=250" | jq -r '.collections[]? | select(.handle|test("gundam|gunpla";"i")) | .handle' | head -4); do
-              sleep 1
-              curl -s -m 30 -A "GundamCompare store probe" "$base/collections/$h/products.json?limit=250" > /tmp/p.json
-              echo "-- $h: products=$(jq '.products|length' /tmp/p.json) variants_with_item_no=$(jq '[.products[].variants[]|select((.sku//"")|test("^G?[0-9]{7}$"))]|length' /tmp/p.json) variants_with_jan=$(jq '[.products[].variants[]|select((.barcode//"")|test("^45[0-9]{11}$"))]|length' /tmp/p.json) vendors=$(jq -r '[.products[].vendor]|unique|join(",")' /tmp/p.json | cut -c1-80)"
-              jq -r '.products[0:3][]|"   \(.title) | sku=\(.variants[0].sku) | barcode=\(.variants[0].barcode) | \(.variants[0].price)"' /tmp/p.json
-            done
+          UA="GundamCompare store probe (contact: compareempire@gmail.com)"
+          base=https://hobbytechtoys.com.au
+          for p in 1 2 3; do
+            curl -s -m 30 -A "$UA" "$base/collections.json?limit=250&page=$p" > /tmp/c$p.json
+            echo "collections page $p: $(jq '.collections|length' /tmp/c$p.json 2>&1 | head -1)"
+            jq -r '.collections[]? | select(.handle|test("gundam|gunpla|bandai|hg|mg|rg|pg";"i")) | "\(.handle) \(.products_count)"' /tmp/c$p.json | head -25
           done
+          curl -s -m 30 -A "$UA" "$base/search/suggest.json?q=gundam&resources[type]=product&resources[limit]=5" | jq -r '.resources.results.products[]?|"\(.title) \(.vendor)"' | head
+          curl -s -m 30 -A "$UA" "$base/products.json?limit=250&page=1" > /tmp/a.json
+          echo "all-products p1: $(jq '.products|length' /tmp/a.json)"
+          jq -r '[.products[]|select(.vendor|test("bandai";"i"))]|length' /tmp/a.json
