@@ -4,7 +4,8 @@ import { SITE } from "@/site.config";
 import { CURRENCY, MARKETS, type Kit, type Market, type Offer } from "./site-types";
 import { decodeKitOffer, readKitFile, type KitFile } from "./kit-store";
 import { slugify } from "./slug";
-import { kitIndexable } from "./indexing";
+import { kitAsksIndex, kitIndexable } from "./indexing";
+import { searchFound } from "./search-demand";
 
 let cache: { file: KitFile; bySlug: Map<string, Kit>; byJan: Map<string, Kit> } | null = null;
 function load() {
@@ -48,7 +49,8 @@ export function kitEbayOffers(jan: string): Offer[] {
 
 /** Whether the kit's page asks to be indexed and is in the sitemap (lib/indexing.ts kitIndexable): any shop price, sold out
  *  included, or an eBay row. */
-export const kitIsIndexable = (k: Pick<Kit, "jan">) => kitIndexable(kitOffers(k.jan), kitEbayOffers(k.jan).length);
+export const kitIsIndexable = (k: Pick<Kit, "jan" | "slug">) =>
+  kitAsksIndex(kitIndexable(kitOffers(k.jan), kitEbayOffers(k.jan).length), kitInStockStores(k.jan), searchFound(`/kit/${k.slug}`));
 
 /** The cheapest in-stock offer in one market. */
 export function kitBest(jan: string, market: Market): Offer | null {

@@ -20,7 +20,9 @@ export interface ShopNav {
   groups: NavGroup[];
 }
 
-const MENU_LINKS = 8;
+const MENU_LINKS = 6;
+/** Links per sidebar group before its "All ..." link. */
+const SIDEBAR_LINKS = MENU_LINKS;
 const cap = (list: NavLink[], n: number, all: NavLink): NavLink[] => (list.length > n ? [...list.slice(0, n), all] : list);
 
 let memo: { at: unknown; v: ShopNav } | null = null;
@@ -60,17 +62,20 @@ function build(): ShopNav {
   }
 
   const cards: NavGroup[] = [
-    ...dims.slice(0, 3).map((d) => ({ title: d.title, links: cap(d.links, MENU_LINKS, d.all) })),
-    { title: "Newest sets", links: cap(setLinks, 8, { href: "/sets", label: `All ${listed.length} sets` }) },
+    ...dims.slice(0, 2).map((d) => ({ title: d.title, links: cap(d.links, MENU_LINKS, d.all) })),
+    { title: "Newest sets", links: cap(setLinks, MENU_LINKS, { href: "/sets", label: `All ${listed.length} sets` }) },
   ];
   // Gunpla first (2026-11-14): kits are half the site's visits, so the sidebar and the phone menu open on grade and scale.
+  // The sidebar keeps a short list per group (2026-11-19, the core-update quality pass: the rail alone put ~200 links on
+  // every page, more than the page's own content). Each group shows its first SIDEBAR_LINKS and an "All ..." link; the
+  // hubs themselves list the rest. DECISIONS.md, 2026-11-19 "Fewer links on every page".
   const groups: NavGroup[] = [
-    ...kitGroups.map((g) => ({ title: `${SITE.kits!.label} ${g.title.toLowerCase()}`, links: g.links })),
-    ...dims.map((d, i) => ({ title: `Cards ${d.title.toLowerCase()}`, links: [...(i === 0 ? [{ href: "/cards", label: "All cards" }] : []), ...cap(d.links, 10, d.all)] })),
-    { title: "Card sets", links: cap(setLinks, 10, { href: "/sets", label: "Every set" }) },
-    ...(sealedLinks.length ? [{ title: "Sealed by type", links: [...sealedLinks, { href: "/sealed", label: "All sealed" }] }] : []),
+    ...kitGroups.map((g) => ({ title: `${SITE.kits!.label} ${g.title.toLowerCase()}`, links: cap(g.links.filter((l) => l.href !== "/kits"), SIDEBAR_LINKS, { href: "/kits", label: `All ${SITE.kits!.label}` }) })),
+    ...dims.slice(0, 2).map((d, i) => ({ title: `Cards ${d.title.toLowerCase()}`, links: [...(i === 0 ? [{ href: "/cards", label: "All cards" }] : []), ...cap(d.links, SIDEBAR_LINKS, d.all)] })),
+    { title: "Card sets", links: cap(setLinks, SIDEBAR_LINKS, { href: "/sets", label: "Every set" }) },
+    ...(sealedLinks.length ? [{ title: "Sealed by type", links: cap(sealedLinks, SIDEBAR_LINKS, { href: "/sealed", label: "All sealed" }) }] : []),
   ];
   const seen = new Set<string>();
   const unique = groups.map((g) => ({ ...g, links: g.links.filter((l) => !seen.has(l.href) && !!seen.add(l.href)) })).filter((g) => g.links.length);
-  return { menus: { cards, sealed: sealedLinks.length ? [{ title: "By product type", links: [...sealedLinks, { href: "/preorders", label: "Pre-orders" }, { href: "/sealed", label: "All sealed" }] }] : [], kits: kitGroups }, groups: unique };
+  return { menus: { cards, sealed: sealedLinks.length ? [{ title: "By product type", links: [...cap(sealedLinks, MENU_LINKS, { href: "/sealed", label: "All sealed" }), { href: "/preorders", label: "Pre-orders" }] }] : [], kits: kitGroups.map((g) => ({ ...g, links: cap(g.links.filter((l) => l.href !== "/kits"), MENU_LINKS, { href: "/kits", label: `All ${SITE.kits?.label ?? "kits"}` }) })) }, groups: unique };
 }

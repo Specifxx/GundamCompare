@@ -2487,3 +2487,27 @@ sitting on top of it.
   `var(--bn-space)` + a small gap up, and the body's bottom padding follows it. Hidden, it slides fully off-screen (transform only, CLS 0).
 - **Measured** (local build, dock stacked): Pixel 7 412×915 nav + dock take 129px (14.1%); iPhone 15 393×852 with a 34px safe area
   143px (16.8%); iPhone SE 375×667 129px (19.3%); the old flush bar took about the same plus the full safe area.
+
+## 2026-11-19: Core-update quality pass: stricter indexing, fewer links, ads below content, no pop-up, who runs the site
+
+The November core update took Gundam Compare from ~330 impressions a day to ~2 (10 Nov). Search Console (56 days) showed
+people finding 78 of 1,429 indexable card pages and 5 of 2,330 kit pages; a card page carried ~1,900 characters of its own
+and 234 links, 208 of them in the sidebar, header menus and footer. Owner, 2026-11-19: noindex the thin pages, cull the
+internal and cross-site links, take ads and pop-ups out from above the content, and say clearly who runs the site and
+how it makes money.
+
+- **Indexing** (`lib/indexing.ts`): a single asks to be indexed when it is in an upcoming set, Search Console finds it (a
+  click or 10+ impressions in 56 days, `lib/search-demand.ts`, copied daily from the `demand` branch into
+  `data/public/search-demand.json` by refresh-prices.yml), or it is worth US$5+ on TCGplayer and a store sells it
+  (`cardAsksIndex`, ≈695 pages). A kit asks when two shops have it in stock or search finds it (`kitAsksIndex`, ≈938).
+  Sealed products keep the zero-data rule. The sitemap follows. Every page stays live, linked, `noindex, follow`.
+- **Links**: the sidebar shows 6 links per group and two card dimensions (was 10 and all of them), three tools and the
+  tools page, the header dropdowns match; the footer keeps 12 links (was 28: every seasonal sale, tool and side project).
+  A card page went from 234 links to 146. The "Also in this cluster" tiles linking our other sites (`FamilyCluster`) are
+  off; the footer's /our-sites is the one link between our sites.
+- **Ads**: the one native ad block moves from under the breadcrumbs (and under the home hero) to the foot of each page,
+  after the price table and the page's own content. The leave nudge (a card on exit intent) is off (`LEAVE_NUDGE_ON`).
+  The ad look A/B (`applyAdLook`, the selectors) is unchanged and follows the block.
+- **Trust**: `/about` says who runs the site (co-founders Bill and George, no outside owner), that AI tools help write
+  it while prices are read by a program, and what the price guides cost to run (about A$790 a month, our books, 30 days to
+  15 November 2026). The about page no longer links our other sites in its body.
