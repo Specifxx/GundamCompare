@@ -2195,3 +2195,7 @@ the placement's own clicks (`from` ends `_nudge`). Rollback: remove `<ReturnNudg
 
 Kit pages are half of the site's visitors and carried "<kit> price: compare N shops". The card pages already lead with the price (2026-11-10) because pages ranking 4th to 8th earned 0 clicks. A kit with an in-stock US shop is now titled
 "<kit> Price: $X (N shops)", stepped down to fit 60 characters (`kitTitleCandidates`, `fitTitle`); a kit with no US price keeps the old wording. Title only: URLs, canonicals, h1 and JSON-LD unchanged. Read the effect in Search Console on /kit/ pages from ~2 Dec (CTR before and after).
+
+## 2026-11-18: cart checkout opens every store or none (owner)
+
+Checkout (`openAll`, `src/lib/cart-checkout.ts`) opens one blank tab per store inside the click, and only when every one opens does it send each to its store's own tagged link. If the browser refuses any, it closes the ones that opened, visits nothing, and the drawer shows the allow-pop-ups steps and a "Try again" button. Before, the first store opened and the rest were refused, which left the visitor with one tab. Chrome 157 on dexcompare.io and on url-opener.com (the owner's model, which does the same close-and-ask) both give one tab until pop-ups are allowed for the site; with them allowed, all open. No browser API grants that permission from a click, so the steps stay.
