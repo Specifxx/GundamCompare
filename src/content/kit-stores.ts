@@ -46,6 +46,10 @@ export const KIT_STORES: KitStoreConfig[] = [
   { key: "hobbykitz", name: "Hobbykitz", base: "https://www.hobbykitz.com.au", market: "AU", collections: ["gundam-non-preorders", "gundam-pre-orders"] },
   { key: "metrohobbiesau", name: "Metro Hobbies", base: "https://www.metrohobbies.com.au", market: "AU", collections: ["gundam-kits-in-stock", "gundam-new-arrivals", "bandai-30-minute-missions"] },
   { key: "principalityofg", name: "Principality of G", base: "https://principalityofg.com.au", market: "AU", collections: ["all-gundam-kits"] },
+  // Suggested through the store form (Megaculture, HobbyTech Toys); probed from an Actions runner on 2026-11-18: Shopify,
+  // Bandai item number in the SKU ("G5063041") on 94 of 250 (Megaculture gundam), 124 of 131 and 35 of 37 (HobbyTech HG and MG).
+  { key: "megaculture", name: "Megaculture", base: "https://megaculture.com.au", market: "AU", collections: ["hg-gundam", "mg-gundam", "rg-gundam"] },
+  { key: "hobbytechtoys", name: "HobbyTech Toys", base: "https://hobbytechtoys.com.au", market: "AU", collections: ["gundam-hg-high-grade", "gundam-mg-master-grade", "gundam-rg-real-grade", "gundam-pg-perfect-grade", "gundam-eg-entry-grade", "gundam-sd-super-deformed"] },
   // Neto, not Shopify: category pages, each card naming the Bandai item number (owner's request, 2026-10-29).
   {
     key: "frontlinehobbies",
