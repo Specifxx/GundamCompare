@@ -9,10 +9,10 @@ jobs:
     steps:
       - name: Probe
         run: |
-          for base in https://hobbytechtoys.com.au https://megaculture.com.au https://munclemikes.com; do
+          for base in https://hobbytechtoys.com.au; do
             echo "=== $base"
             curl -s -m 30 -A "GundamCompare store probe (contact: compareempire@gmail.com)" "$base/collections.json?limit=250" \
-              | jq -r '.collections[]? | select(.handle|test("gundam|gunpla|bandai|model|kit";"i")) | "\(.handle) \(.products_count)"' | head -30
+              | jq -r '.collections[]? | select(.handle|test("gundam|gunpla|bandai|model|kit";"i")) | "\(.handle) \(.products_count)"' | grep -iE "gundam|gunpla|bandai" | head -20
             for h in $(curl -s -m 30 -A "GundamCompare store probe" "$base/collections.json?limit=250" | jq -r '.collections[]? | select(.handle|test("gundam|gunpla";"i")) | .handle' | head -4); do
               sleep 1
               curl -s -m 30 -A "GundamCompare store probe" "$base/collections/$h/products.json?limit=250" > /tmp/p.json
