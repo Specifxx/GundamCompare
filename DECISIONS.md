@@ -2190,3 +2190,8 @@ rel sponsored, `from=<placement>_nudge`. Once a session, 20 s or ✕ or Esc, nev
 `nudge_click` for "on"; every `buy_click` carries `nudge_arm`. Lift = paid (eBay or TCGplayer) buy clicks per `nudge_eligible`, on against off, plus
 the placement's own clicks (`from` ends `_nudge`). Rollback: remove `<ReturnNudge />` from the root layout. `lib/return-nudge.ts`,
 `components/ReturnNudge.tsx`, `tests/return-nudge.test.ts`.
+
+## 2026-11-18: Kit page titles lead with the US price
+
+Kit pages are half of the site's visitors and carried "<kit> price: compare N shops". The card pages already lead with the price (2026-11-10) because pages ranking 4th to 8th earned 0 clicks. A kit with an in-stock US shop is now titled
+"<kit> Price: $X (N shops)", stepped down to fit 60 characters (`kitTitleCandidates`, `fitTitle`); a kit with no US price keeps the old wording. Title only: URLs, canonicals, h1 and JSON-LD unchanged. Read the effect in Search Console on /kit/ pages from ~2 Dec (CTR before and after).

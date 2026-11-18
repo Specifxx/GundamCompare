@@ -53,3 +53,11 @@ export function cardTitleCandidates(name: string, number: string | null, setName
   out.push(`${head} Price — ${g}`, `${head} Price`, head);
   return out;
 }
+
+/** "<Kit> Price: $X (N shops)", stepping down; without a US price it keeps the old "price: compare N shops" wording. */
+export function kitTitleCandidates(name: string, price: string | null, stores: number): string[] {
+  const out: string[] = [];
+  if (price) out.push(`${name} Price: ${price} (${stores} shops)`, `${name} Price: ${price}`);
+  out.push(`${name} price: compare ${stores} shops`, `${name} Price`, name);
+  return out;
+}
