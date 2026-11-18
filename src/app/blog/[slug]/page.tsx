@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { AdSlot } from "@/components/AdSlot";
 import { abs } from "@/lib/site";
 import { renderPost } from "@/lib/post-render";
+import { ShareButton } from "@/components/ShareButton";
 
 export const revalidate = 86400;
 // Blog posts are code, not database rows: prerendering them costs nothing.
@@ -31,6 +32,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       <Breadcrumbs items={[{ name: "Guides", href: "/blog" }, { name: p.title }]} />
       <p className="eyebrow tabular">{p.updated ? `Updated ${p.updated}` : p.date}</p>
       <h1 className="mt-2 font-display text-3xl font-black leading-[1.1] md:text-4xl">{p.title}</h1>
+      <ShareButton path={`/blog/${p.slug}`} name={p.title} medium="guide" text={`${p.title}, on ${SITE.name}`} className="mt-3" />
       <p className="mt-4 max-w-[68ch] text-lg leading-8 text-muted">{p.description}</p>
       {p.image && (
         // The post's own thumbnail, a static file in public/blog: no optimiser, no function.
