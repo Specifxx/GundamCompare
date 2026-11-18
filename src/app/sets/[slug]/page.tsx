@@ -18,6 +18,7 @@ import { imageAt } from "@/lib/image";
 import { SealedQuickBuy } from "@/components/SealedQuickBuy";
 import { InlineAds } from "@/components/InlineAds";
 import { adSearch, cardAds } from "@/lib/card-ads";
+import { ShareButton } from "@/components/ShareButton";
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
@@ -71,6 +72,7 @@ export default function SetPage({ params }: { params: { slug: string } }) {
       <header>
         <p className="text-xs uppercase tracking-wide text-brand-400">{s.upcoming ? "Upcoming" : "Released"} {s.releasedOn}</p>
         <h1 className="font-display text-3xl font-black">{s.upcoming && cards.length > 0 ? <>{s.name} spoilers: every card revealed so far</> : <>{s.name} card list &amp; prices</>}</h1>
+        <ShareButton path={`/sets/${s.slug}`} name={`${s.name} prices`} medium="set" text={`${s.name}: every price compared on ${SITE.name}`} className="mt-3" />
         <p className="mt-2 text-muted">{cards.length} cards · one of each is worth {money(value)} at TCGplayer market · {sealed.length} sealed products.</p>
         {preorderSetList().some((x) => x.id === s.id) && (
           <p className="mt-2"><Link className="link font-semibold" href={preorderPath(s)}>{isPreorder(s) ? `${s.name} pre-order prices at every store →` : `${s.name} booster box prices at every store →`}</Link></p>
