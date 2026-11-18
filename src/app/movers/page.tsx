@@ -23,6 +23,7 @@ export default function Movers() {
   return (
     <div className="flex flex-col gap-8">
       <h1 className="font-display text-3xl font-black">{SITE.gameShort} price movers</h1>
+        <p className="mt-1 text-sm"><Link className="link" href="/hot-100">This week&apos;s {SITE.gameShort} Hot 100 →</Link></p>
       <ShareButton path="/movers" name={`${SITE.gameShort} price movers`} medium="movers" text={`This week's biggest ${SITE.gameShort} price moves, from daily TCGplayer market prices`} className="mt-2" />
       <MoversTable rows={tableRows(w, mo)} noun="products" />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
