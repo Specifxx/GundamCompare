@@ -2427,3 +2427,12 @@ the footer, dialogs and the keyboard, ✕ for the visit, labelled Ad, rel sponso
 `dock_arm`. Verdict 2 Dec: buy clickers and paid buy clicks per arm. EPN's Network Agreement (Exhibit A §1.4, §2.5) puts any
 promotional method it does not expressly permit under prior written approval; the dock has run since 2026-11-06, this changes only
 when it shows. Not on Dex or MTG Compare (their phone A/B runs to 3 Dec).
+
+## 2026-11-18 — EW and the plain kit must agree (wrong-price report)
+
+A visitor reported (10 Nov) that Mecha Express Australia's A$35.99 row on HG 1/144 Gundam Sandrock Kai EW (JAN
+4573102725424) was the wrong product. Its listing (handle `bandai-hg-1-144-gundam-sandrock-custom`) is the plain Sandrock
+Custom, priced like it (Hobbyco sells that kit at A$37.50), with the EW kit's barcode on it; the other 17 shops all name
+EW. Barcode matching cannot see a wrong barcode, so `keepConsistent` now also votes on EW: with four or more titled
+listings for one JAN, when at least three in four agree on EW (or on its absence), the odd ones out are dropped. It only
+refuses, never adds; `tests/kits.test.ts` pins it.

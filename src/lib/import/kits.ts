@@ -190,6 +190,9 @@ export interface KitListing extends KitOffer {
   market: Market;
 }
 
+/** The title names the EW (Endless Waltz) version: "EW", "EW Ver.", "Kai EW", "Endless Waltz". */
+export const isEw = (title: string): boolean => /(^|[^a-z0-9])ew([^a-z0-9]|$)|endless\s+waltz/i.test(title);
+
 /** One JAN's listings, minus the ones that disagree with the rest: a grade
  *  other than the kit's (the barcode-printing shops decide it when there are
  *  any), or, with three or more listings, a price under 0.4× or over 2.5× the
@@ -204,6 +207,15 @@ export function keepConsistent(ls: KitListing[], fx: Record<string, number>): Ki
   const direct = ls.filter((l) => !l.derived);
   const grade = vote(direct) ?? vote(ls);
   let out = grade ? ls.filter((l) => !l.grade || l.grade === grade) : ls;
+  // EW (Endless Waltz) is a different kit from the plain one under the same name ("Sandrock Custom" vs "Sandrock
+  // Custom EW"). With four or more titled listings, when three in four agree, the odd ones out go: a shop printing
+  // the EW barcode on its old plain kit (wrong-price report, 2026-11-10) or the reverse.
+  const titled = out.filter((l) => l.title.trim());
+  if (titled.length >= 4) {
+    const ew = titled.filter((l) => isEw(l.title)).length;
+    if (ew * 4 >= titled.length * 3) out = out.filter((l) => !l.title.trim() || isEw(l.title));
+    else if ((titled.length - ew) * 4 >= titled.length * 3) out = out.filter((l) => !l.title.trim() || !isEw(l.title));
+  }
   // Two listings far apart, one read from an item number: trust the barcode.
   if (out.length === 2) {
     const [a, b] = out.map((l) => l.cents / (fx[CURRENCY[l.market]] ?? 1));
