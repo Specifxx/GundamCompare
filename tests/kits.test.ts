@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { gradeOf, isKitPreorder, isKitTitle, janFromItemCode, janOf, jansIn, keepConsistent, kitCore, kitName, scaleOf, validEan13, type KitListing } from "@/lib/import/kits";
+import { gradeOf, isEw, isKitPreorder, isKitTitle, janFromItemCode, janOf, jansIn, keepConsistent, kitCore, kitName, scaleOf, validEan13, type KitListing } from "@/lib/import/kits";
 
 // Real shop titles and SKUs from the 2026-10-28 store probe.
 const BANDAI = ["4573102", "4549660", "4543112"];
@@ -144,4 +144,20 @@ test("Rhypla Builds' Neto theme: cards without <article>, stock from the add-to-
 test("a pre-order's ETA and '(Tentative)' stay out of the kit's name", () => {
   assert.equal(kitCore("(Pre-Order)  ETA Mar-Apr 2027 HG 1/144 STRIKE FREEDOM GUNDAM SEED FREEDOM ZERO Ver. (Tentative)"), "STRIKE FREEDOM GUNDAM SEED FREEDOM ZERO Ver.");
   assert.equal(kitCore("(Pre-Order)  ETA June-July 2027 HG 1/144 GUNDAM ZERO"), "GUNDAM ZERO");
+});
+
+test("EW and the plain kit are told apart when most shops agree (Gundam Compare wrong-price report, 2026-11-10)", () => {
+  assert.ok(isEw("HG 1/144 Gundam Sandrock Custom EW"));
+  assert.ok(isEw("Bandai Spirits Gundam Sandrock Kai EW 1/144 Scale Model Kit"));
+  assert.ok(isEw("HGAC XXXG-01SR2 Gundam Sandrock Custom EW Ver."));
+  assert.ok(!isEw("Bandai HG 1/144 Gundam Sandrock Custom"));
+  assert.ok(!isEw("HG 1/144 Gundam Sandrock NEW"));
+  // JAN 4573102725424 (HGAC 268 Sandrock Custom EW): Mecha Express printed it on its plain Sandrock Custom at A$35.99.
+  const ew = ["HG 1/144 Gundam Sandrock Custom EW", "HGAC XXXG-01SR2 Gundam Sandrock Custom EW Ver.", "Bandai Spirits Gundam Sandrock Kai EW 1/144", "HG 1/144 Gundam Sandrock Custom EW"];
+  const ls = [...ew.map((title, i) => listing({ source: `s${i}`, title, cents: 4500 })), listing({ source: "mecha", title: "Bandai HG 1/144 Gundam Sandrock Custom", cents: 3600 })];
+  assert.deepEqual(keepConsistent(ls, { USD: 1 }).map((l) => l.source), ["s0", "s1", "s2", "s3"]);
+  // Too few titles, or no clear majority: nothing is dropped for it.
+  assert.equal(keepConsistent(ls.slice(2), { USD: 1 }).length, 3);
+  const split = [listing({ source: "a", title: "HG Wing Zero EW" }), listing({ source: "b", title: "HG Wing Zero EW" }), listing({ source: "c", title: "HG Wing Zero" }), listing({ source: "d", title: "HG Wing Zero" })];
+  assert.equal(keepConsistent(split, { USD: 1 }).length, 4);
 });
