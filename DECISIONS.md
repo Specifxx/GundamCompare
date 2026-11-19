@@ -2615,3 +2615,10 @@ A store can sell a raw card and its slabs as variants of ONE Shopify product ("N
 9.5" US$115, found on OP Compare). `pickVariant` took the cheapest in-stock variant, so the slab priced the card.
 It now drops every variant `isGradedVariant` reads as a slab (PSA, BGS, CGC, SGC, Beckett, TAG/AGS grades, Graded,
 Slab, ACE grading) before choosing; a product with only slabs gives no offer. `tests/graded-variant.test.ts`.
+
+## 2026-11-19 — Premium keeps what it promises: a year of collection history and a spreadsheet export
+
+Premium's copy promised "a year of value history and a spreadsheet export" for the collection; YGO Compare and MTG Compare had them
+and this site did not. Ported from YGO Compare: a member's collection keeps 365 days of daily value (`MEMBER_HISTORY_DAYS`, free: 60),
+drawn as a line under each market's total, and "Export to spreadsheet (CSV)" (`collectionCsv`, formula-safe cells). Everything still
+lives in the visitor's browser; nothing is sent anywhere.
