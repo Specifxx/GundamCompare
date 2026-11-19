@@ -2,11 +2,11 @@
 // ASINs scripts/amazon-asins.ts found, written to data/amazon-live/<MARKET>.json (git-ignored). Amazon's licence lets a
 // price be kept for 24 hours and shown with its time, so prices are fetched by each build and never committed; the product
 // page shows one only while under 24 hours old (lib/amazon-live.ts) and the browser hides it after that. Most-compared
-// products first, AMAZON_BUILD_CALLS getItems calls a market (ten ASINs each, one a second; 30 by default, about 35
+// products first, AMAZON_BUILD_CALLS getItems calls a market (ten ASINs each, one a second; 0 by default (owner, 2026-11-19: the network's Amazon API allowance is shared, mostly ScentCompare's), about 35
 // seconds of build each). A price under 60% or over 160% of the product's in-stock store median is dropped (a different
 // count, a marketplace seller's fantasy). Without credentials, or on any error, it writes nothing and never fails the
 // build; a store whose account has no API access yet (403) is skipped and the next market still runs.
-// Gunpla kits (2026-11-10) follow the sealed products with their own AMAZON_KIT_BUILD_CALLS (30 by default), keyed by JAN and
+// Gunpla kits (2026-11-10) follow the sealed products with their own AMAZON_KIT_BUILD_CALLS (0 by default since 2026-11-19), keyed by JAN and
 // held to the same 60–160% of the kit's in-stock hobby-shop median.
 //   npx tsx scripts/fetch-amazon-prices.ts
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -29,11 +29,11 @@ async function market(m: Market) {
   const known = JSON.parse(readFileSync(asinsFile(m), "utf8")) as AsinFile;
   const sealed = marketSealed(m)
     .filter((x) => known[String(x.p.id)]?.asin)
-    .slice(0, Number(process.env.AMAZON_BUILD_CALLS || 30) * 10)
+    .slice(0, Math.min(0, Number(process.env.AMAZON_BUILD_CALLS || 0)) * 10)
     .map((x) => ({ key: String(x.p.id), prices: x.prices }));
   const kitRows = marketKits(m)
     .filter((k) => known[k.jan]?.asin)
-    .slice(0, Number(process.env.AMAZON_KIT_BUILD_CALLS || 30) * 10)
+    .slice(0, Math.min(0, Number(process.env.AMAZON_KIT_BUILD_CALLS || 0)) * 10)
     .map((k) => ({ key: k.jan, prices: k.prices }));
   const todo = [...sealed, ...kitRows];
   if (!todo.length) return console.log(`Amazon prices ${m}: no ASINs for in-stock products yet.`);
