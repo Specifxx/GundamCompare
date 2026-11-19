@@ -9,6 +9,7 @@
 // in that market's own currency: never eBay, never a conversion.
 import { SITE } from "@/site.config";
 import { deals, priceOf, products } from "./data";
+import { kitOffers, kits, kitsOn } from "./kits";
 import type { Market, Offer } from "./site-types";
 
 export function lowestByMarket(offers: Offer[]): Partial<Record<Market, number>> {
@@ -35,6 +36,15 @@ export function buildAlertFeed(now = new Date()): AlertFeed {
     const prices = lowestByMarket(priceOf(p.id).offers);
     if (!Object.keys(prices).length) continue;
     items[p.id] = { n: p.number ? `${p.name} ${p.number}` : p.name, u: `/card/${p.slug}`, p: prices };
+  }
+  // Gunpla kits (2026-11-19): keyed by the JAN on the box, the same number the kit page's alert form sends. A JAN is 13 digits
+  // starting 45/49, so it never meets a TCGplayer product id. Shops only: kitOffers holds no eBay or Amazon row.
+  if (kitsOn()) {
+    for (const k of kits()) {
+      const prices = lowestByMarket(kitOffers(k.jan));
+      if (!Object.keys(prices).length || items[k.jan]) continue;
+      items[k.jan] = { n: k.name, u: `/kit/${k.slug}`, p: prices };
+    }
   }
   const top = deals(40)
     .filter((d) => d.offer.source !== "ebay" && d.offer.source !== "tcgplayer")

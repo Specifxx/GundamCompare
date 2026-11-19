@@ -18,6 +18,9 @@ import { MARKET_LABEL } from "@/lib/site-types";
 import { sourceNameServer } from "@/lib/sources";
 import { fitTitle, kitTitleCandidates } from "@/lib/seo-title";
 import { kitShipping } from "@/lib/kit-shipping-data";
+import { lowestByMarket } from "@/lib/alert-feed";
+import { PriceAlert } from "@/components/PriceAlert";
+import { WatchPrice } from "@/components/WatchPrice";
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
@@ -54,6 +57,9 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   const usOffers = inStock.filter((o) => o.currency === "USD");
   const m = meta();
   const pid = Number(k.jan);
+  // The price alert (RiftCompare's shared service; lib/alert-feed.ts lists every kit by its JAN): each market's cheapest
+  // in-stock shop, never eBay or Amazon. With none in the visitor's market the form offers "back in stock" instead.
+  const alertPrices = lowestByMarket(offers);
   const search = `${cfg.searchPrefix} ${k.name}`;
   // Amazon's row in the table (pinned under eBay): the kit's own Amazon page where the daily refresh found its ASIN by
   // the JAN on the box, with this build's price for 24 hours; else the tagged search (2026-11-10).
@@ -117,6 +123,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
                 : "Sold out at every shop we track today."}
             </p>
             <CardTopBuy offers={withEbay} productId={pid} ebayQuery={search} amazon={amazon} />
+            {SITE.priceAlerts && <WatchPrice site={SITE.key} productId={pid} prices={alertPrices} />}
           </header>
           <section>
             <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-4">
@@ -124,6 +131,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
               <CheckedAgo at={kitsUpdatedAt() ?? m?.updatedAt} />
             </div>
             <PriceTable offers={withEbay} fx={m?.fx ?? { USD: 1 }} productId={pid} page="kit" amazon={amazon} image={k.image ?? null} product={`${k.name} (JAN ${k.jan})`} delivery={kitShipping()} />
+            {SITE.priceAlerts && <PriceAlert site={SITE.key} productId={pid} prices={alertPrices} />}
             <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <a className="link font-semibold" rel="sponsored nofollow noopener" target="_blank" href={goHref({ url: ebaySearchUrl(search, "US"), source: "ebay", market: "US" }, pid, "kit_ebay_search")}>Check eBay listings →</a>
               <span className="rounded bg-ink-800 px-1.5 py-0.5 text-[10px] text-muted">Paid link</span>
