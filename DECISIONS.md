@@ -2539,6 +2539,7 @@ live remaining count are unchanged. `tests/ebay-plan.test.ts` pins it.
 A production check on a sister site found /premium opening on phones under ad blocks. Premium promises no ads, and these are
 conversion and utility pages, so the layout's ad units (DockAds) stand down on them (`lib/ad-free-paths.ts`,
 `AdRouteGate.tsx`, `tests/ad-free-paths.test.ts`).
+
 ## 2026-11-19 — A calmer home page on a phone
 
 Owner, 2026-11-19: "way too much going on in the mobile version of the home page" (KaeYoung first; the same pass here).
@@ -2548,3 +2549,13 @@ shelf and the chase cards are ONE sideways row each on a phone (`rail` on `KitGr
 globals.css), and the guide cards show from sm up. Measured on a 390px phone: 9,143 px tall before, 4,973 after. Layout
 only: URLs, titles, the h1 and the h2 outline, metadata and JSON-LD are the same, the server HTML is the same at every
 width, and the desktop page is unchanged. Before adding a block to the phone home page, say what it replaces.
+
+## 2026-11-19 — Price alerts on Gunpla kit pages
+
+Kit pages are half of the site's visits (`/kits` 498 of 1,054 in the 30 days to 10 Nov) but had no way to ask for an email:
+the alert feed listed cards only. `buildAlertFeed` now also lists every kit with an in-stock shop price, keyed by its JAN
+(13 digits starting 45/49, so it never meets a TCGplayer product id), at `/kit/<slug>`, shops only (never the eBay row or
+Amazon). The kit page carries the same "Watch this price" button (the retention A/B arm) and the alert form under the price
+table that the card page has; with no shop in the visitor's market the form is "back in stock". 1,318 kits joined the feed
+(about 345 KB in all). RiftCompare's service needs no change: its product id allows any `[A-Za-z0-9._:-]` id. Job C of the
+2026-11-18 reassignment; read `watch_signup` / `restock_signup` on `/kit/` pages from 2 Dec.

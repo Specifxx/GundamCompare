@@ -45,3 +45,22 @@ test("the weekly price drops box is opt-in: unticked, and sent only as the visit
   assert.ok(!/defaultChecked|checked=/.test(src), "never pre-ticked");
   assert.match(src, /const weekly = f\.get\("weekly"\) === "on";/);
 });
+
+test("Gunpla kits are in the feed by their JAN, at their shops' lowest in-stock price, and the kit page asks for alerts (2026-11-19)", async () => {
+  const { buildAlertFeed } = await import("../src/lib/alert-feed");
+  const { kits, kitOffers, kitsOn } = await import("../src/lib/kits");
+  const feed = buildAlertFeed(new Date("2026-11-19T00:00:00Z"));
+  if (kitsOn()) {
+    const k = kits().find((x) => kitOffers(x.jan).some((o) => o.inStock));
+    if (k) {
+      const item = feed.items[k.jan];
+      assert.ok(item, "a kit with an in-stock shop is in the feed");
+      assert.equal(item.u, `/kit/${k.slug}`);
+      assert.deepEqual(item.p, lowestByMarket(kitOffers(k.jan)));
+    }
+  }
+  const page = fs.readFileSync("src/app/kit/[slug]/page.tsx", "utf8");
+  assert.match(page, /<PriceAlert site=\{SITE\.key\} productId=\{pid\} prices=\{alertPrices\} \/>/);
+  assert.match(page, /const pid = Number\(k\.jan\);/, "the form sends the JAN the feed is keyed by");
+  assert.match(page, /const alertPrices = lowestByMarket\(offers\);/, "shops only: never the eBay row");
+});
