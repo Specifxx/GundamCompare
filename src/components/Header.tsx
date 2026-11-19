@@ -56,30 +56,32 @@ export function Header() {
         <Link href="/" className="flex h-11 shrink-0 items-center rounded-lg" aria-label={`${SITE.name} home`}>
           <Logo wordmark="hidden sm:inline" />
         </Link>
-        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-0.5 2xl:flex" aria-label="Main">
           <HeaderNavItems items={items} />
           {/* A discreet, labelled sponsored item (xl and up only): eBay's search for the game, tagged. Not a section of the site. */}
           <a
             href={goHref({ url: ebaySearchUrl(SITE.ebay.query, "US"), source: "ebay", market: "US" }, undefined, "header-ebay")}
             rel="sponsored nofollow noopener"
             target="_blank"
-            className="hidden items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:bg-raised hover:text-ink xl:inline-flex"
+            className="hidden items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:bg-raised hover:text-ink min-[1700px]:inline-flex"
           >
             <span className="ad-pill">Ad</span> eBay
           </a>
         </nav>
-        <div className="hdr-search min-w-0 flex-1 lg:ml-auto lg:w-56 lg:flex-none xl:w-64">
+        <div className="hdr-search min-w-0 flex-1 2xl:ml-auto 2xl:w-56 2xl:flex-none min-[1700px]:w-64">
           <SearchBox size="sm" />
         </div>
         <ThemeToggle className="hidden sm:inline-flex" />
-        {/* Premium (owner, 2026-11-19: "premium should also be visible"): the gold pill from md; phones have it atop the menu. */}
-        <PremiumHeaderLink className="hidden md:inline-flex" />
+        {/* Premium (owner, 2026-11-19: "premium should also be visible"): the gold pill from md; phones have it atop the menu. Sign in must
+            never be pushed off the row (owner, 2026-11-19), so the sections row starts at 2xl (the sidebar and the menu carry them below),
+            and the pill and the eBay item step aside where the row is full. */}
+        <PremiumHeaderLink className="hidden md:inline-flex 2xl:hidden min-[1700px]:inline-flex" />
         <MarketPicker />
         {/* The cart list (components/cart, owner 2026-11-06): every width, with its count. */}
         {/* Sign in / account (owner, 2026-11-19: "the login/signup button should be visible for all sites"): every width. */}
         <AccountHeaderLink />
         <CartHeaderLink />
-        <MobileMenu groups={groups} className="lg:hidden" />
+        <MobileMenu groups={groups} className="2xl:hidden" />
       </div>
     </header>
   );

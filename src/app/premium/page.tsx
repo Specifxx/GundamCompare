@@ -42,7 +42,7 @@ export default function PremiumPage() {
         <h2>How it works</h2>
         <p>
           Sign in on {SITE_NAME} with an emailed link (no password), pick monthly or yearly, and start the 14-day trial through Stripe&rsquo;s secure checkout.
-          You are not charged until day 15, and you can cancel any time from <strong>Manage billing</strong> on this page. The same account works on our sister sites DexCompare, MTG Compare, TCG Prices and RiftCompare. If it lapses, the extras stop; your free alerts keep working.
+          You are not charged until day 15, and you can cancel any time from <strong>Manage billing</strong> on this page. The same account works across all our price comparison sites. If it lapses, the extras stop; your free alerts keep working.
         </p>
         <h2>What it does not do</h2>
         <p>
