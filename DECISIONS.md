@@ -2511,3 +2511,13 @@ how it makes money.
 - **Trust**: `/about` says who runs the site (co-founders Bill and George, no outside owner), that AI tools help write
   it while prices are read by a program, and what the price guides cost to run (about A$790 a month, our books, 30 days to
   15 November 2026). The about page no longer links our other sites in its body.
+
+## 2026-11-19 — A calmer home page on a phone
+
+Owner, 2026-11-19: "way too much going on in the mobile version of the home page" (KaeYoung first; the same pass here).
+Below sm the hero is the headline, the words and the link to every card; the creators bubble, the market row, trending
+chips, counts and the two hero boxes show from sm up (the header already carries the search and the market). The Gunpla
+shelf and the chase cards are ONE sideways row each on a phone (`rail` on `KitGrid` / `TileGrid`, `.phone-rail` in
+globals.css), and the guide cards show from sm up. Measured on a 390px phone: 9,143 px tall before, 4,973 after. Layout
+only: URLs, titles, the h1 and the h2 outline, metadata and JSON-LD are the same, the server HTML is the same at every
+width, and the desktop page is unchanged. Before adding a block to the phone home page, say what it replaces.
