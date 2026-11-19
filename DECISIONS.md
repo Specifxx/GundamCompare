@@ -2574,3 +2574,13 @@ content "spread across a large network of sites" and re-dating pages to look fre
   latest import: their words do not change with prices.
 
 Black Friday and Cyber Monday pages are unchanged (in season). Judge the effect on 1 to 8 Dec against 3 to 9 Nov.
+
+## 2026-11-19 — Accounts: collection needs sign-in, Sign in and Premium visible, Google and Discord, Collection tab
+
+Owner, 19 Nov: "you can only use my collection if you are signed in and the login/signup button should be visible for all sites",
+"premium should also be visible", Collection in place of Menu on the phone bar, and Google and Discord sign-in on every site for
+retention. `/collection` asks a signed-out visitor to sign in ("I own this" too); the header's account link shows at every width
+("Sign in" in words from 400px), a gold Premium pill from md, and the phone menu opens with Sign in and Premium; the phone bar's last
+tab is Collection (the header keeps the menu button). `/account` has "Continue with Google" and "Continue with Discord"
+(`OAuthButtons.tsx`, through RiftCompare's sister sign-in and its existing apps: nothing to set up), and signed in it is an account
+hub. `/account/verify` lands where the visitor was headed. Browser-only: every page keeps one CDN copy. Same as MTG, Dex and YGO.
