@@ -98,7 +98,11 @@ export default function Home() {
           links are the ones the old hero carried. */}
       <section className="hero-band relative -mx-4 -mt-6 overflow-x-clip border-b border-line px-4 pb-10 pt-8 sm:-mx-6 sm:px-8 sm:pb-14 sm:pt-12">
         <HeroSparks />
-        <CreatorsBubble />
+        {/* Phone hero, 2026-11-19 (owner: "way too much going on in the mobile version of the home page"): the headline, the
+            words and the link to every card. The header already has the search and the market, so the creators bubble, the
+            market row, trending chips, counts and the two hero boxes show from sm up; the sealed shelf follows straight
+            after. Same HTML at every width. */}
+        <div className="hidden sm:contents"><CreatorsBubble /></div>
         {/* Two columns from lg (owner, 2026-11-08: KaeYoung and ScentCompare's hero, "feature some products on the hero"): the words,
             search, region row and trending chips on the left, two featured boxes on the right (under the words on a phone). The
             words, the h1 and the links are the ones the centred hero carried. */}
@@ -114,10 +118,12 @@ export default function Home() {
               Price check any card or sealed product and find the cheapest place to buy: live prices from TCGplayer, eBay and {storeCount} stores in the US, UK, Canada, Australia and Europe, in your own currency, updated daily.
             </p>
             <div className="hero-search relative z-30 mt-6 hidden w-full max-w-2xl sm:block"><SearchBox big /></div>
+            <div className="hidden sm:block">
             <p className="eyebrow mt-6">Shopping from</p>
             <MarketChooser className="mt-2" bare />
+            </div>
             {trending.length > 0 && (
-              <div className="mt-5 w-full max-w-2xl">
+              <div className="mt-5 hidden w-full max-w-2xl sm:block">
                 <p className="eyebrow">Trending</p>
                 <ul className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
                   {trending.map((p) => (
@@ -130,7 +136,7 @@ export default function Home() {
                 </ul>
               </div>
             )}
-            <p className="mt-5 flex flex-wrap items-center gap-2 text-sm">
+            <p className="mt-5 hidden flex-wrap items-center gap-2 text-sm sm:flex">
               {m ? (
                 <>
                   <span className="hero-stat"><b className="tabular">{m.counts.cards.toLocaleString()}</b> cards</span>
@@ -143,10 +149,10 @@ export default function Home() {
               )}
               {upcoming && <Link className="hero-stat hover:border-ink/40" href={preorderPath(upcoming)}>{upcoming.name} pre-orders →</Link>}
             </p>
-            <p className="mt-3 text-sm"><Link href="/cards" className="link font-semibold">All {m?.counts.cards.toLocaleString() ?? ""} cards in the database →</Link></p>
+            <p className="mt-4 text-sm sm:mt-3"><Link href="/cards" className="link font-semibold">All {m?.counts.cards.toLocaleString() ?? ""} cards in the database →</Link></p>
           </div>
           {heroPicks.length > 0 && (
-            <div className="min-w-0">
+            <div className="hidden min-w-0 sm:block">
               <p className="eyebrow mb-3">Newest sealed · TCGplayer market</p>
               <HeroCards items={heroPicks} />
             </div>
@@ -169,13 +175,13 @@ export default function Home() {
       {/* Model kits (SITE.kits): the kits most shops have in stock. */}
       {SITE.kits && kitsOn() && (
         <Section className="sd" title={`${SITE.kits.label} prices`} href="/kits" sub={`${kits().length.toLocaleString()} ${SITE.kits.noun} across ${SITE.kits.stores.length} hobby shops, matched by barcode.`}>
-          <KitGrid items={rankKits(featuredKits()).slice(0, 6)} />
+          <KitGrid items={rankKits(featuredKits()).slice(0, 6)} rail />
         </Section>
       )}
 
       {latest && chase.length > 0 && (
         <Section className="sd" title={`${latest.name} chase cards`} href={`/sets/${latest.slug}`} sub="The most valuable cards in the newest set, with every store's price." linkLabel="Full set price guide">
-          <TileGrid items={chase} />
+          <TileGrid items={chase} rail />
         </Section>
       )}
 
@@ -204,8 +210,9 @@ export default function Home() {
       {/* The site's own star score and approved reviews (owner, 2026-11-03), loaded in the browser; nothing until there is a rating. */}
       <SiteReviews />
 
+      {/* The guide cards from sm up (2026-11-19): on a phone the menu and footer reach the blog. */}
       {posts().length > 0 && (
-        <Section className="sd" title="Guides" href="/blog" sub={`Buying guides and price explainers for ${SITE.gameShort}.`}>
+        <Section className="sd hidden sm:block" title="Guides" href="/blog" sub={`Buying guides and price explainers for ${SITE.gameShort}.`}>
           <div className="sd-stagger grid gap-3 md:grid-cols-3">
             {posts().slice(0, 3).map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="card group p-5 transition-colors hover:border-ink/40">
