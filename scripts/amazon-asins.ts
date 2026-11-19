@@ -11,7 +11,7 @@
 // externalIds carry that JAN (barcodeMatches), never by title. Kept in the same file under the JAN (the kit page's
 // product id is Number(jan)). Three failed calls in a row end a market: a store our credential can't serve fails every
 // call, and the workflow shouldn't spend minutes learning it again.
-//   npx tsx scripts/amazon-asins.ts            AMAZON_SEARCH_BUDGET=400 sealed searches, AMAZON_KIT_CALLS=600 kit calls
+//   npx tsx scripts/amazon-asins.ts            AMAZON_SEARCH_BUDGET=0 (owner, 2026-11-19: the network's Amazon API allowance is shared, mostly ScentCompare's) sealed searches, AMAZON_KIT_CALLS=0 kit calls
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { AMAZON_STORES } from "@/lib/affiliate";
@@ -40,7 +40,7 @@ async function market(m: Market, idx: MatchIndex) {
     status({ state: "off" });
     return console.log(`Amazon ASINs ${m}: no AMAZON_CREATORS_* credentials yet, skipped.`);
   }
-  const budget = Number(process.env.AMAZON_SEARCH_BUDGET || 400);
+  const budget = Math.min(0, Number(process.env.AMAZON_SEARCH_BUDGET || 0));
   const today = new Date().toISOString().slice(0, 10);
   const known: AsinFile = existsSync(FILE) ? JSON.parse(readFileSync(FILE, "utf8")) : {};
   const list = marketSealed(m);
@@ -79,7 +79,7 @@ async function market(m: Market, idx: MatchIndex) {
   }
   // Gunpla kits: by barcode only.
   const kitTodo = refused || failed >= 3 ? [] : kitList.filter((k) => due(k.jan));
-  const kitBudget = Number(process.env.AMAZON_KIT_CALLS || 600);
+  const kitBudget = Math.min(0, Number(process.env.AMAZON_KIT_CALLS || 0));
   const resources = ["itemInfo.title", "itemInfo.externalIds"];
   let kitCalls = 0, kitSearched = 0, kitFound = 0;
   failed = 0;
