@@ -1,1 +1,1 @@
-{"at":"2026-11-18T01:05:31.857Z","state":"refused","searched":0,"found":0,"known":0,"waiting":18,"kits":{"searched":0,"found":0,"known":0,"waiting":0},"note":"searchItems 403 {\"message\":\"Your account does not currently meet the eligibility requirements.\",\"reason\":\"AssociateNotEl"}
+{"at":"2026-11-19T00:43:59.248Z","state":"ok","searched":18,"found":13,"known":585,"waiting":0,"kits":{"searched":586,"found":572,"known":572,"waiting":178}}
