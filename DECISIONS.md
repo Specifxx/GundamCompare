@@ -2539,6 +2539,7 @@ live remaining count are unchanged. `tests/ebay-plan.test.ts` pins it.
 A production check on a sister site found /premium opening on phones under ad blocks. Premium promises no ads, and these are
 conversion and utility pages, so the layout's ad units (DockAds) stand down on them (`lib/ad-free-paths.ts`,
 `AdRouteGate.tsx`, `tests/ad-free-paths.test.ts`).
+
 ## 2026-11-19 — A calmer home page on a phone
 
 Owner, 2026-11-19: "way too much going on in the mobile version of the home page" (KaeYoung first; the same pass here).
