@@ -22,6 +22,8 @@ import { KITS_FILE, decodeKitOffer, encodeKitOffer, readKitFile, type KitFile } 
 import { ebayCredentials, ebayRemaining, ebayToken } from "@/lib/import/ebay";
 import { kitDemand, kitEbayRows, planKitEbay, searchKit, type KitEbayState } from "@/lib/import/kit-ebay";
 import { execFileSync } from "node:child_process";
+import { KIT_LOWS_FILE, readLowsFile, recordKitLows, writeLowsFile } from "@/lib/import/store-lows";
+import { dayNumber } from "@/lib/import/history";
 
 const STATE = path.join(process.cwd(), "data", "state");
 
@@ -276,6 +278,8 @@ async function main() {
   }
   kits.sort((a, b) => a.name.localeCompare(b.name));
   const decodedOffers = new Map(Object.entries(offers).map(([jan, ts]) => [jan, ts.map(decodeKitOffer).filter((o): o is Offer => !!o)]));
+  // The cheapest in-stock shop price per market, one point per change: the kit page's price history (2026-11-20).
+  writeLowsFile(KIT_LOWS_FILE, recordKitLows(readLowsFile(KIT_LOWS_FILE), dayNumber(now), decodedOffers));
   const ebay = await kitEbay(kits, (jan) => decodedOffers.get(jan) ?? [], now);
   const file: KitFile = { generatedAt: now.toISOString(), kits, offers, stores: status, ebay };
   fs.mkdirSync(path.dirname(KITS_FILE), { recursive: true });
