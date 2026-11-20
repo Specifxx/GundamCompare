@@ -6,6 +6,9 @@ import { decodeKitOffer, readKitFile, type KitFile } from "./kit-store";
 import { slugify } from "./slug";
 import { kitAsksIndex, kitIndexable } from "./indexing";
 import { searchFound } from "./search-demand";
+import fs from "node:fs";
+import path from "node:path";
+import type { Series } from "./series";
 
 let cache: { file: KitFile; bySlug: Map<string, Kit>; byJan: Map<string, Kit> } | null = null;
 function load() {
@@ -45,6 +48,20 @@ export function kitEbayOffers(jan: string): Offer[] {
     url,
     title: "",
   }));
+}
+
+let lows: Record<string, Record<string, Series>> | null = null;
+/** The kit's cheapest in-stock shop price per market over time (data/store-lows/kits.json, written by the daily kit
+ *  import, 2026-11-20): the kit page's price history. Shops only, never eBay, Amazon or a converted price. */
+export function kitLowsOf(jan: string): Record<string, Series> {
+  if (!lows) {
+    try {
+      lows = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data", "store-lows", "kits.json"), "utf8"));
+    } catch {
+      lows = {};
+    }
+  }
+  return lows![jan] ?? {};
 }
 
 /** Whether the kit's page asks to be indexed and is in the sitemap (lib/indexing.ts kitIndexable): any shop price, sold out

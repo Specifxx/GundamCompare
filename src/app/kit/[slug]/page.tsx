@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
-import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitEbayOffers, kitImage, kitIsIndexable, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
+import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitEbayOffers, kitImage, kitIsIndexable, kitLowsOf, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
 import { money } from "@/lib/format";
 import { PriceTable } from "@/components/PriceTable";
 import { CardStickyBuyBar, CardTopBuy, CheckedAgo } from "@/components/CardBuy";
@@ -12,7 +12,8 @@ import { InlineAds } from "@/components/InlineAds";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { amazonSearchUrls, ebaySearchUrl, goHref } from "@/lib/affiliate";
 import { amazonCells } from "@/lib/amazon-live";
-import { meta } from "@/lib/data";
+import { historyThrough, meta } from "@/lib/data";
+import { PriceHistory } from "@/components/PriceHistory";
 import { abs, KITS_SHARE_IMAGE } from "@/lib/site";
 import { MARKET_LABEL } from "@/lib/site-types";
 import { sourceNameServer } from "@/lib/sources";
@@ -68,6 +69,7 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   const related = sameGrade.slice(0, 6);
   // eBay ads of the kit itself first, then its grade's popular kits.
   const adTiles = kitAdTiles([k, ...sameGrade], 10);
+  const lows = kitLowsOf(k.jan);
   const markets = [...new Set(inStock.map((o) => o.market))];
   // Offers are sorted in stock first, then by price: the first per market is its cheapest.
   const cheapestByMarket = markets.map((mk) => inStock.find((o) => o.market === mk)!);
@@ -137,6 +139,14 @@ export default function KitPage({ params }: { params: { slug: string } }) {
               <span className="rounded bg-ink-800 px-1.5 py-0.5 text-[10px] text-muted">Paid link</span>
             </p>
           </section>
+          {/* The cheapest in-stock shop price in the visitor's market, recorded daily from 2026-11-20 (shops only, never eBay or
+              Amazon). Drawn once the kit has a recorded day. */}
+          {Object.keys(lows).length > 0 && (
+            <section className="card-surface p-4">
+              <h2 className="mb-2 font-display text-xl font-bold">Price history</h2>
+              <PriceHistory lows={lows} fx={m?.fx} through={historyThrough()} days={365} />
+            </section>
+          )}
           <section className="prose-site max-w-none text-sm">
             <h2>Where is {k.name} cheapest?</h2>
             <p>

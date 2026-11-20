@@ -56,3 +56,31 @@ export function dailyBefore(series: Series | undefined, today: number, days: num
   }
   return out;
 }
+
+/** Gunpla kits (SITE.kits), keyed by JAN, in one file beside the sets' (2026-11-20): the kit page's history chart. */
+export const KIT_LOWS_FILE = path.join(LOWS_DIR, "kits.json");
+
+export function readLowsFile(file: string): SetLows {
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+export function writeLowsFile(file: string, lows: SetLows): void {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  const body = JSON.stringify(lows);
+  if (!fs.existsSync(file) || fs.readFileSync(file, "utf8") !== body) fs.writeFileSync(file, body);
+}
+
+/** Pure: today's cheapest in-stock shop price per market for every kit in this run, by JAN. A kit not in the run keeps
+ *  its series untouched (it may come back); a kit in the run with no stock records 0 in the markets it had. */
+export function recordKitLows(prev: SetLows, today: number, offersByJan: Iterable<[string, Offer[]]>): SetLows {
+  const next: SetLows = { ...prev };
+  for (const [jan, offers] of offersByJan) {
+    const lows = storeLowsByMarket(offers);
+    if (Object.keys(lows).length || next[jan]) next[jan] = recordLows(next[jan], today, lows);
+  }
+  return next;
+}
