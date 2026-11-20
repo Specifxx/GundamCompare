@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-19T00:44:03.990Z",
+ "generatedAt": "2026-11-20T00:44:27.769Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -27,29 +27,29 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Resource (R-002) (C++)",
-   "url": "https://www.gundamcompare.com/card/resource-r-002-c-newtype-rising",
-   "cents": 5600,
-   "currency": "USD",
-   "store": "Vegas Singles",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/645374_200w.jpg",
-   "refCents": 8875,
-   "refLabel": "TCGplayer market price",
-   "savingPct": 37
-  },
-  {
-   "kind": "deal",
-   "cluster": "cards",
-   "region": "US",
    "title": "Gundam (LR+)",
    "url": "https://www.gundamcompare.com/card/gundam-lr",
    "cents": 10103,
    "currency": "USD",
    "store": "PunkOuter Games",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/641452_200w.jpg",
-   "refCents": 13519,
+   "refCents": 13391,
    "refLabel": "TCGplayer market price",
    "savingPct": 25
+  },
+  {
+   "kind": "deal",
+   "cluster": "cards",
+   "region": "US",
+   "title": "Gundam Epyon (LR+)",
+   "url": "https://www.gundamcompare.com/card/gundam-epyon-lr-dual-impact",
+   "cents": 8965,
+   "currency": "USD",
+   "store": "PunkOuter Games",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/659248_200w.jpg",
+   "refCents": 10827,
+   "refLabel": "TCGplayer market price",
+   "savingPct": 17
   },
   {
    "kind": "deal",
@@ -61,9 +61,9 @@
    "currency": "USD",
    "store": "Card Boyz",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/707586_200w.jpg",
-   "refCents": 21829,
+   "refCents": 21369,
    "refLabel": "TCGplayer market price",
-   "savingPct": 17
+   "savingPct": 15
   },
   {
    "kind": "deal",
@@ -89,7 +89,7 @@
    "currency": "USD",
    "store": "Green Door Collectibles",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/680468_200w.jpg",
-   "refCents": 6178,
+   "refCents": 6167,
    "refLabel": "TCGplayer market price",
    "savingPct": 9
   },
@@ -181,6 +181,20 @@
    "kind": "deal",
    "cluster": "hobby",
    "region": "CA",
+   "title": "MG 1/100 V2 Gundam Ver. Ka",
+   "url": "https://www.gundamcompare.com/kit/mg-1-100-v2-gundam-ver-ka",
+   "cents": 4895,
+   "currency": "CAD",
+   "store": "Banana Games & Hobby",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/mg-lm314v21-v2-gundam-ver-ka-00_2.jpg?v=1737664122",
+   "refCents": 7495,
+   "refLabel": "median store price",
+   "savingPct": 35
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "CA",
    "title": "HG 1/144 R05 Aegis Gundam",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-r05-aegis-gundam",
    "cents": 1799,
@@ -250,20 +264,6 @@
   {
    "kind": "deal",
    "cluster": "hobby",
-   "region": "CA",
-   "title": "HG 1/144 Gyan Strom (Agnes Giebenrath Custom)",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-gyan-strom-agnes-giebenrath-custom",
-   "cents": 3399,
-   "currency": "CAD",
-   "store": "Gundam Extra",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgce-gyan-strom-agnes-giebenrath-custom-gp.jpg?v=1737734758",
-   "refCents": 4395,
-   "refLabel": "median store price",
-   "savingPct": 23
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
    "region": "US",
    "title": "HG 1/144 Messer Type-M01 (Gawman Use)",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-messer-type-m01-gawman-use",
@@ -309,13 +309,13 @@
    "region": "US",
    "title": "HG 1/144 GT-9600 Gundam Leopard",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-hgaw-gt-9600-gundam-leopard",
-   "cents": 2345,
+   "cents": 2386,
    "currency": "USD",
    "store": "Japan Figure",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgaw-gt-9600-gundam-leopard-base.jpg?v=1785789540",
    "refCents": 3095,
    "refLabel": "median store price",
-   "savingPct": 24
+   "savingPct": 23
   },
   {
    "kind": "deal",
