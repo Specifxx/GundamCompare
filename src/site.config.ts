@@ -31,6 +31,8 @@ export const SITE: SiteConfig = {
   impactSiteVerification: "3ab0538e-afa1-4fe4-9cac-ce9a84159716",
 
   priceAlerts: true,
+  // This site's own invite to the Discord hub (lands in #announcements; owner, 2026-11-20: grow the Discord). Shown on the Hot 100 strip.
+  discordInvite: "https://discord.gg/cmN2J9hCRQ",
   // The phone bottom nav (components/BottomNav.tsx, DECISIONS.md 2026-11-18): "optin" = only a visitor who opens any page with ?bn=1
   // sees it; "on" = everyone on a phone; "off" is the rollback (it ignores ?bn=1 too).
   bottomNav: "on",
