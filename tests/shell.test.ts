@@ -67,9 +67,9 @@ test("every rail link points at a page of the site, and prices come first", () =
   for (const l of phoneNav()) assert.ok(l.href === "/tools" || rail.includes(l.href), `${l.href} is in the phone row but not the rail`);
 });
 
-test("the homepage is RiftCompare's order: hero, ads, deals, sealed, chase cards, reviews, guides, FAQ, and nothing else", () => {
+test("the homepage order: hero, most popular (2026-11-20), sealed, deals, reviews, guides, FAQ, and nothing else", () => {
   const src = readFileSync("src/app/page.tsx", "utf8");
-  const order = ["<HeroSparks />", "<CreatorsBubble />", "<SealedHero", "chase cards", "Today's top deals", "<SiteReviews />", 'title="Guides"', "Frequently asked questions", "<InlineAds "];
+  const order = ["<HeroSparks />", "<CreatorsBubble />", "title={`Most popular", "<SealedHero", "Today's top deals", "<SiteReviews />", 'title="Guides"', "Frequently asked questions", "<InlineAds "];
   let at = -1;
   for (const o of order) {
     const i = src.indexOf(o, at + 1);
