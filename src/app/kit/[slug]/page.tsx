@@ -15,9 +15,9 @@ import { amazonCells } from "@/lib/amazon-live";
 import { historyThrough, meta } from "@/lib/data";
 import { PriceHistory } from "@/components/PriceHistory";
 import { abs, KITS_SHARE_IMAGE } from "@/lib/site";
-import { MARKET_LABEL } from "@/lib/site-types";
+import { MARKET_LABEL, MARKETS } from "@/lib/site-types";
 import { sourceNameServer } from "@/lib/sources";
-import { fitTitle, kitTitleCandidates } from "@/lib/seo-title";
+import { fitDescription, fitTitle, kitDescriptionCandidates, kitTitleCandidates } from "@/lib/seo-title";
 import { kitShipping } from "@/lib/kit-shipping-data";
 import { lowestByMarket } from "@/lib/alert-feed";
 import { PriceAlert } from "@/components/PriceAlert";
@@ -33,7 +33,22 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const us = offers.find((o) => o.market === "US" && o.inStock);
   // The cheapest in-stock US price leads the title (2026-11-18, like the card pages): the fact the searcher came for, visible in the result.
   const title = fitTitle(kitTitleCandidates(k.name, us ? money(us.cents, us.currency) : null, stores)).absolute;
-  const description = `${k.name} ${SITE.kits.label} kit${us ? ` from ${money(us.cents, us.currency)} in the US` : ""}. Compare ${stores} hobby shops in the US, UK, Canada and Australia, matched by barcode (JAN ${k.jan}), cheapest in stock first.`;
+  // The description leads with the price and the kit's grade and scale, like the title (2026-11-21): the US shop price, else
+  // the first other market with the kit in stock (named), else "sold out" and the free restock email. Shops only.
+  const leadOffer = us ?? MARKETS.map((mk) => offers.find((o) => o.market === mk && o.inStock)).find(Boolean) ?? null;
+  const description = fitDescription(
+    kitDescriptionCandidates({
+      name: k.name,
+      gradeLabel: k.grade ? (GRADE_LABEL[k.grade] ?? k.grade).replace(/\s*\([^)]*\)$/, "").replace(/,.*$/, "").replace(/ Missions$/, "") : null,
+      scale: k.scale,
+      jan: k.jan,
+      lead: leadOffer
+        ? { price: money(leadOffer.cents, leadOffer.currency), market: leadOffer.market, inStockShops: new Set(offers.filter((o) => o.market === leadOffer.market && o.inStock).map((o) => o.source)).size }
+        : null,
+      stores,
+      alerts: Boolean(SITE.priceAlerts),
+    }),
+  );
   const images = k.image ? [kitImage(k.image, 1000)] : [KITS_SHARE_IMAGE];
   return {
     title: { absolute: title },

@@ -2739,3 +2739,13 @@ to come back: the week's biggest price drops by email (the existing weekly email
 test: it is on for everyone. Measured as `weekly_signup` with placement `hot-100` (an existing event, no new event name) and
 the invite's uses in Discord. The email promises the week's drops, which is what the weekly email sends, not the Hot 100 chart
 itself.
+
+## 2026-11-21: Kit page descriptions lead with the price, its market, and the grade and scale
+
+The kit title has led with the US price since 2026-11-18 (#177); the description still opened with the kit's name and named a
+price only for a US shop. It now says, in this order: the cheapest in-stock shop price and the market it is in ("from £18.99
+in the UK" when no US shop has the kit, which gives 501 of 2,344 kits a price in the result they did not have), how many shops
+there have it in stock today, then the grade and scale spelled out ("High Grade 1/144 model kit") and the JAN match. A kit
+sold out everywhere says so and that a back-in-stock email is free. Shops only, never eBay or Amazon, as for the title.
+Candidates step down to fit 160 characters (`kitDescriptionCandidates`, `tests/kit-title.test.ts`). It ships in the same
+release as the title change, so the ~2 Dec Search Console read of /kit/ CTR covers both as one before/after.
