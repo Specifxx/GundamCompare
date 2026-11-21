@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-21T00:06:10.930Z",
+ "generatedAt": "2026-11-21T23:21:21.339Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -19,7 +19,7 @@
    "currency": "USD",
    "store": "Atlantis Games & Comics",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619080_200w.jpg",
-   "refCents": 5796,
+   "refCents": 5764,
    "refLabel": "TCGplayer market price",
    "savingPct": 48
   },
@@ -43,27 +43,13 @@
    "region": "US",
    "title": "Gundam Epyon (LR+)",
    "url": "https://www.gundamcompare.com/card/gundam-epyon-lr-dual-impact",
-   "cents": 8843,
+   "cents": 8719,
    "currency": "USD",
    "store": "PunkOuter Games",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/659248_200w.jpg",
    "refCents": 10529,
    "refLabel": "TCGplayer market price",
-   "savingPct": 16
-  },
-  {
-   "kind": "deal",
-   "cluster": "cards",
-   "region": "US",
-   "title": "EX Resource (EXR-004) (C+) (SP)",
-   "url": "https://www.gundamcompare.com/card/ex-resource-exr-004-c-sp",
-   "cents": 18200,
-   "currency": "USD",
-   "store": "Card Boyz",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/707586_200w.jpg",
-   "refCents": 21369,
-   "refLabel": "TCGplayer market price",
-   "savingPct": 15
+   "savingPct": 17
   },
   {
    "kind": "deal",
@@ -83,15 +69,29 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
+   "title": "EX Resource (EXR-004) (C+) (SP)",
+   "url": "https://www.gundamcompare.com/card/ex-resource-exr-004-c-sp",
+   "cents": 18200,
+   "currency": "USD",
+   "store": "Card Boyz",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/707586_200w.jpg",
+   "refCents": 20460,
+   "refLabel": "TCGplayer market price",
+   "savingPct": 11
+  },
+  {
+   "kind": "deal",
+   "cluster": "cards",
+   "region": "US",
    "title": "Starter Deck 09: Destiny Ignition",
    "url": "https://www.gundamcompare.com/card/starter-deck-09-destiny-ignition",
-   "cents": 5600,
+   "cents": 5500,
    "currency": "USD",
    "store": "Green Door Collectibles",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/680468_200w.jpg",
    "refCents": 6131,
    "refLabel": "TCGplayer market price",
-   "savingPct": 9
+   "savingPct": 10
   },
   {
    "kind": "deal",
