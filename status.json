@@ -1,0 +1,63 @@
+{
+ "v": 1,
+ "site": "www.gundamcompare.com",
+ "at": "2026-11-21T19:44:32.759Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "name": "Live site",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "A card page",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "Daily price import",
+   "status": "ok",
+   "detail": "19.7h old"
+  },
+  {
+   "name": "Store imports",
+   "status": "warn",
+   "detail": "magictraders: 0 matched; collectorclash: 0 matched; goblingaming: https://www.goblingaming.co.uk/collections/gundam-tcg/products.json?limit=250&page=1&country=GB: HTTP 403 <!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><me"
+  },
+  {
+   "name": "eBay budget",
+   "status": "ok",
+   "detail": "1150/1150 calls on 2026-11-20, 602 eligible"
+  },
+  {
+   "name": "Family feed",
+   "status": "ok",
+   "detail": "30 items, 19.6h old; 9 sister feeds (rift, op, dex, mtg, lorcana, ygo, cyberpunk, bandai, sealed)"
+  },
+  {
+   "name": "Amazon ASIN finder",
+   "status": "ok",
+   "detail": "AU: ok, 583 ASINs, 20h ago; CA: ok, 0 ASINs, 20h ago; EU: ok, 0 ASINs, 20h ago; UK: ok, 0 ASINs, 20h ago; US: ok, 721 ASINs, 20h ago"
+  },
+  {
+   "name": "Fetch TCG row",
+   "status": "ok",
+   "detail": "the Fetch TCG row is on /card/zgok"
+  },
+  {
+   "name": "Model kit import",
+   "status": "ok",
+   "detail": "2344 kits from 38 stores, 19.7h old"
+  },
+  {
+   "name": "Model kit eBay rows",
+   "status": "ok",
+   "detail": "281 of 2344 kits show an eBay row (1164 searched)"
+  },
+  {
+   "name": "Kit delivery quotes",
+   "status": "ok",
+   "detail": "21 of 36 Shopify kit shops quoted, newest 7 days old"
+  }
+ ]
+}
