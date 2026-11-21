@@ -61,3 +61,54 @@ export function kitTitleCandidates(name: string, price: string | null, stores: n
   out.push(`${name} price: compare ${stores} shops`, `${name} Price`, name);
   return out;
 }
+
+export const DESCRIPTION_MAX = 160;
+
+const IN_MARKET: Record<string, string> = { US: "in the US", UK: "in the UK", CA: "in Canada", AU: "in Australia", EU: "in Europe", SG: "in Singapore" };
+
+/**
+ * A kit page's meta description (2026-11-21, the site file's backlog item 3): the price and the kit's grade and scale lead,
+ * like the title (#177), so the result says what the searcher came for before the click. The price is the US shop price
+ * when one has it in stock; else the first other market that does, named (1,513 kit pages had no in-stock US shop,
+ * 2026-11-13); else it says the kit is sold out and that a restock email is free. Shops only: never eBay or Amazon.
+ * Candidates longest first; the first that fits 160 characters wins, the last is returned whatever its length.
+ */
+export function kitDescriptionCandidates(o: {
+  name: string;
+  gradeLabel: string | null;
+  scale: string | null;
+  jan: string;
+  /** The cheapest in-stock shop price and its market, already formatted ("$24.99"). */
+  lead: { price: string; market: string; inStockShops: number } | null;
+  stores: number;
+  alerts: boolean;
+}): string[] {
+  const facts = [o.gradeLabel, o.scale].filter(Boolean).join(" ");
+  const kind = facts ? `${facts} model kit` : "Model kit";
+  const shops = (n: number) => `${n} hobby shop${n === 1 ? "" : "s"}`;
+  const out: string[] = [];
+  if (o.lead) {
+    const head = `${o.name} from ${o.lead.price} ${IN_MARKET[o.lead.market] ?? `in ${o.lead.market}`}`;
+    const stock = `in stock at ${shops(o.lead.inStockShops)} today`;
+    out.push(
+      `${head}, ${stock}. ${kind}, compared across ${shops(o.stores)} in the US, UK, Canada and Australia, matched by JAN barcode ${o.jan}.`,
+      `${head}, ${stock}. ${kind}, compared across ${shops(o.stores)}, matched by JAN barcode.`,
+      `${head}, ${stock}. ${kind}, matched by JAN barcode.`,
+      `${head}. ${kind}, matched by JAN barcode.`,
+      `${head}.`,
+    );
+  } else {
+    const tail = o.alerts ? " Get a free email when it is back in stock." : "";
+    out.push(
+      `${o.name}: sold out at the ${shops(o.stores)} we track today. ${kind}, matched by JAN barcode ${o.jan}.${tail}`,
+      `${o.name}: sold out at the ${shops(o.stores)} we track today. ${kind}, matched by JAN barcode.${tail}`,
+      `${o.name}: sold out at the ${shops(o.stores)} we track today.${tail}`,
+      `${o.name}: sold out at the ${shops(o.stores)} we track today.`,
+    );
+  }
+  return out;
+}
+
+export function fitDescription(candidates: string[], max = DESCRIPTION_MAX): string {
+  return candidates.find((d) => d.length <= max) ?? candidates[candidates.length - 1];
+}
