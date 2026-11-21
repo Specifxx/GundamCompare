@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-20T00:44:27.769Z",
+ "generatedAt": "2026-11-21T00:06:10.930Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -43,13 +43,13 @@
    "region": "US",
    "title": "Gundam Epyon (LR+)",
    "url": "https://www.gundamcompare.com/card/gundam-epyon-lr-dual-impact",
-   "cents": 8965,
+   "cents": 8843,
    "currency": "USD",
    "store": "PunkOuter Games",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/659248_200w.jpg",
-   "refCents": 10827,
+   "refCents": 10529,
    "refLabel": "TCGplayer market price",
-   "savingPct": 17
+   "savingPct": 16
   },
   {
    "kind": "deal",
@@ -89,7 +89,7 @@
    "currency": "USD",
    "store": "Green Door Collectibles",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/680468_200w.jpg",
-   "refCents": 6167,
+   "refCents": 6131,
    "refLabel": "TCGplayer market price",
    "savingPct": 9
   },
@@ -187,37 +187,9 @@
    "currency": "CAD",
    "store": "Banana Games & Hobby",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/mg-lm314v21-v2-gundam-ver-ka-00_2.jpg?v=1737664122",
-   "refCents": 7495,
+   "refCents": 6999,
    "refLabel": "median store price",
-   "savingPct": 35
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "CA",
-   "title": "HG 1/144 R05 Aegis Gundam",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-r05-aegis-gundam",
-   "cents": 1799,
-   "currency": "CAD",
-   "store": "Gundam Extra",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-r05-aegis-gundam-00.jpg?v=1737661483",
-   "refCents": 2499,
-   "refLabel": "median store price",
-   "savingPct": 28
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "CA",
-   "title": "HG 1/144 Gundam Zagan",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-zagan",
-   "cents": 3399,
-   "currency": "CAD",
-   "store": "Gundam Extra",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-ibo-gundam-zagan-base2.jpg?v=1764627317",
-   "refCents": 4747,
-   "refLabel": "median store price",
-   "savingPct": 28
+   "savingPct": 30
   },
   {
    "kind": "deal",
@@ -229,21 +201,21 @@
    "currency": "CAD",
    "store": "Gundam Extra",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/mg-zgmf-x20a-strike-freedom-gundam-full-burst-mode-00.jpg?v=1737660355",
-   "refCents": 10995,
+   "refCents": 10799,
    "refLabel": "median store price",
-   "savingPct": 27
+   "savingPct": 26
   },
   {
    "kind": "deal",
    "cluster": "hobby",
    "region": "CA",
-   "title": "MG 1/100 Destiny Gundam Extreme Blast Mode",
-   "url": "https://www.gundamcompare.com/kit/mg-1-100-destiny-gundam-extreme-blast-mode",
-   "cents": 7999,
+   "title": "HG 1/144 Gundam Zagan",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-zagan",
+   "cents": 3399,
    "currency": "CAD",
    "store": "Gundam Extra",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/mg-zgmf-x42s-destiny-gundam-extreme-blast-mode-00.jpg?v=1737659432",
-   "refCents": 10495,
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-ibo-gundam-zagan-base2.jpg?v=1764627317",
+   "refCents": 4499,
    "refLabel": "median store price",
    "savingPct": 24
   },
@@ -260,6 +232,34 @@
    "refCents": 4297,
    "refLabel": "median store price",
    "savingPct": 23
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "CA",
+   "title": "HG 1/144 Delta Gundam",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-delta-gundam",
+   "cents": 5595,
+   "currency": "CAD",
+   "store": "Banana Games & Hobby",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-msn-001-delta-gundam-base.jpg?v=1754699521",
+   "refCents": 7249,
+   "refLabel": "median store price",
+   "savingPct": 23
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "CA",
+   "title": "HG 1/144 Gyan Strom (Agnes Giebenrath Custom)",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-gyan-strom-agnes-giebenrath-custom",
+   "cents": 3399,
+   "currency": "CAD",
+   "store": "Gundam Extra",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgce-gyan-strom-agnes-giebenrath-custom-gp.jpg?v=1737734758",
+   "refCents": 4319,
+   "refLabel": "median store price",
+   "savingPct": 21
   },
   {
    "kind": "deal",
@@ -397,9 +397,9 @@
    "currency": "GBP",
    "store": "Dragoon Gaming",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-rising-freedom-gundam-gp2_1.jpg?v=1737728182",
-   "refCents": 2160,
+   "refCents": 2230,
    "refLabel": "median store price",
-   "savingPct": 22
+   "savingPct": 24
   },
   {
    "kind": "deal",
