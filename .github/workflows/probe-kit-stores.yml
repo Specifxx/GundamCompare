@@ -11,9 +11,6 @@ on:
         description: "Candidate list to probe"
         type: string
         default: research/kit-candidate-hosts-us-2026-11-22.txt
-  push:
-    branches: [claude/project-thread-cdp2cw]
-    paths: [scripts/probe-kit-stores.ts, .github/workflows/probe-kit-stores.yml]
 
 permissions:
   contents: read
@@ -29,7 +26,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npx tsx scripts/probe-kit-stores.ts --hosts "${{ inputs.hosts || 'research/kit-candidate-hosts-us-2026-11-22.txt' }}"
+      - run: npx tsx scripts/probe-kit-stores.ts --hosts "${{ inputs.hosts }}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
