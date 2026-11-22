@@ -1,6 +1,6 @@
 {
  "401games": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Toronto",
   "fee": 1095,
   "freeFrom": 19045,
@@ -8,23 +8,31 @@
   "maxTested": 19045
  },
  "dragoongaming": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "London",
   "fee": 600,
-  "freeFrom": 6800,
-  "paidAt": 5700,
-  "maxTested": 6800
+  "freeFrom": 6400,
+  "paidAt": 5400,
+  "maxTested": 6400
  },
  "gaijingadgets": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "London",
   "fee": 389,
   "freeFrom": 10498,
   "paidAt": 4999,
   "maxTested": 10498
  },
+ "galactictoys": {
+  "at": "2026-11-22",
+  "to": "New York",
+  "fee": 865,
+  "freeFrom": null,
+  "paidAt": 31280,
+  "maxTested": 31280
+ },
  "gamesportal": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Sydney",
   "fee": 966,
   "freeFrom": null,
@@ -32,23 +40,23 @@
   "maxTested": 30000
  },
  "generalgames": {
-  "at": "2026-11-13",
+  "at": "2026-11-22",
   "to": "Sydney",
   "fee": 1500,
   "freeFrom": null,
-  "paidAt": 31300,
-  "maxTested": 31300
+  "paidAt": 30800,
+  "maxTested": 30800
  },
  "goodgames": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Sydney",
   "fee": 950,
-  "freeFrom": 8644,
-  "paidAt": 7423,
-  "maxTested": 8644
+  "freeFrom": 9380,
+  "paidAt": 7985,
+  "maxTested": 9380
  },
  "gundamplanet": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "New York",
   "fee": 800,
   "freeFrom": 15255,
@@ -56,7 +64,7 @@
   "maxTested": 27120
  },
  "hearnshobbies": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Sydney",
   "fee": 1399,
   "freeFrom": 15791,
@@ -64,7 +72,7 @@
   "maxTested": 17590
  },
  "hobbyco": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Sydney",
   "fee": 990,
   "freeFrom": 13000,
@@ -79,24 +87,40 @@
   "paidAt": 10500,
   "maxTested": 12800
  },
+ "hobbytechtoys": {
+  "at": "2026-11-22",
+  "to": "Sydney",
+  "fee": 1495,
+  "freeFrom": 25545,
+  "paidAt": 25241,
+  "maxTested": 27344
+ },
  "japanfigure": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "New York",
-  "fee": 1959,
+  "fee": 2217,
   "freeFrom": null,
-  "paidAt": 31240,
-  "maxTested": 31240
+  "paidAt": 30020,
+  "maxTested": 30020
  },
  "lvlupgaming": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "London",
   "fee": 300,
   "freeFrom": 9180,
   "paidAt": 6240,
   "maxTested": 9180
  },
+ "megaculture": {
+  "at": "2026-11-22",
+  "to": "Sydney",
+  "fee": 2000,
+  "freeFrom": null,
+  "paidAt": 31600,
+  "maxTested": 31600
+ },
  "metrohobbiesau": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Sydney",
   "fee": 1299,
   "freeFrom": 15990,
@@ -104,23 +128,23 @@
   "maxTested": 25584
  },
  "pandahobby": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "Toronto",
   "fee": 0,
-  "freeFrom": 1572,
+  "freeFrom": 1600,
   "paidAt": 0,
-  "maxTested": 1572
+  "maxTested": 1600
  },
  "redsuncollectables": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "London",
   "fee": 290,
-  "freeFrom": 6447,
-  "paidAt": 4338,
-  "maxTested": 6447
+  "freeFrom": 7043,
+  "paidAt": 4738,
+  "maxTested": 7043
  },
  "torchlightgh": {
-  "at": "2026-11-13",
+  "at": "2026-11-22",
   "to": "Toronto",
   "fee": 1500,
   "freeFrom": 17492,
@@ -128,7 +152,7 @@
   "maxTested": 17492
  },
  "toyarena": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "New York",
   "fee": 1299,
   "freeFrom": null,
@@ -136,7 +160,7 @@
   "maxTested": 30384
  },
  "travellingman": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "London",
   "fee": 299,
   "freeFrom": 4799,
@@ -144,15 +168,15 @@
   "maxTested": 4799
  },
  "uniongundam": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "London",
   "fee": 600,
-  "freeFrom": 8000,
-  "paidAt": 7000,
-  "maxTested": 8000
+  "freeFrom": 7500,
+  "paidAt": 6600,
+  "maxTested": 9000
  },
  "usagundamstore": {
-  "at": "2026-11-15",
+  "at": "2026-11-22",
   "to": "New York",
   "fee": 1099,
   "freeFrom": null,
