@@ -77,4 +77,6 @@ test("the homepage order: hero, most popular (2026-11-20), sealed, deals, review
     at = i;
   }
   for (const gone of ["TOOLS", "MoverList", "Set price guides", "CreatorsTeaser", "AdSlot"]) assert.doesNotMatch(src, new RegExp(gone), gone);
+  // The newest released set is linked in the hero as words, at every width (merch, 2026-11-22).
+  assert.match(src, /latest && <Link href=\{`\/sets\/\$\{latest\.slug\}`\}/);
 });
