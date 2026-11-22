@@ -1,0 +1,38 @@
+name: Probe kit stores
+
+# One-off research (US-first, owner 2026-11-22): which candidate US shops sell Gunpla with the
+# JAN or Bandai's item number in their listings (scripts/probe-kit-stores.ts). Read-only: it
+# prints a kit-stores.ts block in the log and uploads research/kit-stores-probe.json.
+
+on:
+  workflow_dispatch:
+    inputs:
+      hosts:
+        description: "Candidate list to probe"
+        type: string
+        default: research/kit-candidate-hosts-us-2026-11-22.txt
+  push:
+    branches: [claude/project-thread-cdp2cw]
+    paths: [scripts/probe-kit-stores.ts, .github/workflows/probe-kit-stores.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx tsx scripts/probe-kit-stores.ts --hosts "${{ inputs.hosts || 'research/kit-candidate-hosts-us-2026-11-22.txt' }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kit-stores-probe
+          path: research/kit-stores-probe.json
+          if-no-files-found: ignore
