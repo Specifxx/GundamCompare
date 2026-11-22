@@ -22,6 +22,16 @@ export const KIT_STORES: KitStoreConfig[] = [
   { key: "allaccesscardshop", name: "All Access Card Shop", base: "https://allaccesscardshop.com", market: "US", collections: ["gunpla-model-kits"] },
   { key: "superanimestore", name: "Super Anime Store", base: "https://superanimestore.com", market: "US", collections: ["model-kits"] },
   { key: "japanfigure", name: "Japan Figure", base: "https://www.japan-figure.com", market: "US", collections: ["bandai-spirits"] },
+  // US-first (owner, 2026-11-22): probed from an Actions runner over TCG Prices' 456 US stores and the US Gunpla shops
+  // of the 2026-10-28 probe (scripts/probe-kit-stores.ts). Each matches 20+ kits on half or more of its kit listings by
+  // the JAN or Bandai's item number: Galactic Toys 695 of 862, Mox Valley Games 585 of 591, Unplugged Gaming 83 of 83,
+  // Nerdzoic 65 of 125, Retrofix Games 57 of 58, Shall We Play? 30 of 31.
+  { key: "galactictoys", name: "Galactic Toys", base: "https://galactictoys.com", market: "US", collections: ["new-model-kits", "new-arrival-model-kits-july-2023", "bandai-models"] },
+  { key: "moxvalleygames", name: "Mox Valley Games", base: "https://moxvalleygames.com", market: "US", collections: ["gundams", "all-model-kits"] },
+  { key: "unpluggedgamestore", name: "Unplugged Gaming", base: "https://unpluggedgamestore.com", market: "US", collections: ["model-kits"] },
+  { key: "nerdzoic", name: "Nerdzoic Toy Store", base: "https://nerdzoic.com", market: "US", collections: ["model-kits-1", "gunpla-model-kits-1"] },
+  { key: "retrofixgames", name: "Retrofix Games", base: "https://retrofixgames.com", market: "US", collections: ["gunpla"] },
+  { key: "shallweplaygames", name: "Shall We Play?", base: "https://shallweplaygames.com", market: "US", collections: ["gunpla"] },
   // United Kingdom
   { key: "travellingman", name: "Travelling Man", base: "https://www.travellingman.com", market: "UK", collections: ["model-kit-gunpla", "gundam"] },
   { key: "uniongundam", name: "Union Gundam", base: "https://www.uniongundam.co.uk", market: "UK", collections: ["all-gunpla"] },

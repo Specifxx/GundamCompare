@@ -2760,3 +2760,14 @@ pasted URL or a translate proxy is "none" or "cross-site". "yandex" and "baidu" 
 builds, baiduboxapp). Now `looksLikeBot` (the one thing that untags) is only an empty User-Agent or a self-named crawler or
 script; the header checks moved to `suspectClick`, which at most leaves a click out of the server-side click log, never the tag.
 The 10-14 Nov crawler with full browser headers will reach the networks tagged again: accepted by the owner's rule.
+
+## 2026-11-22: Six more US Gunpla shops (US-first)
+
+The owner's US-first push (22 Nov) found the kit section had 6 US shops against Australia's 16. `scripts/probe-kit-stores.ts`
+(dispatch-only `probe-kit-stores.yml`, read-only) read 467 candidate US Shopify stores (TCG Prices' US list and the US
+shops of the 2026-10-28 probe) from an Actions runner and ran every kit listing through the import's own `janOf`. A shop
+is added only when it matches 20 or more kits on half or more of its kit listings: Galactic Toys (695 of 862; 522 in stock
+and already in the catalogue), Mox Valley Games (585 of 591), Unplugged Gaming (83 of 83), Nerdzoic (65 of 125), Retrofix
+Games (57 of 58), Shall We Play? (30 of 31). The many card shops that list Gunpla with their own SKUs or Bandai's older
+seven-digit numbers (Flipside, Gamers Guild, Impact, Sweets and Geeks: 0-1% matched) stay out on the existing rule: no
+JAN or item number, no listing. Matching is unchanged.
