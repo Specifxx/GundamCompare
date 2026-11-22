@@ -153,7 +153,12 @@ export default function Home() {
               )}
               {upcoming && <Link className="hero-stat hover:border-ink/40" href={preorderPath(upcoming)}>{upcoming.name} pre-orders →</Link>}
             </p>
-            <p className="mt-4 text-sm sm:mt-3"><Link href="/cards" className="link font-semibold">All {m?.counts.cards.toLocaleString() ?? ""} cards in the database →</Link></p>
+            {/* The newest released set, as words, at every width (merch, 2026-11-22: /sets/stardust-trails took 147 of 205 views
+                in 7 days, more than the home page's 77, and the home named no set). A way in, never a product. */}
+            <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm sm:mt-3">
+              {latest && <Link href={`/sets/${latest.slug}`} className="link font-semibold">{latest.name} prices →</Link>}
+              <Link href="/cards" className="link font-semibold">All {m?.counts.cards.toLocaleString() ?? ""} cards in the database →</Link>
+            </p>
           </div>
           {heroPicks.length > 0 && (
             <div className="hidden min-w-0 sm:block">
