@@ -59,16 +59,17 @@ export default function Kits() {
           </Link>
         ))}
       </nav>
+      {/* On a phone each grade is one sideways row (2026-11-23: the hub was 29,100 px tall); the grid from sm up. */}
       {showNew && (
         <section>
           <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">New in stores</h2>
-          <KitGrid items={fresh} />
+          <KitGrid items={fresh} rail />
         </section>
       )}
       {hubs.map((h) => (
         <section key={h.slug}>
           <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl"><Link className="hover:underline" href={`/kits/grade/${h.slug}`}>{h.label} →</Link></h2>
-          <KitGrid items={h.items.slice(0, 12)} />
+          <KitGrid items={h.items.slice(0, 12)} rail />
         </section>
       ))}
       {(() => {
@@ -76,7 +77,7 @@ export default function Kits() {
         return rest.length ? (
           <section>
             <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">Other kits</h2>
-            <KitGrid items={rest} />
+            <KitGrid items={rest} rail />
           </section>
         ) : null;
       })()}

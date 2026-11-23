@@ -2807,3 +2807,19 @@ TCGplayer's lowest listing and the cheapest US eBay Buy It Now (never counted as
 recording it, its tracked range and where today sits; the set's release and age, the product's rank among the set's priced
 sealed products and how many of its cheapest pack it costs (a price ratio, never a claim about contents). `setRead` adds
 "<set> prices at a glance" under each set page's grid the same way. The kit page's "Where is it cheapest?" uses it too, shops only (never eBay or Amazon), with the cheapest US shop price's own history, where the kit's US price sits among its grade's kits, and the day a shop first listed it; the JAN sentence stays. Nothing is said without data on the render to back it. Judge on 1 to 8 Dec against 3 to 9 Nov.
+
+
+## 2026-11-23: The hubs and the deal finder fit a phone
+
+Owner, 23 Nov ("we spend so much time on the landing page that we forgot the database pages, the filters, the guides, the hubs").
+Measured on a 390px phone: `/sealed` was 23,800 px and `/kits` 29,100 px of two-column tiles, `/stores` 21,800 px of one flat
+list with Australia first, and the deal finder table put the price and the Buy button off the right edge.
+
+- `/sealed` and `/kits`: each type or grade is one sideways row on a phone (`TileGrid`/`KitGrid` `rail`, the home page shelf), the
+  grid from `sm` up. Same products, same links, same server HTML. 5,500 px and 8,700 px.
+- `/stores`: the US first, then the countries with the most stores (US-first, owner 22 Nov); each country by listings matched,
+  twelve showing and the rest behind "Show all", with a find box (`FoldFinder.tsx`). Every store is still in the HTML with
+  the same link; without scripts everything shows. 9,200 px.
+- Deal finder: below `sm` the Where, Market and Under columns fold into the name and price cells, so a row is name, price, Buy.
+
+No URL, title, heading, prompt, banner or ad changed.
