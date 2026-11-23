@@ -1,3 +1,4 @@
+import { NavBoost } from "@/components/NavBoost";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
@@ -90,6 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2">
           Skip to content
         </a>
+        {/* Clicks that feel instant on the real URLs: intent prefetch, the main tabs warmed when idle, a line on tap. */}
+        <NavBoost warm={["/", "/sealed", "/cards", "/kits", "/tools/deal-finder"]} />
         <PrefsProvider>
           <Header />
           <HolidayStrip />
