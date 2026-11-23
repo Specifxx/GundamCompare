@@ -1,3 +1,5 @@
+import { setRead } from "@/lib/buyer-read";
+import { historyThrough as _ht, priceOf as _po, refCents as _rc } from "@/lib/data";
 import type { Metadata } from "next";
 import Link from "@/components/Link";
 import { notFound } from "next/navigation";
@@ -54,6 +56,23 @@ export default function SetPage({ params }: { params: { slug: string } }) {
   const older = i >= 0 && i < listed.length - 1 ? listed[i + 1] : null;
   const others = listed.filter((x) => x.id !== s.id && x.productCount > 20).slice(0, 12);
   const guides = postsAbout([s.name, s.code]).slice(0, 4);
+  // "<set> prices at a glance", from the set's own products (lib/buyer-read.ts setRead, 2026-11-23 SEO quality pass):
+  // stores only (never eBay, TCGplayer or Amazon), each market's cheapest in its own currency.
+  const glance = setRead({
+    name: s.name,
+    releasedOn: s.releasedOn,
+    upcoming: s.upcoming,
+    today: _ht(),
+    money,
+    marketName: (m) => String(m),
+    products: sealed.map((p) => {
+      const e = _po(p.id);
+      const live = e.offers.filter((o) => o.inStock && !o.preorder && !["ebay", "tcgplayer", "amazon"].includes(o.source));
+      const best = new Map<string, { market: string; currency: string; cents: number }>();
+      for (const o of live) if (!best.has(o.market) || best.get(o.market)!.cents > o.cents) best.set(o.market, { market: o.market, currency: o.currency, cents: o.cents });
+      return { name: shortName(p.name), sealedType: p.sealedType, refCents: _rc(p.id), change30d: e.change30d, best: [...best.values()], inStockStores: new Set(live.map((o) => o.source)).size };
+    }),
+  });
   return (
     <div className="flex flex-col gap-8">
       {cards.length > 0 && (
@@ -109,6 +128,12 @@ export default function SetPage({ params }: { params: { slug: string } }) {
               </tbody>
             </table>
           </div>
+        </section>
+      )}
+      {glance.length > 0 && (
+        <section className="prose-site max-w-none text-sm">
+          <h2>{s.name} prices at a glance</h2>
+          {glance.map((t, k) => <p key={k}>{t}</p>)}
         </section>
       )}
       {guides.length > 0 && (
