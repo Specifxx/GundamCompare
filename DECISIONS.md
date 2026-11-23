@@ -2782,3 +2782,13 @@ so ShareButton's share-for-a-deal A/B test is untouched; event `share { medium: 
 **Why.** On 22 Nov a CA$89.99 Delta Reign ETB pre-order at Cardboard Hero took ten referral orders in 41 minutes, almost none through
 a click we tracked: the store link had been pasted into a restock chat. People share drops anyway; this makes the link they paste ours.
 Owner, 2026-11-23: "apply all these learnings to all the other sites". Read `share` medium `drop` and `share_visit` a week after release.
+
+## 2026-11-23: Robot4Less and Gundam Place Store join the kit comparison (US-first)
+
+Both are big US Gunpla shops that the 2026-10-28 probe left out because their kits carried no JAN or item number. The
+2026-11-22 probe run (`probe-kit-stores.yml`, job log) found they now print it on many kits: Robot4Less matched 816 of 1,751
+kit listings (743 already in the catalogue, 85 of them in stock), Gundam Place Store 315 of 1,424 (301 in the catalogue,
+83 in stock). The 22 Nov entry's "half or more of its kit listings" bar was a probe shortlist, not a matching rule: a shop
+under it is fine when the listings that do match are read by the JAN, as Union Gundam (35 of 2,359) has been since
+October. The unmatched listings are skipped, never guessed; only Bandai's JAN prefixes match; `keepConsistent` still drops
+an odd grade, EW mismatch or price. Matching is unchanged. US kit shops 12 → 14.

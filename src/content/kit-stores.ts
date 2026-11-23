@@ -3,9 +3,10 @@
 // Shopify shops: the ~190 card stores below plus ~95 hobby shops): its
 // collection's products.json returned Bandai kits whose SKU or description
 // carries the JAN or Bandai's item number, which is how kits are matched
-// (lib/import/kits.ts). Shops that sell Gunpla without either (Robot4Less,
-// Hobbies Online, Tokyo Toys, Gundam Place Store…) are left out: their kits
-// cannot be matched without guessing. Keys equal the card store's key where
+// (lib/import/kits.ts). Shops that sell Gunpla without either (Hobbies
+// Online, Tokyo Toys…) are left out: their kits cannot be matched without
+// guessing (Robot4Less and Gundam Place Store were too, until they began
+// printing the JAN; added 2026-11-23). Keys equal the card store's key where
 // the shop is the same. Metro Hobbies (metrohobbies.ca, Square Online) was
 // asked for on 2026-10-29 but its pages carry no SKU, item number or JAN, so
 // it is left out on the same rule. Metro Hobbies Australia (metrohobbies.com.au) is a
@@ -32,6 +33,12 @@ export const KIT_STORES: KitStoreConfig[] = [
   { key: "nerdzoic", name: "Nerdzoic Toy Store", base: "https://nerdzoic.com", market: "US", collections: ["model-kits-1", "gunpla-model-kits-1"] },
   { key: "retrofixgames", name: "Retrofix Games", base: "https://retrofixgames.com", market: "US", collections: ["gunpla"] },
   { key: "shallweplaygames", name: "Shall We Play?", base: "https://shallweplaygames.com", market: "US", collections: ["gunpla"] },
+  // Two big US Gunpla shops the 2026-10-28 probe left out (no JAN then) that now print it on many kits (the same probe's
+  // 2026-11-22 run): Robot4Less 816 of 1,751 kit listings matched (94 in stock), Gundam Place Store 315 of 1,424 (89 in
+  // stock). Under the "half" mark only because each lists many kits without a code, which are skipped, never guessed, as
+  // at Union Gundam (35 of 2,359). Only Bandai JAN prefixes match, and keepConsistent still drops odd grades and prices.
+  { key: "robot4less", name: "Robot4Less", base: "https://www.robot4less.com", market: "US", collections: ["high-grade", "master-grade", "other-model-kits", "gundam"] },
+  { key: "gundamplacestore", name: "Gundam Place Store", base: "https://www.gundamplacestore.com", market: "US", collections: ["gundams", "high-grade", "master-grade"] },
   // United Kingdom
   { key: "travellingman", name: "Travelling Man", base: "https://www.travellingman.com", market: "UK", collections: ["model-kit-gunpla", "gundam"] },
   { key: "uniongundam", name: "Union Gundam", base: "https://www.uniongundam.co.uk", market: "UK", collections: ["all-gunpla"] },
