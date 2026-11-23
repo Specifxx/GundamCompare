@@ -2792,3 +2792,18 @@ kit listings (743 already in the catalogue, 85 of them in stock), Gundam Place S
 under it is fine when the listings that do match are read by the JAN, as Union Gundam (35 of 2,359) has been since
 October. The unmatched listings are skipped, never guessed; only Bandai's JAN prefixes match; `keepConsistent` still drops
 an odd grade, EW mismatch or price. Matching is unchanged. US kit shops 12 → 14.
+
+## 2026-11-23: "Is it worth it?" and the set pages are written from each product's own data (SEO quality pass)
+
+A live audit of the sitemap's pages on 23 Nov (random pages per type, `<main>` text without header, footer, nav and forms;
+5-word shingles shared by more than a fifth of the sample counted as template) found the product pages of this engine thin:
+a median of 57 words of a page's own on YGO Compare, 69 on TCG Prices, 105 on Gundam Compare's card pages and 83 on its kit pages (10 of 20 under 80), against 653 on DexCompare. The
+"Is it worth it?" section was one templated sentence on every product page.
+
+`lib/buyer-read.ts` (pure, the same file as YGO Compare's and TCG Prices'; `tests/buyer-read.test.ts`) now writes it from
+the product's own data: each market's in-stock store count, cheapest and dearest and what the gap saves; the cheapest
+US-dollar store against TCGplayer's market price (never converted); one store versus many, sold out, pre-orders only;
+TCGplayer's lowest listing and the cheapest US eBay Buy It Now (never counted as stores); TCGplayer's price since we started
+recording it, its tracked range and where today sits; the set's release and age, the product's rank among the set's priced
+sealed products and how many of its cheapest pack it costs (a price ratio, never a claim about contents). `setRead` adds
+"<set> prices at a glance" under each set page's grid the same way. The kit page's "Where is it cheapest?" uses it too, shops only (never eBay or Amazon), with the cheapest US shop price's own history, where the kit's US price sits among its grade's kits, and the day a shop first listed it; the JAN sentence stays. Nothing is said without data on the render to back it. Judge on 1 to 8 Dec against 3 to 9 Nov.

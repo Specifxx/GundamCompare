@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
 import { SITE } from "@/site.config";
-import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBySlug, kitEbayOffers, kitImage, kitIsIndexable, kitLowsOf, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
+import { gradeSlug, GRADE_LABEL, kitAdTiles, kitBest, kitBySlug, kitEbayOffers, kitImage, kitIsIndexable, kitLowsOf, kitOffers, kits, kitsUpdatedAt, popular, scaleHubOf } from "@/lib/kits";
 import { money } from "@/lib/format";
 import { PriceTable } from "@/components/PriceTable";
 import { CardStickyBuyBar, CardTopBuy, CheckedAgo } from "@/components/CardBuy";
@@ -15,7 +15,8 @@ import { amazonCells } from "@/lib/amazon-live";
 import { historyThrough, meta } from "@/lib/data";
 import { PriceHistory } from "@/components/PriceHistory";
 import { abs, KITS_SHARE_IMAGE } from "@/lib/site";
-import { MARKET_LABEL, MARKETS } from "@/lib/site-types";
+import { MARKET_LABEL, MARKETS, type Market, type Offer } from "@/lib/site-types";
+import { buyerRead } from "@/lib/buyer-read";
 import { sourceNameServer } from "@/lib/sources";
 import { fitDescription, fitTitle, kitDescriptionCandidates, kitTitleCandidates } from "@/lib/seo-title";
 import { kitShipping } from "@/lib/kit-shipping-data";
@@ -86,10 +87,32 @@ export default function KitPage({ params }: { params: { slug: string } }) {
   const adTiles = kitAdTiles([k, ...sameGrade], 10);
   const lows = kitLowsOf(k.jan);
   const markets = [...new Set(inStock.map((o) => o.market))];
-  // Offers are sorted in stock first, then by price: the first per market is its cheapest.
-  const cheapestByMarket = markets.map((mk) => inStock.find((o) => o.market === mk)!);
-  // With nothing in stock, the prose names each market's cheapest sold-out shop row instead (the price table shows them too).
-  const soldOutByMarket = inStock.length ? [] : [...new Set(offers.map((o) => o.market))].map((mk) => offers.find((o) => o.market === mk)!);
+  // "Where is it cheapest?" from this kit's own shop prices and history (lib/buyer-read.ts, 2026-11-23 SEO quality pass):
+  // shops only, never eBay or Amazon, each market in its own currency.
+  const usLows = lows.US ?? [];
+  const read = buyerRead({
+    name: k.name,
+    sealedType: null,
+    refCents: null,
+    history: usLows,
+    historyLabel: "the cheapest in-stock US shop price",
+    today: historyThrough(),
+    offers,
+    storeName: (o) => sourceNameServer(o as Offer),
+    set: null,
+    siblings: [],
+    money,
+    marketOrder: MARKETS,
+    marketName: (mk) => (mk === "US" || mk === "UK" ? `the ${MARKET_LABEL[mk as Market]}` : MARKET_LABEL[mk as Market] ?? String(mk)),
+    ebayPrices: false,
+  });
+  // Where this kit's price sits among the same grade's kits with an in-stock US shop price (shops only).
+  const usBest = kitBest(k.jan, "US");
+  const gradePeers = k.grade && usBest ? kits().filter((x) => x.grade === k.grade && x.jan !== k.jan).map((x) => kitBest(x.jan, "US")?.cents).filter((c): c is number => c != null) : [];
+  const gradeLine = usBest && gradePeers.length >= 5
+    ? `Among the ${gradePeers.length + 1} ${GRADE_LABEL[k.grade!] ?? k.grade} kits with an in-stock US shop price, this one is ${(() => { const below = gradePeers.filter((c) => c < usBest.cents).length; const p = Math.round((below / gradePeers.length) * 100); return p >= 50 ? `dearer than ${p}%` : `cheaper than ${100 - p}%`; })()} of them${k.scale ? ` (scale ${k.scale})` : ""}.`
+    : null;
+  const firstSeen = k.firstSeen ? `A shop we track first listed it on ${new Date(`${k.firstSeen.slice(0, 10)}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}.` : null;
   return (
     <article className="flex flex-col gap-8">
       {/* A Product with no offers is a Search Console error (the card page's rule, 2026-11-04): 1,513 of 2,328 kit pages had
@@ -164,10 +187,9 @@ export default function KitPage({ params }: { params: { slug: string } }) {
           )}
           <section className="prose-site max-w-none text-sm">
             <h2>Where is {k.name} cheapest?</h2>
+            {read.length ? read.map((t, i) => <p key={i}>{t}</p>) : <p>No shop we track has it in stock today.</p>}
+            {(gradeLine || firstSeen) && <p>{[gradeLine, firstSeen].filter(Boolean).join(" ")}</p>}
             <p>
-              {cheapestByMarket.length
-                ? `Cheapest in stock today: ${cheapestByMarket.map((o) => `${money(o.cents, o.currency)} at ${sourceNameServer(o)} (${MARKET_LABEL[o.market]})`).join(", ")}. `
-                : `No shop we track has it in stock today.${soldOutByMarket.length ? ` Last listed: ${soldOutByMarket.map((o) => `${money(o.cents, o.currency)} at ${sourceNameServer(o)} (${MARKET_LABEL[o.market]}, ${o.preorder ? "pre-order" : "sold out"})`).join(", ")}.` : ""} `}
               We compare {cfg.stores.length} hobby shops every day and match each listing by the kit&apos;s JAN barcode ({k.jan}), so every price above is for this exact kit. Prices are before postage and stay sorted by the kit&apos;s own price; where a shop&apos;s checkout gave us a delivery quote, it is shown under the shop&apos;s name with the order value that makes delivery free. The shop&apos;s checkout price is final.
             </p>
           </section>
