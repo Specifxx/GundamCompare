@@ -34,7 +34,7 @@ import { ShareButton } from "@/components/ShareButton";
 import { DropShare } from "@/components/DropShare";
 import { attrHref, rarityHref, sealedHref } from "@/lib/hubs";
 
-import { cardTitleCandidates, fitTitle } from "@/lib/seo-title";
+import { cardDescriptionCandidates, cardTitleCandidates, fitDescription, fitTitle } from "@/lib/seo-title";
 import { cardAsksIndex, priceValidUntil } from "@/lib/indexing";
 import { searchFound } from "@/lib/search-demand";
 import { gtinLabel, gtinLd } from "@/lib/gtin";
@@ -49,8 +49,25 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const name = shortName(p.name);
   // "<card> <number> Price: $X — <set>" (today’s TCGplayer market), stepped down to fit 60 characters (lib/seo-title.ts).
   const title = fitTitle(cardTitleCandidates(name, p.number, set?.name ?? null, p.kind === "sealed", ref ? money(ref) : null)).absolute;
-  const stores = new Set(priceOf(p.id).offers.map((o) => o.source)).size;
-  const description = `${name} (${set?.name ?? SITE.gameShort}${p.rarity ? `, ${p.rarity}` : ""}) ${ref ? `is worth about ${money(ref)} today` : "has no TCGplayer market price yet"}. Compare ${stores} live prices from TCGplayer, eBay and ${SITE.gameShort} stores, with price history.`;
+  // The description leads with the cheapest in-stock store price, US first, then TCGplayer's market (2026-11-24, page
+  // scorecard Job D; lib/seo-title.ts cardDescriptionCandidates). Stores only in the lead, never eBay or TCGplayer.
+  const storeOffers = priceOf(p.id).offers.filter((o) => o.inStock && !o.preorder && o.cents > 0 && !["ebay", "tcgplayer", "amazon"].includes(o.source));
+  const cheapestIn = (mk: Market) => storeOffers.filter((o) => o.market === mk).sort((a, b) => a.cents - b.cents)[0];
+  const leadOffer = MARKETS.map(cheapestIn).find(Boolean) ?? null;
+  const description = fitDescription(
+    cardDescriptionCandidates({
+      name,
+      number: p.number,
+      setName: set?.name ?? null,
+      rarity: p.rarity,
+      sealed: p.kind === "sealed",
+      ref: ref ? money(ref) : null,
+      lead: leadOffer
+        ? { price: money(leadOffer.cents, leadOffer.currency), market: leadOffer.market, inStockStores: new Set(storeOffers.filter((o) => o.market === leadOffer.market).map((o) => o.source)).size }
+        : null,
+      stores: storeCountOf(p.id),
+    }),
+  );
   return {
     title: { absolute: title },
     description,

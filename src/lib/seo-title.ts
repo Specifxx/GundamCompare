@@ -112,3 +112,64 @@ export function kitDescriptionCandidates(o: {
 export function fitDescription(candidates: string[], max = DESCRIPTION_MAX): string {
   return candidates.find((d) => d.length <= max) ?? candidates[candidates.length - 1];
 }
+
+/**
+ * A card or sealed page's meta description (2026-11-24, Job D of the 23 Nov page scorecard: /card/ pages at Google
+ * position 5 to 8 with 0 clicks in 28 days, e.g. Gundam Bael LR+ 170 impressions). The old one said "Gundam Bael (LR+)
+ * (Stardust Trails, LR+) is worth about $22.69 today. Compare 27 live prices…": the rarity twice and a count that mixed
+ * eBay, TCGplayer and every market. Like the kit pages (#235) it now leads with the cheapest in-stock STORE price, US
+ * first, else the first market that has stock (named), and how many stores have it in stock there, then TCGplayer's
+ * market price as the reference. Stores only in the lead: never eBay, TCGplayer or Amazon. Longest candidate first;
+ * `fitDescription` takes the first that fits 160 characters.
+ */
+export function cardDescriptionCandidates(o: {
+  name: string;
+  number: string | null;
+  setName: string | null;
+  rarity: string | null;
+  sealed: boolean;
+  /** TCGplayer market price, formatted ("$22.69"). */
+  ref: string | null;
+  /** The cheapest in-stock store price and its market, formatted. */
+  lead: { price: string; market: string; inStockStores: number } | null;
+  stores: number;
+}): string[] {
+  const g = SITE.gameShort;
+  const bare = o.number ? o.name.replace(` (${o.number})`, "") : o.name;
+  const head = o.number && !o.sealed && !bare.includes(o.number) ? `${bare} ${o.number}` : bare;
+  // Say the rarity once: store names already carry it ("Gundam Bael (LR+)").
+  const rarity = o.rarity && !bare.includes(`(${o.rarity})`) ? o.rarity : null;
+  const where = [o.setName, rarity].filter(Boolean).join(", ");
+  const what = o.sealed ? `${g} Card Game sealed product` : `${g} Card Game card`;
+  const about = where ? `${what} from ${where}` : what;
+  const n = (k: number, w: string) => `${k} ${w}${k === 1 ? "" : "s"}`;
+  const ref = o.ref ? `TCGplayer market ${o.ref}` : null;
+  const out: string[] = [];
+  if (o.lead) {
+    const lead = `${head} from ${o.lead.price} ${IN_MARKET[o.lead.market] ?? `in ${o.lead.market}`}, in stock at ${n(o.lead.inStockStores, "store")}`;
+    const refPart = ref ? `; ${ref}` : "";
+    out.push(
+      `${lead}${refPart}. ${about}, compared across ${n(o.stores, "store")} with price history.`,
+      `${lead}${refPart}. ${about}, with price history.`,
+      `${lead}${refPart}. ${about}.`,
+      `${lead}${refPart}.`,
+      `${lead}.`,
+    );
+  } else if (ref) {
+    const lead = `${head} price: ${ref}`;
+    const stock = o.stores > 0 ? `Sold out at the ${n(o.stores, "store")} we track` : "Not in stock at any store we track yet";
+    out.push(
+      `${lead}. ${stock}; eBay listings and price history below. ${about}.`,
+      `${lead}. ${stock}; eBay listings and price history below.`,
+      `${lead}. ${about}.`,
+      `${lead}.`,
+    );
+  } else {
+    out.push(
+      `${head}: no TCGplayer market price yet. ${about}; store and eBay listings as they appear.`,
+      `${head}: no TCGplayer market price yet. ${about}.`,
+      `${head}: no TCGplayer market price yet.`,
+    );
+  }
+  return out;
+}
