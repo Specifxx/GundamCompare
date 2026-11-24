@@ -112,9 +112,14 @@ export function PriceTable({ offers, fx, productId, page, compact = false, maxRo
   // Stores first, marketplaces below (owner, 2026-11-23 UX review, P1 10: "lead with the best-price store and move marketplaces to a
   // labelled block below"): on the full page the store rows lead, cheapest first, and eBay, TCGplayer and Amazon follow under one
   // "Marketplaces · Ad" line. This reverses the 2026-11-17 pinned-at-top order for the product page only; the quick view keeps it.
+  // A marketplace that IS the best price still leads the table: the best price always comes first.
   const below = !compact && !maxRows && live.some((o) => !pinned.includes(o));
+  const lead = below && cheapest && pinned.includes(cheapest) ? cheapest : null;
+  const market$ = (o: Offer) => pinned.includes(o) && o !== lead;
   const byPrice = (list: Offer[]) =>
-    below ? [...list.filter((o) => live.includes(o) && !pinned.includes(o)), ...list.filter((o) => pinned.includes(o)), ...list.filter((o) => !live.includes(o) && !pinned.includes(o))] : list;
+    below
+      ? [...(lead ? [lead] : []), ...list.filter((o) => live.includes(o) && !pinned.includes(o)), ...list.filter(market$), ...list.filter((o) => !live.includes(o) && !pinned.includes(o))]
+      : list;
   const uncapped = byPrice(compact ? rows.slice(0, 6) : unfold ? rows : rows.filter((o) => live.includes(o)));
   const shown = maxRows ? uncapped.slice(0, maxRows) : uncapped;
   const moreRows = maxRows ? uncapped.length - shown.length + (compact || unfold ? 0 : outOfStock.length) : 0;
@@ -179,10 +184,10 @@ export function PriceTable({ offers, fx, productId, page, compact = false, maxRo
   const fetchRowsAt = (i: number) => fetchRow.filter((f) => fetchAt(f.r.priceCents) === i).map((f) => f.node);
   // Amazon is the second row, right under eBay (first when there is no eBay row).
   // Amazon is the row right under the last pinned row (eBay, then TCGplayer), first when there is none.
-  const lastStore = shown.reduce((at, o, i) => (!pinned.includes(o) && live.includes(o) ? i : at), -1);
-  const amazonAfter = shown.reduce((at, o, i) => (pinned.includes(o) ? i : at), below && amazonRow ? lastStore : -1);
+  const lastStore = shown.reduce((at, o, i) => (!market$(o) && live.includes(o) ? i : at), -1);
+  const amazonAfter = below ? shown.reduce((at, o, i) => (market$(o) ? i : at), amazonRow ? lastStore : -1) : shown.reduce((at, o, i) => (pinned.includes(o) ? i : at), -1);
   // The one label row over the marketplaces block: before the first pinned row, else before Amazon alone.
-  const firstPinned = shown.findIndex((o) => pinned.includes(o));
+  const firstPinned = shown.findIndex(market$);
   const marketsLabel = below && (firstPinned >= 0 || amazonRow) ? (
     <tr className="border-t border-line bg-raised" data-marketplaces>
       <td colSpan={4} className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted">
