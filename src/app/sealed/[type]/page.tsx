@@ -40,7 +40,7 @@ export default function SealedHub({ params }: { params: { type: string } }) {
         <h1 className="font-display text-3xl font-black">{SITE.gameShort} {h.label.toLowerCase()}</h1>
         <p className="mt-2 text-muted">{h.items.length} products, newest set first. Open any one to compare every store and eBay.</p>
       </header>
-      <TileGrid items={items} />
+      <TileGrid items={items} controls={`sealed-${h.slug}`} />
       <section>
         <h2 className="mb-3 font-display text-lg font-bold">Other sealed products</h2>
         <div className="flex flex-wrap gap-2">

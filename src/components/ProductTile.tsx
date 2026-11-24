@@ -5,6 +5,8 @@ import { money, pct } from "@/lib/format";
 import { refCents, setById, summaryOf } from "@/lib/data";
 import { shortName } from "@/lib/names";
 import { StockPill } from "./StockPill";
+import { GridControls } from "./GridControls";
+import { CONTROLS_MIN } from "@/lib/grid-sort";
 
 /**
  * A product card (the engine's ProductCard, from MTG Compare): the art on a plate, the name, the set and number, the stock pill,
@@ -18,9 +20,18 @@ export function ProductTile({ p, change }: { p: Product; change?: number | null 
   const stores = e.inStockSources;
   const set = setById(p.setId)?.name;
   const name = shortName(p.name);
+  // The tile's facts for the listing's sort and filter bar (GridControls, lib/grid-sort.ts; owner, 2026-11-23 UX review, P0 3):
+  // the price shown, % under TCGplayer's market for the cheapest in-stock US store, the set's release date and name.
+  const us = e.best.find((o) => o.market === "US" && o.currency === "USD" && o.inStock && !["ebay", "tcgplayer", "amazon"].includes(o.source));
+  const under = ref && us && us.cents < ref ? Math.round((1 - us.cents / ref) * 100) : null;
   return (
     <Link
       href={`/card/${p.slug}`}
+      data-gp={ref ?? ""}
+      data-gu={under ?? ""}
+      data-gn={setById(p.setId)?.releasedOn ?? ""}
+      data-gs={set ?? ""}
+      data-gk={stores > 0 ? "1" : "0"}
       data-qv={p.slug}
       data-qv-name={name}
       data-qv-sub={[set, p.number].filter(Boolean).join(" · ") || undefined}
@@ -62,10 +73,17 @@ export function ProductTile({ p, change }: { p: Product; change?: number | null 
 }
 
 /** `rail`: one sideways row on a phone (the home page's shelves, 2026-11-19), the usual grid from sm up. */
-export function TileGrid({ items, rail }: { items: Product[]; rail?: boolean }) {
+/** `controls`: a full listing of 8+ products gets the sort and filter bar (owner, 2026-11-23 UX review, P0 3); the server HTML keeps the page's one order. */
+export function TileGrid({ items, rail, controls }: { items: Product[]; rail?: boolean; controls?: string }) {
+  const bar = !!controls && !rail && items.length >= CONTROLS_MIN;
+  const id = bar ? `grid-${controls}` : undefined;
+  const sets = bar ? [...new Set(items.map((p) => setById(p.setId)?.name).filter((x): x is string => !!x))].sort() : [];
   return (
-    <div className={`grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6${rail ? " phone-rail scroller" : ""}`}>
-      {items.map((p) => <ProductTile key={p.id} p={p} />)}
-    </div>
+    <>
+      {bar && <GridControls gridId={id!} sets={sets} />}
+      <div id={id} className={`grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6${rail ? " phone-rail scroller" : ""}`}>
+        {items.map((p) => <ProductTile key={p.id} p={p} />)}
+      </div>
+    </>
   );
 }

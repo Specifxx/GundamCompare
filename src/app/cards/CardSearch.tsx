@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { track } from "@vercel/analytics";
 import { FamilySearch } from "@/components/FamilySearch";
 
 interface Hit { slug: string; href?: string; name: string; set: string; image: string | null; price: string; number: string | null; rarity: string | null; kind?: string }
@@ -20,14 +21,26 @@ function tileImage(h: Hit): string | null {
 export function CardSearch() {
   const q = useSearchParams().get("q") ?? "";
   const [hits, setHits] = useState<Hit[] | null>(null);
+  const [fixed, setFixed] = useState<string | null>(null);
+  const [popular, setPopular] = useState<Hit[]>([]);
   useEffect(() => {
     if (!q) return setHits(null);
-    fetch(`/api/search?q=${encodeURIComponent(q)}&limit=60`).then((r) => r.json()).then((d: { hits: Hit[] }) => setHits(d.hits)).catch(() => setHits([]));
+    fetch(`/api/search?q=${encodeURIComponent(q)}&limit=60`).then((r) => r.json()).then((d: { hits: Hit[]; fixed?: string | null; popular?: boolean }) => {
+        setHits(d.popular ? [] : d.hits);
+        setPopular(d.popular ? d.hits : []);
+        setFixed(d.fixed ?? null);
+        // What the next round of changes is driven by (owner's review, item 24): searches that found nothing, or only after a fix.
+        try {
+          if (d.popular || !d.hits.length) track("search_zero", { q: q.trim().toLowerCase().slice(0, 60) });
+          else if (d.fixed) track("search_fixed", { q: q.trim().toLowerCase().slice(0, 60), fixed: d.fixed });
+        } catch {}
+      }).catch(() => setHits([]));
   }, [q]);
   if (!q) return null;
   return (
     <section className="mt-8" aria-live="polite">
       <h2 className="mb-3 font-display text-xl font-bold sm:mb-4 sm:text-2xl">Results for “{q}”</h2>
+      {fixed && hits && hits.length > 0 && <p className="-mt-2 mb-3 text-sm text-muted">Showing results for “<b className="text-ink">{fixed}</b>”.</p>}
       {hits === null && <p className="text-sm leading-6 text-muted">Searching…</p>}
       {/* No results: a short paragraph close to the height "Searching…" held, so the page below barely moves (results arrive after paint). */}
       {hits?.length === 0 && (
@@ -35,6 +48,18 @@ export function CardSearch() {
           <span className="font-semibold text-ink">Nothing matches that yet.</span> Try fewer words, or browse{" "}
           <a className="link" href="/kits">Gunpla prices</a>, <a className="link" href="/sealed">sealed</a> or <a className="link" href="/sets">every set</a>.
         </p>
+      )}
+      {hits?.length === 0 && popular.length > 0 && (
+        <div className="mt-3">
+          <p className="mb-2 text-sm font-semibold text-ink">Popular right now</p>
+          <ul className="flex flex-wrap gap-2">
+            {popular.slice(0, 8).map((h) => (
+              <li key={h.href ?? h.slug}>
+                <a className="chip" href={h.href ?? `/card/${h.slug}`}>{h.name} · {h.price}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
       {hits && hits.length > 0 && (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
