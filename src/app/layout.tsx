@@ -18,7 +18,8 @@ import { CHRISTMAS_FESTIVE_LAYER, SEASON_BOOT_SCRIPT } from "@/lib/season";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PreorderStrip } from "@/components/PreorderStrip";
-import { HolidayStrip } from "@/components/HolidayStrip";
+import { HolidayStrip, holidayStripOn } from "@/components/HolidayStrip";
+import { ImageRescue } from "@/components/ImageRescue";
 import { holidayNav } from "@/lib/holiday-nav";
 import { PrefsProvider } from "@/components/ClientPrefs";
 import { QuickView } from "@/components/QuickView";
@@ -95,8 +96,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NavBoost warm={["/", "/sealed", "/cards", "/kits", "/tools/deal-finder"]} />
         <PrefsProvider>
           <Header />
-          <HolidayStrip />
-          <PreorderStrip />
+          {/* One promo line at most (owner, 2026-11-23 UX review, P0 6): the sale line while it runs, else the pre-order line. */}
+          {holidayStripOn() ? <HolidayStrip /> : <PreorderStrip />}
           {/* The engine's shell: from xl the sidebar sits in the flow beside <main>, both inside the 1480px shell. */}
           <div className="mx-auto flex w-full max-w-shell flex-1">
             <SideNav groups={navGroups({ history, sale: holidayNav(), shop: shopNav().groups })} />
@@ -119,6 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <BuyClickTracker />
         <ReturnNudge />
+        <ImageRescue />
         <LeaveNudge />
         <AdFreeSync />
         <ShareArrival />

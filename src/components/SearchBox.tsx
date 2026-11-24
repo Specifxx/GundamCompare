@@ -14,6 +14,9 @@ interface Hit { slug: string; href?: string; name: string; set: string; image: s
 export function SearchBox({ big = false, size, placeholder }: { big?: boolean; size?: "sm"; placeholder?: string }) {
   const [q, setQ] = useState("");
   const [hits, setHits] = useState<Hit[]>([]);
+  // "Showing results for …" after a typo, and "popular instead" when nothing matched (owner, 2026-11-23 UX review, P0 5).
+  const [fixed, setFixed] = useState<string | null>(null);
+  const [popular, setPopular] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
   const router = useRouter();
@@ -27,7 +30,10 @@ export function SearchBox({ big = false, size, placeholder }: { big?: boolean; s
       try {
         // Lower-cased so "Dark Magician" and "dark magician" share one CDN entry.
         const r = await fetch(`/api/search?q=${encodeURIComponent(q.trim().toLowerCase())}`);
-        setHits(((await r.json()) as { hits: Hit[] }).hits);
+        const d = (await r.json()) as { hits: Hit[]; fixed?: string | null; popular?: boolean };
+        setHits(d.hits);
+        setFixed(d.fixed ?? null);
+        setPopular(!!d.popular);
         setOpen(true);
       } catch {}
     }, 250);
@@ -82,6 +88,11 @@ export function SearchBox({ big = false, size, placeholder }: { big?: boolean; s
       />
       {listed && (
         <ul id={`${id}-list`} role="listbox" className="absolute left-0 right-0 z-50 mt-2 max-h-96 overflow-auto rounded-2xl border border-line bg-surface p-1 text-left shadow-lift">
+          {(fixed || popular) && (
+            <li role="presentation" className="px-3 pb-1 pt-2 text-xs text-muted">
+              {popular ? <>Nothing matches &ldquo;{q.trim()}&rdquo;. Popular right now:</> : <>Showing results for &ldquo;<b className="text-ink">{fixed}</b>&rdquo;</>}
+            </li>
+          )}
           {hits.map((h, i) => (
             <li key={h.href ?? h.slug} id={`${id}-${i}`} role="option" aria-selected={i === active}>
               <a href={hrefOf(h)} className={`flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-raised ${i === active ? "bg-raised" : ""}`} onMouseEnter={() => setActive(i)}>

@@ -46,7 +46,7 @@ export default function ScalePage({ params }: { params: { scale: string } }) {
           <Link key={g.slug} href={`/kits/grade/${g.slug}`} className="chip">{g.label}</Link>
         ))}
       </nav>
-      <KitGrid items={h.items.slice(0, TILES)} />
+      <KitGrid items={h.items.slice(0, TILES)} facet="scale" />
       {rest.length > 0 && (
         <section>
           <h2 className="mb-4 font-display text-xl font-bold sm:text-2xl">More {h.scale} kits</h2>
