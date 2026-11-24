@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { SITE } from "@/site.config";
-import { TITLE_MAX, cardTitleCandidates, fitTitle, setTitleCandidates } from "@/lib/seo-title";
+import { DESCRIPTION_MAX, TITLE_MAX, cardDescriptionCandidates, cardTitleCandidates, fitDescription, fitTitle, setTitleCandidates } from "@/lib/seo-title";
 
 test("fitTitle keeps the brand when it fits and drops it before the words", () => {
   assert.equal(fitTitle(["Short"]).absolute, `Short | ${SITE.name}`);
@@ -50,4 +50,32 @@ test("a card's title leads with today's price when it has one, and still fits", 
   assert.match(t, /^ZZ Gundam \(LR\+\) GD06-033 Price: \$76\.28/);
   assert.ok(t.length <= TITLE_MAX, t);
   assert.match(fitTitle(cardTitleCandidates("ZZ Gundam (LR+)", "GD06-033", "Stardust Trails", false)).absolute, /Price — /, "no price, the old title");
+});
+
+// 2026-11-24 (page scorecard, Job D): card snippets lead with the cheapest in-stock store price, US first, and say the rarity once.
+test("card description leads with the store price and TCGplayer's market, rarity said once", () => {
+  const d = fitDescription(
+    cardDescriptionCandidates({ name: "Gundam Bael (LR+)", number: "GD06-034", setName: "Stardust Trails", rarity: "LR+", sealed: false, ref: "$22.69", lead: { price: "$24.25", market: "US", inStockStores: 1 }, stores: 9 }),
+  );
+  assert.ok(d.startsWith("Gundam Bael (LR+) GD06-034 from $24.25 in the US, in stock at 1 store; TCGplayer market $22.69."), d);
+  assert.equal(d.match(/LR\+/g)?.length, 1, d);
+  assert.ok(d.length <= DESCRIPTION_MAX);
+  assert.doesNotMatch(d, /eBay/);
+});
+
+test("card description names the market when only another market has stock, and plurals stores", () => {
+  const d = fitDescription(
+    cardDescriptionCandidates({ name: "Familial Love", number: "GD06-110", setName: "Stardust Trails", rarity: "Rare", sealed: false, ref: "$1.36", lead: { price: "C$2.00", market: "CA", inStockStores: 4 }, stores: 6 }),
+  );
+  assert.ok(d.startsWith("Familial Love GD06-110 from C$2.00 in Canada, in stock at 4 stores;"), d);
+  assert.match(d, /Stardust Trails, Rare/);
+});
+
+test("card description without stock gives the TCGplayer reference, without any price says so", () => {
+  const sold = fitDescription(cardDescriptionCandidates({ name: "[EVX09] Special Booster Bundle 01", number: null, setName: "Promotional Cards", rarity: null, sealed: true, ref: "$468.33", lead: null, stores: 0 }));
+  assert.ok(sold.startsWith("[EVX09] Special Booster Bundle 01 price: TCGplayer market $468.33."), sold);
+  assert.match(sold, /Not in stock at any store we track yet/);
+  const none = fitDescription(cardDescriptionCandidates({ name: "New Card", number: "GD07-001", setName: null, rarity: null, sealed: false, ref: null, lead: null, stores: 0 }));
+  assert.match(none, /no TCGplayer market price yet/);
+  for (const s of [sold, none]) assert.ok(s.length <= DESCRIPTION_MAX);
 });
