@@ -2858,7 +2858,7 @@ review", P0 to P2). What fits this site:
   never a dead end. `search_zero` and `search_fixed` events record it (item 24).
 - **One promo line above the title (P0 6).** The sale line OR the pre-order line, never both, and the sale line closes with ✕ for 7 days.
 - **Stores first, marketplaces below (P1 10)** on the product page: the store rows lead, cheapest first, and eBay, TCGplayer and Amazon
-  follow under one "Marketplaces · Ad" line; the eBay call-out moved under the table. This reverses the 2026-11-17 pinned-at-top order
+  follow under one "Marketplaces · Ad" line; a marketplace that IS the best price still leads. The eBay call-out moved under the table. This reverses the 2026-11-17 pinned-at-top order
   for the product page only; the quick view keeps it.
 - **One primary action per row (P1 11):** the thumbs are hidden on phones. **The cart is the Shortlist (P1 12):** every label says
   Shortlist / Save, and the drawer says "Prices you saved. We sell nothing: you buy at each store on its own site." every time; the
