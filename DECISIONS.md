@@ -2867,3 +2867,15 @@ review", P0 to P2). What fits this site:
   "% under TCGplayer" with the definition on hover. **Reliable images (P1 15):** a failed image is tried once more after 1.5 s, then
   hidden behind its plate (`ImageRescue`). **Accessibility (P2 21):** a visible focus ring everywhere and a reduced-motion catch-all.
 - Not done here: delivered price by default (P1 9: per-store shipping is not in this site's data), visual set logos (P2 17).
+
+## 2026-11-24: Card snippets lead with the store price (page scorecard, Job D)
+
+The 23 Nov page scorecard put Gundam's bottom pages at `/card/` URLs that rank 5th to 8th on Google with no clicks in 28
+days (Improved Technique 185 impressions at 6.7, Gundam Bael LR+ 170 at 6.2, Harry Ord R+ 115 at 5.7). Their titles already
+carry the TCGplayer price (2026-11-10); the description did not help: "Gundam Bael (LR+) (Stardust Trails, LR+) is worth
+about $22.69 today. Compare 27 live prices from TCGplayer, eBay and Gundam stores", the rarity twice and a count that mixed
+eBay, TCGplayer and all six markets. It now reads like the kit pages' (#235): the cheapest in-stock store price, US first,
+else the first market with stock (named), how many stores have it there, then TCGplayer's market as the reference, then the
+set and rarity (said once). Stores only in the lead, never eBay, TCGplayer, Amazon or a pre-order. No "today": data is read
+daily but published weekly. `cardDescriptionCandidates` in `lib/seo-title.ts`, pinned by `tests/seo-title.test.ts`. Read
+/card/ CTR from ~2 Dec.
