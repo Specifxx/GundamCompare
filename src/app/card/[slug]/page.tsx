@@ -210,7 +210,7 @@ export default function CardPage({ params }: { params: { slug: string } }) {
             <h2>Is {name} worth it?</h2>
             {/* Written from this product's own prices, stock and history (lib/buyer-read.ts, 2026-11-23 SEO quality pass). */}
             {read.map((t, k) => <p key={k}>{t}</p>)}
-            <p className="text-muted">Prices from {SITE.stores.length} stores, TCGplayer and eBay are read every day and published weekly; the price table says when these were checked.</p>
+            <p className="text-muted">Prices from {SITE.stores.length} stores, TCGplayer and eBay are read and published every day; the price table says when these were checked.</p>
           </section>
         </div>
       </div>

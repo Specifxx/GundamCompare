@@ -2879,3 +2879,12 @@ else the first market with stock (named), how many stores have it there, then TC
 set and rarity (said once). Stores only in the lead, never eBay, TCGplayer, Amazon or a pre-order. No "today": data is read
 daily but published weekly. `cardDescriptionCandidates` in `lib/seo-title.ts`, pinned by `tests/seo-title.test.ts`. Read
 /card/ CTR from ~2 Dec.
+
+## 2026-11-24: Daily releases again (owner)
+
+The owner, asked after the UX review whether weekly releases were worth the stale prices: "we definitely want as much
+price recency as possible." So every day's `refresh-prices.yml` data commit carries `[deploy]` again (one build a day,
+still under the 12-hour gate in `scripts/vercel-ignore-build.sh`), reversing the weekly release of 2026-11-19.
+`production-deploy.yml`'s fallback runs daily and releases only if nothing has in 26 hours. The ops check "Live prices
+age" is red past 36 hours (was 8 days), and the home FAQ and card page say prices are published the same day. The amber
+CheckedAgo past 12 hours stays. Cost: about six extra builds a week per site, inside the $5–6 a day Vercel cap.
