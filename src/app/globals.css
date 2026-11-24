@@ -911,3 +911,6 @@ html[data-nav] .nav-line { opacity: 1; animation: nav-line 2.4s cubic-bezier(0.1
 }
 /* P1 15, reliable images: a failed picture leaves its plate, never a broken-image icon (ImageRescue.tsx). */
 img[data-img-failed] { visibility: hidden; }
+
+/* The listing sort and filter bar's fields (GridControls.tsx). */
+.grid-ctl { @apply min-h-10 rounded-lg border border-line bg-surface px-2 text-sm text-ink; }

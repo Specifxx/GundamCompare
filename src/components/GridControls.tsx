@@ -39,7 +39,7 @@ export function GridControls({ gridId, sets, setsLabel = "sets" }: { gridId: str
     setShown(active ? n : null);
   }, [sort, f, active]);
 
-  const sel = "min-h-10 rounded-lg border border-line bg-surface px-2 text-sm text-ink";
+  const sel = "grid-ctl"; // globals.css: the site's own field look
   return (
     <div className="mb-3 flex flex-wrap items-center gap-2" role="group" aria-label="Sort and filter">
       <label className="flex items-center gap-1.5 text-sm text-muted">
