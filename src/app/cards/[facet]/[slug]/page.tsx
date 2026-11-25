@@ -21,9 +21,28 @@ export function generateMetadata({ params }: { params: { facet: string; slug: st
   const h = attrHub(params.facet, params.slug);
   if (!f || !h) return {};
   const name = attrHubTitle(f.cfg, h.label);
+  // Price-led snippet (2026-11-25, page scorecard of 23 Nov: /cards/trait/alphacide at position 4.6 and
+  // /cards/trait/ghingnham-fleet at 8.3 had impressions and no clicks under "prices, most valuable first").
+  // The searcher's answer goes first: the dearest card and its price, then the range. TCGplayer market only.
+  // A TCGplayer "market" of $999, $9,999 or $99,999 is a seller's placeholder ask on a thin listing, not a price (an
+  // Edition Beta Wing Gundam LR+ at $9,999 heads the Unit hub): the snippet skips such cards rather than put that
+  // number in front of a searcher. The page's own grid is unchanged.
+  const real = (c: number | null) => c != null && !(c >= 99900 && /^9+$/.test(String(Math.round(c / 100))));
+  const priced = h.items.filter((p) => real(refCents(p.id)));
+  const top = priced[0];
+  const topCents = top ? refCents(top.id) : null;
+  const lowCents = priced.length ? refCents(priced[priced.length - 1].id) : null;
+  const topName = top ? shortName(top.name) : "";
   return {
-    title: fitTitle([`${name}: prices, most valuable first`, `${name}: prices`, name]),
-    description: `All ${h.items.length} ${h.label} ${SITE.game} cards ranked by TCGplayer market price, with the cheapest store and eBay listing for each. Updated daily.`,
+    title: fitTitle([
+      ...(top ? [`${name}: ${topName} ${money(topCents)}, ${priced.length} priced`, `${name}: top card ${money(topCents)}, ${priced.length} priced`] : []),
+      `${name}: prices, most valuable first`,
+      `${name}: prices`,
+      name,
+    ]),
+    description: top
+      ? `The most valuable ${h.label} card is ${topName} at ${money(topCents)}. All ${priced.length} priced ${h.label} ${SITE.game} cards${priced.length > 1 ? `, ${money(lowCents)} to ${money(topCents)}` : ""}, ranked by TCGplayer market price with the cheapest store for each. Updated daily.`
+      : `All ${h.items.length} ${h.label} ${SITE.game} cards ranked by TCGplayer market price, with the cheapest store for each. Updated daily.`,
     ...canon(`/cards/${f.cfg.facet}/${h.slug}`),
   };
 }
