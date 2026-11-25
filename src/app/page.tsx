@@ -89,7 +89,7 @@ export default function Home() {
     { q: `Is ${SITE.name} free?`, a: `Yes, completely, and you don't need an account. ${SITE.name} is paid for by affiliate commissions: when you buy through some links, the store may pay us a small fee at no cost to you.` },
   ];
   return (
-    <div className="flex flex-col gap-14">
+    <div className="home-tidy flex flex-col gap-14">
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE.name, url: SITE_URL, logo: `${SITE_URL}/icon.svg` }} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "WebSite", name: SITE.name, url: SITE_URL, publisher: { "@id": `${SITE_URL}/#org` }, potentialAction: { "@type": "SearchAction", target: `${SITE_URL}/cards?q={q}`, "query-input": "required name=q" } }} />
       {/* The products on this page, by their own URLs: the most popular, then the sealed shelf (SEO audit, 2026-11-03; 2026-11-20). */}
@@ -115,13 +115,14 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-[1440px] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(340px,480px)] lg:items-center lg:gap-10">
           <div className="min-w-0">
             <ChristmasGifts />
-            <p className="eyebrow">{SITE.gameShort} price comparison</p>
+            <p className="home-more eyebrow">{SITE.gameShort} price comparison</p>
             <h1 className="hero-glow mt-3 max-w-4xl font-display text-3xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               <span className="text-brand">{SITE.gameShort}</span> Card Prices
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg">
               <strong className="block text-ink">Buy {SITE.gameShort} cards at the best price</strong>
-              Price check any card or sealed product and find the cheapest place to buy: live prices from TCGplayer, eBay and {storeCount} stores in the US, UK, Canada, Australia and Europe, in your own currency, updated daily.
+              {/* The phone keeps the bold line; the sentence shows from sm up (home-tidy, globals.css; 2026-11-26). */}
+              <span className="home-more">Price check any card or sealed product and find the cheapest place to buy: live prices from TCGplayer, eBay and {storeCount} stores in the US, UK, Canada, Australia and Europe, in your own currency, updated daily.</span>
             </p>
             <div className="hero-search relative z-30 mt-6 hidden w-full max-w-2xl sm:block"><SearchBox big /></div>
             <div className="hidden sm:block">
@@ -200,11 +201,11 @@ export default function Home() {
       {/* Today's top deals sit below the products (owner, 2026-11-16; Most popular replaced the chase cards 2026-11-20). */}
       {topDeals.length > 0 && (
         <Section className="sd" title="Today's top deals" href="/tools/deal-finder" sub="In-stock listings below TCGplayer market, refreshed daily." linkLabel="Browse all deals">
-          {bfSeason(today) && <p className="mb-3 text-sm"><Link className="link" href="/black-friday">Black Friday deals</Link> · <Link className="link" href="/cyber-monday">Cyber Monday deals</Link>, updated daily →</p>}
+          {bfSeason(today) && <p className="home-more mb-3 text-sm"><Link className="link" href="/black-friday">Black Friday deals</Link> · <Link className="link" href="/cyber-monday">Cyber Monday deals</Link>, updated daily →</p>}
           {salesInSeason(CORE_SALES, today).map((s) => (
             <p key={s.slug} className="mb-3 text-sm"><Link className="link" href={`/${s.slug}`}>{s.linkLabel}, updated daily →</Link></p>
           ))}
-          <div className="sd-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="home-deals sd-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {topDeals.map((d) => (
               <Link key={`${d.p.id}${d.offer.source}`} href={`/card/${d.p.slug}`} className="card group flex min-w-0 items-center gap-3 p-3 transition-colors hover:border-ink/40">
                 <span className="plate h-20 w-14 shrink-0">{d.p.image && <img src={d.p.image} alt={d.p.name} className="h-full w-full object-contain p-0.5" loading="lazy" />}</span>
