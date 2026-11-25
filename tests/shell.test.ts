@@ -13,7 +13,7 @@ test("the shell is the engine's: header, sidebar beside main, no fixed rail vari
   const layout = readFileSync("src/app/layout.tsx", "utf8");
   assert.match(layout, /max-w-shell/);
   assert.match(layout, /<SideNav /);
-  assert.match(layout, /<main id="main" className="min-w-0 flex-1">/);
+  assert.match(layout, /<main id="main" className="relative min-w-0 flex-1">/);
   assert.match(layout, /<DockAds /);
   assert.doesNotMatch(layout, /sidenav-w|fonts\.googleapis/);
   assert.match(readFileSync("src/components/SideNav.tsx", "utf8"), /hidden w-60 shrink-0 xl:block/);
@@ -67,9 +67,9 @@ test("every rail link points at a page of the site, and prices come first", () =
   for (const l of phoneNav()) assert.ok(l.href === "/tools" || rail.includes(l.href), `${l.href} is in the phone row but not the rail`);
 });
 
-test("the homepage order: hero, most popular (2026-11-20), sealed, deals, reviews, guides, FAQ, and nothing else", () => {
+test("the homepage order: hero, most popular (2026-11-20), sealed, deals, the ad block (mid-page, 2026-11-25), reviews, guides, FAQ", () => {
   const src = readFileSync("src/app/page.tsx", "utf8");
-  const order = ["<HeroSparks />", "<CreatorsBubble />", "title={`Most popular", "<SealedHero", "Today's top deals", "<SiteReviews />", 'title="Guides"', "Frequently asked questions", "<InlineAds "];
+  const order = ["<HeroSparks />", "<CreatorsBubble />", "title={`Most popular", "<SealedHero", "Today's top deals", "<InlineAds ", "<SiteReviews />", 'title="Guides"', "Frequently asked questions"];
   let at = -1;
   for (const o of order) {
     const i = src.indexOf(o, at + 1);

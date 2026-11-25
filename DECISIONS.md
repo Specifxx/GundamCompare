@@ -2902,3 +2902,17 @@ past a phone's edge. Cart and watch wording wait for their A/B verdicts.
 Owner, 2026-11-26: "I don't really like the Christmas lights on the very top." The string of lights hanging under the header
 (2026-11-20) is removed on every Compare site: the `.xmas-garland::after` rule is gone from the `xmas-logo` block in `globals.css`
 and the class is off the header. The Santa hat on the logo stays, and nothing else of the Christmas layer changes.
+
+## 2026-11-25: The home ad block moves mid-page, and a TCGplayer column fills the empty right side on very wide windows (owner)
+
+Owner, 2026-11-25: "Why are the display ads at the very bottom of the site? … there's so much space on the left and the right
+side of the website." Two changes, ported from YGO Compare (same day):
+
+- The home page's one ad block (`InlineAds`) moves from under the FAQ to mid-page: after the prices, kits and top deals, before
+  the reviews, guides and questions. Never under the hero, never above a price. Card and kit pages keep it under the price table.
+- `GutterAds.tsx`: from 1900px wide, one slim, labelled column of the import's own TCGplayer tiles sits in the empty space right
+  of the page's 1392px content, inside `<main>` (now `relative`), so it never covers the sidebar, the page, the header or the footer
+  and ends where the content ends; its card is sticky under the header. Gundam is a light-ad site: TCGplayer only, right only,
+  never eBay or Amazon. Browser-only (nothing in the server HTML, CLS 0), never for ad-free members, the app or the ad-free pages
+  (`AdRouteGate`), links rel sponsored through /go under `gutter-tcg`. It skips the products the banner already shows
+  (`pastBanner`). This is not the old side rail: the page keeps its full width. `tests/card-ads.test.ts` pins it.
