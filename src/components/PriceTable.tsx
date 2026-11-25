@@ -132,7 +132,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, maxRo
   const amazonRow = amazonUrl && amazonLive ? (
     <tr data-amazon-row className={`border-t border-line ${PIN_OUTLINE.amazon}`}>
       <td className="px-3 py-2.5">
-        <span className="font-medium text-ink">Amazon</span>
+        <span className="font-medium text-ink [overflow-wrap:anywhere]">Amazon</span>
         <StoreVote url={amazonUrl} name="Amazon" className="ml-2 text-muted" />
         {!compact && amazonCart && <span className="block sm:hidden"><CartAddButton {...amazonCart} inline className="text-xs" /></span>}
         <span className="ad-pill ml-2">Ad</span>
@@ -155,7 +155,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, maxRo
     ? fetchTcg.rows.map((r) => ({ r, node: (
         <tr key="fetchtcg" data-fetch-row className="border-t border-line">
           <td className="px-3 py-2.5">
-            <span className="font-medium text-ink">Fetch TCG</span>
+            <span className="font-medium text-ink [overflow-wrap:anywhere]">Fetch TCG</span>
             <span className={compact ? "block" : "block sm:hidden"}><CartAddButton href={r.url} productUrl={r.url} storeName="Fetch TCG" title={product ?? cartTitle ?? "Item"} detail={r.condition} priceCents={r.priceCents} currency="AUD" image={image} inline className="text-xs" /></span>
           </td>
           <td className="hidden px-3 py-2.5 text-xs text-muted sm:table-cell">
@@ -219,7 +219,7 @@ export function PriceTable({ offers, fx, productId, page, compact = false, maxRo
                 {below && i === firstPinned && marketsLabel}
                 <tr className={`border-t border-line ${loud ? "bg-open-soft/40" : ""} ${o.inStock ? "" : "opacity-60"} ${best && inStock.length > 1 ? PIN_OUTLINE.cheapest : o.source === "ebay" && pinned.includes(o) ? PIN_OUTLINE.ebay : ""}`}>
                   <td className="px-3 py-2.5">
-                    <span className="font-medium text-ink">{sourceName(o)}</span>
+                    <span className="font-medium text-ink [overflow-wrap:anywhere]">{sourceName(o)}</span>
                     <StoreVote url={o.url} name={sourceName(o)} className="ml-2 text-muted" />
                     {/* Phones: the cart list's add button as a line under the store, where the row has no width to spare. */}
                     {o.inStock && (
