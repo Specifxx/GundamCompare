@@ -37,7 +37,7 @@ export default function SealedHub({ params }: { params: { type: string } }) {
         <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", name: `${SITE.gameShort} ${h.label.toLowerCase()}`, numberOfItems: items.length, itemListElement: items.slice(0, 30).map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.name, url: abs(`/card/${p.slug}`) })) }} />
       )}
       <header>
-        <h1 className="font-display text-3xl font-black">{SITE.gameShort} {h.label.toLowerCase()}</h1>
+        <h1 className="list-h1 font-display text-3xl font-black">{SITE.gameShort} {h.label.toLowerCase()}</h1>
         <p className="mt-2 text-muted">{h.items.length} products, newest set first. Open any one to compare every store and eBay.</p>
       </header>
       <TileGrid items={items} controls={`sealed-${h.slug}`} />

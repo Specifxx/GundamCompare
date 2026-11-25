@@ -7,7 +7,7 @@ export function Section({ id, title, kicker, sub, href, linkLabel = "See all", c
       <div className="mb-5 flex flex-wrap items-end justify-between gap-x-4 gap-y-1">
         <div className="min-w-0">
           {kicker && <div className="eyebrow mb-1">{kicker}</div>}
-          <h2 className="font-display text-2xl font-bold tracking-tight sm:text-[28px]">{title}</h2>
+          <h2 className="sec-h font-display text-2xl font-bold tracking-tight sm:text-[28px]">{title}</h2>
           {sub && <p className="mt-1 text-sm text-muted">{sub}</p>}
         </div>
         {href && (

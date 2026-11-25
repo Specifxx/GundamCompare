@@ -19,7 +19,7 @@ export function KitTile({ k, facet }: { k: Kit; facet?: "grade" | "scale" }) {
       data-gs={(facet === "grade" ? k.scale : k.grade) ?? ""}
       data-gk={inStock > 0 ? "1" : "0"}
       className="group card flex flex-col overflow-hidden p-2 transition-colors hover:border-ink/40">
-      <div className="plate aspect-square">
+      <div className="plate pc-plate aspect-square">
         {k.image ? (
           <img src={kitImage(k.image, 400)} alt={`${k.name} box`} loading="lazy" decoding="async" className="h-full w-full object-contain p-1.5 transition-transform group-hover:scale-[1.02]" />
         ) : (
