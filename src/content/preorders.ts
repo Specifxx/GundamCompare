@@ -14,7 +14,7 @@ export const PREORDER_COPY: PreorderCopy = {
   sets: {
     "stardust-trails": {
       intro:
-        "Every store taking pre-orders for <b>Stardust Trails (GD06)</b>, the Gundam Card Game set built on ZZ Gundam and 0083 Stardust Memory, compared cheapest first in your currency. It releases on 30 October 2026.",
+        "Every store selling <b>Stardust Trails (GD06)</b>, the Gundam Card Game set built on ZZ Gundam and 0083 Stardust Memory, compared cheapest first in your currency. It released on 30 October 2026.",
       facts: [
         { label: "Release", value: "30 October 2026" },
         { label: "Set code", value: "GD06" },
@@ -22,8 +22,8 @@ export const PREORDER_COPY: PreorderCopy = {
         { label: "Legend Rares", value: "12 (+ LR+ / LR++ parallels)" },
       ],
       faq: [
-        { q: "When does GD06 Stardust Trails release?", a: "30 October 2026, with pre-orders open at most stores." },
-        { q: "What is in Stardust Trails?", a: "It is themed on Mobile Suit Gundam ZZ (its 40th anniversary) and Gundam 0083: Stardust Memory (its 35th), in 12-card packs at US$4.99. Its Legend Rares include ZZ Gundam, Gundam GP01Fb and Elpeo Ple's Qubeley Mk-II; the LR+ and LR++ parallels of ZZ Gundam and GP01Fb are the expected chases." },
+        { q: "When did GD06 Stardust Trails release?", a: "On 30 October 2026. Its full card list with prices is on the Stardust Trails set page." },
+        { q: "What is in Stardust Trails?", a: "It is themed on Mobile Suit Gundam ZZ (its 40th anniversary) and Gundam 0083: Stardust Memory (its 35th), in 12-card packs at US$4.99. Its Legend Rares include ZZ Gundam, Gundam GP01Fb and Elpeo Ple's Qubeley Mk-II; the LR+ and LR++ parallels of ZZ Gundam and GP01Fb are the chase cards." },
       ],
     },
     "blazing-fist": {
