@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div>
       <h1 className="font-display text-3xl font-black">Best Basket</h1>
-      <p className="mt-2 max-w-3xl text-muted">Paste a deck or want list, one card per line (&ldquo;4 Card Name&rdquo; or &ldquo;Card Name x2&rdquo;; add the card number if a name has several printings). You get the cheapest in-stock price for every card in your market, and the stores that can fill the most of it in one order. Postage isn&apos;t included.</p>
+      <p className="mt-2 max-w-3xl text-muted">Paste a deck or want list, one card per line (&ldquo;4 Card Name&rdquo; or &ldquo;Card Name x2&rdquo;; add the card number if a name has several printings). You get the cheapest in-stock price for every card in your market, the stores that can fill the most of it in one order, and the cheapest way to buy it all with each store&apos;s shipping included.</p>
       <Basket />
     </div>
   );
