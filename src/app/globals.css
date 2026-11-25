@@ -10,33 +10,39 @@
    (lib/theme.ts THEME_BOOT_SCRIPT), decided before first paint from the visitor's
    saved choice, so one CDN copy of each page serves everyone. */
 :root {
-  --bg: 246 246 243;
+  /* The light theme: cool armour white, federation blue for what is pressed, the chest's red and the yellow of a vent as
+     highlights only (the lively look, 2026-11-26). */
+  --bg: 241 244 250;
   --surface: 255 255 255;
-  --raised: 250 250 248;
-  --line: 228 227 222;
-  --ink: 21 23 28;
-  --muted: 92 96 108;
-  --faint: 100 104 115; /* 5.2:1 on --bg, 5.6:1 on --surface (WCAG AA for small text) */
-  --brand: 37 87 201; /* Gundam Compare blue (#2557c9); white on it is 6.4:1 */
+  --raised: 246 248 252;
+  --line: 217 224 237;
+  --ink: 13 21 44;
+  --muted: 80 91 116;
+  --faint: 92 102 126; /* 5.3:1 on --bg, 5.9:1 on --surface (WCAG AA for small text) */
+  --brand: 30 86 214; /* federation blue (#1e56d6); white on it is 6.3:1 */
   --brand-ink: 255 255 255;
-  --brand-soft: 229 237 255;
-  --brand-strong: 26 64 160; /* brand as TEXT on --brand-soft and on --surface: chips and .btn-soft */
-  --accent: 229 48 63; /* the red of the mobile suit's chest: highlights only */
-  --spark: 229 48 63;
+  --brand-soft: 226 236 255;
+  --brand-strong: 22 62 164; /* brand as TEXT on --brand-soft and on --surface: chips and .btn-soft */
+  --accent: 214 40 54; /* the red of the mobile suit's chest: highlights only */
+  --spark: 214 40 54;
+  --amber: 190 132 0; /* the yellow, as a line or a small fill on a light page: never text */
+  --glow: 46 112 240; /* the blue that lights the page's ground */
   --open: 20 118 56; /* 5.0:1 on --open-soft, 5.7:1 on --surface: the 12px stock pill is AA */
   --open-soft: 226 245 232;
-  --sold: 100 104 115;
-  --sold-soft: 238 238 240;
+  --sold: 92 102 126;
+  --sold-soft: 235 238 244;
   --stale: 143 88 0;
   --stale-soft: 253 243 219;
   --pre: 88 76 214;
   --pre-soft: 236 234 252;
   --up: 20 118 56;
   --down: 196 40 70;
-  --ad: 243 246 252; /* sponsored units: a cool tint no store row or product card uses */
-  --ad-line: 120 128 148;
-  --shadow: 24 22 18;
-  --wordmark: linear-gradient(180deg, #1a40a0 0%, #2557c9 60%, #3d7bff 100%);
+  --ad: 240 244 253; /* sponsored units: a cool tint no store row or product card uses */
+  --ad-line: 116 126 150;
+  --shadow: 16 28 64;
+  --wordmark: linear-gradient(180deg, #163ea4 0%, #1e56d6 60%, #3d7bff 100%);
+  /* The light a headline's key word is written in. */
+  --lit: linear-gradient(100deg, #163ea4 0%, #1e56d6 28%, #4f8dff 50%, #1e56d6 72%, #163ea4 100%);
   /* The sticky header's height: sticky offsets (top-[var(--hdr)]) and anchor jumps (scroll-padding-top below) follow it. */
   --hdr: 60px;
   color-scheme: light;
@@ -48,34 +54,40 @@
   }
 }
 
+/* The dark theme, the default: a cockpit in deep space. A deep navy page (never flat black), armour white for words,
+   federation blue for what is pressed and what glows, red and yellow sparingly. Until 2026-11-26 the page was a neutral
+   near-black with one blue; the owner: "so dull". */
 :root:not([data-theme="light"]) {
-  --bg: 15 16 19;
-  --surface: 23 24 29;
-  --raised: 29 31 37;
-  --line: 45 47 55;
-  --ink: 238 238 241;
-  --muted: 166 170 181;
-  --faint: 140 144 156; /* 6.0:1 on --bg, 5.6:1 on --surface */
-  --brand: 122 165 255; /* #7aa5ff: 7.8:1 on --bg */
-  --brand-ink: 10 20 44;
-  --brand-soft: 26 40 76;
-  --brand-strong: 170 198 255; /* on --brand-soft and on --surface */
-  --accent: 255 102 118;
-  --spark: 255 102 118;
+  --bg: 7 12 27;
+  --surface: 13 20 41;
+  --raised: 20 29 56;
+  --line: 37 51 88;
+  --ink: 236 241 251;
+  --muted: 162 174 201;
+  --faint: 136 149 180; /* 6.3:1 on --bg, 5.8:1 on --surface */
+  --brand: 110 166 255; /* #6ea6ff: 7.6:1 on --bg */
+  --brand-ink: 6 16 42;
+  --brand-soft: 20 40 88;
+  --brand-strong: 172 205 255; /* on --brand-soft and on --surface */
+  --accent: 255 98 104;
+  --spark: 255 98 104;
+  --amber: 255 208 74;
+  --glow: 58 134 255;
   --open: 74 206 120;
-  --open-soft: 20 48 30;
-  --sold: 150 154 164;
-  --sold-soft: 38 40 46;
+  --open-soft: 16 46 36;
+  --sold: 146 157 184;
+  --sold-soft: 30 39 66;
   --stale: 240 180 60;
   --stale-soft: 52 40 14;
-  --pre: 160 150 255;
-  --pre-soft: 36 32 70;
+  --pre: 166 156 255;
+  --pre-soft: 36 34 84;
   --up: 74 206 120;
   --down: 255 112 140;
-  --ad: 26 31 45;
-  --ad-line: 120 130 156;
+  --ad: 16 25 52;
+  --ad-line: 112 128 168;
   --shadow: 0 0 0;
-  --wordmark: linear-gradient(180deg, #ffffff 0%, #b9ceff 45%, #7aa5ff 100%);
+  --wordmark: linear-gradient(180deg, #ffffff 0%, #bcd6ff 45%, #6ea6ff 100%);
+  --lit: linear-gradient(100deg, #ffffff 0%, #a9ccff 22%, #4f8dff 46%, #e6f0ff 62%, #6ea6ff 82%, #ffffff 100%);
   color-scheme: dark;
 }
 
@@ -291,7 +303,7 @@ h1, h2, h3 { letter-spacing: -0.01em; }
   animation: menu-sheet-in 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .menu-sheet::backdrop {
-  background: rgb(15 16 19 / 0.45);
+  background: rgb(4 8 20 / 0.55);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 }
@@ -338,7 +350,7 @@ html:has(.menu-sheet[open]) {
     radial-gradient(30rem 16rem at 90% 110%, rgb(var(--brand) / 0.1), transparent 60%),
     rgb(var(--surface));
 }
-.hero-band > :not(.hero-sparks):not(.hero-corner) { position: relative; z-index: 1; }
+.hero-band > :not(.hero-sparks):not(.hero-corner):not(.hud) { position: relative; z-index: 1; }
 @media (min-width: 640px) {
   .hero-band > .hero-corner { position: absolute; }
 }
@@ -914,3 +926,458 @@ img[data-img-failed] { visibility: hidden; }
 
 /* The listing sort and filter bar's fields (GridControls.tsx). */
 .grid-ctl { @apply min-h-10 rounded-lg border border-line bg-surface px-2 text-sm text-ink; }
+
+/* ── The lively look (owner, 2026-11-26: "so dull … people aren't going to be like, wow, I found this really cool site … we want
+   it to be a very nice experience … oh, look, these sites are amazing"). Gundam Compare's own: a cockpit's head-up display in
+   deep space. A deep navy page that glows, a targeting reticle and a radar sweep behind the hero, streaks of light, tiles that
+   lock on under the pointer, the tricolour (blue, red, yellow on armour white) as small marks. What it does NOT change: the
+   blocks of a page and their order, any URL, title or heading, where an ad sits or how it looks, a price row's order or its
+   buttons. CSS only: transforms, opacity and gradients; no image, no script, nothing here moves the layout, and every animation
+   sits inside prefers-reduced-motion: no-preference. DECISIONS.md, 2026-11-26. ─────────────────────────────────────────── */
+
+/* The page's ground: soft lights behind everything, fixed, so no page is flat. (body::before is the season's hairline.) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(64rem 36rem at 14% -10%, rgb(var(--glow) / 0.2), transparent 70%),
+    radial-gradient(44rem 28rem at 98% 2%, rgb(var(--glow) / 0.1), transparent 70%),
+    radial-gradient(70rem 40rem at 60% 120%, rgb(var(--glow) / 0.12), transparent 70%);
+}
+:root[data-theme="light"] body::after {
+  background:
+    radial-gradient(64rem 36rem at 14% -10%, rgb(var(--glow) / 0.1), transparent 70%),
+    radial-gradient(44rem 28rem at 98% 2%, rgb(var(--glow) / 0.07), transparent 70%);
+}
+@media print {
+  body::after { display: none; }
+}
+
+/* The header ends, and the footer starts, with a thread of light: blue running to white and back. */
+body > header::before,
+.ftr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgb(var(--glow) / 0.85) 18%, rgb(var(--ink) / 0.75) 34%, rgb(var(--glow) / 0.85) 52%, transparent 78%) 0 0 / 200% 100%;
+}
+body > header::before { bottom: -1px; }
+.ftr { position: relative; }
+.ftr::before { top: -1px; transform: scaleX(-1); }
+
+/* The sidebar: a group's label wears a short blue dash, and the page you are on a lit edge. */
+[data-sidenav] .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 2px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  background: rgb(var(--brand));
+  box-shadow: 0 0 8px rgb(var(--glow) / 0.9);
+}
+[data-sidenav] a[aria-current="page"] {
+  background-image: linear-gradient(90deg, rgb(var(--glow) / 0.22), transparent 70%);
+  box-shadow: inset 0 0 0 1px rgb(var(--line)), inset 3px 0 0 rgb(var(--brand));
+}
+
+/* The hero band: deep space, lit from above. */
+.hero-band {
+  background:
+    radial-gradient(60rem 26rem at 30% -30%, rgb(var(--glow) / 0.34), transparent 62%),
+    radial-gradient(36rem 26rem at 88% 50%, rgb(var(--glow) / 0.16), transparent 68%),
+    radial-gradient(30rem 16rem at 6% 112%, rgb(var(--accent) / 0.08), transparent 60%),
+    linear-gradient(180deg, rgb(var(--surface)), rgb(var(--bg)));
+}
+:root[data-theme="light"] .hero-band {
+  background:
+    radial-gradient(60rem 26rem at 30% -30%, rgb(var(--glow) / 0.2), transparent 62%),
+    radial-gradient(36rem 26rem at 88% 50%, rgb(var(--glow) / 0.1), transparent 68%),
+    linear-gradient(180deg, rgb(var(--surface)), rgb(var(--raised)));
+}
+
+/* The hero's art (components/home/HeroArt.tsx). Under the words (the band lifts everything else to z-index 1), never in the
+   flow, never clickable, clipped to the band: the band is the page's own column, so nothing reaches the window's sides. */
+.hero-band > .hud {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: clip;
+  pointer-events: none;
+  /* The reticle's size and place (the sweep shares them). Phones: small, mostly off the top right corner, faint. */
+  --rs: 21rem;
+  --rr: -8.5rem;
+  --rt: -7rem;
+  --ro: 0.3;
+  /* Panel lines: a fine grid and a coarse one, fading out towards the words. */
+  background-image:
+    linear-gradient(rgb(var(--glow) / 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--glow) / 0.13) 1px, transparent 1px),
+    linear-gradient(rgb(var(--glow) / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--glow) / 0.06) 1px, transparent 1px);
+  background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+  background-position: -1px -1px;
+}
+.hud::before,
+.hud::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+/* The grid is cut away where the words are: this veil is the band's own colour, strong at the left, gone at the right. */
+.hud::before {
+  inset: 0;
+  background: linear-gradient(90deg, rgb(var(--surface) / 0.94) 0%, rgb(var(--surface) / 0.8) 38%, transparent 78%), linear-gradient(0deg, rgb(var(--bg) / 0.9), transparent 30%);
+}
+:root[data-theme="light"] .hud::before {
+  background: linear-gradient(90deg, rgb(var(--surface) / 0.96) 0%, rgb(var(--surface) / 0.85) 38%, transparent 78%), linear-gradient(0deg, rgb(var(--raised) / 0.9), transparent 30%);
+}
+/* A gauge along the foot of the band: fine ticks, a long one every fifth, and a short tricolour mark. */
+.hud::after {
+  left: 1rem;
+  bottom: 0.7rem;
+  width: min(22rem, 60%);
+  height: 8px;
+  opacity: 0.8;
+  background:
+    linear-gradient(90deg, rgb(var(--brand)) 0 2.5rem, transparent 0 2.75rem, rgb(var(--accent)) 0 3.5rem, transparent 0 3.75rem, rgb(var(--amber)) 0 4.25rem, transparent 0) 0 100% / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, rgb(var(--muted) / 0.7) 0 1px, transparent 1px 40px) 0 0 / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, rgb(var(--muted) / 0.4) 0 1px, transparent 1px 8px) 0 0 / 100% 3px no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
+  mask-image: linear-gradient(90deg, #000 60%, transparent);
+}
+.hud-ret,
+.hud-sweep {
+  position: absolute;
+  right: var(--rr);
+  top: var(--rt);
+  width: var(--rs);
+  height: var(--rs);
+}
+.hud-ret {
+  stroke: rgb(var(--glow));
+  opacity: var(--ro);
+}
+.hud-ret g {
+  transform-box: view-box;
+  transform-origin: 300px 300px;
+}
+.hud-ret .hr-b { stroke: rgb(var(--ink)); opacity: 0.7; }
+.hud-ret .hr-red { stroke: rgb(var(--accent)); }
+.hud-ret .hr-dot { stroke: none; fill: rgb(var(--amber)); }
+/* The radar's sweep: a wedge of light that fades behind its leading edge. */
+.hud-sweep {
+  border-radius: 50%;
+  opacity: min(1, calc(var(--ro) * 1.6));
+  background: conic-gradient(from 0deg, transparent 0deg 262deg, rgb(var(--glow) / 0.05) 290deg, rgb(var(--glow) / 0.5) 358deg, rgb(var(--ink) / 0.9) 360deg);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 0 1.5%, #000 2% 76%, transparent 77.5%);
+  mask-image: radial-gradient(closest-side, transparent 0 1.5%, #000 2% 76%, transparent 77.5%);
+}
+/* A streak of light crossing the band. Still, it is a faint line near the top; moving, it crosses every few seconds. */
+.hud-beam {
+  position: absolute;
+  left: 0;
+  width: 26rem;
+  height: 2px;
+  border-radius: 2px;
+  --ba: -16deg;
+  --bx: 40vw;
+  opacity: 0.3;
+  transform: rotate(var(--ba)) translate3d(var(--bx), 0, 0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, transparent, rgb(var(--glow) / 0.5) 55%, rgb(var(--ink)) 100%);
+  box-shadow: 0 0 14px 1px rgb(var(--glow) / 0.75);
+}
+.hud-beam-1 { top: 62%; }
+.hud-beam-2 {
+  top: 104%;
+  width: 16rem;
+  --ba: -16deg;
+  --bx: 70vw;
+  opacity: 0.22;
+  background: linear-gradient(90deg, transparent, rgb(var(--accent) / 0.5) 55%, rgb(255 226 226) 100%);
+  box-shadow: 0 0 14px 1px rgb(var(--accent) / 0.7);
+}
+:root[data-theme="light"] .hud-beam { background: linear-gradient(90deg, transparent, rgb(var(--glow) / 0.35) 55%, rgb(var(--glow)) 100%); }
+:root[data-theme="light"] .hud-beam-2 { background: linear-gradient(90deg, transparent, rgb(var(--accent) / 0.3) 55%, rgb(var(--accent)) 100%); }
+@media (min-width: 640px) {
+  .hero-band > .hud { --rs: 30rem; --rr: -9rem; --rt: -8rem; --ro: 0.42; }
+}
+/* From lg the hero has its second column (two featured boxes): the reticle is centred on it, so the boxes sit in its sights. */
+@media (min-width: 1024px) {
+  .hero-band > .hud { --rs: 40rem; --rr: calc(2rem + 240px - 20rem); --rt: calc(50% - 19.25rem); --ro: 0.55; }
+}
+:root[data-theme="light"] .hud-ret { opacity: calc(var(--ro) * 0.6); }
+:root[data-theme="light"] .hud-sweep { opacity: calc(var(--ro) * 0.5); }
+
+/* The headline's key word is written in light, and the light runs across it. */
+.hero-glow { text-shadow: 0 0 60px rgb(var(--glow) / 0.45); }
+:root[data-theme="light"] .hero-glow { text-shadow: none; }
+.hero-glow .text-brand,
+.pp-price {
+  background: var(--lit) 0 0 / 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* The search: an edge that is always faintly lit, and lights up when it is used. */
+.hero-search::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgb(var(--glow) / 0.9), rgb(var(--ink) / 0.55), rgb(var(--glow) / 0.9)) 0 0 / 200% 100%;
+  filter: blur(11px);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.hero-search:focus-within::before { opacity: 0.85; }
+.hero-search input { border-color: rgb(var(--glow) / 0.5); }
+
+/* The hero's chips. Trending: each wears a pip in one of the three colours. Counts: the number in the brand's light. */
+.hud-chips .chip::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  background: rgb(var(--c, var(--brand)));
+  box-shadow: 0 0 10px rgb(var(--c, var(--brand)) / 0.9);
+}
+.hud-chips > li:nth-child(3n + 2) .chip { --c: var(--accent); }
+.hud-chips > li:nth-child(3n + 3) .chip { --c: var(--amber); }
+.hud-chips .chip,
+.hero-stat {
+  background-color: rgb(var(--surface) / 0.72);
+}
+.hud-chips .chip:hover {
+  border-color: rgb(var(--c, var(--brand)) / 0.8);
+  box-shadow: 0 10px 24px -14px rgb(var(--c, var(--brand)) / 0.9);
+}
+.hero-stat b { color: rgb(var(--brand-strong)); }
+
+/* Every card: a surface with a little light in it rather than a flat slab. Never the sponsored banners (.bnr). */
+.card:not(.bnr),
+.card-surface {
+  background-image: linear-gradient(160deg, rgb(var(--glow) / 0.09), transparent 46%);
+}
+a.card:hover {
+  border-color: rgb(var(--brand) / 0.65);
+  box-shadow: 0 18px 40px -22px rgb(var(--glow) / 0.9), 0 0 0 1px rgb(var(--glow) / 0.18);
+}
+
+/* A product's plate (ProductTile, KitTile, the hero's two boxes, the sealed shelf): under the pointer it is locked on. Four
+   brackets close in on its corners and a band of light crosses it. */
+.pc-plate {
+  position: relative;
+  box-shadow: 0 0 0 1px rgb(var(--line)), 0 18px 40px -26px rgb(var(--glow) / 0.7);
+}
+.group:hover .pc-plate {
+  box-shadow: 0 0 0 1.5px rgb(var(--brand) / 0.9), 0 0 0 4px rgb(var(--glow) / 0.22), 0 24px 46px -20px rgb(var(--glow) / 0.85);
+}
+.pc-plate::before,
+.pc-plate::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.pc-plate::before {
+  inset: 6px;
+  --k: #1e56d6;
+  --l: 14px;
+  background:
+    linear-gradient(var(--k), var(--k)) 0 0 / var(--l) 2px, linear-gradient(var(--k), var(--k)) 0 0 / 2px var(--l),
+    linear-gradient(var(--k), var(--k)) 100% 0 / var(--l) 2px, linear-gradient(var(--k), var(--k)) 100% 0 / 2px var(--l),
+    linear-gradient(var(--k), var(--k)) 0 100% / var(--l) 2px, linear-gradient(var(--k), var(--k)) 0 100% / 2px var(--l),
+    linear-gradient(var(--k), var(--k)) 100% 100% / var(--l) 2px, linear-gradient(var(--k), var(--k)) 100% 100% / 2px var(--l);
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.07);
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.group:hover .pc-plate::before {
+  opacity: 0.9;
+  transform: none;
+}
+.pc-plate::after {
+  inset: 0;
+  background: linear-gradient(115deg, transparent 34%, rgb(46 112 240 / 0.16) 44%, rgb(255 255 255 / 0.7) 50%, rgb(46 112 240 / 0.16) 56%, transparent 66%);
+  transform: translateX(-120%);
+}
+
+/* A section's title is marked like a panel: a slanted bar of blue, red and yellow. */
+.sec-h {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.sec-h::before {
+  content: "";
+  flex: none;
+  align-self: stretch;
+  width: 5px;
+  min-height: 1em;
+  margin-block: 0.12em;
+  border-radius: 1px;
+  transform: skewX(-14deg);
+  background: linear-gradient(180deg, rgb(var(--brand)) 0 58%, transparent 0 64%, rgb(var(--accent)) 0 82%, transparent 0 88%, rgb(var(--amber)) 0);
+  box-shadow: 0 0 14px rgb(var(--glow) / 0.75);
+}
+
+/* A list page's h1 ends in a short gauge: blue, then a notch of red and one of yellow. */
+.list-h1::after {
+  content: "";
+  display: block;
+  width: 4.5rem;
+  height: 4px;
+  margin-top: 0.65rem;
+  border-radius: 1px;
+  transform: skewX(-24deg);
+  transform-origin: 0 100%;
+  background: linear-gradient(90deg, rgb(var(--brand)) 0 62%, transparent 0 67%, rgb(var(--accent)) 0 82%, transparent 0 87%, rgb(var(--amber)) 0);
+  box-shadow: 0 0 16px rgb(var(--glow) / 0.6);
+}
+
+/* The sealed shelf's tabs: the chosen one glows, with a lit line under it. */
+.sealed-hero [role="tab"] { position: relative; }
+.sealed-hero [role="tab"]::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: -1px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgb(var(--brand)), rgb(var(--ink)), rgb(var(--brand)));
+  box-shadow: 0 0 12px 1px rgb(var(--glow));
+  transform: scaleX(0);
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.sealed-hero [role="tab"][aria-selected="true"] { box-shadow: 0 8px 22px -12px rgb(var(--glow)); }
+.sealed-hero [role="tab"][aria-selected="true"]::after { transform: scaleX(1); }
+
+/* The filled button: a little light on top, a glow under it. Its colours (and so its contrast) are the tokens'. */
+.btn-primary {
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.22), transparent 55%);
+  box-shadow: 0 8px 22px -10px rgb(var(--brand) / 0.8), inset 0 0 0 1px rgb(255 255 255 / 0.14);
+}
+/* A quiet button or chip warms when the pointer reaches it (still one filled button a table). */
+.btn-soft,
+.btn-ghost {
+  transition-property: color, background-color, border-color, box-shadow;
+}
+.btn-soft:hover,
+.btn-ghost:hover {
+  border-color: rgb(var(--brand) / 0.7);
+  box-shadow: 0 8px 22px -12px rgb(var(--glow) / 0.8);
+}
+.chip:hover { border-color: rgb(var(--brand) / 0.6); }
+
+/* The product page and the kit page: the photo stands in a frame whose edge is lit by a light going round it, with four
+   lock-on brackets outside the corners; the market price is written in light. */
+.pp-frame {
+  position: relative;
+  isolation: isolate;
+  padding: 3px;
+  border-radius: 16px;
+  box-shadow: 0 30px 70px -34px rgb(var(--glow) / 0.95);
+}
+/* The lit edge: a wheel of light behind the photo, of which only the frame's 3px rim shows. It turns by transform alone. */
+.pp-edge {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: inherit;
+  background: rgb(var(--line));
+}
+.pp-edge::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200%;
+  aspect-ratio: 1;
+  margin: -100% 0 0 -100%;
+  background: conic-gradient(from 20deg, rgb(var(--glow)), #fff 8%, rgb(var(--glow)) 18%, rgb(var(--line)) 36%, rgb(var(--accent)) 50%, rgb(var(--line)) 62%, rgb(var(--amber)) 80%, rgb(var(--line)) 90%, rgb(var(--glow)));
+}
+.pp-frame > img {
+  position: relative;
+  border-radius: 13px;
+  --tw-ring-shadow: 0 0 #0000;
+  box-shadow: none;
+}
+.pp-frame::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  z-index: -1;
+  border-radius: 30px;
+  background: radial-gradient(closest-side, rgb(var(--glow) / 0.5), transparent);
+  filter: blur(26px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.pp-frame::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  pointer-events: none;
+  --k: rgb(var(--brand));
+  --l: 20px;
+  background:
+    linear-gradient(var(--k), var(--k)) 0 0 / var(--l) 2px, linear-gradient(var(--k), var(--k)) 0 0 / 2px var(--l),
+    linear-gradient(var(--k), var(--k)) 100% 0 / var(--l) 2px, linear-gradient(var(--k), var(--k)) 100% 0 / 2px var(--l),
+    linear-gradient(var(--k), var(--k)) 0 100% / var(--l) 2px, linear-gradient(var(--k), var(--k)) 0 100% / 2px var(--l),
+    linear-gradient(var(--k), var(--k)) 100% 100% / var(--l) 2px, linear-gradient(var(--k), var(--k)) 100% 100% / 2px var(--l);
+  background-repeat: no-repeat;
+  opacity: 0.85;
+}
+/* The motion. Slow, and only what a compositor moves: the reticle's rings turn, the sweep goes round, a streak crosses, light
+   runs over the headline and across a tile the pointer has reached. All of it stays still for a visitor who asked for less. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .hud-ret .hr-a { animation: hud-spin 160s linear infinite; }
+  .hud-ret .hr-b { animation: hud-spin 46s linear infinite reverse; }
+  .hud-ret .hr-c { animation: hud-lock 7s ease-in-out infinite alternate; }
+  .hud-ret .hr-dot { animation: hud-blink 2.4s ease-in-out infinite alternate; }
+  .hud-sweep { animation: hud-spin 9s linear infinite; }
+  .hud-beam { animation: hud-beam 11s cubic-bezier(0.3, 0, 0.2, 1) 1.2s infinite both; }
+  .hud-beam-2 { animation-duration: 17s; animation-delay: 6s; }
+  .hero-glow .text-brand,
+  .pp-price { animation: lit-run 7s ease-in-out infinite alternate; }
+  .hero-search::before { animation: lit-run 6s linear infinite alternate; }
+  body > header::before { animation: lit-run 14s ease-in-out infinite alternate; }
+  .pp-edge::before { animation: hud-spin 10s linear infinite; }
+  .pp-frame::after { animation: pp-lock 3.6s ease-in-out infinite alternate; }
+  .group:hover .pc-plate::after { transform: translateX(120%); transition: transform 0.8s ease-out; }
+  a.card.group { transition-property: color, background-color, border-color, box-shadow, transform; transition-duration: 0.2s; }
+  a.card.group:hover { transform: translateY(-4px); }
+}
+@keyframes hud-spin { to { transform: rotate(360deg); } }
+@keyframes hud-lock { from { transform: rotate(-8deg) scale(1.04); } to { transform: rotate(8deg) scale(0.97); } }
+@keyframes hud-blink { from { opacity: 0.35; } to { opacity: 1; } }
+@keyframes hud-beam {
+  0% { transform: rotate(var(--ba)) translate3d(-30rem, 0, 0); opacity: 0; }
+  3% { opacity: 0.9; }
+  16% { transform: rotate(var(--ba)) translate3d(110vw, 0, 0); opacity: 0.9; }
+  17%, 100% { transform: rotate(var(--ba)) translate3d(110vw, 0, 0); opacity: 0; }
+}
+@keyframes lit-run { to { background-position: 100% 0; } }
+@keyframes pp-lock { from { transform: scale(1.025); opacity: 0.45; } to { transform: none; opacity: 0.95; } }
+/* On a phone the art sits behind running text: the veil over the grid is heavier there. */
+@media (max-width: 639.98px) {
+  .hud::before { background: linear-gradient(90deg, rgb(var(--surface) / 0.9), rgb(var(--surface) / 0.55)), linear-gradient(0deg, rgb(var(--bg) / 0.9), transparent 30%); }
+  :root[data-theme="light"] .hud::before { background: linear-gradient(90deg, rgb(var(--surface) / 0.92), rgb(var(--surface) / 0.6)); }
+}

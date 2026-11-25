@@ -23,7 +23,7 @@ export default function Sets() {
   return (
     <div>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", name: `${SITE.gameShort} sets`, numberOfItems: listed.length, itemListElement: listed.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.name, url: abs(`/sets/${s.slug}`) })) }} />
-      <h1 className="mb-6 font-display text-3xl font-black">{SITE.gameShort} sets in order</h1>
+      <h1 className="list-h1 mb-6 font-display text-3xl font-black">{SITE.gameShort} sets in order</h1>
       <p className="-mt-3 mb-6 text-sm text-muted">Newest first. Open a set for its full card list with prices.</p>
       {(isMultiGame ? LINES.map((l) => ({ line: l as GameLine | null, list: listed.filter((s) => s.line === l.id) })) : [{ line: null as GameLine | null, list: listed }]).map(({ line, list }) => (
       <section key={line?.id ?? "all"} className="mb-8">

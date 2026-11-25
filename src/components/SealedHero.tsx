@@ -22,7 +22,7 @@ function Tile({ i, market }: { i: HeroItem; market: Market }) {
   const pr = i.prices[market] ?? null;
   return (
     <Link href={`/card/${i.slug}`} className="card group flex w-[150px] shrink-0 snap-start flex-col overflow-hidden transition-colors hover:border-ink/40 sm:w-[168px]">
-      <span className="relative block aspect-square bg-white">
+      <span className="pc-plate relative block aspect-square bg-white">
         {i.image && <img src={i.image} alt={i.name} width={200} height={200} loading="lazy" decoding="async" className="h-full w-full object-contain p-2 transition group-hover:scale-[1.03]" />}
         {pr?.saving && <span className="absolute left-1.5 top-1.5 rounded-md bg-buy px-1.5 py-0.5 text-[11px] font-black text-surface shadow">−{pr.saving.pct}%</span>}
         {i.releasesOn && <span className="absolute right-1.5 top-1.5 rounded-full bg-pre-soft px-2 py-0.5 text-[11px] font-bold text-pre">Pre-order</span>}
@@ -59,7 +59,7 @@ export function SealedHero({ data, game, sealedHref }: { data: SealedHeroData; g
     <section aria-labelledby="sealed-hero" className="sealed-hero flex flex-col gap-3">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
-          <h2 id="sealed-hero" className="font-display text-xl font-black sm:text-2xl">{game} booster boxes and sealed</h2>
+          <h2 id="sealed-hero" className="sec-h font-display text-xl font-black sm:text-2xl">{game} booster boxes and sealed</h2>
           <p className="text-sm text-muted">Each box&rsquo;s cheapest store in {MARKET_LABEL[market]} today. {cur.sub ? `${cur.sub}. ` : ""}</p>
         </div>
         <Link href={cur.href} className="link text-sm font-semibold">{cur.more} →</Link>

@@ -2896,3 +2896,44 @@ ones that pay us, and found the product page's top too wordy. Ported here: under
 listed, whether it pays us or not, in price order" linked to /methodology; "I own this" (its hint now a tooltip) and "Share deal"
 (was "Share this deal with your group chat") in one row; a long one-word store name wraps instead of pushing the price table
 past a phone's edge. Cart and watch wording wait for their A/B verdicts.
+
+## 2026-11-26: the lively look (a cockpit's display in deep space: a hero that moves, tiles that lock on)
+
+**Owner.** "When experiences are very dull people aren't going to be like, wow, I found this really cool site, you should check it
+out … it's just dull as hell … we want it to be a very nice experience, because even though it doesn't increase the functionality,
+it's like, oh, look, these sites are amazing." YGO Compare got its own look the same day (violet and gold); this is Gundam
+Compare's, in its own colours: it stays blue.
+
+**What was wrong.** A neutral near-black page (`15 16 19`) with one blue on it. Nothing glowed, nothing moved but the hero's
+drifting motes, and a product tile, a section title and a product photo looked the same as on every other site of ours.
+
+**Decision.** Presentation only: the tokens at the top of `globals.css`, one block at its end ("The lively look"), one small
+server component (`components/home/HeroArt.tsx`) and class hooks (`sec-h`, `list-h1`, `pc-plate`, `pp-frame` / `pp-edge`,
+`pp-price`, `hud-chips`, `ftr`).
+- **Colours.** Dark (the default): a deep navy page, armour white for words, federation blue for what is pressed and what glows
+  (`--glow`), the chest's red and a vent's yellow (`--amber`) as small marks only. Light: cool armour white with the same blue.
+  `tests/contrast.test.ts` still measures every filled control from the tokens (the dark surface it pins moved).
+- **The hero.** A head-up display behind the same words, search and two boxes as before: a targeting reticle of our own drawing
+  (rings, a tick scale, arcs, a lock-on square: plain geometry, nobody's logo, mobile suit or character) centred on the two
+  featured boxes from lg, a radar sweep turning inside it, a faint panel-line grid that fades out under the words, a gauge along
+  the foot, and two streaks of light that cross every few seconds. "Gundam" in the headline is written in light that runs
+  across it; the search has a lit edge; the trending chips wear a pip in one of the three colours. The art is under 1.5 KB of
+  server HTML, aria-hidden, absolute and clipped to the hero band, which is the page's own column: it never reaches the
+  window's empty sides (the gutter ads' from 1440px) and nothing shifts when it paints. No image, no script; the motes
+  (`HeroSparks`, 2026-11-03) stay as the stars.
+- **Everywhere else.** Soft blue lights fixed behind every page; a thread of light under the header and over the footer; a
+  slanted blue, red and yellow panel mark on section titles and a short gauge under a list page's h1; a lit dash on the
+  sidebar's group labels and a lit edge on the page you are on; a glow and a lit line on the sealed shelf's chosen tab. A
+  product or kit tile under the pointer is locked on: four brackets close in on its plate, a band of light crosses it and the
+  tile lifts. On the product page and the kit page the photo stands in a frame whose edge a light goes round, with four
+  brackets outside its corners, and the market price is written in light.
+- **Motion** is transform, opacity and gradient position only, and every animation sits inside
+  `prefers-reduced-motion: no-preference`. `tests/lively-look.test.ts` pins that, the art's size, and that the block loads no image.
+
+**What it does not change.** No URL, title, description, heading text, h1/h2 outline, JSON-LD or order of blocks; nothing new
+on a page. No ad's place or look (the sponsored banners keep a flat card; only the `--ad` tokens follow the palette). No price
+row, its order or which button is filled. The hero keeps its two featured boxes (owner, 2026-11-08). The Santa hat stays; the
+Christmas lights are another change's. The header's thread is drawn on `body > header::before`, so `Header.tsx` is untouched.
+
+**Read:** share-button uses and returning visitors per week from the release; home bounce and buy clicks per visitor must hold
+(a fall of 10% means the hero's art goes first: render nothing in `HeroArt`).

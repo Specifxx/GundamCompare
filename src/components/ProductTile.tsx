@@ -38,7 +38,7 @@ export function ProductTile({ p, change }: { p: Product; change?: number | null 
       data-qv-img={p.image ? imageAt(p.image, "400w")! : undefined}
       className="group card flex flex-col overflow-hidden p-2 transition-colors hover:border-ink/40"
     >
-      <div className="plate aspect-[5/7]">
+      <div className="plate pc-plate aspect-[5/7]">
         {p.image ? (
           <img src={imageAt(p.image, "400w")!} alt={`${name} ${p.kind === "card" ? "card" : ""}`} loading="lazy" decoding="async" className="h-full w-full object-contain p-1.5 transition-transform group-hover:scale-[1.02]" />
         ) : (

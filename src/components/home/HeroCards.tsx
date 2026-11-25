@@ -32,7 +32,7 @@ export function HeroCards({ items }: { items: Product[] }) {
               data-qv-img={img ?? undefined}
               className="hc-card group"
             >
-              <span className="hc-art plate">
+              <span className="hc-art plate pc-plate">
                 {img ? (
                   <img
                     src={img}

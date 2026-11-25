@@ -4,6 +4,7 @@ import { SearchBox } from "@/components/SearchBox";
 import { MarketChooser } from "@/components/ClientPrefs";
 import { CreatorsBubble } from "@/components/creators/CreatorsBubble";
 import { HeroSparks } from "@/components/HeroSparks";
+import { HeroArt } from "@/components/home/HeroArt";
 import { ChristmasGifts } from "@/components/ChristmasGifts";
 import { TileGrid } from "@/components/ProductTile";
 import { byValue, deals, latestReleasedSet, meta, products } from "@/lib/data";
@@ -102,6 +103,7 @@ export default function Home() {
           links are the ones the old hero carried. */}
       <section className="hero-band relative -mx-4 -mt-6 overflow-x-clip border-b border-line px-4 pb-10 pt-8 sm:-mx-6 sm:px-8 sm:pb-14 sm:pt-12">
         <HeroSparks />
+        <HeroArt />
         {/* Phone hero, 2026-11-19 (owner: "way too much going on in the mobile version of the home page"): the headline, the
             words and the link to every card. The header already has the search and the market, so the creators bubble, the
             market row, trending chips, counts and the two hero boxes show from sm up; the sealed shelf follows straight
@@ -129,7 +131,7 @@ export default function Home() {
             {trending.length > 0 && (
               <div className="mt-5 hidden w-full max-w-2xl sm:block">
                 <p className="eyebrow">Trending</p>
-                <ul className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
+                <ul className="hud-chips mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
                   {trending.map((p) => (
                     <li key={p.id}>
                       <Link href={`/card/${p.slug}`} className="chip w-full justify-center truncate">
@@ -235,7 +237,7 @@ export default function Home() {
       )}
 
       <section className="sd max-w-3xl">
-        <h2 className="mb-3 font-display text-2xl font-bold tracking-tight">Frequently asked questions</h2>
+        <h2 className="sec-h mb-3 font-display text-2xl font-bold tracking-tight">Frequently asked questions</h2>
         {faqs.map((f) => (
           <details key={f.q} className="border-b border-line py-3">
             <summary className="cursor-pointer font-medium">{f.q}</summary>

@@ -33,7 +33,7 @@ export default function ScalePage({ params }: { params: { scale: string } }) {
     <div className="flex flex-col gap-8">
       <header>
         <Breadcrumbs items={[{ name: SITE.kits.label, href: "/kits" }, { name: h.label }]} />
-        <h1 className="font-display text-3xl font-black">{h.scale} scale {SITE.kits.label} prices</h1>
+        <h1 className="list-h1 font-display text-3xl font-black">{h.scale} scale {SITE.kits.label} prices</h1>
         <p className="mt-2 text-muted">{h.items.length} kits, the ones most shops have in stock first. Open a kit to compare every shop.</p>
       </header>
       <nav aria-label="Scales" className="flex flex-wrap gap-2">

@@ -28,7 +28,7 @@ export default function Cards() {
   return (
     <div className="flex flex-col gap-8">
       <header>
-        <h1 className="font-display text-3xl font-black">{SITE.gameShort} card prices</h1>
+        <h1 className="list-h1 font-display text-3xl font-black">{SITE.gameShort} card prices</h1>
         <p className="mt-2 text-muted">Search any card, or browse by set. Every card page compares all the stores we track.</p>
         <div className="mt-5 max-w-xl"><SearchBox /></div>
         <Suspense><CardSearch /></Suspense>

@@ -22,7 +22,7 @@ export default function Sealed() {
   return (
     <div className="flex flex-col gap-8">
       <header>
-        <h1 className="font-display text-3xl font-black">{SITE.gameShort} booster box and sealed prices</h1>
+        <h1 className="list-h1 font-display text-3xl font-black">{SITE.gameShort} booster box and sealed prices</h1>
         <p className="mt-2 text-muted">Newest sets first within each type. Open any product to compare every store.</p>
       </header>
       {/* On a phone each type is one sideways row (2026-11-23: the page was 23,800 px of two-column tiles); the grid from sm up. */}
