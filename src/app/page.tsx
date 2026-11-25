@@ -219,6 +219,10 @@ export default function Home() {
         </Section>
       )}
 
+      {/* The one ad block, mid-page (owner, 2026-11-25: "Why are the display ads at the very bottom of the site?"): after the
+          prices, kits and deals, before the reviews, guides and questions; never under the hero or above a price. */}
+      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
+
       {/* The site's own star score and approved reviews (owner, 2026-11-03), loaded in the browser; nothing until there is a rating. */}
       <SiteReviews />
 
@@ -246,8 +250,6 @@ export default function Home() {
         ))}
       </section>
       <p className="sr-only">{products().length} products tracked</p>
-      {/* Ads sit below the page's own content, never above it (2026-11-19, core-update quality pass). */}
-      <InlineAds ads={cardAds({ limit: 10 })} search={adSearch()} page="home" />
     </div>
   );
 }
