@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-24T04:06:07.595Z",
+ "generatedAt": "2026-11-25T02:37:43.532Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -19,7 +19,7 @@
    "currency": "USD",
    "store": "Atlantis Games & Comics",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619080_200w.jpg",
-   "refCents": 5668,
+   "refCents": 5628,
    "refLabel": "TCGplayer market price",
    "savingPct": 47
   },
@@ -89,9 +89,20 @@
    "currency": "USD",
    "store": "PixelThat TCG",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619148_200w.jpg",
-   "refCents": 5774,
+   "refCents": 5762,
    "refLabel": "TCGplayer market price",
    "savingPct": 13
+  },
+  {
+   "kind": "preorder",
+   "cluster": "cards",
+   "region": "US",
+   "title": "Blazing Fist Booster Box",
+   "url": "https://www.gundamcompare.com/preorders/blazing-fist",
+   "cents": 11976,
+   "currency": "USD",
+   "store": "Gamers Guild AZ",
+   "releaseDate": "2027-01-29"
   },
   {
    "kind": "deal",
@@ -173,7 +184,7 @@
    "currency": "AUD",
    "store": "HobbyTech Toys",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-rx-78nt-1-gundam-nt-1-alex-gp.jpg?v=1745270454",
-   "refCents": 3199,
+   "refCents": 3174,
    "refLabel": "median store price",
    "savingPct": 38
   },
