@@ -2,7 +2,7 @@ import type { Post } from "./types";
 
 export const post: Post = {
   slug: "gundam-card-game-ban-list",
-  title: "Gundam Card Game ban list explained (October 2026)",
+  title: "Gundam Card Game Ban List: Anksha Banned, Corsica Base at 2",
   description:
     "The current Gundam Card Game banned and restricted list: Anksha banned, Corsica Base restricted to two, the new banned pairs, and how often Bandai updates it.",
   date: "2026-10-25",

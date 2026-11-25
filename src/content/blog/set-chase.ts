@@ -4,7 +4,7 @@ import type { Post } from "./types";
 export const SET_POSTS: Post[] = [
   {
     slug: "freedom-ascension-most-valuable-cards",
-    title: "Freedom Ascension Most Valuable Cards: Gundam Card Game GD05",
+    title: "Freedom Ascension Most Valuable Cards: Top 20 Prices Today (GD05)",
     description: "The most valuable Freedom Ascension cards today, from live TCGplayer and store prices: the top 20, every LR++ and LR+ card and the booster box price.",
     date: "2026-10-29",
     keywords: ["freedom ascension most valuable cards", "freedom ascension chase cards", "freedom ascension card prices", "freedom ascension lr++ cards", "freedom ascension booster box price"],
