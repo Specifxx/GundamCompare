@@ -2897,6 +2897,12 @@ listed, whether it pays us or not, in price order" linked to /methodology; "I ow
 (was "Share this deal with your group chat") in one row; a long one-word store name wraps instead of pushing the price table
 past a phone's edge. Cart and watch wording wait for their A/B verdicts.
 
+## 2026-11-26: The header's string of Christmas lights is removed (owner)
+
+Owner, 2026-11-26: "I don't really like the Christmas lights on the very top." The string of lights hanging under the header
+(2026-11-20) is removed on every Compare site: the `.xmas-garland::after` rule is gone from the `xmas-logo` block in `globals.css`
+and the class is off the header. The Santa hat on the logo stays, and nothing else of the Christmas layer changes.
+
 ## 2026-11-26: the lively look (a cockpit's display in deep space: a hero that moves, tiles that lock on)
 
 **Owner.** "When experiences are very dull people aren't going to be like, wow, I found this really cool site, you should check it
