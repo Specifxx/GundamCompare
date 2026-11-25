@@ -143,7 +143,12 @@ export default function KitPage({ params }: { params: { slug: string } }) {
       <Breadcrumbs items={[{ name: cfg.label, href: "/kits" }, ...(k.grade ? [{ name: GRADE_LABEL[k.grade] ?? k.grade, href: `/kits/grade/${gradeSlug(k.grade)}` }] : []), { name: k.name }]} />
       <div className="grid gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
         <div className="order-2 flex flex-col gap-4 md:order-1">
-          {k.image && <img src={kitImage(k.image, 640)} alt={`${k.name} box`} className="plate hidden aspect-square w-full object-contain p-3 md:block" width={320} height={320} />}
+          {k.image && (
+            <div className="pp-frame hidden md:block">
+              <span className="pp-edge" aria-hidden="true" />
+              <img src={kitImage(k.image, 640)} alt={`${k.name} box`} className="plate block aspect-square w-full object-contain p-3" width={320} height={320} />
+            </div>
+          )}
           <dl className="card-surface grid grid-cols-2 gap-x-3 gap-y-1.5 p-4 text-sm">
             {k.grade && (<><dt className="text-muted">Grade</dt><dd><Link className="link" href={`/kits/grade/${gradeSlug(k.grade)}`}>{GRADE_LABEL[k.grade] ?? k.grade}</Link></dd></>)}
             {k.scale && (<><dt className="text-muted">Scale</dt><dd>{scaleHubOf(k) ? <Link className="link" href={`/kits/scale/${scaleHubOf(k)!.slug}`}>{k.scale}</Link> : k.scale}</dd></>)}
