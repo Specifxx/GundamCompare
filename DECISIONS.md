@@ -3007,3 +3007,13 @@ are `home-tidy` (the page), `home-more` (what a phone leaves out) and `home-deal
 in scope.
 
 **Read:** phone bounce (non-Reddit) and buy clickers per 100 on the home page, the week after release against the week before.
+
+## 2026-11-26: Sealed titles name the game; the guides index names its topics
+
+Page scorecard of 23 Nov (Job D). A sealed product's name already carries its set ("Stardust Trails Sleeved Booster
+Pack"), so the card title's "— Gundam <set>" suffix was skipped and the title never said "Gundam", the word searchers
+put first. The sleeved pack ranked 6.2 with 26 impressions and no click; the plain pack 15.3. Sealed titles now lead
+"Gundam <name> Price: $X" when it fits 60 characters; when only one fits, the price wins over the game word
+(`cardTitleCandidates`, `tests/seo-title.test.ts`). /blog (37 impressions, position 16.7) was titled "Gundam guides and
+price analysis"; it now names its topics, "Gundam Card Game Guides: Ban List, Rarities & Top Cards", and the description
+and intro count the guides from the post list. Read Google CTR on both ~7 Dec.

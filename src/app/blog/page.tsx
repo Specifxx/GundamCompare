@@ -5,18 +5,28 @@ import { canon } from "@/lib/site";
 import { posts } from "@/lib/posts";
 
 export const revalidate = 86400;
-export const metadata: Metadata = {
-  title: `${SITE.gameShort} guides and price analysis`,
-  description: `Guides to buying ${SITE.game} cards: set price guides, most valuable cards, where to buy and pre-order advice.`,
-  ...canon("/blog"),
-};
+// Page scorecard of 23 Nov (Job D, "enrich"): /blog was seen 37 times at position 16.7 with no click under "Gundam guides and
+// price analysis", a title that named no topic. It now names what the guides answer (ban list, rarities, most valuable
+// cards, where to buy) and the description counts them, from the post list itself.
+const setGuides = () => posts().filter((p) => /Most Valuable Cards|card list/i.test(p.title));
+export function generateMetadata(): Metadata {
+  const all = posts();
+  return {
+    title: { absolute: `${SITE.game} Guides: Ban List, Rarities & Top Cards` },
+    description: `${all.length} ${SITE.game} guides with today's prices: the ban list, rarities, the most valuable cards of ${setGuides().length} sets, box or singles, and where to buy cheapest.`,
+    ...canon("/blog"),
+  };
+}
 
 export default function Blog() {
   return (
     <div className="flex flex-col gap-6">
       <header>
         <h1 className="font-display text-3xl font-black">{SITE.gameShort} guides</h1>
-        <p className="mt-2 text-muted">Buying guides and price explainers, with today&apos;s prices in every one.</p>
+        <p className="mt-2 text-muted">
+          {posts().length} buying guides and price explainers, with today&apos;s prices in every one: the ban list, rarities, the most
+          valuable cards of {setGuides().length} sets, booster box or singles, and where to buy.
+        </p>
       </header>
       <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {posts().map((p) => (

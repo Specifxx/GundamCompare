@@ -79,3 +79,16 @@ test("card description without stock gives the TCGplayer reference, without any 
   assert.match(none, /no TCGplayer market price yet/);
   for (const s of [sold, none]) assert.ok(s.length <= DESCRIPTION_MAX);
 });
+
+test("a sealed title names the game its set-led name leaves out, and the price outranks it", () => {
+  const g = SITE.gameShort;
+  const t = fitTitle(cardTitleCandidates("Stardust Trails Sleeved Booster Pack", null, "Stardust Trails", true, "$5.49")).absolute;
+  assert.match(t, new RegExp(`^${g} Stardust Trails Sleeved Booster Pack Price: \\$5\\.49`));
+  assert.ok(t.length <= TITLE_MAX, t);
+  // Too long with the game word and the price: the price stays, the game word goes.
+  const long = "Stardust Trails Sleeved Booster Pack Display";
+  assert.match(fitTitle(cardTitleCandidates(long, null, "Stardust Trails", true, "$129.99")).absolute, /Price: \$129\.99/);
+  // A name that already says the game is not doubled, and single cards are untouched.
+  assert.ok(!cardTitleCandidates(`${g} Assemble Case`, null, null, true, "$9.00")[0].startsWith(`${g} ${g}`));
+  assert.match(cardTitleCandidates("Some Card", "AB01-001", "First Set", false, "$1.00")[0], /^Some Card AB01-001/);
+});

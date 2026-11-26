@@ -45,10 +45,17 @@ export function cardTitleCandidates(name: string, number: string | null, setName
   const bare = number ? name.replace(` (${number})`, "") : name;
   const head = number && !sealed && !bare.includes(number) ? `${bare} ${number}` : bare;
   const out: string[] = [];
+  // A sealed product's name already carries its set ("Stardust Trails Sleeved Booster Pack"), so the set suffix below
+  // is skipped and the title lost the game's name, the word searchers put first ("gundam stardust trails booster box";
+  // 2026-11-26, page scorecard Job D: the sleeved pack at position 6.2 with 0 clicks). Lead with it, then fall back.
+  const gameless = sealed && !new RegExp(`\\b${g}\\b`, "i").test(bare);
+  if (gameless && price) out.push(`${g} ${head} Price: ${price}`);
   if (price) {
     if (setName && !bare.includes(setName)) out.push(`${head} Price: ${price} — ${g} ${setName}`, `${head} Price: ${price} — ${setName}`);
     out.push(`${head} Price: ${price}`);
   }
+  // The price outranks the game's name when only one fits.
+  if (gameless) out.push(`${g} ${head} Price`);
   if (setName && !bare.includes(setName)) out.push(`${head} Price — ${g} ${setName}`, `${head} Price — ${setName}`);
   out.push(`${head} Price — ${g}`, `${head} Price`, head);
   return out;
