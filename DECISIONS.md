@@ -3027,3 +3027,12 @@ posting the member's token as every other account call does. A daily check-in is
 a row, up to 10 a day; points buy 7 days of Premium (300 points, once a month, never for paying subscribers). It loads after render,
 opens nothing by itself and shows on no other page (one prompt a visit at most). Points have no cash value and never change giveaway
 entries.
+
+## 2026-11-27: The Empire design system on Gundam Compare
+
+A visitor wrote to Compare Empire asking us to "hire a graphic designer so it wasn't giving claudeslop"; the owner asked for a
+design agent to lift every site (rules in the project's `design-system/README.md`). Gundam keeps its targeting reticle and its
+colours. The `empire-ds` block at the end of `globals.css` takes off the generated-template tells: the headline word and the
+product price written in moving light (a price is read, never shimmered), the glow behind the headline, the blurred ring round
+the search, pill shapes on cards, buttons and marks (10px and 6px now). CSS only. `tests/lively-look.test.ts` reads the lively
+block up to the design block.

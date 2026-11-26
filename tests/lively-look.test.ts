@@ -7,7 +7,9 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
 const css = readFileSync(new URL("../src/app/globals.css", import.meta.url), "utf8");
-const look = css.slice(css.indexOf("── The lively look"));
+const lookFrom = css.indexOf("── The lively look");
+const lookTo = css.indexOf("empire-ds:start", lookFrom);
+const look = css.slice(lookFrom, lookTo === -1 ? undefined : lookTo);
 
 test("the hero's art: one aria-hidden block under 1.5 KB, plain geometry, no link, photo or word", async () => {
   // The component is compiled for Next's automatic JSX runtime; under tsx it needs React in scope.
