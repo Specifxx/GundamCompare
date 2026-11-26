@@ -1427,3 +1427,40 @@ a.card:hover {
     padding-bottom: 1.75rem;
   }
 }
+
+/* empire-ds:start ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+   The Empire design system, v1 (design agent, 2026-11-27; rules in the project's design-system/README.md). A visitor wrote in
+   that our sites read as "Claude slop". Gundam keeps its targeting reticle (the hero's own art) and its navy and federation blue,
+   and loses the generated-template tells: words and prices written in moving light, a glow behind the headline, a blurred ring
+   of light round the search, pill shapes everywhere. CSS only: no markup, words, order or URL change.
+   ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── */
+:root { --ds-radius: 10px; --ds-radius-sm: 6px; }
+/* The coloured word and the product price are solid colour, still. A price is read, never shimmered. */
+.hero-glow { text-shadow: none !important; letter-spacing: -0.035em; }
+.hero-glow .text-brand {
+  background: none !important;
+  color: rgb(var(--brand)) !important;
+  -webkit-text-fill-color: currentColor !important;
+  animation: none !important;
+}
+.pp-price {
+  background: none !important;
+  color: rgb(var(--ink)) !important;
+  -webkit-text-fill-color: currentColor !important;
+  animation: none !important;
+}
+/* The search: a firm field, the brand edge only when it has focus. */
+.hero-search::before { content: none !important; }
+.hero-search input {
+  border-radius: var(--ds-radius);
+  border-width: 1.5px;
+  border-color: rgb(var(--ink) / 0.28);
+  box-shadow: none;
+}
+.hero-search input:focus { border-color: rgb(var(--brand)); box-shadow: 0 0 0 3px rgb(var(--brand) / 0.18); }
+/* One radius for surfaces and buttons, a small one for marks. */
+.card, .card-surface { border-radius: var(--ds-radius); }
+.btn { border-radius: var(--ds-radius); }
+.chip, .tag, .pc-badge { border-radius: var(--ds-radius-sm); }
+.wordmark { background: none !important; color: rgb(var(--brand)) !important; -webkit-text-fill-color: currentColor !important; }
+/* empire-ds:end */
