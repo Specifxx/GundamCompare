@@ -1,0 +1,1940 @@
+{
+ "probedOn": "2026-11-26",
+ "stores": [
+  {
+   "key": "1uprm",
+   "name": "1UP",
+   "base": "https://1uprm.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "bandai-gundam-card-game",
+     "count": 23,
+     "ygo": 23,
+     "sample": 23,
+     "sealed": 19,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Booster Pack  [GD03] (ENG)",
+    "Gundam Card Game Booster Pack  [GD04] (ENG)",
+    "Gundam Card Game Starter Deck : Flash Of Radiance [ST-08] (ENG)",
+    "Gundam Card Game Starter Deck : Celestial Drive [ST-07] (ENG)"
+   ]
+  },
+  {
+   "key": "allyoucanplay",
+   "name": "All You Can Play",
+   "base": "https://allyoucanplay.eu",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 11,
+     "ygo": 8,
+     "sample": 8,
+     "sealed": 6,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-gd01-newtype-rising",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-gd02-dual-impact",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-gd03-steel-requiem",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-gd06-stardust-trails",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-pc01a-gundam-assemble-set-iron-blooded-orphans",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 0,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-pc02a-gundam-assemble-set-gquuuuuux",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 0,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Display Booster Box - Stardust Trails GD06 ENG GD-06",
+    "Gundam Card Game - Premium Card Collection GUNDAM ASSEMBLE Set - Mobile Suit Gundam GQuuuuuuX [PC02A] | ENG",
+    "Gundam Card Game - Premium Card Collection GUNDAM ASSEMBLE Set - Mobile Suit Gundam IRON-BLOODED ORPHANS [PC01A] | ENG",
+    "Gundam Card Game - Display Booster Box - Steel Requiem GD03 ENG GD-03",
+    "Gundam Card Game - Display Booster Box - Newtype Rising [GD01] ENG",
+    "Gundam Card Game - Display Booster Box - Dual Impact GD02 ENG GD-02",
+    "Gundam Card Game - Display Booster Box - Steel Requiem GD03 ENG GD-03",
+    "Gundam Card Game - Display Booster Box - Stardust Trails GD06 ENG GD-06",
+    "Gundam Card Game - Premium Card Collection GUNDAM ASSEMBLE Set - Mobile Suit Gundam IRON-BLOODED ORPHANS [PC01A] | ENG",
+    "Gundam Card Game - Premium Card Collection GUNDAM ASSEMBLE Set - Mobile Suit Gundam GQuuuuuuX [PC02A] | ENG"
+   ]
+  },
+  {
+   "key": "animerch",
+   "name": "Animerch",
+   "base": "https://animerch.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 3,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-starter-decks",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Steel Requiem Booster Pack [GD03]",
+    "Gundam Card Game Steel Requiem Booster Box [GD03]",
+    "Gundam Card Game Celestial Drive ST07 Starter Deck EN",
+    "Gundam Card Game Celestial Drive ST07 Starter Deck EN"
+   ]
+  },
+  {
+   "key": "baruzcard",
+   "name": "BaruZcard Tcg & Accessori",
+   "base": "https://baruzcard.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 33,
+     "ygo": 33,
+     "sample": 33,
+     "sealed": 29,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game GD06 Stardust Trails Sealed Case 12 Booster Box – ENG",
+    "Gundam Card Game GD06 Stardust Trails Booster Box Display 24 Buste – ENG",
+    "Gundam Card Game Starter Deck Bundle ST11 ST12 ST13 ST14 – 4 Mazzi ENG",
+    "Gundam Card Game Sealed Case GD05 12x Box Freedom Ascension ENG"
+   ]
+  },
+  {
+   "key": "battlebear",
+   "name": "Battle Bear Trading Cards & Games",
+   "base": "https://battle-bear.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 12,
+     "ygo": 12,
+     "sample": 12,
+     "sealed": 11,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Newtype Dual Impact GD02 Sleeved Booster Englisch",
+    "Gundam Card Game Freedom Ascension Deck Build Box SC01 Englisch",
+    "Gundam Newtype Dual Impact GD02 Booster Englisch",
+    "Gundam SEED Strike ST04 Starter Deck Englisch"
+   ]
+  },
+  {
+   "key": "battlebearkl",
+   "name": "Battle Bear Kaiserslautern",
+   "base": "https://battle-bear-kl.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 17,
+     "ygo": 13,
+     "sample": 17,
+     "sealed": 16,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Wings of Advance ST02 Starter Deck Englisch",
+    "Gundam Heroic Beginnings ST01 Starter Deck Englisch",
+    "Gundam Zeon's Rush ST03 Starter Deck Englisch",
+    "Gundam Newtype Dual Impact GD02 Booster Englisch"
+   ]
+  },
+  {
+   "key": "battlebearsb",
+   "name": "Battle Bear Saarbrücken",
+   "base": "https://www.battle-bear-sb.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 9,
+     "ygo": 7,
+     "sample": 9,
+     "sealed": 8,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Newtype Dual Impact GD02 Booster Englisch",
+    "Gundam Dual Impact GD02 Booster Display Englisch",
+    "Gundam Card Game Stardust Trails GD06 Booster",
+    "Gundam Card Game Stardust Trails GD06 Display"
+   ]
+  },
+  {
+   "key": "beamcardshop",
+   "name": "Beam Card Shop",
+   "base": "https://beamcardshop.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 6,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 6,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam GD-05 Booster Box",
+    "Gundam Card Game GD-04 Booster Box",
+    "Gundam Card Game GD06 Booster Box",
+    "Gundam Extra Booster EB-01 Booster Box"
+   ]
+  },
+  {
+   "key": "blockhousegames",
+   "name": "Blockhouse Games",
+   "base": "https://blockhousegames.net",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 12,
+     "ygo": 11,
+     "sample": 11,
+     "sealed": 9,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Dual Impact GD02 Booster",
+    "Gundam Card Game - Phantom Aria GD04 Booster",
+    "Gundam Card Game - Phantom Aria GD04 Booster Display",
+    "Gundam Card Game - Steel Requiem GD03 Booster"
+   ]
+  },
+  {
+   "key": "boostrclub",
+   "name": "Boostrclub",
+   "base": "https://boostrclub.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 2,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 2,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Protection Acrylique - Display Gundam Card Game",
+    "Gundam CG - Boîte de 24 Boosters - GD07 Blazing Fist [EN]"
+   ]
+  },
+  {
+   "key": "breakthecase",
+   "name": "BreakTheCase",
+   "base": "https://www.breakthecase.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 7,
+     "ygo": 7,
+     "sample": 7,
+     "sealed": 7,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Dual Impact Booster Display - [GD-02] - Englisch",
+    "Gundam Card Game - Freedom Ascension - Booster Display - [GD-05] - 1st Anniversary - Englisch",
+    "Gundam Card Game - Clan Unity - Starter Deck - [ST06] - Englisch",
+    "Gundam Card Game - Dual Impact Booster - [GD-02] - Englisch"
+   ]
+  },
+  {
+   "key": "bsastore",
+   "name": "BSA Carte Collezionabili",
+   "base": "https://bsastore.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 8,
+     "ygo": 8,
+     "sample": 8,
+     "sealed": 5,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-eng",
+     "count": 8,
+     "ygo": 8,
+     "sample": 8,
+     "sealed": 5,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-booster-box-displays-eng",
+     "count": 4,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 4,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-booster-packs-eng",
+     "count": 4,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 0,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-collections-eng",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 1,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-deck-eng",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 3,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-gd02-dual-impact-eng",
+     "count": 2,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 1,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-gd03-steel-requiem-eng",
+     "count": 2,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 1,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Box Display 24 Bustine - GD02 - Dual Impact - ENG - Gundam Card Game",
+    "Bustina da 13 carte - GD02 - Dual Impact - ENG - Gundam Card Game",
+    "Bustina da 12 carte - GD05 - Freedom Acension - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD04 - Phantom Aria - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD02 - Dual Impact - ENG - Gundam Card Game",
+    "Bustina da 13 carte - GD02 - Dual Impact - ENG - Gundam Card Game",
+    "Bustina da 12 carte - GD05 - Freedom Acension - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD04 - Phantom Aria - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD05 - Freedom Ascension - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD04 - Phantom Aria - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD03 - Steel Requiem - ENG - Gundam Card Game",
+    "Box Display 24 Bustine - GD02 - Dual Impact - ENG - Gundam Card Game"
+   ]
+  },
+  {
+   "key": "cardclub",
+   "name": "Card Club",
+   "base": "https://cardclub.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 25,
+     "ygo": 17,
+     "sample": 25,
+     "sealed": 22,
+     "singles": 1
+    },
+    {
+     "handle": "gundam-starter-deck",
+     "count": 15,
+     "ygo": 11,
+     "sample": 15,
+     "sealed": 15,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-display",
+     "count": 8,
+     "ygo": 7,
+     "sample": 8,
+     "sealed": 8,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam - Booster Display GD03 - englisch",
+    "Gundam Card Game - Ultimate Deck ST09 -  englisch - Vorbestellung",
+    "Gundam - Booster Display Newtype Rising GD01 - englisch",
+    "Gundam Card Game - Starter Deck ST08 -  englisch",
+    "Gundam Card Game - Ultimate Deck ST09 -  englisch - Vorbestellung",
+    "Gundam Card Game - Starter Deck ST08 -  englisch",
+    "Gundam Card Game - Iron Bloom Starter Deck ST05 - englisch",
+    "Gundam Card Game - Starter Deck ST07 - englisch",
+    "Gundam - Booster Display GD03 - englisch",
+    "Gundam - Booster Display Newtype Rising GD01 - englisch",
+    "Gundam - GD04 Phantom Aria - Booster Display - englisch",
+    "Gundam Card Game Freedom Ascension Deck Build Box SC01"
+   ]
+  },
+  {
+   "key": "cardcollector",
+   "name": "Card Collector",
+   "base": "https://card-collector.net",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 53,
+     "ygo": 7,
+     "sample": 7,
+     "sealed": 0,
+     "singles": 7
+    },
+    {
+     "handle": "gundam-card-game",
+     "count": 26,
+     "ygo": 9,
+     "sample": 9,
+     "sealed": 7,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-side-event",
+     "count": 5,
+     "ygo": 5,
+     "sample": 5,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - GD-06 Release Event - Freitag 30.10.2026 ab 18.00 Uhr - Canceled !",
+    "GUNDAM CARD GAME Store Tournament November – Samstag 07.11.2026 ab 18:00 Uhr",
+    "GUNDAM CARD GAME Store Tournament December – Samstag 05.12.2026 ab 18:00 Uhr",
+    "GUNDAM CARD GAME Store Tournament December – Freitag 11.12.2026 ab 18:00 Uhr",
+    "Gundam Card Game - GD07 Booster Display (24 Boosters) Englisch ab 29.01.2027",
+    "Gundam Card Game - GD06 Booster Display (24 Boosters) Englisch",
+    "Gundam Card Game - Premium Collection GUNDAM ASSEMBLE SET [PC01A]",
+    "Gundam Card Game - Premium Collection GUNDAM ASSEMBLE SET [PC02A] Englisch",
+    "Gundam Card Game – 2-Booster Battle | 20-Karten-Micro-Sealed",
+    "Gundam Card Game – Puzzle Challenge | Berechne den entscheidenden Angriff",
+    "Gundam Card Game – King of the Hill | Übernimm das Kommando",
+    "Gundam Card Game – Leihdeck-Roulette Side Event | Zufällige Fraktion"
+   ]
+  },
+  {
+   "key": "cardknights",
+   "name": "Card-Knights",
+   "base": "https://card-knights.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 5,
+     "ygo": 3,
+     "sample": 5,
+     "sealed": 4,
+     "singles": 1
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game – Starter Deck 07: Celestial Drive [ST07]",
+    "Gundam Card Game Starter Deck ST06 – Clan Unity (EN)",
+    "Gundam Card Game Starter Deck ST10 (EN)",
+    "Gundam Assemble – Expansion Packs & Paint Sets | Miniaturen & Zubehör (EN)"
+   ]
+  },
+  {
+   "key": "cardsplace",
+   "name": "Cardsplace",
+   "base": "https://cardsplace.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 34,
+     "ygo": 26,
+     "sample": 26,
+     "sealed": 22,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-starter-decks",
+     "count": 12,
+     "ygo": 8,
+     "sample": 8,
+     "sealed": 8,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-special-boxen-sets",
+     "count": 8,
+     "ygo": 5,
+     "sample": 5,
+     "sealed": 5,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-booster-displays",
+     "count": 6,
+     "ygo": 5,
+     "sample": 5,
+     "sealed": 5,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-booster-packs",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Celestial Drive Starter Deck [ST07] - English",
+    "Gundam Card Game - Flash of Radiance Starter Deck [ST08] - English",
+    "Gundam Card Game - Steel Requiem Booster Display [GD-03] - English",
+    "Gundam Card Game - Clan Unity Starter Deck [ST06] - English",
+    "Gundam Card Game - Heavy Dominion Starter Deck [ST14] - English",
+    "Gundam Card Game - Raging Onslaught Starter Deck [ST12] - English",
+    "Gundam Card Game - Silent Barrage Starter Deck [ST13] - English",
+    "Gundam Card Game - Aquatic Assault Starter Deck [ST11] - English",
+    "Gundam Card Game - Deck Build Box Freedom Ascension [SC01] - English",
+    "Gundam Card Game - Seed Strike Gundam Assemble Starter Deck Set [ST04A] - English",
+    "Gundam Card Game - Zeon's Rush Gundam Assemble Starter Deck Set [ST03A] - English",
+    "Gundam Card Game - Wings of Advance Gundam Assemble Starter Deck Set [ST02A] - English"
+   ]
+  },
+  {
+   "key": "ccncards",
+   "name": "CCN Cards",
+   "base": "https://ccncards.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-eng",
+     "count": 15,
+     "ygo": 5,
+     "sample": 5,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Stardust Trails GD06 - ENG",
+    "Gundam Card Game - GD03 Steel Requiem - ENG",
+    "Gundam Card Game - Starter Deck SEED Strike ST04/ST04A - ENG",
+    "Gundam Card Game - Starter Deck Zeon´s Rush ST03/ST03A - ENG"
+   ]
+  },
+  {
+   "key": "dctrading",
+   "name": "DC-Trading",
+   "base": "https://dctrading.at",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 15,
+     "ygo": 10,
+     "sample": 15,
+     "sealed": 11,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "ST11 Aquatic Assault Starter Deck – EN",
+    "ST12 Raging Onslaught Starter Deck – EN",
+    "ST13 Silent Barrage Starter Deck – EN",
+    "ST14 Heavy Dominion Starter Deck – EN"
+   ]
+  },
+  {
+   "key": "defconduezero",
+   "name": "Defcon 2.0",
+   "base": "https://defconduezero.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 5,
+     "ygo": 3,
+     "sample": 5,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Premium Case Protettivo per Riftbound o Gundam Booster Box Magnetico in Plexiglass - TCG Lab",
+    "Phantom Aria - GD-04 - Gundam Card Game - Boosters Box (EN)",
+    "Steel Requiem - GD-03 - Gundam Card Game - Boosters Box (EN)",
+    "GUNDAM ASSEMBLE Set -Mobile Suit Gundam IRON-BLOODED ORPHANS- Premium Card Collection [PC01A] (EN)"
+   ]
+  },
+  {
+   "key": "deichcards",
+   "name": "deichcards.de",
+   "base": "https://deichcards.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game-booster-starter-decks-bei-deichcards",
+     "count": 10,
+     "ygo": 10,
+     "sample": 10,
+     "sealed": 7,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game (EN) Starter Deck ST01-ST04",
+    "Gundam Card Game GD-03 (EN) - Steel Requiem - Booster Display",
+    "Gundam Card Game GD-04 (EN) - Phantom Aria - Display Box",
+    "Gundam Card Game GD-02 (EN) - Dual Impact - Booster Display"
+   ]
+  },
+  {
+   "key": "dragoncard",
+   "name": "The Dragoncard",
+   "base": "https://www.dragoncard.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 40,
+     "ygo": 22,
+     "sample": 32,
+     "sealed": 24,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-starter-decks",
+     "count": 12,
+     "ygo": 10,
+     "sample": 11,
+     "sealed": 11,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-expansion-newtype-rising-gd01",
+     "count": 10,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 4,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-expansion-steel-requiem-gd03",
+     "count": 8,
+     "ygo": 5,
+     "sample": 7,
+     "sealed": 5,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-booster-displays",
+     "count": 6,
+     "ygo": 5,
+     "sample": 5,
+     "sealed": 5,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-booster-packs",
+     "count": 6,
+     "ygo": 5,
+     "sample": 5,
+     "sealed": 5,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam - Starter Deck - ST02: Wings of Advance",
+    "Gundam - Starter Deck - ST01: Heroic Beginnings",
+    "Gundam - GD05 - Freedom Ascension - Booster Display",
+    "Gundam - Starter Deck - ST04: SEED Strike",
+    "Gundam - Starter Deck - ST02: Wings of Advance",
+    "Gundam - Starter Deck - ST01: Heroic Beginnings",
+    "Gundam - Starter Deck - ST04: SEED Strike",
+    "Gundam - Starter Deck - ST03: Zeon's Rush",
+    "Gundam - Starter Deck - ST02: Wings of Advance",
+    "Gundam - Starter Deck - ST01: Heroic Beginnings",
+    "Gundam - Starter Deck - ST04: SEED Strike",
+    "Gundam - Starter Deck - ST03: Zeon's Rush"
+   ]
+  },
+  {
+   "key": "evlutcg",
+   "name": "Evolution TCG",
+   "base": "https://evlutcg.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 16,
+     "ygo": 16,
+     "sample": 16,
+     "sealed": 16,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - GD06 Stardust Trails Sealed Case (12x Booster Boxes) English Preorder",
+    "Gundam Card Game - EB01 Eternal Nexus Sealed Case (12x Booster Boxes) English Preorder",
+    "Gundam Card Game - GD05 Freedom Ascension Sealed Case (12x Booster Boxes) English",
+    "Gundam Card Game - GD05 Freedom Ascension Booster Box English Preorder"
+   ]
+  },
+  {
+   "key": "fantasiacards",
+   "name": "FantasiaCards",
+   "base": "https://fantasiacards.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 17,
+     "ygo": 17,
+     "sample": 17,
+     "sealed": 15,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - GD05 - Freedom Ascension - Display [ENG]",
+    "Gundam Card Game - GD05 - Freedom Ascension - Booster [ENG]",
+    "Gundam Card Game - EB01 - Eternal Nexus - Display [ENG]",
+    "Gundam Card Game - EB01 - Eternal Nexus - Booster [ENG]"
+   ]
+  },
+  {
+   "key": "fireanddice",
+   "name": "Fire & Dice",
+   "base": "https://fireanddice.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 10,
+     "ygo": 9,
+     "sample": 10,
+     "sealed": 9,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-starter-decks",
+     "count": 6,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 6,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-booster-boxes",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Stardust Trails Booster Box - Stardust Trails",
+    "Starter Deck: Silent Barrage - Starter Deck: Silent Barrage",
+    "Starter Deck: Heavy Dominion - Starter Deck: Heavy Dominion",
+    "Starter Deck: Iron Bloom - Starter Deck: Iron Bloom",
+    "Starter Deck: Heavy Dominion - Starter Deck: Heavy Dominion",
+    "Starter Deck: Silent Barrage - Starter Deck: Silent Barrage",
+    "Starter Deck: Raging Onslaught - Starter Deck: Raging Onslaught",
+    "Starter Deck: Aquatic Assault - Starter Deck: Aquatic Assault",
+    "Stardust Trails Booster Box - Stardust Trails",
+    "Freedom Ascension Booster Box - Freedom Ascension",
+    "Eternal Nexus Booster Box - Eternal Nexus"
+   ]
+  },
+  {
+   "key": "fumetteriageco",
+   "name": "Fumetteria Geco",
+   "base": "https://fumetteriageco.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-trading-card-game",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Steel Requiem Booster Box [GD-03] - EN",
+    "GUNDAM CARD GAME ST07 CELESTIAL DRIVE STARTER DECK - ENG",
+    "GUNDAM CARD GAME ST08 FLASH OF RADIANCE STARTER DECK - ENG"
+   ]
+  },
+  {
+   "key": "gamerzparadize",
+   "name": "GamerzParadize",
+   "base": "https://gamerzparadize.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 31,
+     "ygo": 13,
+     "sample": 20,
+     "sealed": 11,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-decks",
+     "count": 10,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 3,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-booster-boxen",
+     "count": 6,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 4,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-booster-packs",
+     "count": 6,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 4,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-special-editions",
+     "count": 2,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 0,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam - 3d Rubber Mascot Keychain - Aerpla-kun",
+    "Gundam - 3d Rubber Mascot Keychain - Aile Stpla-kun",
+    "Gundam - 3d Rubber Mascot Keychain - Build Stpla-kun",
+    "Gundam - 3d Rubber Mascot Keychain - GMPLA-kun",
+    "Gundam Card Game - Premium Collection Gundam Assemble Set [PC01A] - EN",
+    "Gundam Card Game - Premium Gundam Assemble Starter Set [PC02A] - EN",
+    "Gundam Card Game - Starter Deck ST11 - Aquatic Assault",
+    "Gundam Card Game - Ultimate Deck 02 ST-15",
+    "Gundam Card Game - Blazing Fist Booster Box - GD-07 EN",
+    "Gundam Card Game - Booster Box - GD-08",
+    "Gundam Card Game - Stardust Trails Booster Box - GD-06 EN",
+    "Gundam Card Game Extra Booster Box EB02"
+   ]
+  },
+  {
+   "key": "gamesavenue",
+   "name": "Games Avenue",
+   "base": "https://gamesavenue.fr",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 11,
+     "ygo": 10,
+     "sample": 11,
+     "sealed": 10,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam ! Deck de Démarrage \"Heavy Dominion\" ST14 - Anglais !",
+    "Gundam ! Deck de Démarrage ST05 Iron Boom - Anglais !",
+    "Gundam ! Display \"Blazing Fist\" GD07 - Anglais !",
+    "Gundam ! Display \"Stardust Trails\" GD06 - Anglais !"
+   ]
+  },
+  {
+   "key": "goosegames",
+   "name": "Goose Games",
+   "base": "https://goose-games.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 20,
+     "ygo": 10,
+     "sample": 10,
+     "sealed": 10,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam - Freedom Ascension GD05 Booster Display (24) - EN",
+    "Gundam - Stardust Trails GD06 - Booster Display (24) - EN",
+    "Gundam - Iron Bloom - Starter Deck ST05 - EN",
+    "Gundam - SEED Strike - Starter Deck ST04 - EN"
+   ]
+  },
+  {
+   "key": "iconiccards",
+   "name": "ICONIC CARDS",
+   "base": "https://iconic-cards.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 10,
+     "ygo": 6,
+     "sample": 10,
+     "sealed": 10,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game – Freedom Ascension [GD05] Booster Box 24 Bustine (Inglese)",
+    "Gundam Card Game Booster Box Newtype Rising [GD01]",
+    "Gundam Assemble Starter Set [ST04A] - Inglese",
+    "Gundam Assemble Starter Set [ST03A] - Inglese"
+   ]
+  },
+  {
+   "key": "isengard",
+   "name": "Isengard Fantasy Shop",
+   "base": "https://isengard.com.cy",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 14,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 5,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Starter Sets  (ST01/ST02/ST03/ST04)",
+    "Gundam Card Game Starter Deck Display ST-08",
+    "Gundam Card Game Starter Deck [ST-11],[ST-12],[ST-13],[ST-14]",
+    "Gundam Card Game Starter Deck Display ST-07"
+   ]
+  },
+  {
+   "key": "kaibacards",
+   "name": "KaibaCards e.U.",
+   "base": "https://kaibacards.at",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "bandai-gundam-card-game",
+     "count": 21,
+     "ygo": 9,
+     "sample": 9,
+     "sealed": 7,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Premium Collection ASSEMBLE Set -Mobile Suit Gundam IRON-BLOODED ORPHANS- [PC01A] Englisch",
+    "Gundam Card Game Premium Collection ASSEMBLE Set -Mobile Suit Gundam GQuuuuuuX- [PC02A]",
+    "Gundam Card Game Starter Deck ST08 Flash of Radiance Englisch",
+    "Gundam Card Game Starter Deck ST07 Celestial Drive Englisch"
+   ]
+  },
+  {
+   "key": "kazuma",
+   "name": "Kazuma games shop",
+   "base": "https://kazuma.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 3,
+     "ygo": 2,
+     "sample": 3,
+     "sealed": 0,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "GUNDAM TCG PREMIUM CARD COLLECTION ASSEMBLE BLOODED ORPHANS PC01A",
+    "GUNDAM TCG - ST05 - IRON BLOOM",
+    "GUNDAM TCG - ST06 - CLAN UNITY"
+   ]
+  },
+  {
+   "key": "kingcards",
+   "name": "King Cards",
+   "base": "https://kingcards.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 9,
+     "ygo": 9,
+     "sample": 9,
+     "sealed": 9,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Stardust Trails Booster Box [GD06]",
+    "Gundam Booster Box Freedom Ascension [GD05]",
+    "Gundam Booster Box Phantom Aria [GD04]",
+    "Gundam Card Game Ultimate Deck Destiny Ignition [ST09]"
+   ]
+  },
+  {
+   "key": "laescotillajuegos",
+   "name": "La Escotilla",
+   "base": "https://laescotillajuegos.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 64,
+     "ygo": 31,
+     "sample": 32,
+     "sealed": 27,
+     "singles": 1
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Stardust Trails Booster Box GD06 (24 Boosters)",
+    "Gundam Card Game - Starter Deck Heavy Dominion (ST14)",
+    "Gundam Card Game - Starter Deck Silent Barrage (ST13)",
+    "Gundam Card Game - Starter Deck Raging Onslaught (ST12)"
+   ]
+  },
+  {
+   "key": "lakecards",
+   "name": "LAKE-CARDS",
+   "base": "https://lakecards.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game – Dual Impact Booster Display GD-02 (EN) | 24 Booster | Englisch"
+   ]
+  },
+  {
+   "key": "madridnortetcg",
+   "name": "Madrid Norte TCG",
+   "base": "https://madridnortetcg.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "collections-gundam-card-game",
+     "count": 4,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Freedom Ascension GD05 Booster Box (EN)",
+    "1st Anniversary Set PB-03 – Gundam Card Game (EN)",
+    "Gundam Card Game GD-06 Stardust Trails — Booster Box 24 Sobres (EN)",
+    "Booster Box GD-07 – (EN) Gundam Card Game"
+   ]
+  },
+  {
+   "key": "manamarket",
+   "name": "ManaMarket",
+   "base": "https://manamarket.eu",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 27,
+     "ygo": 27,
+     "sample": 27,
+     "sealed": 27,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game",
+     "count": 27,
+     "ygo": 27,
+     "sample": 27,
+     "sealed": 27,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-single",
+     "count": 21,
+     "ygo": 21,
+     "sample": 21,
+     "sealed": 21,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-starter-decks",
+     "count": 6,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 6,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-starterdecks",
+     "count": 6,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 6,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "EX Resource (EXR-001) - Deck Build Box Freedom Ascension (Resource) [SC01-EXR-001]",
+    "Unforeseen Incident (ST01-014) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-ST01-014]",
+    "With Iron and Blood (ST05-013) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-013]",
+    "Isaribi (ST05-015) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-015]",
+    "EX Resource (EXR-001) - Deck Build Box Freedom Ascension (Resource) [SC01-EXR-001]",
+    "EX Base (EXB-001) - Deck Build Box Freedom Ascension (Resource) [SC01-EXB-001]",
+    "Resource (R-001) - Deck Build Box Freedom Ascension (Resource) [SC01-R-001]",
+    "Unforeseen Incident (ST01-014) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-ST01-014]",
+    "EX Resource (EXR-001) - Deck Build Box Freedom Ascension (Resource) [SC01-EXR-001]",
+    "Unforeseen Incident (ST01-014) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-ST01-014]",
+    "With Iron and Blood (ST05-013) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-013]",
+    "Isaribi (ST05-015) (V.1 - Common) - Starter Deck: Iron Bloom (Common) [ST05-015]"
+   ]
+  },
+  {
+   "key": "manamecha",
+   "name": "Mana Mecha",
+   "base": "https://manamecha.fr",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 36,
+     "ygo": 36,
+     "sample": 36,
+     "sealed": 29,
+     "singles": 0
+    },
+    {
+     "handle": "decks-pre-construits-gundam",
+     "count": 21,
+     "ygo": 21,
+     "sample": 21,
+     "sealed": 15,
+     "singles": 0
+    },
+    {
+     "handle": "boosters-gundam-a-lunite",
+     "count": 8,
+     "ygo": 8,
+     "sample": 8,
+     "sealed": 8,
+     "singles": 0
+    },
+    {
+     "handle": "boites-de-boosters-gundam",
+     "count": 7,
+     "ygo": 7,
+     "sample": 7,
+     "sealed": 7,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Premium Accesory Set PB02 - Iron-Blooded Orphans - Gundam Card Game",
+    "ST14 Heavy Dominion - Deck de Démarrage - Gundam Card Game",
+    "ST13 Silent Barrage - Deck de Démarrage - Gundam Card Game",
+    "ST12 Raging Onslaught - Deck de Démarrage - Gundam Card Game",
+    "ST14 Heavy Dominion - Deck de Démarrage - Gundam Card Game",
+    "ST13 Silent Barrage - Deck de Démarrage - Gundam Card Game",
+    "ST12 Raging Onslaught - Deck de Démarrage - Gundam Card Game",
+    "ST11 Aquatic Assault - Deck de Démarrage - Gundam Card Game",
+    "GD06 Stardust Trails  - Booster - Gundam Card Game",
+    "SC01 Deck Build Box - Gundam Card Game",
+    "GD05 Freedom Ascension - Booster - Gundam Card Game",
+    "EB01 Eternal Nexus - Booster - Gundam Card Game"
+   ]
+  },
+  {
+   "key": "mcgillicuddystoyshop",
+   "name": "McGillicuddy's Toy Shop",
+   "base": "https://mcgillicuddystoyshop.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 27,
+     "ygo": 18,
+     "sample": 18,
+     "sealed": 16,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Freedom Ascension GD05 Booster Box",
+    "Gundam Card Game Deck Build Box Freedom Ascension SC01",
+    "Gundam TCG Card Game Starter Deck- Wings of Advance (ST02)",
+    "Gundam TCG Card Game Starter Deck- Zeon's Rush (ST03)"
+   ]
+  },
+  {
+   "key": "mulligantcg",
+   "name": "Mulligan TCG Shop",
+   "base": "https://mulligantcg.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gd",
+     "count": 13,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Phantom Aria GD04 Display",
+    "Gundam Card Game - Eternal Nexus - EB01 Booster Display EN",
+    "Gundam Card Game Official Card Sleeve 02",
+    "Gundam Card Game - Premium Card Collection Gundam Assemble Set - PC02A"
+   ]
+  },
+  {
+   "key": "nerdbank",
+   "name": "Spielewelt",
+   "base": "https://nerdbank.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 29,
+     "ygo": 18,
+     "sample": 22,
+     "sealed": 22,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Newtype Rising Booster - EN",
+    "Gundam Card Game Newtype Rising Display - EN",
+    "Gundam Card Game SEED Strike Starter Deck - EN",
+    "Gundam Card Game Zeon's Rush Starter Deck - EN"
+   ]
+  },
+  {
+   "key": "ninpostore",
+   "name": "Ninpo Store",
+   "base": "https://ninpostore.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 4,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 2,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Booster Box Display GD-05 (24 Sobres) - Gundam Card Game",
+    "Booster Box Display GD-06 (24 Sobres) - Gundam Card Game"
+   ]
+  },
+  {
+   "key": "otakura",
+   "name": "Otakura",
+   "base": "https://otakura.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 13,
+     "ygo": 13,
+     "sample": 13,
+     "sealed": 13,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "GD02 - Dual Impact Case da 12 Box - Gundam Card Game (ENG)",
+    "ST05 - Iron Bloom Starter Deck - Gundam Card Game (ENG)",
+    "ST06 - Clan Unity Starter Deck - Gundam Card Game (ENG)",
+    "GD02 - Dual Impact Box da 24 bustine - Gundam Card Game"
+   ]
+  },
+  {
+   "key": "playmaniac",
+   "name": "Play-Maniac",
+   "base": "https://www.play-maniac.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 26,
+     "ygo": 8,
+     "sample": 8,
+     "sealed": 7,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Celestial Drive Starter Deck (ST07) Englisch",
+    "Gundam Card Game Official Card Sleeve 02 4 versch. Sleeves",
+    "Gundam Card Game Starter Deck ST11 Aquatic Assault Englisch",
+    "Gundam Card Game Starter Deck ST12 Raging Onslaught Englisch"
+   ]
+  },
+  {
+   "key": "pokebundles",
+   "name": "Pokebundles Ireland",
+   "base": "https://www.pokebundles.ie",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 3,
+     "ygo": 3,
+     "sample": 3,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Newtype Rising GD01 Booster Pack",
+    "Gundam Card Game Newtype Rising GD01 Booster Box",
+    "Gundam Card Game Steel Requiem GD03 Booster Box"
+   ]
+  },
+  {
+   "key": "pokeca",
+   "name": "Pokeca.NL",
+   "base": "https://pokeca.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 27,
+     "ygo": 15,
+     "sample": 26,
+     "sealed": 22,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Clan Unity Starter Deck",
+    "Gundam Stardust Trails GD-06 Booster Box",
+    "Gundam Assemble Paint Pack 01 [PA01] EN",
+    "Gundam Assemble Starter Set 01 [ST01] EN"
+   ]
+  },
+  {
+   "key": "pokemillon",
+   "name": "POKEMILLON - La Tienda Pokémon",
+   "base": "https://www.pokemillon.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 15,
+     "ygo": 10,
+     "sample": 14,
+     "sealed": 10,
+     "singles": 2
+    }
+   ],
+   "sampleTitles": [
+    "Gundam TCG | Baraja de Demostracion de Char Aznable Inglés 2025",
+    "Gundam TCG | Baraja de Demostracion de Amura Ray Inglés 2025",
+    "Gundam TCG | Booster Display Phantom Aria GD-04",
+    "Sobre Gundam x Geternil Collaboration Pack"
+   ]
+  },
+  {
+   "key": "pokepower",
+   "name": "PokePower",
+   "base": "https://poke-power.eu",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 12,
+     "ygo": 7,
+     "sample": 12,
+     "sealed": 12,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam - Deck Build Box Freedom Ascension (SC01)",
+    "Gundam - GD05 Booster Box Freedom Ascension",
+    "Gundam - EB01 Booster Box Eternal Nexus",
+    "Gundam - GD04 Booster Box Phantom Aria"
+   ]
+  },
+  {
+   "key": "poneglyphcards",
+   "name": "PoneglyphCards",
+   "base": "https://poneglyphcards.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "box-gundam-eng",
+     "count": 2,
+     "ygo": 1,
+     "sample": 2,
+     "sealed": 1,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Deck Build Box SC-01 (ENG)",
+    "Gundam Premium Accessory Set Mobile Suit Gundam Wing (ENG)"
+   ]
+  },
+  {
+   "key": "primeprotector",
+   "name": "Prime Protector",
+   "base": "https://primeprotector.at",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 25,
+     "ygo": 25,
+     "sample": 25,
+     "sealed": 22,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game – GD06 Stardust Trails Booster Display (Englisch)",
+    "Gundam Card Game: Deck Build Box [SC01] – (Englisch)",
+    "Gundam Card Game - Premium Card Collection GUNDAM ASSEMBLE Set [PC02A]",
+    "Gundam Card Game - Premium Card Collection GUNDAM ASSEMBLE Set [PC01A]"
+   ]
+  },
+  {
+   "key": "recollectibles",
+   "name": "ReCollectibles",
+   "base": "https://recollectibles.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "aile-strike-gundam-st04-001-alle-versionen",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 0,
+     "singles": 1
+    }
+   ],
+   "sampleTitles": [
+    "Aile Strike Gundam (ST04-001) (V.1) BETA Legendary Rare Englisch"
+   ]
+  },
+  {
+   "key": "ronintcg",
+   "name": "Ronin il Covo dei Samurai",
+   "base": "https://ronintcg.it",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 17,
+     "ygo": 10,
+     "sample": 12,
+     "sealed": 9,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game – Starter Deck ST10 “Generation Pulse”",
+    "Gundam Card Game Extra Booster EB01 ENG",
+    "Gundam TCG: Premium Collection Gundam Assemble Set - GQuuuuuuX [PC02A] ENG",
+    "Gundam TCG: Premium Collection Gundam Assemble Set - Iron Blooded Orphans [PC01A] ENG"
+   ]
+  },
+  {
+   "key": "sarumangames",
+   "name": "Saruman Games",
+   "base": "https://sarumangames.es",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 34,
+     "ygo": 21,
+     "sample": 28,
+     "sealed": 17,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "GUNDAM TCG: - AQUATIC ASSAULT - (ST11)",
+    "GUNDAM TCG: - RAGING ONSLAUGHT - (ST12)",
+    "GUNDAM TCG: CAJA DE SOBRES - PHANTOM ARIA - (GDO4)",
+    "GUNDAM TCG: STARTER DECK Iron Bloom ST05"
+   ]
+  },
+  {
+   "key": "sgames",
+   "name": "S-Games",
+   "base": "https://s-games.at",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 10,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 3,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Booster Box [GD06] TCG",
+    "Gundam Card Game Official Card Sleeve 02 TCG",
+    "Gundam Card Game Starter Deck [ST-13] TCG",
+    "Preorder - Gundam Card Game Booster Box [GD07] TCG"
+   ]
+  },
+  {
+   "key": "side7",
+   "name": "Side7",
+   "base": "https://side7.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 38,
+     "ygo": 36,
+     "sample": 38,
+     "sealed": 26,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-tcg-online",
+     "count": 13,
+     "ygo": 11,
+     "sample": 13,
+     "sealed": 8,
+     "singles": 0
+    },
+    {
+     "handle": "gundamstarterdeck",
+     "count": 4,
+     "ygo": 4,
+     "sample": 4,
+     "sealed": 4,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game ST01 - Heroic Beginning starter deck",
+    "Gundam Card Game ST02 - Wings of Advance starter deck",
+    "Gundam Card Game ST03 - Zeon's Rush starter deck",
+    "Gundam Card Game ST04 - SEED Strike starter deck",
+    "Gundam Card Game - Starter Deck ST13 - Silent Barrage",
+    "Gundam Card Game - Starter Deck ST12 - Raging Onslaught",
+    "Gundam Card Game Steel Requiem GD03",
+    "Gundam Card Game - Starter Deck ST14 - Heavy Dominion",
+    "Gundam Card Game - Starter Deck ST13 - Silent Barrage",
+    "Gundam Card Game - Starter Deck ST12 - Raging Onslaught",
+    "Gundam Card Game - Starter Deck ST14 - Heavy Dominion",
+    "Gundam Card Game Starter Deck ST11 - Aquatic Assault"
+   ]
+  },
+  {
+   "key": "spellnexus",
+   "name": "SpellNexus",
+   "base": "https://spellnexus.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 182,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 0,
+     "singles": 40
+    },
+    {
+     "handle": "gundam-single",
+     "count": 177,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 0,
+     "singles": 40
+    }
+   ],
+   "sampleTitles": [
+    "Infinite Variations (GD06-118) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-118]",
+    "Xavier's Gyan Hakuji-Packs (GQ) (GD06-053) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-053]",
+    "Val Walo (GD06-052) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-052]",
+    "Nyaan (GD06-094) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-094]",
+    "Infinite Variations (GD06-118) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-118]",
+    "Xavier's Gyan Hakuji-Packs (GQ) (GD06-053) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-053]",
+    "Val Walo (GD06-052) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-052]",
+    "Nyaan (GD06-094) (V.2 - Rare +) - Stardust Trails (Rare +) [GD06-094]"
+   ]
+  },
+  {
+   "key": "spielewelt",
+   "name": "Spielewelt",
+   "base": "https://spielewelt.de",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 29,
+     "ygo": 18,
+     "sample": 22,
+     "sealed": 22,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game Newtype Rising Booster - EN",
+    "Gundam Card Game Newtype Rising Display - EN",
+    "Gundam Card Game SEED Strike Starter Deck - EN",
+    "Gundam Card Game Zeon's Rush Starter Deck - EN"
+   ]
+  },
+  {
+   "key": "tcg",
+   "name": "OTAKUYA TCG",
+   "base": "https://tcg.otakuya.es",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "tcg-gundam",
+     "count": 9,
+     "ygo": 9,
+     "sample": 9,
+     "sealed": 8,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Booster Box Display Inglés GD-07 - Gundam Card Game",
+    "Booster Box Display GD-04 (24 Sobres) Inglés - Gundam Card Game",
+    "Booster Box Display GD-06 (24 Sobres) Inglés - Gundam Card Game",
+    "Playmat and Card Set Mobile Suit - Gundam Card Game"
+   ]
+  },
+  {
+   "key": "tcgking",
+   "name": "TCGKing.nl",
+   "base": "https://tcgking.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-all",
+     "count": 590,
+     "ygo": 35,
+     "sample": 40,
+     "sealed": 7,
+     "singles": 29
+    },
+    {
+     "handle": "gundam-singles",
+     "count": 542,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 0,
+     "singles": 40
+    },
+    {
+     "handle": "gundam-alternate-art",
+     "count": 489,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 0,
+     "singles": 40
+    },
+    {
+     "handle": "gundam-set-gd05",
+     "count": 67,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 1,
+     "singles": 39
+    },
+    {
+     "handle": "gundam-set-gd03",
+     "count": 55,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 2,
+     "singles": 38
+    },
+    {
+     "handle": "gundam-set-gd06",
+     "count": 54,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 3,
+     "singles": 37
+    },
+    {
+     "handle": "gundam-set-gd04",
+     "count": 53,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 2,
+     "singles": 38
+    },
+    {
+     "handle": "gundam-set-gd02",
+     "count": 49,
+     "ygo": 40,
+     "sample": 40,
+     "sealed": 3,
+     "singles": 37
+    }
+   ],
+   "sampleTitles": [
+    "Wing Gundam Zero (EW) (GD05-067) Double Plus Alternate Art (++) [English]",
+    "Gundam (GD01-001) Double Plus Alternate Art (++) [English]",
+    "Strike Freedom Gundam (GD05-002) Double Plus Alternate Art (++) [English]",
+    "Gundam GD03: Steel Requiem Sealed Case [English]",
+    "Wing Gundam Zero (EW) (GD05-067) Double Plus Alternate Art (++) [English]",
+    "Gundam (GD01-001) Double Plus Alternate Art (++) [English]",
+    "Strike Freedom Gundam (GD05-002) Double Plus Alternate Art (++) [English]",
+    "Gundam Aerial Rebuild (GD01-067) Double Plus Alternate Art (++) [English]",
+    "Overflowing Affection (GD01-118) Alternate Art (+) [English]",
+    "Marida Cruz (GD01-093) Alternate Art (+) [English]",
+    "Wing Gundam Zero (GD01-024) Alternate Art (+) [English]",
+    "Gundam Barbatos 1st Form (GD02-054) Alternate Art (+) [English]"
+   ]
+  },
+  {
+   "key": "tcgplatform",
+   "name": "TCG Platform",
+   "base": "https://tcgplatform.nl",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam",
+     "count": 2,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 2,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-booster-box",
+     "count": 2,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 2,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam - Stardust Trails [GD06] - Booster Box",
+    "Gundam: Steel Requiem [GD03] - Booster Box",
+    "Gundam - Stardust Trails [GD06] - Booster Box",
+    "Gundam: Steel Requiem [GD03] - Booster Box"
+   ]
+  },
+  {
+   "key": "tcgviert",
+   "name": "TCGViert",
+   "base": "https://tcgviert.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-tcg",
+     "count": 2,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game | Deck Build Box (SC01) | Deck Box (EN)"
+   ]
+  },
+  {
+   "key": "templarsarena",
+   "name": "Templars Arena Gamecenter",
+   "base": "https://templarsarena.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 25,
+     "ygo": 25,
+     "sample": 25,
+     "sealed": 21,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-starter-decks",
+     "count": 14,
+     "ygo": 14,
+     "sample": 14,
+     "sealed": 13,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-booster-display",
+     "count": 6,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 6,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-card-game-premium-collection",
+     "count": 2,
+     "ygo": 2,
+     "sample": 2,
+     "sealed": 0,
+     "singles": 0
+    },
+    {
+     "handle": "gundam-extra-booster",
+     "count": 1,
+     "ygo": 1,
+     "sample": 1,
+     "sealed": 1,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Phantom Aria GD04 Booster - EN",
+    "Gundam Card Game - Dual Impact (GD-02) - Booster - EN (Copy)",
+    "Gundam ST01-04 Bundle",
+    "Gundam Card Game - Starter Deck ST11-14 Bundle - EN",
+    "Gundam ST01-04 Bundle",
+    "Gundam Card Game - Starter Deck ST11-14 Bundle - EN",
+    "Gundam Card Game Starter Seed Strike ST04",
+    "Gundam Card Game Starter Zeons Rush ST03",
+    "Gundam Card Game - Phantom Aria GD04 Booster - EN",
+    "Gundam Card Game - Dual Impact (GD-02) - Booster - EN (Copy)",
+    "Gundam Card Game - Phantom Aria GD04 Booster Display (24 Boosters) - EN",
+    "Gundam Card Game - Dual Impact (GD-02) - Booster Box - EN"
+   ]
+  },
+  {
+   "key": "venturacardgames",
+   "name": "Ventura Games",
+   "base": "https://venturacardgames.com",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 13,
+     "ygo": 6,
+     "sample": 6,
+     "sealed": 6,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game: Zeon’s Rush Starter Deck ST03- EN",
+    "Gundam Card Game SEED Strike ST04 English Starter Deck – Kira & Athrun Theme",
+    "Gundam Card Game Wings of Advance Starter Deck ST02 – English Edition",
+    "Gundam Card Game Clan Unity Starter Deck ST06 – English | GQuuuuuX Theme"
+   ]
+  },
+  {
+   "key": "versusgamecenter",
+   "name": "Versus Gamecenter",
+   "base": "https://versusgamecenter.pt",
+   "market": "EU",
+   "collections": [
+    {
+     "handle": "gundam-card-game",
+     "count": 39,
+     "ygo": 24,
+     "sample": 24,
+     "sealed": 23,
+     "singles": 0
+    }
+   ],
+   "sampleTitles": [
+    "Gundam Card Game - Starter Deck ST11 Aquatic Assault - EN",
+    "Gundam Card Game - Starter Deck ST13 Silent Barrage - EN",
+    "Gundam Card Game - Starter Deck ST12 Raging Onslaught - EN",
+    "Gundam Card Game - Starter Deck ST14 Heavy Dominion - EN"
+   ]
+  }
+ ]
+}
