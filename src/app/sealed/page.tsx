@@ -7,6 +7,7 @@ import { adSearch, cardAds } from "@/lib/card-ads";
 import { SEALED_ORDER as ORDER, SEALED_PLURAL as PLURAL, sealedHref } from "@/lib/hubs";
 import Link from "@/components/Link";
 import { TileGrid } from "@/components/ProductTile";
+import { SealedSearch } from "@/components/SealedSearch";
 
 export const revalidate = 86400; // data only changes with a release (DECISIONS.md, "Vercel cost")
 export const metadata: Metadata = {
@@ -24,6 +25,9 @@ export default function Sealed() {
       <header>
         <h1 className="list-h1 font-display text-3xl font-black">{SITE.gameShort} booster box and sealed prices</h1>
         <p className="mt-2 text-muted">Newest sets first within each type. Open any product to compare every store.</p>
+        <div className="mt-5">
+          <SealedSearch placeholder={`Search sealed: a set, a code or “booster box”`} />
+        </div>
       </header>
       {/* On a phone each type is one sideways row (2026-11-23: the page was 23,800 px of two-column tiles); the grid from sm up. */}
       {groups.map((g) => (
