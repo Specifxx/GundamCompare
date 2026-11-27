@@ -3036,3 +3036,13 @@ colours. The `empire-ds` block at the end of `globals.css` takes off the generat
 product price written in moving light (a price is read, never shimmered), the glow behind the headline, the blurred ring round
 the search, pill shapes on cards, buttons and marks (10px and 6px now). CSS only. `tests/lively-look.test.ts` reads the lively
 block up to the design block.
+
+## 2026-11-27: Set pages say what this set's cards are worth (page scorecard, Job D)
+
+The 23 Nov page scorecard listed `/sets/eternal-nexus` as "seen but ranks too low" (17 impressions, position 15.6, no
+clicks): its only set-specific text was the sealed "prices at a glance". Set pages now carry "About <set> card prices"
+(`lib/set-readout.ts`, Rift Compare's set template as Lorcana Compare runs it): how many cards are priced and what one of
+each comes to, the share the ten most valuable hold, the middle card, how many are in stock at a store, the dearest and
+cheapest card, and the rarity that fills the top ten. The meta description leads with the set's code, its most valuable
+card and price, and the set's value. TCGplayer market only; stock counts stores only (never eBay, TCGplayer or Amazon);
+a $999 / $9,999 / $99,999 placeholder market is unpriced here, as in the hub snippets. Titles unchanged.
