@@ -31,6 +31,7 @@ import { Section } from "@/components/Section";
 import { adSearch, cardAds } from "@/lib/card-ads";
 import { HeroCards } from "@/components/home/HeroCards";
 import { rankBy, rankKits, rankProducts } from "@/lib/home-demand";
+import { MascotGuide } from "@/components/MascotGuide";
 
 // The homepage leads with "<game> Card Prices" and the number of stores compared, as Rift Compare's does.
 export function generateMetadata(): Metadata {
@@ -125,6 +126,8 @@ export default function Home() {
               <span className="home-more">Price check any card or sealed product and find the cheapest place to buy: live prices from TCGplayer, eBay and {storeCount} stores in the US, UK, Canada, Australia and Europe, in your own currency, updated daily.</span>
             </p>
             <div className="hero-search relative z-30 mt-6 hidden w-full max-w-2xl sm:block"><SearchBox big /></div>
+            {/* Penny suggests a first search (owner, 2026-11-27: "a little mascot saying, hey, search this term here"). */}
+            <MascotGuide examples={["RX-78-2", "Zaku", "Booster Box"]} fallbackHref="/cards?q=" />
             <div className="hidden sm:block">
             <p className="eyebrow mt-6">Shopping from</p>
             <MarketChooser className="mt-2" bare />
