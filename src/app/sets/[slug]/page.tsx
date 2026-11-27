@@ -21,6 +21,19 @@ import { SealedQuickBuy } from "@/components/SealedQuickBuy";
 import { InlineAds } from "@/components/InlineAds";
 import { adSearch, cardAds } from "@/lib/card-ads";
 import { ShareButton } from "@/components/ShareButton";
+import { setReadout } from "@/lib/set-readout";
+
+const NOT_STORES = new Set(["ebay", "tcgplayer", "amazon"]);
+
+/** The set's cards for the read-out: TCGplayer market and whether a store (never eBay, TCGplayer or Amazon) has it. */
+function readoutOf(setName: string, cards: ReturnType<typeof productsInSet>) {
+  return setReadout(setName, cards.map((p) => ({
+    name: shortName(p.name),
+    rarity: p.rarity,
+    cents: refCents(p.id),
+    inStock: priceOf(p.id).offers.some((o) => o.inStock && !o.preorder && !NOT_STORES.has(o.source)),
+  })));
+}
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
@@ -31,11 +44,17 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const count = productsInSet(s.id).filter((p) => p.kind === "card").length;
   const spoilers = !!s.upcoming && count > 0;
   const title = fitTitle(setTitleCandidates(s.name, count, spoilers));
+  // Price-led snippet (2026-11-27, page scorecard of 23 Nov: /sets/eternal-nexus seen at position 15.6, 0 clicks):
+  // the set's most valuable card and the set's value, TCGplayer market only, placeholder asks skipped.
+  const r = spoilers ? null : readoutOf(s.name, productsInSet(s.id).filter((p) => p.kind === "card"));
+  const lead = r?.top ? `${r.top.label} at ${money(r.top.cents)}` : null;
   return {
     title,
     description: spoilers
       ? `Every ${s.name} card revealed so far (${count} and counting), with pre-order prices as stores list them${s.releasedOn ? `. Releases ${s.releasedOn}` : ""}. Updated daily as new spoilers land.`
-      : `${count > 0 ? `All ${count} ${s.name} cards` : `The ${s.name} card list`} with prices: the most valuable cards, every card's TCGplayer market price, and the cheapest store and eBay listings. Updated daily.`,
+      : lead
+        ? `All ${count} ${s.name}${s.code ? ` (${s.code})` : ""} cards with prices. The most valuable is ${lead}; one of each comes to ${money(r!.totalCents)} at TCGplayer market. Every card's price and the cheapest store listing, updated daily.`
+        : `${count > 0 ? `All ${count} ${s.name} cards` : `The ${s.name} card list`} with prices: the most valuable cards, every card's TCGplayer market price, and the cheapest store and eBay listings. Updated daily.`,
     ...canon(`/sets/${s.slug}`),
     openGraph: { ...canon(`/sets/${s.slug}`).openGraph, title: title.absolute },
   };
@@ -56,6 +75,7 @@ export default function SetPage({ params }: { params: { slug: string } }) {
   const older = i >= 0 && i < listed.length - 1 ? listed[i + 1] : null;
   const others = listed.filter((x) => x.id !== s.id && x.productCount > 20).slice(0, 12);
   const guides = postsAbout([s.name, s.code]).slice(0, 4);
+  const readout = readoutOf(s.name, cards);
   // "<set> prices at a glance", from the set's own products (lib/buyer-read.ts setRead, 2026-11-23 SEO quality pass):
   // stores only (never eBay, TCGplayer or Amazon), each market's cheapest in its own currency.
   const glance = setRead({
@@ -128,6 +148,13 @@ export default function SetPage({ params }: { params: { slug: string } }) {
               </tbody>
             </table>
           </div>
+        </section>
+      )}
+      {readout.about.length > 0 && (
+        <section className="prose-site max-w-none text-sm">
+          <h2>About {s.name} card prices</h2>
+          {readout.about.map((t, k) => <p key={k}>{t}</p>)}
+          {readout.facts && <p>{readout.facts}</p>}
         </section>
       )}
       {glance.length > 0 && (
