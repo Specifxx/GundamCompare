@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-26T01:55:22.083Z",
+ "generatedAt": "2026-11-27T01:52:04.374Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -19,9 +19,9 @@
    "currency": "USD",
    "store": "Atlantis Games & Comics",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619080_200w.jpg",
-   "refCents": 5628,
+   "refCents": 5588,
    "refLabel": "TCGplayer market price",
-   "savingPct": 47
+   "savingPct": 46
   },
   {
    "kind": "deal",
@@ -33,9 +33,9 @@
    "currency": "USD",
    "store": "PunkOuter Games",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/641452_200w.jpg",
-   "refCents": 13167,
+   "refCents": 12791,
    "refLabel": "TCGplayer market price",
-   "savingPct": 23
+   "savingPct": 21
   },
   {
    "kind": "deal",
@@ -55,20 +55,6 @@
    "kind": "deal",
    "cluster": "cards",
    "region": "US",
-   "title": "Starter Deck 09: Destiny Ignition",
-   "url": "https://www.gundamcompare.com/card/starter-deck-09-destiny-ignition",
-   "cents": 5000,
-   "currency": "USD",
-   "store": "PixelThat TCG",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/680468_200w.jpg",
-   "refCents": 6071,
-   "refLabel": "TCGplayer market price",
-   "savingPct": 18
-  },
-  {
-   "kind": "deal",
-   "cluster": "cards",
-   "region": "US",
    "title": "Dual Impact Booster Box",
    "url": "https://www.gundamcompare.com/card/dual-impact-booster-box",
    "cents": 12000,
@@ -78,6 +64,20 @@
    "refCents": 14539,
    "refLabel": "TCGplayer market price",
    "savingPct": 17
+  },
+  {
+   "kind": "deal",
+   "cluster": "cards",
+   "region": "US",
+   "title": "Starter Deck 09: Destiny Ignition",
+   "url": "https://www.gundamcompare.com/card/starter-deck-09-destiny-ignition",
+   "cents": 5000,
+   "currency": "USD",
+   "store": "PixelThat TCG",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/680468_200w.jpg",
+   "refCents": 5986,
+   "refLabel": "TCGplayer market price",
+   "savingPct": 16
   },
   {
    "kind": "deal",
@@ -114,9 +114,9 @@
    "currency": "AUD",
    "store": "Mecha Express Australia",
    "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/rg-gf13-017nj-shining-gundam-base.jpg?v=1750793537",
-   "refCents": 6299,
+   "refCents": 6124,
    "refLabel": "median store price",
-   "savingPct": 48
+   "savingPct": 46
   },
   {
    "kind": "deal",
@@ -131,20 +131,6 @@
    "refCents": 1948,
    "refLabel": "median store price",
    "savingPct": 44
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "AU",
-   "title": "HG 1/144 Destiny Gundam Spec II & Zeus Sillouette",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-destiny-gundam-spec-ii-and-zeus-sillouette",
-   "cents": 7199,
-   "currency": "AUD",
-   "store": "Mecha Express Australia",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgce-zgmf-a-42s2-destiny-gundam-spec-ii-zeus-silhouette-gp.jpg?v=1737742518",
-   "refCents": 12499,
-   "refLabel": "median store price",
-   "savingPct": 42
   },
   {
    "kind": "deal",
@@ -187,6 +173,20 @@
    "refCents": 4299,
    "refLabel": "median store price",
    "savingPct": 40
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "AU",
+   "title": "HG 1/144 Gundam Sandrock Custom",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-sandrock-custom-88415",
+   "cents": 2099,
+   "currency": "AUD",
+   "store": "HobbyTech Toys",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgac-xxxg-01sr2-gundam-sandrock-custom-gp.jpg?v=1741725469",
+   "refCents": 3445,
+   "refLabel": "median store price",
+   "savingPct": 39
   },
   {
    "kind": "deal",
