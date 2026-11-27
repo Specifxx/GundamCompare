@@ -41,18 +41,24 @@ import { ReturnBeacon } from "@/components/ReturnBeacon";
 import { SinceLastVisit } from "@/components/SinceLastVisit";
 import { AdRouteGate } from "@/components/AdRouteGate";
 
-// The engine's two faces (DexCompare and MTG Compare: Bricolage Grotesque for headings, Inter for text), bundled as the latin
+// The engine's faces (Geist since design v2, 2026-11-27; Bricolage Grotesque and Inter before it), bundled as the latin
 // subsets of the variable fonts (OFL, src/app/fonts): no font request at build or at runtime. Display is optional, not swap:
 // both faces are preloaded, so a warm visit renders in them from the first paint, and a slow first visit keeps the size-adjusted
 // fallback for that page instead of re-wrapping every line when the font lands (MTG Compare measured CLS 0.209 with swap).
+// Empire design v2 "Ledger" (2026-11-27): Geist for words and headings, Geist Mono for figures (OFL, fonts/Geist-OFL.txt).
 const display = localFont({
-  src: [{ path: "./fonts/BricolageGrotesque-latin.woff2", weight: "600 800" }],
+  src: [{ path: "./fonts/Geist-Variable.woff2", weight: "100 900" }],
   variable: "--font-display",
   display: "optional",
 });
 const sans = localFont({
-  src: [{ path: "./fonts/Inter-latin.woff2", weight: "100 900" }],
+  src: [{ path: "./fonts/Geist-Variable.woff2", weight: "100 900" }],
   variable: "--font-sans",
+  display: "optional",
+});
+const mono = localFont({
+  src: [{ path: "./fonts/GeistMono-Variable.woff2", weight: "100 900" }],
+  variable: "--font-mono",
   display: "optional",
 });
 
@@ -81,7 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const history = historyOn();
   return (
     // The boot scripts stamp data-theme and data-season on this element before React hydrates; React must not report that.
-    <html lang="en" className={`${display.variable} ${sans.variable}`} data-festive={CHRISTMAS_FESTIVE_LAYER ? "on" : undefined} suppressHydrationWarning>
+    <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`} data-festive={CHRISTMAS_FESTIVE_LAYER ? "on" : undefined} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT + SEASON_BOOT_SCRIPT + ADFREE_BOOT_SCRIPT }} />
         <link rel="preconnect" href="https://tcgplayer-cdn.tcgplayer.com" />

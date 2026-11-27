@@ -3054,3 +3054,14 @@ Black Friday in every time zone (00:00 UTC 27 Nov to 10:00 UTC 28 Nov, `lib/bf-m
 one bold Black Friday bar: the Black Friday deals page, and a labelled TCGplayer sale link (/go from=bf_mode). Same
 place as the line, in the server HTML, never a pop-up, fixed or floating; ✕ hides it for the visit. The browser re-reads the
 clock, so a cached page reverts on time with no build; the files can go after Cyber Monday.
+
+## 2026-11-27 — Empire design language v2, "Ledger"
+
+The owner (2026-11-27) asked for a rework so the sites look state of the art and expert-designed, not vibe-coded. v1 (`empire-ds`)
+took the template tells off. v2 (`empire-v2`, last in `globals.css`; the project's design-system/README.md, the same block as Dex
+and MTG Compare) gives the look a point of view, a price ledger:
+- Geist for words and headings, Geist Mono for prices. Both are bundled (OFL), replacing Inter and Bricolage.
+- Near-black neutral greys in dark mode and warm paper in light. Federation blue is still the one accent where you act.
+- Photos on the paper plate, mono table heads, and no scroll effects. The reticle stays.
+- Buy buttons keep their fill. `tests/contrast.test.ts` pins the new dark surface.
+CSS and fonts only: no word, order, URL, heading or ranking changed.
