@@ -3114,3 +3114,7 @@ can be taken down a little because we already have enough feedback". The rate-us
 more (`AUTO_ASK = false`); a "Rate us" link still opens it. During Cyber Weekend the visit's one prompt goes to the sale card.
 
 Released at 22:41 UTC: TCGplayer's sale card, owner asked for urgent releases.
+
+## 2026-11-28 — Owner override of the deploy floor
+
+The owner (28 Nov, 00:38 UTC): "Ignore the deploy limit. Just deploy them urgently." `scripts/vercel-ignore-build.sh` now builds a `[deploy]` commit whose subject also carries `[owner-now]` whatever the gap since the last production build. Only for a release the owner has asked for in those words; every other release keeps the 12-hour gap and the 8-hour `[urgent]` floor. Released at 00:38 UTC for the Cyber Weekend TCGplayer bar and pop-up.
