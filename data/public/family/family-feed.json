@@ -1,7 +1,7 @@
 {
  "v": 1,
  "site": "gundam",
- "generatedAt": "2026-11-27T01:52:04.374Z",
+ "generatedAt": "2026-11-28T01:35:14.681Z",
  "links": {
   "US": {
    "deals": "https://www.gundamcompare.com/black-friday",
@@ -19,23 +19,9 @@
    "currency": "USD",
    "store": "Atlantis Games & Comics",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619080_200w.jpg",
-   "refCents": 5588,
+   "refCents": 5484,
    "refLabel": "TCGplayer market price",
-   "savingPct": 46
-  },
-  {
-   "kind": "deal",
-   "cluster": "cards",
-   "region": "US",
-   "title": "Gundam (LR+)",
-   "url": "https://www.gundamcompare.com/card/gundam-lr",
-   "cents": 10103,
-   "currency": "USD",
-   "store": "PunkOuter Games",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/641452_200w.jpg",
-   "refCents": 12791,
-   "refLabel": "TCGplayer market price",
-   "savingPct": 21
+   "savingPct": 45
   },
   {
    "kind": "deal",
@@ -61,9 +47,9 @@
    "currency": "USD",
    "store": "Wayward City Games",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/650748_200w.jpg",
-   "refCents": 14539,
+   "refCents": 14331,
    "refLabel": "TCGplayer market price",
-   "savingPct": 17
+   "savingPct": 16
   },
   {
    "kind": "deal",
@@ -75,9 +61,9 @@
    "currency": "USD",
    "store": "PixelThat TCG",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/680468_200w.jpg",
-   "refCents": 5986,
+   "refCents": 5841,
    "refLabel": "TCGplayer market price",
-   "savingPct": 16
+   "savingPct": 14
   },
   {
    "kind": "deal",
@@ -89,7 +75,21 @@
    "currency": "USD",
    "store": "PixelThat TCG",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/619148_200w.jpg",
-   "refCents": 5762,
+   "refCents": 5758,
+   "refLabel": "TCGplayer market price",
+   "savingPct": 13
+  },
+  {
+   "kind": "deal",
+   "cluster": "cards",
+   "region": "US",
+   "title": "Freedom Ascension Booster Box",
+   "url": "https://www.gundamcompare.com/card/freedom-ascension-booster-box",
+   "cents": 13999,
+   "currency": "USD",
+   "store": "Retrofix Games",
+   "image": "https://tcgplayer-cdn.tcgplayer.com/product/693621_200w.jpg",
+   "refCents": 16085,
    "refLabel": "TCGplayer market price",
    "savingPct": 13
   },
@@ -122,20 +122,6 @@
    "kind": "deal",
    "cluster": "hobby",
    "region": "AU",
-   "title": "HG 1/144 R05 Aegis Gundam",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-r05-aegis-gundam",
-   "cents": 1099,
-   "currency": "AUD",
-   "store": "Mecha Express Australia",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hg-r05-aegis-gundam-00.jpg?v=1737661483",
-   "refCents": 1948,
-   "refLabel": "median store price",
-   "savingPct": 44
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "AU",
    "title": "HG 1/144 Immortal Justice Gundam",
    "url": "https://www.gundamcompare.com/kit/hg-1-144-immortal-justice-gundam",
    "cents": 2519,
@@ -145,20 +131,6 @@
    "refCents": 4248,
    "refLabel": "median store price",
    "savingPct": 41
-  },
-  {
-   "kind": "deal",
-   "cluster": "hobby",
-   "region": "AU",
-   "title": "HG 1/144 RX-75 GunTank",
-   "url": "https://www.gundamcompare.com/kit/hg-1-144-rx-75-guntank",
-   "cents": 1199,
-   "currency": "AUD",
-   "store": "Mecha Express Australia",
-   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-rx-75-guntank-00.jpg?v=1737658649",
-   "refCents": 2000,
-   "refLabel": "median store price",
-   "savingPct": 40
   },
   {
    "kind": "deal",
@@ -187,6 +159,34 @@
    "refCents": 3445,
    "refLabel": "median store price",
    "savingPct": 39
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "AU",
+   "title": "HG 1/144 Gundam NT-1",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-nt-1",
+   "cents": 1979,
+   "currency": "AUD",
+   "store": "HobbyTech Toys",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hguc-rx-78nt-1-gundam-nt-1-alex-gp.jpg?v=1745270454",
+   "refCents": 3174,
+   "refLabel": "median store price",
+   "savingPct": 38
+  },
+  {
+   "kind": "deal",
+   "cluster": "hobby",
+   "region": "AU",
+   "title": "HG 1/144 Gundam Jiyan Altron",
+   "url": "https://www.gundamcompare.com/kit/hg-1-144-gundam-jiyan-altron",
+   "cents": 2099,
+   "currency": "AUD",
+   "store": "HobbyTech Toys",
+   "image": "https://cdn.shopify.com/s/files/1/0671/4769/4277/files/hgbd-gundam-jiyan-altron-gpr.jpg?v=1737672502",
+   "refCents": 3375,
+   "refLabel": "median store price",
+   "savingPct": 38
   },
   {
    "kind": "deal",
@@ -262,15 +262,15 @@
    "kind": "deal",
    "cluster": "hobby",
    "region": "US",
-   "title": "SD Sangoku Soketsuden Huang Zhong Gundam Dynames",
-   "url": "https://www.gundamcompare.com/kit/sd-sangoku-soketsuden-huang-zhong-gundam-dynames",
-   "cents": 699,
+   "title": "Pokemon Eevee",
+   "url": "https://www.gundamcompare.com/kit/pokemon-eevee",
+   "cents": 886,
    "currency": "USD",
-   "store": "Robot4Less",
-   "image": "https://cdn.shopify.com/s/files/1/0727/8355/products/aceb97fc-0aa8-46e9-95dc-ea08ece310ec.jpg?v=1762269746",
-   "refCents": 999,
+   "store": "Galactic Toys",
+   "image": "https://cdn.shopify.com/s/files/1/0745/9736/8117/files/eevee04.png?v=1722553427",
+   "refCents": 1299,
    "refLabel": "median store price",
-   "savingPct": 30
+   "savingPct": 32
   },
   {
    "kind": "deal",
