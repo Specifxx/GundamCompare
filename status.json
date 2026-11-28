@@ -1,0 +1,73 @@
+{
+ "v": 1,
+ "site": "www.gundamcompare.com",
+ "at": "2026-11-28T08:23:30.047Z",
+ "overall": "warn",
+ "checks": [
+  {
+   "name": "Live site",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "Live prices age",
+   "status": "ok",
+   "detail": "live prices 8h old (daily release)"
+  },
+  {
+   "name": "A card page",
+   "status": "ok",
+   "detail": "200"
+  },
+  {
+   "name": "Best Basket shipping",
+   "status": "ok",
+   "detail": "308 of 383 stores measured, 7h old"
+  },
+  {
+   "name": "Daily price import",
+   "status": "ok",
+   "detail": "6.9h old"
+  },
+  {
+   "name": "Store imports",
+   "status": "warn",
+   "detail": "magictraders: 0 matched; blockhousegames: 0 matched; boostrclub: 0 matched; breakthecase: 0 matched; cardcollector: 0 matched; bsastore: 0 matched; defconduezero: 0 matched; dctrading: 0 matched; deichcards: 0 matched; ccncards: 0 matched; fantasiacards: 0 matched; fumetteriageco: 0 matched; gamesavenue: 0 matched; goosegames: 0 matched; gamerzparadize: 0 matched; kazuma: 0 matched; isengard: 0 matched; lakecards: 0 matched; manamecha: 0 matched; mulligantcg: 0 matched; ninpostore: 0 matched; playmaniac: 0 matched; primeprotector: store charges USD, but is configured for EU (EUR) — fix its market in src/content/stores.ts; poneglyphcards: 0 matched; ronintcg: 0 matched; sgames: 0 matched; spielewelt: 0 matched; tcgotakuyaes: 0 matched; tcgviert: 0 matched; venturacardgames: 0 matched; collectorclash: 0 matched; goblingaming: https://www.goblingaming.co.uk/collections/gundam-tcg/products.json?limit=250&page=1&country=GB: HTTP 403 <!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><me; darkstonecomics: https://www.darkstonecomics.com/collections/gundam-tcg-singles/products.json?limit=250&page=1&country=US: HTTP 401 ; creatorpultgames: 0 matched; charmcitycollectibles: 0 matched; dinoscardsandcollectibles: 0 matched; escollectible: 0 matched; gamersngeeks: 0 matched; gootzygaming: 0 matched; guubuu: 0 matched; hastygoblingames: 0 matched; mindgamesandmagic: 0 matched; mantisgamestudio: 0 matched; phillytcg: 0 matched; stevensongames: 0 matched; swordsandspoons: 0 matched; yourgamehaven: 0 matched; zenithgg: 0 matched"
+  },
+  {
+   "name": "eBay budget",
+   "status": "ok",
+   "detail": "700/1150 calls on 2026-11-28, 594 eligible"
+  },
+  {
+   "name": "Family feed",
+   "status": "ok",
+   "detail": "31 items, 6.8h old; 9 sister feeds (rift, op, dex, mtg, lorcana, ygo, cyberpunk, bandai, sealed)"
+  },
+  {
+   "name": "Amazon ASIN finder",
+   "status": "ok",
+   "detail": "AU: ok, 570 ASINs, 7h ago; CA: ok, 0 ASINs, 7h ago; EU: ok, 0 ASINs, 7h ago; UK: ok, 0 ASINs, 7h ago; US: ok, 714 ASINs, 7h ago"
+  },
+  {
+   "name": "Fetch TCG row",
+   "status": "ok",
+   "detail": "the Fetch TCG row is on /card/zgok"
+  },
+  {
+   "name": "Model kit import",
+   "status": "ok",
+   "detail": "2491 kits from 46 stores, 6.9h old"
+  },
+  {
+   "name": "Model kit eBay rows",
+   "status": "ok",
+   "detail": "336 of 2491 kits show an eBay row (1335 searched)"
+  },
+  {
+   "name": "Kit delivery quotes",
+   "status": "ok",
+   "detail": "24 of 44 Shopify kit shops quoted, newest 6 days old"
+  }
+ ]
+}
