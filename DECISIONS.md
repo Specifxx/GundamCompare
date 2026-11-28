@@ -3118,3 +3118,14 @@ Released at 22:41 UTC: TCGplayer's sale card, owner asked for urgent releases.
 ## 2026-11-28 — Owner override of the deploy floor
 
 The owner (28 Nov, 00:38 UTC): "Ignore the deploy limit. Just deploy them urgently." `scripts/vercel-ignore-build.sh` now builds a `[deploy]` commit whose subject also carries `[owner-now]` whatever the gap since the last production build. Only for a release the owner has asked for in those words; every other release keeps the 12-hour gap and the 8-hour `[urgent]` floor. Released at 00:38 UTC for the Cyber Weekend TCGplayer bar and pop-up.
+
+## 2026-11-28 — Rarity hubs and the colour / type indexes get price-led snippets
+
+Page scorecard of 23 Nov (Job D): /cards/rarity/lr-plus-plus (14 impressions, position 10.9), /cards/color (12, 7.8) and
+/cards/type (16, 36.8) had no clicks. They now follow the trait hubs' rule of 2026-11-25 (`lib/hub-snippet.ts`): a rarity
+hub's title and description lead with its dearest card and TCGplayer market price, then the priced range ("LR++ Gundam
+cards: Wing Gundam Zero (EW) $3,910, 16 priced"); an index's title names its values largest first ("Gundam cards by
+colour: Green, White, Red, Blue prices") and its description the three dearest cards, each with its value. Placeholder
+markets ($999, $9,999, $99,999) are never put in a snippet. The scorecard's "noindex /cards/type" was not taken: it is
+the type hubs' index page, linked from /cards, and a better snippet costs nothing; reread its position ~9 Dec. Grids
+and tables unchanged.

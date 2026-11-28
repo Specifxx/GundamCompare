@@ -10,6 +10,8 @@ import { attrFacet, attrHubTitle, facetStats } from "@/lib/hubs";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { abs } from "@/lib/site";
+import { fitTitle } from "@/lib/seo-title";
+import { facetIndexSnippet } from "@/lib/hub-snippet";
 
 // The index of one attribute hub (SITE.cardHubs): every colour, type or
 // franchise with its card count, median and most valuable card.
@@ -20,9 +22,16 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 export function generateMetadata({ params }: { params: { facet: string } }): Metadata {
   const f = attrFacet(params.facet);
   if (!f) return {};
+  // Price-led (page scorecard 23 Nov: /cards/color 12 impressions at 7.8, /cards/type 16 at 36.8, none clicked):
+  // the values by size in the title, each one's dearest card in the description (lib/hub-snippet.ts).
+  const s = facetIndexSnippet(SITE.game, SITE.gameShort, f.cfg.noun, f.hubs.map((h) => ({
+    label: h.label,
+    count: h.items.length,
+    items: h.items.slice(0, 40).map((p) => ({ name: shortName(p.name), cents: refCents(p.id) })),
+  })));
   return {
-    title: `${SITE.gameShort} cards by ${f.cfg.noun[0]}: prices for every ${f.cfg.noun[0]}`,
-    description: `All ${f.hubs.length} ${SITE.game} ${f.cfg.noun[1]} with card counts, median price and the most valuable card in each. Compare every store.`,
+    title: fitTitle(s.titles),
+    description: s.description,
     ...canon(`/cards/${f.cfg.facet}`),
   };
 }

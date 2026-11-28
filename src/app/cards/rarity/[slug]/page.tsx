@@ -8,6 +8,9 @@ import { rarityHubs } from "@/lib/hubs";
 import { ChipList } from "@/components/ChipList";
 import { TileGrid } from "@/components/ProductTile";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { shortName } from "@/lib/names";
+import { fitTitle } from "@/lib/seo-title";
+import { rarityHubSnippet } from "@/lib/hub-snippet";
 
 export const dynamic = "force-dynamic"; // one CDN copy per URL (next.config.js CDN_PAGES), never ISR
 
@@ -16,9 +19,11 @@ const hub = (slug: string) => rarityHubs().find((h) => h.slug === slug) ?? null;
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const h = hub(params.slug);
   if (!h) return {};
+  // Price-led (page scorecard 23 Nov: /cards/rarity/lr-plus-plus, 14 impressions at 10.9, none clicked); lib/hub-snippet.ts.
+  const s = rarityHubSnippet(SITE.game, SITE.gameShort, h.label, h.items.map((p) => ({ name: shortName(p.name), cents: refCents(p.id) })));
   return {
-    title: `${h.label} ${SITE.gameShort} card prices — most valuable first`,
-    description: `All ${h.items.length} ${h.label} ${SITE.game} cards ranked by TCGplayer market price, with the cheapest store and eBay listing for each.`,
+    title: fitTitle(s.titles),
+    description: s.description,
     ...canon(`/cards/rarity/${h.slug}`),
   };
 }
